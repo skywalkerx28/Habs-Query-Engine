@@ -1,0 +1,53 @@
+---
+description: Prohibits emojis in all code files to maintain professional code standards
+globs: ["**/*.{py,js,ts,jsx,tsx,md,html,css,scss,json,yaml,yml,toml,sh,bash,zsh,sql,rb,php,go,java,cpp,h,hpp,c,cs,rs,kt,swift,m,mm}"]
+alwaysApply: true
+---
+
+# No Emojis in Code
+
+## Rule: Absolutely NO emojis allowed in any code files
+
+### Why This Matters
+- **Professional Standards**: Emojis are unprofessional in production codebases
+- **Code Quality**: Maintains clean, readable, technical documentation
+- **Accessibility**: Emojis can cause display issues and accessibility problems
+- **Searchability**: Emojis hinder code search and grep operations
+- **Version Control**: Emojis can cause encoding issues in diffs and commits
+
+### What This Applies To
+- Source code files (.py, .js, .ts, .java, etc.)
+- Documentation files (.md, .rst, .txt)
+- Configuration files (.json, .yaml, .toml, etc.)
+- Scripts (.sh, .bash, .zsh)
+- Database files (.sql)
+- All text-based files in the repository
+
+### Exceptions
+- NONE. No emojis are allowed anywhere in the codebase.
+- This includes comments, docstrings, commit messages, and documentation.
+
+### Enforcement
+This rule is automatically enforced by Cursor's rule system. Any attempt to include emojis will be flagged and should be immediately removed.
+
+### Examples of What NOT to Do
+```python
+# WRONG - Never do this
+def calculate_score():  # Target emoji here
+    return score + 10  # Plus emoji here
+
+# CORRECT - Professional approach
+def calculate_score():
+    """Calculate the final score by adding bonus points."""
+    return score + 10
+```
+
+### Replacement Strategies
+Instead of emojis, use:
+- Clear, descriptive text
+- Professional Unicode symbols when necessary (e.g., → for arrows, • for bullets)
+- ASCII art for documentation when appropriate
+- Descriptive variable/function names
+- Well-written comments and docstrings
+
+**Remember**: Quality code communicates through clarity and precision, not decorative elements. Keep your codebase professional and emoji-free.
