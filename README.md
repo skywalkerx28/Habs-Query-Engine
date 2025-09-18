@@ -2,9 +2,9 @@
 
 ## AI-Driven Analytics Platform for Montreal Canadiens
 
-**HabsAI Query Engine** is a world-class, AI-powered analytics platform tailored exclusively for the Montreal Canadiens. At its core, it's a semantic search and analysis "AI index" that transforms your collection of 82 play-by-play CSV files (covering the 2024-2025 season's ~300,000 granular events like shots, passes, possessions, and coordinates) into an intelligent, conversational knowledge base.
+**HabsAI Query Engine** is a world-class, AI-powered analytics platform tailored exclusively for the Montreal Canadiens. At its core, it's a semantic search and analysis "AI index" that transforms a collection of play-by-play CSV files (covering the relevant recent seasons ~300,000 granular events like shots, passes, possessions, and coordinates) into an intelligent, conversational knowledge base.
 
-Users—coaches, scouts, analysts, or fans—can ask natural-language questions (e.g., "Analyze the Habs' power play efficiency against Toronto's top penalty kill in overtime situations" or "What's the impact of pairing Hutson with Savard on zone exits?") and receive dynamic, data-grounded responses: aggregated stats (e.g., xG differentials), visualizations (e.g., shot heatmaps on a rink), trend breakdowns, and even prescriptive recommendations (e.g., "Target east-slot rushes—boosts scoring by 18%").
+Coaches, players, scouts, analysts, and other authorized personnel can ask natural-language questions (e.g., "Analyze the Habs' power play efficiency against Toronto's top penalty kill in overtime situations" or "What's the impact of pairing Hutson with Guhle on zone exits?") and receive dynamic, data-grounded responses: aggregated stats (e.g., xG differentials), visualizations (e.g., shot heatmaps on a rink), trend breakdowns, and even prescriptive recommendations (e.g., "Target east-slot rushes—boosts scoring by 18%").
 
 ## Key Differentiators
 
@@ -19,13 +19,13 @@ Users—coaches, scouts, analysts, or fans—can ask natural-language questions 
 
 ### Scalable Architecture
 - **MVP Foundation**: Starts offline with local CSVs; evolves to real-time ingestion
-- **Extensible Design**: Ready for 2025-26 data, AR visualizations, NHL API integrations
+- **Extensible Design**: Ready for 2025-26 data, interactive visualizations, NHL API integrations
 - **Cloud-Ready**: Deployable on Hugging Face Spaces with offline fallback for sensitive data
 
 ## Technical Architecture
 
 ### Core Components
-- **Data Pipeline**: ETL processes for 82 CSV files → unified Parquet format
+- **Data Pipeline**: ETL processes for CSV files → unified Parquet format
 - **Vector Database**: FAISS/Pinecone for semantic search over event embeddings
 - **LLM Integration**: LangChain + local/cloud models for query processing
 - **Analysis Engine**: Custom tools for MTL-specific metrics (Corsi, zone entries, etc.)
@@ -40,15 +40,15 @@ Users—coaches, scouts, analysts, or fans—can ask natural-language questions 
 
 ## Data Overview
 
-- **Source**: 82 NHL play-by-play CSV files (2024-2025 season)
-- **Volume**: ~300,000 granular events
+- **Source**: NHL play-by-play CSV files and archive game footage (from recent relevant seasons)
+- **Volume**: ~Millions granular events and thousands of game footage
 - **Key Fields**: xCoord, yCoord, type, playerReferenceId, expectedGoalsOnNet, period, gameTime
 - **Processing**: Unified schema, derived features (shot_distance, possession_duration), Habs event flagging
 
 ## Development Roadmap
 
 ### Phase 1: Data Preparation & Ingestion Pipeline (Week 1)
-- [COMPLETED] Audit & concatenate 82 CSVs for schema consistency
+- [COMPLETED] Audit & concatenate CSVs for schema consistency
 - [COMPLETED] Data cleaning, enrichment, and feature derivation
 - [COMPLETED] Chunking for RAG (500-event summaries)
 - [COMPLETED] Initial SQLite/Parquet database setup
@@ -105,7 +105,7 @@ streamlit run app/main.py
 ```
 
 ### Data Setup
-1. Place your 82 NHL CSV files in `data/raw/`
+1. Place your NHL CSV files in `data/raw/`
 2. Run ETL pipeline to create unified dataset
 3. Generate embeddings for semantic search
 
@@ -179,16 +179,10 @@ response = engine.query("Which matchups should we target for better scoring oppo
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE] file for details.
 
-## Acknowledgments
 
-- Montreal Canadiens organization for inspiring this analytics platform
-- NHL for providing comprehensive play-by-play data
-- Open-source AI community for enabling advanced analytics capabilities
 
----
-
-**Built for the Montreal Canadiens analytics community**
+**Built for the Montreal Canadiens**
 
 *For questions or collaboration opportunities, please open an issue or contact the maintainers.*

@@ -1,0 +1,18 @@
+# Example Files for Forwards Stats
+
+## Individual Player Files
+Forward-Suzuki-2024-Offensive.csv
+Forward-Caufield-2024-Shooting.csv
+Forward-Dach-2024-Physical.csv
+Forward-Armia-2024-Playmaking.csv
+
+## Group Analysis Files
+Forwards-2024-OffensiveEfficiency.csv
+Forwards-2024-LineChemistry.csv
+Forwards-2024-PowerPlay.csv
+Forwards-2024-PenaltyKill.csv
+
+## Performance Reports
+Forwards-2024-ScoringRates.csv
+Forwards-2024-CorsiAnalysis.csv
+Forwards-2024-ExpectedGoals.csv
