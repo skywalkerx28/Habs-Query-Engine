@@ -1,4 +1,4 @@
-# HabsAI Query Engine 🏒
+# HabsAI Query Engine
 
 ## AI-Driven Analytics Platform for Montreal Canadiens
 
@@ -45,39 +45,39 @@ Users—coaches, scouts, analysts, or fans—can ask natural-language questions 
 - **Key Fields**: xCoord, yCoord, type, playerReferenceId, expectedGoalsOnNet, period, gameTime
 - **Processing**: Unified schema, derived features (shot_distance, possession_duration), Habs event flagging
 
-## 🚀 Development Roadmap
+## Development Roadmap
 
 ### Phase 1: Data Preparation & Ingestion Pipeline (Week 1)
-- ✅ Audit & concatenate 82 CSVs for schema consistency
-- ✅ Data cleaning, enrichment, and feature derivation
-- ✅ Chunking for RAG (500-event summaries)
-- ✅ Initial SQLite/Parquet database setup
+- [COMPLETED] Audit & concatenate 82 CSVs for schema consistency
+- [COMPLETED] Data cleaning, enrichment, and feature derivation
+- [COMPLETED] Chunking for RAG (500-event summaries)
+- [COMPLETED] Initial SQLite/Parquet database setup
 
 ### Phase 2: Vectorization & Retrieval System (Weeks 1-2)
-- 🔄 Embedding generation for semantic search
-- 🔄 FAISS vector database implementation
-- 🔄 Hybrid search (semantic + keyword)
-- 🔄 MTL-specific embedding fine-tuning
+- [IN PROGRESS] Embedding generation for semantic search
+- [IN PROGRESS] FAISS vector database implementation
+- [IN PROGRESS] Hybrid search (semantic + keyword)
+- [IN PROGRESS] MTL-specific embedding fine-tuning
 
 ### Phase 3: LLM Integration & Analysis Engine (Weeks 2-3)
-- 📋 Prompt engineering with Habs context
-- 📋 RAG chain implementation
-- 📋 Structured output formatting (tables/plots)
-- 📋 Custom MTL analysis tools
+- [PLANNED] Prompt engineering with Habs context
+- [PLANNED] RAG chain implementation
+- [PLANNED] Structured output formatting (tables/plots)
+- [PLANNED] Custom MTL analysis tools
 
 ### Phase 4: UI & Deployment (Weeks 3-4)
-- 🎨 Streamlit chat interface
-- 🎨 Visualization integration
-- 🎨 Docker containerization
-- 🎨 Hugging Face Spaces deployment
+- [PLANNED] Streamlit chat interface
+- [PLANNED] Visualization integration
+- [PLANNED] Docker containerization
+- [PLANNED] Hugging Face Spaces deployment
 
 ### Phase 5: Testing & Launch (Weeks 4-6)
-- 🧪 Comprehensive testing suite
-- 🧪 User testing and iteration
-- 🧪 Performance optimization
-- 🧪 MVP launch preparation
+- [PLANNED] Comprehensive testing suite
+- [PLANNED] User testing and iteration
+- [PLANNED] Performance optimization
+- [PLANNED] MVP launch preparation
 
-## 🛠️ Installation & Setup
+## Installation & Setup
 
 ### Prerequisites
 - Python 3.13+
@@ -109,7 +109,7 @@ streamlit run app/main.py
 2. Run ETL pipeline to create unified dataset
 3. Generate embeddings for semantic search
 
-## 💡 Usage Examples
+## Usage Examples
 
 ### Basic Queries
 ```python
@@ -133,7 +133,7 @@ response = engine.query("What's the impact of youth pairings on zone exit succes
 response = engine.query("Which matchups should we target for better scoring opportunities?")
 ```
 
-## 🎯 Performance Benchmarks
+## Performance Benchmarks
 
 - **Query Accuracy**: 85%+ (via backtesting)
 - **Response Time**: <5 seconds
@@ -141,7 +141,7 @@ response = engine.query("Which matchups should we target for better scoring oppo
 - **Retrieval Precision**: >80% relevant chunks
 - **User Satisfaction**: Target 4.5/5 rating
 
-## 🤝 Contributing
+## Contributing
 
 ### Development Philosophy
 - **Efficiency First**: Prioritize simple, optimal code over complex systems
@@ -163,7 +163,7 @@ response = engine.query("Which matchups should we target for better scoring oppo
 - **Unit tests** for new functionality
 - **Performance profiling** for data processing functions
 
-## 📈 Future Enhancements
+## Future Enhancements
 
 ### Phase 2 (Post-MVP)
 - **Real-time Data**: NHL API integration for live game analysis
@@ -177,11 +177,11 @@ response = engine.query("Which matchups should we target for better scoring oppo
 - **Computer Vision**: Video clip retrieval for key moments
 - **Network Analysis**: Player connectivity and chemistry modeling
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Montreal Canadiens organization for inspiring this analytics platform
 - NHL for providing comprehensive play-by-play data
@@ -189,6 +189,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-**Built with ❤️ for the Montreal Canadiens analytics community**
+**Built for the Montreal Canadiens analytics community**
 
 *For questions or collaboration opportunities, please open an issue or contact the maintainers.*
