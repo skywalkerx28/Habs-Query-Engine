@@ -1,0 +1,23 @@
+# Example Files for Defenseman Stats
+
+## Individual Player Files
+Defenseman-Guhle-2024-Defensive.csv
+Defenseman-Savard-2024-Offensive.csv
+Defenseman-Edmundson-2024-Physical.csv
+Defenseman-Xhekaj-2024-Transition.csv
+
+## Defense Pair Analysis
+DefensePair-Guhle-Savard-2024-ZoneExits.csv
+DefensePair-Edmundson-Xhekaj-2024-ShotSuppression.csv
+DefensePair-Matheson-Barron-2024-PowerPlay.csv
+
+## Group Analysis Files
+Defensemen-2024-ZoneExitEfficiency.csv
+Defensemen-2024-ShotSuppression.csv
+Defensemen-2024-PuckMoving.csv
+Defensemen-2024-PhysicalEngagement.csv
+
+## Performance Reports
+Defensemen-2024-DefensiveImpact.csv
+Defensemen-2024-OffensiveContribution.csv
+Defensemen-2024-PairChemistry.csv
