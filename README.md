@@ -1,26 +1,26 @@
-# HabsAI Query Engine
+# HeartBeat Engine
 
 ## AI-Driven Analytics Platform for Montreal Canadiens
 
-**HabsAI Query Engine** is a world-class, AI-powered analytics platform tailored exclusively for the Montreal Canadiens. At its core, it's a semantic search and analysis "AI index" that transforms a collection of play-by-play CSV files (covering the relevant recent seasons ~300,000 granular events like shots, passes, possessions, and coordinates) into an intelligent, conversational knowledge base.
+**HeartBeat Engine** is an AI-powered analytics platform tailored exclusively for the Montreal Canadiens. At its core, it's a semantic search and analysis "AI index" that transforms a collection of tabular and visual data (covering the relevant recent seasons ~millions granular events like shots, passes, possessions, and coordinates) into an intelligent, conversational knowledge base that people are accustomed to interacting with nowadays.
 
-Coaches, players, scouts, analysts, and other authorized personnel can ask natural-language questions (e.g., "Analyze the Habs' power play efficiency against Toronto's top penalty kill in overtime situations" or "What's the impact of pairing Hutson with Guhle on zone exits?") and receive dynamic, data-grounded responses: aggregated stats (e.g., xG differentials), visualizations (e.g., shot heatmaps on a rink), trend breakdowns, and even prescriptive recommendations (e.g., "Target east-slot rushes—boosts scoring by 18%").
+Coaches, players, scouts, analysts, and other authorized personnel can ask natural-language questions (e.g., "Analyze the Habs' power play efficiency against Toronto's top penalty kill in overtime situations" or "What's the impact of pairing Hutson with Guhle on zone exits?" or "Show me all of my shorthanded shifts from last season.") and receive dynamic, data-grounded responses: aggregated stats (e.g., xG differentials), visualizations (e.g., shot heatmaps on a rink), trend breakdowns, and even prescriptive recommendations (e.g., "Target east-slot rushes—boosts scoring by 18%").
 
 ## Key Differentiators
 
 ### Hyper-Tailored for MTL
-- **Canadiens-Specific Logic**: Embeds Montreal-specific insights (e.g., St. Louis' transition style, youth metrics like Roy's reads or Caufield's wristers) via custom prompts and fine-tuning
-- **Habs-Centric Metrics**: Optimized for Montreal's playing style, personnel, and strategic priorities
+- **Canadiens-Specific Logic**: Embeds Montreal-specific insights (e.g., St. Louis' transition style, youth metrics like player development trends and prospect performances) via custom prompts and fine-tuning.
+- **Habs-Centric Metrics**: Optimized for Montreal's playing style, personnel, and strategic priorities.
 
 ### Dynamic & Proactive Analysis
-- **Retrieval-Augmented Generation (RAG)**: Uses LLM to interpret queries, retrieve relevant events, execute on-the-fly analysis
-- **No Pre-coded Queries**: Handles any natural language question without predefined templates
-- **Real-time Insights**: Generates tables, plots, and recommendations dynamically
+- **Retrieval-Augmented Generation (RAG)**: Uses LLM to interpret queries, retrieve relevant events, execute on-the-fly analysis.
+- **No Pre-coded Queries**: Handles any natural language question without predefined templates.
+- **Real-time Insights**: Generates tables, plots, and recommendations dynamically. 
 
 ### Scalable Architecture
-- **MVP Foundation**: Starts offline with local CSVs; evolves to real-time ingestion
-- **Extensible Design**: Ready for 2025-26 data, interactive visualizations, NHL API integrations
-- **Cloud-Ready**: Deployable on Hugging Face Spaces with offline fallback for sensitive data
+- **MVP Foundation**: Starts offline with extensive local tabular and visual data; evolves to real-time ingestion.
+- **Extensible Design**: Ready for 2025-26 data, interactive visualizations, NHL API integrations (possibly).
+- **Cloud-Ready**: Deployable on Hugging Face Spaces with offline fallback for sensitive data.
 
 ## Technical Architecture
 
@@ -29,21 +29,21 @@ Coaches, players, scouts, analysts, and other authorized personnel can ask natur
 - **Vector Database**: FAISS/Pinecone for semantic search over event embeddings
 - **LLM Integration**: LangChain + local/cloud models for query processing
 - **Analysis Engine**: Custom tools for MTL-specific metrics (Corsi, zone entries, etc.)
-- **Web Interface**: Streamlit-powered chat application
+- **Web Interface**: Streamlit-powered chat application (includes heatmap, custom tabular data creation, etc).
 
 ### Tech Stack
-- **Backend**: Python 3.13, pandas, numpy, scikit-learn
-- **AI/ML**: LangChain, sentence-transformers, FAISS
-- **Visualization**: matplotlib, seaborn, plotly
-- **Database**: SQLite/Parquet for local storage
-- **Deployment**: Streamlit, Docker, Hugging Face Spaces
+- **Backend**: Python 3.13, pandas, numpy, scikit-learn.
+- **AI/ML**: LangChain, sentence-transformers, FAISS.
+- **Visualization**: matplotlib, seaborn, plotly.
+- **Database**: SQLite/Parquet for local storage.
+- **Deployment**: Streamlit, Docker, Hugging Face Spaces.
 
 ## Data Overview
 
-- **Source**: NHL play-by-play CSV files and archive game footage (from recent relevant seasons)
-- **Volume**: ~Millions granular events and thousands of game footage
-- **Key Fields**: xCoord, yCoord, type, playerReferenceId, expectedGoalsOnNet, period, gameTime
-- **Processing**: Unified schema, derived features (shot_distance, possession_duration), Habs event flagging
+- **Source**: NHL play-by-play CSV files and archive game footage (from recent relevant seasons).
+- **Volume**: ~Millions granular events and thousands of game footage.
+- **Key Fields**: xCoord, yCoord, type, playerReferenceId, expectedGoalsOnNet, period, gameTime.
+- **Processing**: Unified schema, derived features (shot_distance, possession_duration), Habs event flagging.
 
 ## Development Roadmap
 
