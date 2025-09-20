@@ -1,14 +1,21 @@
 {
   "data_source": "line_combinations",
-  "description": "Comprehensive Montreal Canadiens line combination analytics for the 2024-2025 NHL season, including defensive pairings, forward lines, power play units, penalty kill units, and 5-player combinations with advanced performance metrics",
+  "description": "Montreal Canadiens-only (MTL) line combination analytics for the 2024-2025 NHL season, including defensive pairings, forward lines, power play units, penalty kill units, and 5-player combinations with advanced performance metrics.",
   "format": "parquet",
+  "scope": {
+    "team": "MTL",
+    "season": "2024-2025",
+    "dataset_path": "data/processed/analytics/mtl_line_combinations_2024-2025",
+    "notes": "This dataset contains only Montreal Canadiens line combinations for the 2024-2025 NHL season."
+  },
   "organization": {
-    "structure": "multiple_files_by_type",
+    "structure": "multiple_files_by_type (mtl_only)",
+    "path_root": "data/processed/analytics/mtl_line_combinations_2024-2025",
     "files": [
       {
         "name": "Line_Combinations_Metrics_for_Defencemen.parquet",
         "description": "Defensive pairing combinations showing time on ice, zone starts, puck possession, and expected goals metrics",
-        "path": "data/processed/analytics/line_combinations/Line_Combinations_Metrics_for_Defencemen.parquet",
+        "path": "data/processed/analytics/mtl_line_combinations_2024-2025/Line_Combinations_Metrics_for_Defencemen.parquet",
         "rows": 33,
         "columns": 10,
         "combination_type": "defensive_pairings"
@@ -16,7 +23,7 @@
       {
         "name": "Line_Combinations_Metrics_for_Forwards (1).parquet",
         "description": "Forward line combinations analyzing chemistry, puck possession, and scoring opportunities",
-        "path": "data/processed/analytics/line_combinations/Line_Combinations_Metrics_for_Forwards (1).parquet",
+        "path": "data/processed/analytics/mtl_line_combinations_2024-2025/Line_Combinations_Metrics_for_Forwards (1).parquet",
         "rows": 50,
         "columns": 10,
         "combination_type": "forward_lines"
@@ -24,7 +31,7 @@
       {
         "name": "Line_Combinations_Metrics_for_PPUnits.parquet",
         "description": "Power play unit combinations with special teams effectiveness and shot generation metrics",
-        "path": "data/processed/analytics/line_combinations/Line_Combinations_Metrics_for_PPUnits.parquet",
+        "path": "data/processed/analytics/mtl_line_combinations_2024-2025/Line_Combinations_Metrics_for_PPUnits.parquet",
         "rows": 11,
         "columns": 10,
         "combination_type": "power_play_units"
@@ -32,7 +39,7 @@
       {
         "name": "Line_Combinations_Metrics_for_SHUnits.parquet",
         "description": "Penalty kill unit combinations analyzing defensive structure and shot suppression",
-        "path": "data/processed/analytics/line_combinations/Line_Combinations_Metrics_for_SHUnits.parquet",
+        "path": "data/processed/analytics/mtl_line_combinations_2024-2025/Line_Combinations_Metrics_for_SHUnits.parquet",
         "rows": 14,
         "columns": 10,
         "combination_type": "penalty_kill_units"
@@ -40,7 +47,7 @@
       {
         "name": "Line_Combinations_Metrics_for_Units.parquet",
         "description": "5-player unit combinations representing full team chemistry and deployment strategies",
-        "path": "data/processed/analytics/line_combinations/Line_Combinations_Metrics_for_Units.parquet",
+        "path": "data/processed/analytics/mtl_line_combinations_2024-2025/Line_Combinations_Metrics_for_Units.parquet",
         "rows": 139,
         "columns": 10,
         "combination_type": "five_unit_combinations"
