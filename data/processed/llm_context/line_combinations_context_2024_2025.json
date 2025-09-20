@@ -106,7 +106,7 @@
   "update_frequency": "game-by-game",
   "access_method": "read_parquet_file tool, combination analysis",
   "key_insights": [
-    "Top defensive pairing (Matheson-Hutson) shows strong offensive zone deployment (52.1% OZ starts)",
+    "Top defensive pairing (Matheson-Hutson) shows strong offensive zone deployment (52.1% OZ starts) - note: this metric may be biased as both are offensive defensemen who are typically deployed for offensive zone face-offs",
     "Elite forward line (Suzuki-Caufield-Slafkovsky) leads in puck possession and expected goals",
     "Power play unit with Laine-Suzuki-Caufield-Slafkovsky-Hutson generates highest expected goals",
     "Most effective penalty kill combinations show balanced XGA/XGF ratios",
