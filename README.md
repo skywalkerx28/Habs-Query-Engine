@@ -54,10 +54,10 @@ Coaches, players, scouts, analysts, and other authorized personnel can ask natur
 - [In Progress] Initial SQLite/Parquet database setup
 
 ### Phase 2: Vectorization & Retrieval System (Weeks 1-2)
-- [IN PROGRESS] Embedding generation for semantic search
-- [IN PROGRESS] Pinecone vector database implementation
-- [IN PROGRESS] Hybrid search (semantic + keyword)
-- [IN PROGRESS] MTL-specific embedding fine-tuning
+- [Planned] Embedding generation for semantic search
+- [PLanned] Pinecone vector database implementation
+- [Planned] Hybrid search (semantic + keyword)
+- [Planned] MTL-specific embedding fine-tuning
 
 ### Phase 3: LLM Integration & Analysis Engine (Weeks 2-3)
 
@@ -79,7 +79,7 @@ Query Processing Flow:
 │   User Query    │ -> │  Intent Analysis│ -> │  Hybrid         │ -> │  LLM with Tools │
 │  "Montreal's    │    │  (LLM Router)   │    │  Retrieval      │    │  & Context      │
 │   blocking vs   │    │                 │    │                 │    │                 │
-│   Toronto in    │    │  - Query type   │    │  - RAG chunks   │    │  - Hockey context│
+│   Toronto in    │    │  - Query type   │    │  - RAG chunks   │    │  - Hockey cntxt │
 │   3rd periods"  │    │  - Complexity   │    │    (context)    │    │  - SQL tools    │
 └─────────────────┘    │  - Data needs   │    │  - Parquet SQL  │    │  - Visualization│
                        │  - Filters      │    │    (live data)  │    │  - Calculation  │

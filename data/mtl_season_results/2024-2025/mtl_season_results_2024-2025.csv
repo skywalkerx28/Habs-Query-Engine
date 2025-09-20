@@ -1,0 +1,83 @@
+Game,Date,Home/Away,Opponent,MTL_G,OPP_G,Result,OT_SO,Score
+1,2024-10-09,Home,Toronto,1,0,W,,1-0
+2,2024-10-10,Away,Boston,4,6,L,,4-6
+3,2024-10-12,Home,Ottawa,4,1,W,,4-1
+4,2024-10-14,Home,Pittsburgh,3,6,L,,3-6
+5,2024-10-17,Home,Los Angeles,1,4,L,,1-4
+6,2024-10-19,Away,NY Islanders,3,4,OTL,SO,3-4
+7,2024-10-22,Home,NY Rangers,2,7,L,,2-7
+8,2024-10-26,Home,St. Louis,5,2,W,,5-2
+9,2024-10-27,Away,Philadelphia,4,3,W,,4-3
+10,2024-10-29,Home,Seattle,2,8,L,,2-8
+11,2024-10-31,Away,Washington,3,6,L,,3-6
+12,2024-11-02,Away,Pittsburgh,1,3,L,,1-3
+13,2024-11-05,Home,Calgary,2,3,OTL,OT,2-3
+14,2024-11-07,Away,New Jersey,3,5,L,,3-5
+15,2024-11-09,Away,Toronto,1,4,L,,1-4
+16,2024-11-11,Away,Buffalo,7,5,W,,7-5
+17,2024-11-14,Away,Minnesota,0,3,L,,0-3
+18,2024-11-16,Home,Columbus,5,1,W,,5-1
+19,2024-11-18,Home,Edmonton,3,0,W,,3-0
+20,2024-11-23,Home,Vegas,2,6,L,,2-6
+21,2024-11-26,Home,Utah,2,3,OTL,OT,2-3
+22,2024-11-27,Away,Columbus,4,3,W,OT,4-3
+23,2024-11-30,Away,NY Rangers,3,4,L,,3-4
+24,2024-12-01,Away,Boston,3,6,L,,3-6
+25,2024-12-03,Home,NY Islanders,2,1,W,OT,2-1
+26,2024-12-05,Home,Nashville,3,0,W,,3-0
+27,2024-12-07,Home,Washington,2,4,L,,2-4
+28,2024-12-09,Home,Anaheim,3,2,W,SO,3-2
+29,2024-12-12,Home,Pittsburgh,2,9,L,,2-9
+30,2024-12-14,Away,Winnipeg,2,4,L,,2-4
+31,2024-12-17,Home,Buffalo,6,1,W,,6-1
+32,2024-12-20,Away,Detroit,4,3,W,,4-3
+33,2024-12-21,Home,Detroit,5,1,W,,5-1
+34,2024-12-23,Away,Columbus,4,5,L,,4-5
+35,2024-12-28,Away,Florida,4,0,W,,4-0
+36,2024-12-29,Away,Tampa Bay,5,2,W,,5-2
+37,2024-12-31,Away,Vegas,3,2,W,,3-2
+38,2025-01-03,Away,Chicago,2,4,L,,2-4
+39,2025-01-04,Away,Colorado,2,1,W,SO,2-1
+40,2025-01-06,Home,Vancouver,5,4,W,OT,5-4
+41,2025-01-10,Away,Washington,3,2,W,OT,3-2
+42,2025-01-11,Home,Dallas,1,2,OTL,SO,1-2
+43,2025-01-14,Away,Utah,5,3,W,,5-3
+44,2025-01-16,Away,Dallas,3,1,W,,3-1
+45,2025-01-18,Home,Toronto,3,7,L,,3-7
+46,2025-01-19,Home,NY Rangers,5,4,W,OT,5-4
+47,2025-01-21,Home,Tampa Bay,3,2,W,,3-2
+48,2025-01-23,Away,Detroit,2,4,L,,2-4
+49,2025-01-25,Home,New Jersey,3,4,OTL,OT,3-4
+50,2025-01-28,Home,Winnipeg,1,4,L,,1-4
+51,2025-01-30,Home,Minnesota,0,4,L,,0-4
+52,2025-02-02,Away,Anaheim,2,3,L,,2-3
+53,2025-02-04,Away,San Jose,4,3,W,,4-3
+54,2025-02-05,Away,Los Angeles,3,6,L,,3-6
+55,2025-02-08,Home,New Jersey,0,4,L,,0-4
+56,2025-02-09,Home,Tampa Bay,3,5,L,,3-5
+57,2025-02-22,Away,Ottawa,5,2,W,,5-2
+58,2025-02-25,Home,Carolina,4,0,W,,4-0
+59,2025-02-27,Home,San Jose,4,3,W,OT,4-3
+60,2025-03-01,Away,Buffalo,4,2,W,,4-2
+61,2025-03-03,Home,Buffalo,4,3,W,OT,4-3
+62,2025-03-06,Away,Edmonton,2,3,OTL,OT,2-3
+63,2025-03-08,Away,Calgary,0,1,L,,0-1
+64,2025-03-11,Away,Vancouver,4,2,W,,4-2
+65,2025-03-12,Away,Seattle,4,5,OTL,OT,4-5
+66,2025-03-15,Home,Florida,3,1,W,,3-1
+67,2025-03-18,Home,Ottawa,6,3,W,,6-3
+68,2025-03-20,Away,NY Islanders,3,4,OTL,OT,3-4
+69,2025-03-22,Home,Colorado,4,5,OTL,SO,4-5
+70,2025-03-25,Away,St. Louis,1,6,L,,1-6
+71,2025-03-27,Away,Philadelphia,4,6,L,,4-6
+72,2025-03-28,Away,Carolina,1,4,L,,1-4
+73,2025-03-30,Away,Florida,4,2,W,,4-2
+74,2025-04-01,Home,Florida,3,2,W,OT,3-2
+75,2025-04-03,Home,Boston,4,1,W,,4-1
+76,2025-04-05,Home,Philadelphia,3,2,W,,3-2
+77,2025-04-06,Away,Nashville,2,1,W,,2-1
+78,2025-04-08,Home,Detroit,4,1,W,,4-1
+79,2025-04-11,Away,Ottawa,2,5,L,,2-5
+80,2025-04-12,Away,Toronto,0,1,OTL,OT,0-1
+81,2025-04-14,Home,Chicago,3,4,OTL,SO,3-4
+82,2025-04-16,Home,Carolina,4,2,W,,4-2
