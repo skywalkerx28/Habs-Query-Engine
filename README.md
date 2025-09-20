@@ -26,14 +26,14 @@ Coaches, players, scouts, analysts, and other authorized personnel can ask natur
 
 ### Core Components
 - **Data Pipeline**: ETL processes for CSV files → unified Parquet format
-- **Vector Database**: FAISS/Pinecone for semantic search over event embeddings
+- **Vector Database**: Pinecone for semantic search over event embeddings
 - **LLM Integration**: LangChain + local/cloud models for query processing
 - **Analysis Engine**: Custom tools for MTL-specific metrics (Corsi, zone entries, etc.)
 - **Web Interface**: Streamlit-powered chat application (includes heatmap, custom tabular data creation, etc).
 
 ### Tech Stack
 - **Backend**: Python 3.13, pandas, numpy, scikit-learn.
-- **AI/ML**: LangChain, sentence-transformers, FAISS.
+- **AI/ML**: LangChain, sentence-transformers, Pinecone.
 - **Visualization**: matplotlib, seaborn, plotly.
 - **Database**: SQLite/Parquet for local storage.
 - **Deployment**: Streamlit, Docker, Hugging Face Spaces.
@@ -55,7 +55,7 @@ Coaches, players, scouts, analysts, and other authorized personnel can ask natur
 
 ### Phase 2: Vectorization & Retrieval System (Weeks 1-2)
 - [IN PROGRESS] Embedding generation for semantic search
-- [IN PROGRESS] FAISS vector database implementation
+- [IN PROGRESS] Pinecone vector database implementation
 - [IN PROGRESS] Hybrid search (semantic + keyword)
 - [IN PROGRESS] MTL-specific embedding fine-tuning
 
@@ -94,7 +94,7 @@ Query Processing Flow:
 RAG Pipeline:
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
 │   Query         │ -> │  Retrieval      │ -> │  Context        │ -> │  Generation    │
-│   Processing    │    │  (FAISS/Chroma)│    │  Enhancement     │    │  (Fine-tuned   │
+│   Processing    │    │   (Pinecone)   │    │  Enhancement     │    │  (Fine-tuned   │
 │                 │    │                 │    │                 │    │  LLM)          │
 │  - Tokenization │    │  - Semantic     │    │  - Multi-source │    │               │
 │  - Embedding    │    │    search       │    │    synthesis    │    │  - Prompt eng. │
