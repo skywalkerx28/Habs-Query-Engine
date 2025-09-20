@@ -50,8 +50,8 @@ Coaches, players, scouts, analysts, and other authorized personnel can ask natur
 ### Phase 1: Data Preparation & Ingestion Pipeline (Week 1)
 - [COMPLETED] Audit & concatenate CSVs for schema consistency
 - [COMPLETED] Data cleaning, enrichment, and feature derivation
-- [COMPLETED] Chunking for RAG (500-event summaries)
-- [COMPLETED] Initial SQLite/Parquet database setup
+- [In Progress] Chunking for RAG (500-event summaries)
+- [In Progress] Initial SQLite/Parquet database setup
 
 ### Phase 2: Vectorization & Retrieval System (Weeks 1-2)
 - [IN PROGRESS] Embedding generation for semantic search
