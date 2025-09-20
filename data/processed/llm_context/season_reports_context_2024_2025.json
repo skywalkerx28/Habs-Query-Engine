@@ -1,0 +1,55 @@
+{
+  "data_source": "season_reports",
+  "description": "Comprehensive Montreal Canadiens season performance analytics and advanced hockey metrics for the 2024-2025 NHL season",
+  "format": "parquet",
+  "organization": {
+    "structure": "single_file",
+    "path_pattern": "data/processed/analytics/season_reports/Season-Report-Montreal.parquet",
+    "season": "2024-2025",
+    "team": "MTL"
+  },
+  "data_characteristics": {
+    "rows": 72,
+    "columns": 7,
+    "metrics_count": "70+ advanced hockey analytics metrics",
+    "metric_categories": [
+      "Expected Goals (ES, PP, SH)",
+      "Shot Attempts and Quality",
+      "Face-off Performance",
+      "Zone Entries and Exits",
+      "Possession Metrics",
+      "Defensive Actions",
+      "Goaltending Statistics",
+      "Power Play/Shorthanded Performance"
+    ]
+  },
+  "content_examples": [
+    "ES Expected Goals For: 2.606, Montreal Rank: 18, League Median: 2.642",
+    "PP Expected Goals For: 6.087, Montreal Rank: 30, League Median: 7.873",
+    "ES Shot Attempts For: 54.206, Montreal Rank: 28, League Median: 57.662",
+    "ES Zone Exit Success%: 0.808, Montreal Rank: 5, League Median: 0.798",
+    "Goalie ES Save%: 0.908, Montreal Rank: 25, League Median: 0.916"
+  ],
+  "query_capabilities": [
+    "Retrieve Montreal's ranking for any advanced metric across the league",
+    "Compare Montreal's performance to league median and leaders",
+    "Analyze strengths and weaknesses in specific game situations (ES, PP, SH)",
+    "Get comprehensive season performance overview",
+    "Identify areas for improvement based on statistical rankings"
+  ],
+  "sample_queries": [
+    "What is Montreal's ranking in expected goals for this season?",
+    "How does Montreal perform on the power play compared to league average?",
+    "What are Montreal's zone exit and entry rankings?",
+    "Show me Montreal's goaltending statistics and rankings",
+    "Which metrics is Montreal performing best in relative to the league?"
+  ],
+  "update_frequency": "season_end",
+  "access_method": "read_parquet_file tool, direct analysis",
+  "key_insights": [
+    "Montreal ranks 18th in ES expected goals for, indicating average offensive production",
+    "Power play ranks 30th in expected goals, a significant area for improvement",
+    "Strong zone exit success rate (5th in league) shows good transition play",
+    "Defensive structure holds up well with 23rd ranking in ES expected goals against"
+  ]
+}
