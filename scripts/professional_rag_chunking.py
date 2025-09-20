@@ -824,6 +824,110 @@ Analysis:
 
         return chunks
 
+    def chunk_line_combinations(self, df: pd.DataFrame, file_path: Path) -> List[RAGChunk]:
+        """Chunk line combination data into semantically coherent units."""
+        chunks = []
+        filename = file_path.stem
+
+        # Determine the type of line combination based on filename
+        if 'Defencemen' in filename:
+            combo_type = 'defenseman_pairs'
+            combo_description = 'defensive pairings'
+        elif 'Forwards' in filename:
+            combo_type = 'forward_lines'
+            combo_description = 'forward line combinations'
+        elif 'PPUnits' in filename:
+            combo_type = 'power_play_units'
+            combo_description = 'power play unit combinations'
+        elif 'SHUnits' in filename:
+            combo_type = 'penalty_kill_units'
+            combo_description = 'penalty kill unit combinations'
+        elif 'Units' in filename:
+            combo_type = 'five_unit_combinations'
+            combo_description = '5-player unit combinations'
+        else:
+            combo_type = 'line_combinations'
+            combo_description = 'line combination'
+
+        # Process each combination row
+        for _, row in df.iterrows():
+            players = str(row['Players'])
+            toi_sec = row['TOI(sec)']
+            toi_min = str(row['TOI(min)'])
+            ozst_pct = row['OZst%']
+            soo = row['SOO']
+            soo_delta = row['SOOΔ']
+            sot = row['SOT']
+            xga = row['XGA']
+            xgf_pct = row['XGF%']
+            xgf = row['XGF']
+
+            # Create comprehensive combination analysis
+            content = f"""{combo_description.title()}: {players}
+
+Time on Ice: {toi_min} ({toi_sec} seconds)
+Offensive Zone Start %: {ozst_pct}
+Shot Opportunity Ownership (SOO): {soo}
+SOO Differential: {soo_delta}
+Scoring Opportunity Threat (SOT): {sot}
+Expected Goals Against (XGA): {xga}
+Expected Goals For % (XGF%): {xgf_pct}
+Expected Goals For (XGF): {xgf}
+
+Performance Analysis:
+- {'High offensive zone deployment' if pd.notna(ozst_pct) and isinstance(ozst_pct, (int, float)) and ozst_pct > 0.6 else 'Balanced zone deployment' if pd.notna(ozst_pct) and isinstance(ozst_pct, (int, float)) and ozst_pct > 0.4 else 'Defensive zone deployment focus'}
+- {'Strong puck possession' if pd.notna(soo) and isinstance(soo, (int, float)) and soo > 25 else 'Moderate puck possession' if pd.notna(soo) and isinstance(soo, (int, float)) and soo > 20 else 'Limited puck possession'}
+- {'High quality scoring chances' if pd.notna(sot) and isinstance(sot, (int, float)) and sot > 25 else 'Moderate scoring opportunities' if pd.notna(sot) and isinstance(sot, (int, float)) and sot > 20 else 'Limited scoring chances'}
+- {'Efficient expected goals generation' if pd.notna(xgf_pct) and isinstance(xgf_pct, (int, float)) and xgf_pct > 0.55 else 'Average expected goals production'}"""
+
+            # Extract metrics for metadata
+            metrics = {}
+            if pd.notna(toi_sec) and isinstance(toi_sec, (int, float)):
+                metrics['time_on_ice_seconds'] = float(toi_sec)
+            if pd.notna(ozst_pct) and isinstance(ozst_pct, (int, float)):
+                metrics['offensive_zone_start_percentage'] = float(ozst_pct)
+            if pd.notna(soo) and isinstance(soo, (int, float)):
+                metrics['shot_opportunity_ownership'] = float(soo)
+            if pd.notna(soo_delta) and isinstance(soo_delta, (int, float)):
+                metrics['soo_differential'] = float(soo_delta)
+            if pd.notna(sot) and isinstance(sot, (int, float)):
+                metrics['scoring_opportunity_threat'] = float(sot)
+            if pd.notna(xga) and isinstance(xga, (int, float)):
+                metrics['expected_goals_against'] = float(xga)
+            if pd.notna(xgf_pct) and isinstance(xgf_pct, (int, float)):
+                metrics['expected_goals_for_percentage'] = float(xgf_pct)
+            if pd.notna(xgf) and isinstance(xgf, (int, float)):
+                metrics['expected_goals_for'] = float(xgf)
+
+            metadata = ChunkMetadata(
+                chunk_id=self.generate_chunk_id(content, {
+                    'team': 'Montreal',
+                    'season': '2024-2025',
+                    'combination_type': combo_type,
+                    'players': players.replace(' ', '_').replace(',', '_').replace('"', '').lower()[:50]
+                }),
+                source_file=str(file_path),
+                data_type='line_combinations',
+                season='2024-2025',
+                team='Montreal',
+                metrics=metrics,
+                tags=['line_combinations', combo_type, 'chemistry_analysis', 'performance_metrics', 'montreal_habs']
+            )
+
+            chunk = RAGChunk(
+                content=content,
+                metadata=metadata,
+                source='line_combinations',
+                token_count=self.estimate_token_count(content)
+            )
+
+            is_valid, confidence = self.validate_mathematical_accuracy(chunk)
+            if is_valid:
+                chunks.append(chunk)
+                self.chunk_registry[metadata.chunk_id] = chunk
+
+        return chunks
+
     def extract_team_from_path(self, file_path: Path) -> str:
         """Extract team code from file path"""
         path_str = str(file_path)
@@ -974,6 +1078,8 @@ Analysis:
                     new_chunks = self.chunk_season_reports(df, file_path)
                 elif 'team_stats' in str(file_path):
                     new_chunks = self.chunk_team_stats(df, file_path)
+                elif 'line_combinations' in str(file_path):
+                    new_chunks = self.chunk_line_combinations(df, file_path)
                 else:
                     logger.warning(f"Unknown file type for {file_path}, skipping")
                     continue

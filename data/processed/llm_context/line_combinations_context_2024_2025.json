@@ -1,0 +1,116 @@
+{
+  "data_source": "line_combinations",
+  "description": "Comprehensive Montreal Canadiens line combination analytics for the 2024-2025 NHL season, including defensive pairings, forward lines, power play units, penalty kill units, and 5-player combinations with advanced performance metrics",
+  "format": "parquet",
+  "organization": {
+    "structure": "multiple_files_by_type",
+    "files": [
+      {
+        "name": "Line_Combinations_Metrics_for_Defencemen.parquet",
+        "description": "Defensive pairing combinations showing time on ice, zone starts, puck possession, and expected goals metrics",
+        "path": "data/processed/analytics/line_combinations/Line_Combinations_Metrics_for_Defencemen.parquet",
+        "rows": 33,
+        "columns": 10,
+        "combination_type": "defensive_pairings"
+      },
+      {
+        "name": "Line_Combinations_Metrics_for_Forwards (1).parquet",
+        "description": "Forward line combinations analyzing chemistry, puck possession, and scoring opportunities",
+        "path": "data/processed/analytics/line_combinations/Line_Combinations_Metrics_for_Forwards (1).parquet",
+        "rows": 50,
+        "columns": 10,
+        "combination_type": "forward_lines"
+      },
+      {
+        "name": "Line_Combinations_Metrics_for_PPUnits.parquet",
+        "description": "Power play unit combinations with special teams effectiveness and shot generation metrics",
+        "path": "data/processed/analytics/line_combinations/Line_Combinations_Metrics_for_PPUnits.parquet",
+        "rows": 11,
+        "columns": 10,
+        "combination_type": "power_play_units"
+      },
+      {
+        "name": "Line_Combinations_Metrics_for_SHUnits.parquet",
+        "description": "Penalty kill unit combinations analyzing defensive structure and shot suppression",
+        "path": "data/processed/analytics/line_combinations/Line_Combinations_Metrics_for_SHUnits.parquet",
+        "rows": 14,
+        "columns": 10,
+        "combination_type": "penalty_kill_units"
+      },
+      {
+        "name": "Line_Combinations_Metrics_for_Units.parquet",
+        "description": "5-player unit combinations representing full team chemistry and deployment strategies",
+        "path": "data/processed/analytics/line_combinations/Line_Combinations_Metrics_for_Units.parquet",
+        "rows": 139,
+        "columns": 10,
+        "combination_type": "five_unit_combinations"
+      }
+    ],
+    "season": "2024-2025",
+    "team": "MTL",
+    "total_files": 5,
+    "total_combinations": 247
+  },
+  "data_characteristics": {
+    "total_rows": 247,
+    "total_combinations": 247,
+    "metrics_per_combination": 8,
+    "combination_types": [
+      "Defensive Pairings (2 players)",
+      "Forward Lines (3 players)",
+      "Power Play Units (4-5 players)",
+      "Penalty Kill Units (4-5 players)",
+      "5-Unit Combinations (5 players)"
+    ],
+    "key_metrics": [
+      "TOI (Time on Ice in seconds)",
+      "OZst% (Offensive Zone Start Percentage)",
+      "SOO (Shot Opportunity Ownership)",
+      "SOOΔ (SOO Differential)",
+      "SOT (Scoring Opportunity Threat)",
+      "XGA (Expected Goals Against)",
+      "XGF% (Expected Goals For Percentage)",
+      "XGF (Expected Goals For)"
+    ]
+  },
+  "content_examples": [
+    "Defensive Pairings: Matheson-Hutson - OZst%: 0.521, SOO: 23.14, XGF: 1.20",
+    "Forward Lines: Suzuki-Caufield-Slafkovsky - OZst%: 0.395, SOO: 25.10, XGF: 1.15",
+    "Power Play Units: Laine-Suzuki-Caufield-Slafkovsky-Hutson - XGF: 2.44",
+    "Penalty Kill Units: Savard-Matheson-Armia-Evans - XGA: 0.36",
+    "5-Unit Combinations: Matheson-Carrier-Suzuki-Caufield-Slafkovsky - SOO: 25.23, XGF: 0.95"
+  ],
+  "query_capabilities": [
+    "Analyze specific line combination performance and chemistry",
+    "Compare different player combinations for optimal deployment",
+    "Identify strengths and weaknesses of current pairings",
+    "Evaluate special teams unit effectiveness",
+    "Track time on ice and usage patterns for combinations",
+    "Assess puck possession and zone control by combination type"
+  ],
+  "sample_queries": [
+    "What are the most effective defensive pairings by expected goals?",
+    "Which forward line combinations have the highest puck possession?",
+    "How do power play units perform in terms of expected goals generation?",
+    "What penalty kill combinations are most effective at shot suppression?",
+    "Which 5-player combinations show the best overall chemistry?",
+    "Compare the performance of different Suzuki line combinations"
+  ],
+  "update_frequency": "game-by-game",
+  "access_method": "read_parquet_file tool, combination analysis",
+  "key_insights": [
+    "Top defensive pairing (Matheson-Hutson) shows strong offensive zone deployment (52.1% OZ starts)",
+    "Elite forward line (Suzuki-Caufield-Slafkovsky) leads in puck possession and expected goals",
+    "Power play unit with Laine-Suzuki-Caufield-Slafkovsky-Hutson generates highest expected goals",
+    "Most effective penalty kill combinations show balanced XGA/XGF ratios",
+    "5-unit combinations reveal optimal deployment patterns for different game situations"
+  ],
+  "advanced_features": [
+    "Chemistry scoring based on historical performance together",
+    "Usage pattern analysis showing deployment preferences",
+    "Zone start analysis for offensive/defensive deployment",
+    "Expected goals differential for combination effectiveness",
+    "Time on ice tracking for workload management",
+    "Cross-combination relationships and dependencies"
+  ]
+}
