@@ -64,7 +64,7 @@ Coaches, players, scouts, analysts, and other authorized personnel can ask natur
 **Goal:** Develop a sophisticated Retrieval-Augmented Generation (RAG) system that enables natural language queries about Montreal Canadiens performance data, providing accurate, contextual, and actionable insights through intelligent data synthesis.
 
 #### Core Objectives:
-- **Natural Language Processing:** Enable conversational queries like "How effective was Montreal's power play against Toronto?" or "What's the impact of pairing youth with veterans?"
+- **Natural Language Processing:** Enable conversational queries like "How effective was Montreal's power play against Toronto?" or "What's the impact of pairing Hutson with Matheson on offensive production ?"
 - **Intelligent Data Retrieval:** Multi-tier retrieval system combining pre-processed JSON summaries with real-time Parquet analytics
 - **Contextual Analysis:** Generate insights combining historical patterns, player performance, and strategic recommendations
 - **Visual Intelligence:** Create dynamic visualizations and statistical outputs based on query context
@@ -76,11 +76,11 @@ Coaches, players, scouts, analysts, and other authorized personnel can ask natur
 Query Processing Flow:
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
 │   User Query    │ -> │  Intent Analysis│ -> │  Data Retrieval │
-│  "How did PP    │    │  (LLM Router)  │    │  Strategy        │
+│  "How did PP    │    │  (LLM Router)   │    │  Strategy       │
 │   perform vs    │    │                 │    │                 │
 │   Toronto?"     │    │  - Query type   │    │  - JSON lookup  │
 └─────────────────┘    │  - Complexity   │    │  - Parquet query│
-                       │  - Data needs   │    │  - Real-time calc│
+                       │  - Data needs   │    │  - Instant calc │ 
                        └─────────────────┘    └─────────────────┘
 ```
 
