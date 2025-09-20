@@ -1,0 +1,3633 @@
+[
+  {
+    "game_id": 20006,
+    "date": "2024-10-09",
+    "home_team": "TOR",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the TOR in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3851,
+      "face_offs": 26,
+      "shots": 186,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1346,
+        "face_offs": 10,
+        "shots": 68
+      },
+      "period_2": {
+        "events": 1258,
+        "face_offs": 9,
+        "shots": 53
+      },
+      "period_3": {
+        "events": 1247,
+        "face_offs": 7,
+        "shots": 65
+      }
+    },
+    "rag_content": "Game 20006: TOR vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the TOR in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "TOR",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 3851,
+      "game_length": 3851
+    }
+  },
+  {
+    "game_id": 20011,
+    "date": "2024-10-10",
+    "home_team": "Montreal Canadiens",
+    "away_team": "BOS",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the BOS in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 4017,
+      "face_offs": 49,
+      "shots": 153,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1424,
+        "face_offs": 18,
+        "shots": 50
+      },
+      "period_2": {
+        "events": 1258,
+        "face_offs": 15,
+        "shots": 42
+      },
+      "period_3": {
+        "events": 1335,
+        "face_offs": 16,
+        "shots": 61
+      }
+    },
+    "rag_content": "Game 20011: Montreal Canadiens vs BOS - 0-0. The Montreal Canadiens faced the BOS in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "BOS",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 4017,
+      "game_length": 4017
+    }
+  },
+  {
+    "game_id": 20027,
+    "date": "2024-10-12",
+    "home_team": "OTT",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the OTT in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3459,
+      "face_offs": 45,
+      "shots": 124,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1189,
+        "face_offs": 12,
+        "shots": 44
+      },
+      "period_2": {
+        "events": 1145,
+        "face_offs": 12,
+        "shots": 35
+      },
+      "period_3": {
+        "events": 1125,
+        "face_offs": 21,
+        "shots": 45
+      }
+    },
+    "rag_content": "Game 20027: OTT vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the OTT in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "OTT",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 3459,
+      "game_length": 3459
+    }
+  },
+  {
+    "game_id": 20046,
+    "date": "2024-10-14",
+    "home_team": "PIT",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the PIT in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3961,
+      "face_offs": 38,
+      "shots": 159,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1371,
+        "face_offs": 16,
+        "shots": 55
+      },
+      "period_2": {
+        "events": 1331,
+        "face_offs": 9,
+        "shots": 55
+      },
+      "period_3": {
+        "events": 1259,
+        "face_offs": 13,
+        "shots": 49
+      }
+    },
+    "rag_content": "Game 20046: PIT vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the PIT in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "PIT",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 3961,
+      "game_length": 3961
+    }
+  },
+  {
+    "game_id": 20061,
+    "date": "2024-10-17",
+    "home_team": "LAK",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the LAK in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 4008,
+      "face_offs": 44,
+      "shots": 135,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1370,
+        "face_offs": 18,
+        "shots": 53
+      },
+      "period_2": {
+        "events": 1338,
+        "face_offs": 14,
+        "shots": 49
+      },
+      "period_3": {
+        "events": 1300,
+        "face_offs": 12,
+        "shots": 33
+      }
+    },
+    "rag_content": "Game 20061: LAK vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the LAK in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "LAK",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 4008,
+      "game_length": 4008
+    }
+  },
+  {
+    "game_id": 20081,
+    "date": "2024-10-19",
+    "home_team": "Montreal Canadiens",
+    "away_team": "NYI",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the NYI in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 4146,
+      "face_offs": 56,
+      "shots": 152,
+      "goals": 0,
+      "periods": "4"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1319,
+        "face_offs": 12,
+        "shots": 41
+      },
+      "period_2": {
+        "events": 1242,
+        "face_offs": 7,
+        "shots": 61
+      },
+      "period_3": {
+        "events": 1221,
+        "face_offs": 16,
+        "shots": 32
+      },
+      "period_4": {
+        "events": 364,
+        "face_offs": 21,
+        "shots": 18
+      }
+    },
+    "rag_content": "Game 20081: Montreal Canadiens vs NYI - 0-0. The Montreal Canadiens faced the NYI in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "NYI",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 4146,
+      "game_length": 4146
+    }
+  },
+  {
+    "game_id": 20096,
+    "date": "2024-10-22",
+    "home_team": "NYR",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the NYR in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3652,
+      "face_offs": 43,
+      "shots": 149,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1216,
+        "face_offs": 16,
+        "shots": 56
+      },
+      "period_2": {
+        "events": 1215,
+        "face_offs": 12,
+        "shots": 49
+      },
+      "period_3": {
+        "events": 1221,
+        "face_offs": 15,
+        "shots": 44
+      }
+    },
+    "rag_content": "Game 20096: NYR vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the NYR in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "NYR",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 3652,
+      "game_length": 3652
+    }
+  },
+  {
+    "game_id": 20126,
+    "date": "2024-10-26",
+    "home_team": "STL",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the STL in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3808,
+      "face_offs": 44,
+      "shots": 142,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1227,
+        "face_offs": 11,
+        "shots": 37
+      },
+      "period_2": {
+        "events": 1396,
+        "face_offs": 20,
+        "shots": 57
+      },
+      "period_3": {
+        "events": 1185,
+        "face_offs": 13,
+        "shots": 48
+      }
+    },
+    "rag_content": "Game 20126: STL vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the STL in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "STL",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 3808,
+      "game_length": 3808
+    }
+  },
+  {
+    "game_id": 20138,
+    "date": "2024-10-27",
+    "home_team": "Montreal Canadiens",
+    "away_team": "PHI",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the PHI in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3737,
+      "face_offs": 45,
+      "shots": 148,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1242,
+        "face_offs": 12,
+        "shots": 50
+      },
+      "period_2": {
+        "events": 1303,
+        "face_offs": 18,
+        "shots": 48
+      },
+      "period_3": {
+        "events": 1192,
+        "face_offs": 15,
+        "shots": 50
+      }
+    },
+    "rag_content": "Game 20138: Montreal Canadiens vs PHI - 0-0. The Montreal Canadiens faced the PHI in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "PHI",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3737,
+      "game_length": 3737
+    }
+  },
+  {
+    "game_id": 20149,
+    "date": "2024-10-29",
+    "home_team": "SEA",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the SEA in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3988,
+      "face_offs": 55,
+      "shots": 146,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1347,
+        "face_offs": 11,
+        "shots": 49
+      },
+      "period_2": {
+        "events": 1363,
+        "face_offs": 24,
+        "shots": 54
+      },
+      "period_3": {
+        "events": 1278,
+        "face_offs": 20,
+        "shots": 43
+      }
+    },
+    "rag_content": "Game 20149: SEA vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the SEA in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "SEA",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 3988,
+      "game_length": 3988
+    }
+  },
+  {
+    "game_id": 20164,
+    "date": "2024-10-31",
+    "home_team": "Montreal Canadiens",
+    "away_team": "WSH",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the WSH in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3881,
+      "face_offs": 47,
+      "shots": 177,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1228,
+        "face_offs": 10,
+        "shots": 44
+      },
+      "period_2": {
+        "events": 1331,
+        "face_offs": 22,
+        "shots": 64
+      },
+      "period_3": {
+        "events": 1322,
+        "face_offs": 15,
+        "shots": 69
+      }
+    },
+    "rag_content": "Game 20164: Montreal Canadiens vs WSH - 0-0. The Montreal Canadiens faced the WSH in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "WSH",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3881,
+      "game_length": 3881
+    }
+  },
+  {
+    "game_id": 20180,
+    "date": "2024-11-02",
+    "home_team": "Montreal Canadiens",
+    "away_team": "PIT",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the PIT in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3837,
+      "face_offs": 36,
+      "shots": 154,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1210,
+        "face_offs": 9,
+        "shots": 48
+      },
+      "period_2": {
+        "events": 1341,
+        "face_offs": 15,
+        "shots": 59
+      },
+      "period_3": {
+        "events": 1286,
+        "face_offs": 12,
+        "shots": 47
+      }
+    },
+    "rag_content": "Game 20180: Montreal Canadiens vs PIT - 0-0. The Montreal Canadiens faced the PIT in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "PIT",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3837,
+      "game_length": 3837
+    }
+  },
+  {
+    "game_id": 20196,
+    "date": "2024-11-05",
+    "home_team": "CGY",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the CGY in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3991,
+      "face_offs": 58,
+      "shots": 173,
+      "goals": 0,
+      "periods": "4"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1334,
+        "face_offs": 19,
+        "shots": 69
+      },
+      "period_2": {
+        "events": 1364,
+        "face_offs": 25,
+        "shots": 50
+      },
+      "period_3": {
+        "events": 1283,
+        "face_offs": 13,
+        "shots": 53
+      },
+      "period_4": {
+        "events": 10,
+        "face_offs": 1,
+        "shots": 1
+      }
+    },
+    "rag_content": "Game 20196: CGY vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the CGY in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "CGY",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 3991,
+      "game_length": 3991
+    }
+  },
+  {
+    "game_id": 20212,
+    "date": "2024-11-07",
+    "home_team": "Montreal Canadiens",
+    "away_team": "NJD",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the NJD in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3808,
+      "face_offs": 45,
+      "shots": 127,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1242,
+        "face_offs": 13,
+        "shots": 50
+      },
+      "period_2": {
+        "events": 1306,
+        "face_offs": 14,
+        "shots": 41
+      },
+      "period_3": {
+        "events": 1260,
+        "face_offs": 18,
+        "shots": 36
+      }
+    },
+    "rag_content": "Game 20212: Montreal Canadiens vs NJD - 0-0. The Montreal Canadiens faced the NJD in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "NJD",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3808,
+      "game_length": 3808
+    }
+  },
+  {
+    "game_id": 20227,
+    "date": "2024-11-09",
+    "home_team": "Montreal Canadiens",
+    "away_team": "TOR",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the TOR in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3857,
+      "face_offs": 50,
+      "shots": 132,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1287,
+        "face_offs": 14,
+        "shots": 38
+      },
+      "period_2": {
+        "events": 1302,
+        "face_offs": 23,
+        "shots": 44
+      },
+      "period_3": {
+        "events": 1268,
+        "face_offs": 13,
+        "shots": 50
+      }
+    },
+    "rag_content": "Game 20227: Montreal Canadiens vs TOR - 0-0. The Montreal Canadiens faced the TOR in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "TOR",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3857,
+      "game_length": 3857
+    }
+  },
+  {
+    "game_id": 20239,
+    "date": "2024-11-11",
+    "home_team": "Montreal Canadiens",
+    "away_team": "BUF",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the BUF in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3843,
+      "face_offs": 59,
+      "shots": 120,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1339,
+        "face_offs": 20,
+        "shots": 44
+      },
+      "period_2": {
+        "events": 1227,
+        "face_offs": 20,
+        "shots": 41
+      },
+      "period_3": {
+        "events": 1277,
+        "face_offs": 19,
+        "shots": 35
+      }
+    },
+    "rag_content": "Game 20239: Montreal Canadiens vs BUF - 0-0. The Montreal Canadiens faced the BUF in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "BUF",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3843,
+      "game_length": 3843
+    }
+  },
+  {
+    "game_id": 20263,
+    "date": "2024-11-14",
+    "home_team": "Montreal Canadiens",
+    "away_team": "MIN",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the MIN in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3809,
+      "face_offs": 42,
+      "shots": 127,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1276,
+        "face_offs": 9,
+        "shots": 36
+      },
+      "period_2": {
+        "events": 1276,
+        "face_offs": 17,
+        "shots": 51
+      },
+      "period_3": {
+        "events": 1257,
+        "face_offs": 16,
+        "shots": 40
+      }
+    },
+    "rag_content": "Game 20263: Montreal Canadiens vs MIN - 0-0. The Montreal Canadiens faced the MIN in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "MIN",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3809,
+      "game_length": 3809
+    }
+  },
+  {
+    "game_id": 20275,
+    "date": "2024-11-16",
+    "home_team": "CBJ",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the CBJ in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3696,
+      "face_offs": 47,
+      "shots": 125,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1270,
+        "face_offs": 13,
+        "shots": 50
+      },
+      "period_2": {
+        "events": 1303,
+        "face_offs": 20,
+        "shots": 45
+      },
+      "period_3": {
+        "events": 1123,
+        "face_offs": 14,
+        "shots": 30
+      }
+    },
+    "rag_content": "Game 20275: CBJ vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the CBJ in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "CBJ",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 3696,
+      "game_length": 3696
+    }
+  },
+  {
+    "game_id": 20290,
+    "date": "2024-11-18",
+    "home_team": "EDM",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the EDM in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3722,
+      "face_offs": 33,
+      "shots": 144,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1188,
+        "face_offs": 8,
+        "shots": 50
+      },
+      "period_2": {
+        "events": 1287,
+        "face_offs": 14,
+        "shots": 42
+      },
+      "period_3": {
+        "events": 1247,
+        "face_offs": 11,
+        "shots": 52
+      }
+    },
+    "rag_content": "Game 20290: EDM vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the EDM in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "EDM",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 3722,
+      "game_length": 3722
+    }
+  },
+  {
+    "game_id": 20322,
+    "date": "2024-11-23",
+    "home_team": "VGK",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the VGK in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3798,
+      "face_offs": 41,
+      "shots": 124,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1213,
+        "face_offs": 12,
+        "shots": 39
+      },
+      "period_2": {
+        "events": 1365,
+        "face_offs": 18,
+        "shots": 43
+      },
+      "period_3": {
+        "events": 1220,
+        "face_offs": 11,
+        "shots": 42
+      }
+    },
+    "rag_content": "Game 20322: VGK vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the VGK in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "VGK",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 3798,
+      "game_length": 3798
+    }
+  },
+  {
+    "game_id": 20346,
+    "date": "2024-11-26",
+    "home_team": "UTA",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the UTA in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 4052,
+      "face_offs": 32,
+      "shots": 156,
+      "goals": 0,
+      "periods": "4"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1372,
+        "face_offs": 11,
+        "shots": 65
+      },
+      "period_2": {
+        "events": 1247,
+        "face_offs": 10,
+        "shots": 33
+      },
+      "period_3": {
+        "events": 1210,
+        "face_offs": 9,
+        "shots": 47
+      },
+      "period_4": {
+        "events": 223,
+        "face_offs": 2,
+        "shots": 11
+      }
+    },
+    "rag_content": "Game 20346: UTA vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the UTA in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "UTA",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 4052,
+      "game_length": 4052
+    }
+  },
+  {
+    "game_id": 20355,
+    "date": "2024-11-27",
+    "home_team": "Montreal Canadiens",
+    "away_team": "CBJ",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the CBJ in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3648,
+      "face_offs": 39,
+      "shots": 139,
+      "goals": 0,
+      "periods": "4"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1248,
+        "face_offs": 16,
+        "shots": 51
+      },
+      "period_2": {
+        "events": 1176,
+        "face_offs": 10,
+        "shots": 41
+      },
+      "period_3": {
+        "events": 1182,
+        "face_offs": 12,
+        "shots": 44
+      },
+      "period_4": {
+        "events": 42,
+        "face_offs": 1,
+        "shots": 3
+      }
+    },
+    "rag_content": "Game 20355: Montreal Canadiens vs CBJ - 0-0. The Montreal Canadiens faced the CBJ in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "CBJ",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3648,
+      "game_length": 3648
+    }
+  },
+  {
+    "game_id": 20376,
+    "date": "2024-11-30",
+    "home_team": "Montreal Canadiens",
+    "away_team": "NYR",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the NYR in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3788,
+      "face_offs": 56,
+      "shots": 152,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1255,
+        "face_offs": 16,
+        "shots": 36
+      },
+      "period_2": {
+        "events": 1302,
+        "face_offs": 22,
+        "shots": 73
+      },
+      "period_3": {
+        "events": 1231,
+        "face_offs": 18,
+        "shots": 43
+      }
+    },
+    "rag_content": "Game 20376: Montreal Canadiens vs NYR - 0-0. The Montreal Canadiens faced the NYR in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "NYR",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3788,
+      "game_length": 3788
+    }
+  },
+  {
+    "game_id": 20389,
+    "date": "2024-12-01",
+    "home_team": "Montreal Canadiens",
+    "away_team": "BOS",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the BOS in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3972,
+      "face_offs": 43,
+      "shots": 152,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1301,
+        "face_offs": 13,
+        "shots": 50
+      },
+      "period_2": {
+        "events": 1341,
+        "face_offs": 14,
+        "shots": 53
+      },
+      "period_3": {
+        "events": 1330,
+        "face_offs": 16,
+        "shots": 49
+      }
+    },
+    "rag_content": "Game 20389: Montreal Canadiens vs BOS - 0-0. The Montreal Canadiens faced the BOS in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "BOS",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3972,
+      "game_length": 3972
+    }
+  },
+  {
+    "game_id": 20398,
+    "date": "2024-12-03",
+    "home_team": "NYI",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the NYI in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3875,
+      "face_offs": 35,
+      "shots": 133,
+      "goals": 0,
+      "periods": "4"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1299,
+        "face_offs": 8,
+        "shots": 34
+      },
+      "period_2": {
+        "events": 1274,
+        "face_offs": 17,
+        "shots": 50
+      },
+      "period_3": {
+        "events": 1164,
+        "face_offs": 7,
+        "shots": 41
+      },
+      "period_4": {
+        "events": 138,
+        "face_offs": 3,
+        "shots": 8
+      }
+    },
+    "rag_content": "Game 20398: NYI vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the NYI in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "NYI",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 3875,
+      "game_length": 3875
+    }
+  },
+  {
+    "game_id": 20411,
+    "date": "2024-12-05",
+    "home_team": "NSH",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the NSH in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 4009,
+      "face_offs": 37,
+      "shots": 149,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1446,
+        "face_offs": 15,
+        "shots": 56
+      },
+      "period_2": {
+        "events": 1306,
+        "face_offs": 10,
+        "shots": 52
+      },
+      "period_3": {
+        "events": 1257,
+        "face_offs": 12,
+        "shots": 41
+      }
+    },
+    "rag_content": "Game 20411: NSH vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the NSH in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "NSH",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 4009,
+      "game_length": 4009
+    }
+  },
+  {
+    "game_id": 20430,
+    "date": "2024-12-07",
+    "home_team": "WSH",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the WSH in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3896,
+      "face_offs": 38,
+      "shots": 144,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1320,
+        "face_offs": 12,
+        "shots": 52
+      },
+      "period_2": {
+        "events": 1287,
+        "face_offs": 11,
+        "shots": 41
+      },
+      "period_3": {
+        "events": 1289,
+        "face_offs": 15,
+        "shots": 51
+      }
+    },
+    "rag_content": "Game 20430: WSH vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the WSH in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "WSH",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 3896,
+      "game_length": 3896
+    }
+  },
+  {
+    "game_id": 20445,
+    "date": "2024-12-09",
+    "home_team": "ANA",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the ANA in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 4031,
+      "face_offs": 45,
+      "shots": 130,
+      "goals": 0,
+      "periods": "4"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1297,
+        "face_offs": 13,
+        "shots": 39
+      },
+      "period_2": {
+        "events": 1337,
+        "face_offs": 16,
+        "shots": 48
+      },
+      "period_3": {
+        "events": 1195,
+        "face_offs": 9,
+        "shots": 36
+      },
+      "period_4": {
+        "events": 202,
+        "face_offs": 7,
+        "shots": 7
+      }
+    },
+    "rag_content": "Game 20445: ANA vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the ANA in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "ANA",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 4031,
+      "game_length": 4031
+    }
+  },
+  {
+    "game_id": 20460,
+    "date": "2024-12-12",
+    "home_team": "PIT",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the PIT in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3948,
+      "face_offs": 36,
+      "shots": 123,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1318,
+        "face_offs": 10,
+        "shots": 41
+      },
+      "period_2": {
+        "events": 1341,
+        "face_offs": 14,
+        "shots": 41
+      },
+      "period_3": {
+        "events": 1289,
+        "face_offs": 12,
+        "shots": 41
+      }
+    },
+    "rag_content": "Game 20460: PIT vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the PIT in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "PIT",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 3948,
+      "game_length": 3948
+    }
+  },
+  {
+    "game_id": 20482,
+    "date": "2024-12-14",
+    "home_team": "Montreal Canadiens",
+    "away_team": "WPG",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the WPG in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3821,
+      "face_offs": 38,
+      "shots": 135,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1274,
+        "face_offs": 16,
+        "shots": 45
+      },
+      "period_2": {
+        "events": 1298,
+        "face_offs": 11,
+        "shots": 52
+      },
+      "period_3": {
+        "events": 1249,
+        "face_offs": 11,
+        "shots": 38
+      }
+    },
+    "rag_content": "Game 20482: Montreal Canadiens vs WPG - 0-0. The Montreal Canadiens faced the WPG in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "WPG",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3821,
+      "game_length": 3821
+    }
+  },
+  {
+    "game_id": 20497,
+    "date": "2024-12-17",
+    "home_team": "BUF",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the BUF in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3780,
+      "face_offs": 47,
+      "shots": 150,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1311,
+        "face_offs": 15,
+        "shots": 56
+      },
+      "period_2": {
+        "events": 1297,
+        "face_offs": 18,
+        "shots": 52
+      },
+      "period_3": {
+        "events": 1172,
+        "face_offs": 14,
+        "shots": 42
+      }
+    },
+    "rag_content": "Game 20497: BUF vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the BUF in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "BUF",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 3780,
+      "game_length": 3780
+    }
+  },
+  {
+    "game_id": 20522,
+    "date": "2024-12-20",
+    "home_team": "Montreal Canadiens",
+    "away_team": "DET",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the DET in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3917,
+      "face_offs": 50,
+      "shots": 151,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1358,
+        "face_offs": 18,
+        "shots": 54
+      },
+      "period_2": {
+        "events": 1237,
+        "face_offs": 15,
+        "shots": 41
+      },
+      "period_3": {
+        "events": 1322,
+        "face_offs": 17,
+        "shots": 56
+      }
+    },
+    "rag_content": "Game 20522: Montreal Canadiens vs DET - 0-0. The Montreal Canadiens faced the DET in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "DET",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3917,
+      "game_length": 3917
+    }
+  },
+  {
+    "game_id": 20533,
+    "date": "2024-12-21",
+    "home_team": "DET",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the DET in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3820,
+      "face_offs": 39,
+      "shots": 148,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1301,
+        "face_offs": 17,
+        "shots": 48
+      },
+      "period_2": {
+        "events": 1309,
+        "face_offs": 11,
+        "shots": 48
+      },
+      "period_3": {
+        "events": 1210,
+        "face_offs": 11,
+        "shots": 52
+      }
+    },
+    "rag_content": "Game 20533: DET vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the DET in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "DET",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 3820,
+      "game_length": 3820
+    }
+  },
+  {
+    "game_id": 20551,
+    "date": "2024-12-23",
+    "home_team": "Montreal Canadiens",
+    "away_team": "CBJ",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the CBJ in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3723,
+      "face_offs": 57,
+      "shots": 152,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1211,
+        "face_offs": 15,
+        "shots": 52
+      },
+      "period_2": {
+        "events": 1216,
+        "face_offs": 15,
+        "shots": 43
+      },
+      "period_3": {
+        "events": 1296,
+        "face_offs": 27,
+        "shots": 57
+      }
+    },
+    "rag_content": "Game 20551: Montreal Canadiens vs CBJ - 0-0. The Montreal Canadiens faced the CBJ in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "CBJ",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3723,
+      "game_length": 3723
+    }
+  },
+  {
+    "game_id": 20566,
+    "date": "2024-12-28",
+    "home_team": "Montreal Canadiens",
+    "away_team": "FLA",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the FLA in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3966,
+      "face_offs": 44,
+      "shots": 139,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1348,
+        "face_offs": 13,
+        "shots": 51
+      },
+      "period_2": {
+        "events": 1372,
+        "face_offs": 18,
+        "shots": 55
+      },
+      "period_3": {
+        "events": 1246,
+        "face_offs": 13,
+        "shots": 33
+      }
+    },
+    "rag_content": "Game 20566: Montreal Canadiens vs FLA - 0-0. The Montreal Canadiens faced the FLA in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "FLA",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3966,
+      "game_length": 3966
+    }
+  },
+  {
+    "game_id": 20580,
+    "date": "2024-12-29",
+    "home_team": "Montreal Canadiens",
+    "away_team": "TBL",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the TBL in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3888,
+      "face_offs": 47,
+      "shots": 143,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1362,
+        "face_offs": 20,
+        "shots": 47
+      },
+      "period_2": {
+        "events": 1284,
+        "face_offs": 17,
+        "shots": 50
+      },
+      "period_3": {
+        "events": 1242,
+        "face_offs": 10,
+        "shots": 46
+      }
+    },
+    "rag_content": "Game 20580: Montreal Canadiens vs TBL - 0-0. The Montreal Canadiens faced the TBL in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "TBL",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3888,
+      "game_length": 3888
+    }
+  },
+  {
+    "game_id": 20591,
+    "date": "2024-12-31",
+    "home_team": "Montreal Canadiens",
+    "away_team": "VGK",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the VGK in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3682,
+      "face_offs": 33,
+      "shots": 133,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1238,
+        "face_offs": 10,
+        "shots": 35
+      },
+      "period_2": {
+        "events": 1246,
+        "face_offs": 11,
+        "shots": 53
+      },
+      "period_3": {
+        "events": 1198,
+        "face_offs": 12,
+        "shots": 45
+      }
+    },
+    "rag_content": "Game 20591: Montreal Canadiens vs VGK - 0-0. The Montreal Canadiens faced the VGK in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "VGK",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3682,
+      "game_length": 3682
+    }
+  },
+  {
+    "game_id": 20616,
+    "date": "2024-01-03",
+    "home_team": "Montreal Canadiens",
+    "away_team": "CHI",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the CHI in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3836,
+      "face_offs": 35,
+      "shots": 148,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1334,
+        "face_offs": 13,
+        "shots": 37
+      },
+      "period_2": {
+        "events": 1292,
+        "face_offs": 10,
+        "shots": 56
+      },
+      "period_3": {
+        "events": 1210,
+        "face_offs": 12,
+        "shots": 55
+      }
+    },
+    "rag_content": "Game 20616: Montreal Canadiens vs CHI - 0-0. The Montreal Canadiens faced the CHI in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "CHI",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3836,
+      "game_length": 3836
+    }
+  },
+  {
+    "game_id": 20626,
+    "date": "2024-01-04",
+    "home_team": "Montreal Canadiens",
+    "away_team": "COL",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the COL in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3843,
+      "face_offs": 41,
+      "shots": 150,
+      "goals": 0,
+      "periods": "4"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1193,
+        "face_offs": 9,
+        "shots": 45
+      },
+      "period_2": {
+        "events": 1161,
+        "face_offs": 10,
+        "shots": 42
+      },
+      "period_3": {
+        "events": 1227,
+        "face_offs": 15,
+        "shots": 50
+      },
+      "period_4": {
+        "events": 262,
+        "face_offs": 7,
+        "shots": 13
+      }
+    },
+    "rag_content": "Game 20626: Montreal Canadiens vs COL - 0-0. The Montreal Canadiens faced the COL in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "COL",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3843,
+      "game_length": 3843
+    }
+  },
+  {
+    "game_id": 20638,
+    "date": "2024-01-06",
+    "home_team": "VAN",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the VAN in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3693,
+      "face_offs": 40,
+      "shots": 134,
+      "goals": 0,
+      "periods": "4"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1211,
+        "face_offs": 8,
+        "shots": 43
+      },
+      "period_2": {
+        "events": 1258,
+        "face_offs": 17,
+        "shots": 53
+      },
+      "period_3": {
+        "events": 1172,
+        "face_offs": 14,
+        "shots": 36
+      },
+      "period_4": {
+        "events": 52,
+        "face_offs": 1,
+        "shots": 2
+      }
+    },
+    "rag_content": "Game 20638: VAN vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the VAN in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "VAN",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 3693,
+      "game_length": 3693
+    }
+  },
+  {
+    "game_id": 20665,
+    "date": "2024-01-10",
+    "home_team": "Montreal Canadiens",
+    "away_team": "WSH",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the WSH in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 4055,
+      "face_offs": 37,
+      "shots": 145,
+      "goals": 0,
+      "periods": "4"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1315,
+        "face_offs": 9,
+        "shots": 40
+      },
+      "period_2": {
+        "events": 1316,
+        "face_offs": 14,
+        "shots": 46
+      },
+      "period_3": {
+        "events": 1351,
+        "face_offs": 13,
+        "shots": 55
+      },
+      "period_4": {
+        "events": 73,
+        "face_offs": 1,
+        "shots": 4
+      }
+    },
+    "rag_content": "Game 20665: Montreal Canadiens vs WSH - 0-0. The Montreal Canadiens faced the WSH in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "WSH",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 4055,
+      "game_length": 4055
+    }
+  },
+  {
+    "game_id": 20673,
+    "date": "2024-01-11",
+    "home_team": "DAL",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the DAL in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 4072,
+      "face_offs": 63,
+      "shots": 176,
+      "goals": 0,
+      "periods": "4"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1301,
+        "face_offs": 11,
+        "shots": 61
+      },
+      "period_2": {
+        "events": 1272,
+        "face_offs": 19,
+        "shots": 49
+      },
+      "period_3": {
+        "events": 1252,
+        "face_offs": 25,
+        "shots": 58
+      },
+      "period_4": {
+        "events": 247,
+        "face_offs": 8,
+        "shots": 8
+      }
+    },
+    "rag_content": "Game 20673: DAL vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the DAL in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "DAL",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 4072,
+      "game_length": 4072
+    }
+  },
+  {
+    "game_id": 20704,
+    "date": "2024-01-14",
+    "home_team": "Montreal Canadiens",
+    "away_team": "UTA",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the UTA in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3635,
+      "face_offs": 58,
+      "shots": 144,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1219,
+        "face_offs": 20,
+        "shots": 37
+      },
+      "period_2": {
+        "events": 1252,
+        "face_offs": 15,
+        "shots": 56
+      },
+      "period_3": {
+        "events": 1164,
+        "face_offs": 23,
+        "shots": 51
+      }
+    },
+    "rag_content": "Game 20704: Montreal Canadiens vs UTA - 0-0. The Montreal Canadiens faced the UTA in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "UTA",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3635,
+      "game_length": 3635
+    }
+  },
+  {
+    "game_id": 20715,
+    "date": "2024-01-16",
+    "home_team": "Montreal Canadiens",
+    "away_team": "DAL",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the DAL in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3719,
+      "face_offs": 52,
+      "shots": 150,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1253,
+        "face_offs": 17,
+        "shots": 50
+      },
+      "period_2": {
+        "events": 1220,
+        "face_offs": 15,
+        "shots": 52
+      },
+      "period_3": {
+        "events": 1246,
+        "face_offs": 20,
+        "shots": 48
+      }
+    },
+    "rag_content": "Game 20715: Montreal Canadiens vs DAL - 0-0. The Montreal Canadiens faced the DAL in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "DAL",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3719,
+      "game_length": 3719
+    }
+  },
+  {
+    "game_id": 20726,
+    "date": "2024-01-18",
+    "home_team": "TOR",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the TOR in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3806,
+      "face_offs": 58,
+      "shots": 145,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1263,
+        "face_offs": 15,
+        "shots": 43
+      },
+      "period_2": {
+        "events": 1240,
+        "face_offs": 18,
+        "shots": 54
+      },
+      "period_3": {
+        "events": 1303,
+        "face_offs": 25,
+        "shots": 48
+      }
+    },
+    "rag_content": "Game 20726: TOR vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the TOR in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "TOR",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 3806,
+      "game_length": 3806
+    }
+  },
+  {
+    "game_id": 20738,
+    "date": "2024-01-19",
+    "home_team": "NYR",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the NYR in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3875,
+      "face_offs": 44,
+      "shots": 153,
+      "goals": 0,
+      "periods": "4"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1262,
+        "face_offs": 13,
+        "shots": 38
+      },
+      "period_2": {
+        "events": 1284,
+        "face_offs": 16,
+        "shots": 56
+      },
+      "period_3": {
+        "events": 1175,
+        "face_offs": 14,
+        "shots": 49
+      },
+      "period_4": {
+        "events": 154,
+        "face_offs": 1,
+        "shots": 10
+      }
+    },
+    "rag_content": "Game 20738: NYR vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the NYR in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "NYR",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 3875,
+      "game_length": 3875
+    }
+  },
+  {
+    "game_id": 20749,
+    "date": "2024-01-21",
+    "home_team": "TBL",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the TBL in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 4023,
+      "face_offs": 37,
+      "shots": 141,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1361,
+        "face_offs": 11,
+        "shots": 43
+      },
+      "period_2": {
+        "events": 1363,
+        "face_offs": 14,
+        "shots": 45
+      },
+      "period_3": {
+        "events": 1299,
+        "face_offs": 12,
+        "shots": 53
+      }
+    },
+    "rag_content": "Game 20749: TBL vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the TBL in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "TBL",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 4023,
+      "game_length": 4023
+    }
+  },
+  {
+    "game_id": 20762,
+    "date": "2024-01-23",
+    "home_team": "Montreal Canadiens",
+    "away_team": "DET",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the DET in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3988,
+      "face_offs": 46,
+      "shots": 159,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1328,
+        "face_offs": 14,
+        "shots": 45
+      },
+      "period_2": {
+        "events": 1357,
+        "face_offs": 16,
+        "shots": 61
+      },
+      "period_3": {
+        "events": 1303,
+        "face_offs": 16,
+        "shots": 53
+      }
+    },
+    "rag_content": "Game 20762: Montreal Canadiens vs DET - 0-0. The Montreal Canadiens faced the DET in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "DET",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3988,
+      "game_length": 3988
+    }
+  },
+  {
+    "game_id": 20779,
+    "date": "2024-01-25",
+    "home_team": "NJD",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the NJD in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3974,
+      "face_offs": 60,
+      "shots": 202,
+      "goals": 0,
+      "periods": "4"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1237,
+        "face_offs": 23,
+        "shots": 54
+      },
+      "period_2": {
+        "events": 1303,
+        "face_offs": 19,
+        "shots": 74
+      },
+      "period_3": {
+        "events": 1241,
+        "face_offs": 16,
+        "shots": 64
+      },
+      "period_4": {
+        "events": 193,
+        "face_offs": 2,
+        "shots": 10
+      }
+    },
+    "rag_content": "Game 20779: NJD vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the NJD in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "NJD",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 3974,
+      "game_length": 3974
+    }
+  },
+  {
+    "game_id": 20800,
+    "date": "2024-01-28",
+    "home_team": "WPG",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the WPG in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 4020,
+      "face_offs": 47,
+      "shots": 152,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1321,
+        "face_offs": 16,
+        "shots": 56
+      },
+      "period_2": {
+        "events": 1326,
+        "face_offs": 16,
+        "shots": 52
+      },
+      "period_3": {
+        "events": 1373,
+        "face_offs": 15,
+        "shots": 44
+      }
+    },
+    "rag_content": "Game 20800: WPG vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the WPG in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "WPG",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 4020,
+      "game_length": 4020
+    }
+  },
+  {
+    "game_id": 20813,
+    "date": "2024-01-30",
+    "home_team": "MIN",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the MIN in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3813,
+      "face_offs": 29,
+      "shots": 132,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1301,
+        "face_offs": 9,
+        "shots": 37
+      },
+      "period_2": {
+        "events": 1232,
+        "face_offs": 7,
+        "shots": 47
+      },
+      "period_3": {
+        "events": 1280,
+        "face_offs": 13,
+        "shots": 48
+      }
+    },
+    "rag_content": "Game 20813: MIN vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the MIN in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "MIN",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 3813,
+      "game_length": 3813
+    }
+  },
+  {
+    "game_id": 20837,
+    "date": "2024-02-02",
+    "home_team": "Montreal Canadiens",
+    "away_team": "ANA",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the ANA in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3674,
+      "face_offs": 39,
+      "shots": 140,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1229,
+        "face_offs": 11,
+        "shots": 49
+      },
+      "period_2": {
+        "events": 1224,
+        "face_offs": 14,
+        "shots": 39
+      },
+      "period_3": {
+        "events": 1221,
+        "face_offs": 14,
+        "shots": 52
+      }
+    },
+    "rag_content": "Game 20837: Montreal Canadiens vs ANA - 0-0. The Montreal Canadiens faced the ANA in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "ANA",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3674,
+      "game_length": 3674
+    }
+  },
+  {
+    "game_id": 20858,
+    "date": "2024-02-04",
+    "home_team": "Montreal Canadiens",
+    "away_team": "SJS",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the SJS in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3746,
+      "face_offs": 36,
+      "shots": 166,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1281,
+        "face_offs": 14,
+        "shots": 58
+      },
+      "period_2": {
+        "events": 1232,
+        "face_offs": 11,
+        "shots": 50
+      },
+      "period_3": {
+        "events": 1233,
+        "face_offs": 11,
+        "shots": 58
+      }
+    },
+    "rag_content": "Game 20858: Montreal Canadiens vs SJS - 0-0. The Montreal Canadiens faced the SJS in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "SJS",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3746,
+      "game_length": 3746
+    }
+  },
+  {
+    "game_id": 20861,
+    "date": "2024-02-05",
+    "home_team": "Montreal Canadiens",
+    "away_team": "LAK",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the LAK in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3927,
+      "face_offs": 56,
+      "shots": 145,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1257,
+        "face_offs": 18,
+        "shots": 58
+      },
+      "period_2": {
+        "events": 1286,
+        "face_offs": 16,
+        "shots": 39
+      },
+      "period_3": {
+        "events": 1384,
+        "face_offs": 22,
+        "shots": 48
+      }
+    },
+    "rag_content": "Game 20861: Montreal Canadiens vs LAK - 0-0. The Montreal Canadiens faced the LAK in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "LAK",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3927,
+      "game_length": 3927
+    }
+  },
+  {
+    "game_id": 20876,
+    "date": "2024-02-08",
+    "home_team": "NJD",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the NJD in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3966,
+      "face_offs": 43,
+      "shots": 148,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1320,
+        "face_offs": 19,
+        "shots": 46
+      },
+      "period_2": {
+        "events": 1375,
+        "face_offs": 10,
+        "shots": 59
+      },
+      "period_3": {
+        "events": 1271,
+        "face_offs": 14,
+        "shots": 43
+      }
+    },
+    "rag_content": "Game 20876: NJD vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the NJD in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "NJD",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 3966,
+      "game_length": 3966
+    }
+  },
+  {
+    "game_id": 20891,
+    "date": "2024-02-09",
+    "home_team": "TBL",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the TBL in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3884,
+      "face_offs": 61,
+      "shots": 160,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1267,
+        "face_offs": 19,
+        "shots": 46
+      },
+      "period_2": {
+        "events": 1311,
+        "face_offs": 19,
+        "shots": 60
+      },
+      "period_3": {
+        "events": 1306,
+        "face_offs": 23,
+        "shots": 54
+      }
+    },
+    "rag_content": "Game 20891: TBL vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the TBL in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "TBL",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 3884,
+      "game_length": 3884
+    }
+  },
+  {
+    "game_id": 20901,
+    "date": "2024-02-22",
+    "home_team": "Montreal Canadiens",
+    "away_team": "OTT",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the OTT in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3952,
+      "face_offs": 56,
+      "shots": 155,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1389,
+        "face_offs": 22,
+        "shots": 60
+      },
+      "period_2": {
+        "events": 1318,
+        "face_offs": 17,
+        "shots": 44
+      },
+      "period_3": {
+        "events": 1245,
+        "face_offs": 17,
+        "shots": 51
+      }
+    },
+    "rag_content": "Game 20901: Montreal Canadiens vs OTT - 0-0. The Montreal Canadiens faced the OTT in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "OTT",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3952,
+      "game_length": 3952
+    }
+  },
+  {
+    "game_id": 20920,
+    "date": "2024-02-25",
+    "home_team": "CAR",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the CAR in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3769,
+      "face_offs": 34,
+      "shots": 141,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1220,
+        "face_offs": 5,
+        "shots": 45
+      },
+      "period_2": {
+        "events": 1234,
+        "face_offs": 13,
+        "shots": 38
+      },
+      "period_3": {
+        "events": 1315,
+        "face_offs": 16,
+        "shots": 58
+      }
+    },
+    "rag_content": "Game 20920: CAR vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the CAR in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "CAR",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 3769,
+      "game_length": 3769
+    }
+  },
+  {
+    "game_id": 20934,
+    "date": "2024-02-27",
+    "home_team": "SJS",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the SJS in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3912,
+      "face_offs": 48,
+      "shots": 173,
+      "goals": 0,
+      "periods": "4"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1311,
+        "face_offs": 11,
+        "shots": 54
+      },
+      "period_2": {
+        "events": 1259,
+        "face_offs": 17,
+        "shots": 48
+      },
+      "period_3": {
+        "events": 1202,
+        "face_offs": 18,
+        "shots": 65
+      },
+      "period_4": {
+        "events": 140,
+        "face_offs": 2,
+        "shots": 6
+      }
+    },
+    "rag_content": "Game 20934: SJS vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the SJS in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "SJS",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 3912,
+      "game_length": 3912
+    }
+  },
+  {
+    "game_id": 20953,
+    "date": "2024-03-01",
+    "home_team": "Montreal Canadiens",
+    "away_team": "BUF",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the BUF in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3852,
+      "face_offs": 55,
+      "shots": 172,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1325,
+        "face_offs": 19,
+        "shots": 62
+      },
+      "period_2": {
+        "events": 1324,
+        "face_offs": 28,
+        "shots": 58
+      },
+      "period_3": {
+        "events": 1203,
+        "face_offs": 8,
+        "shots": 52
+      }
+    },
+    "rag_content": "Game 20953: Montreal Canadiens vs BUF - 0-0. The Montreal Canadiens faced the BUF in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "BUF",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3852,
+      "game_length": 3852
+    }
+  },
+  {
+    "game_id": 20968,
+    "date": "2024-03-03",
+    "home_team": "BUF",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the BUF in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3728,
+      "face_offs": 54,
+      "shots": 135,
+      "goals": 0,
+      "periods": "4"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1283,
+        "face_offs": 18,
+        "shots": 41
+      },
+      "period_2": {
+        "events": 1202,
+        "face_offs": 10,
+        "shots": 48
+      },
+      "period_3": {
+        "events": 1177,
+        "face_offs": 24,
+        "shots": 45
+      },
+      "period_4": {
+        "events": 66,
+        "face_offs": 2,
+        "shots": 1
+      }
+    },
+    "rag_content": "Game 20968: BUF vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the BUF in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "BUF",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 3728,
+      "game_length": 3728
+    }
+  },
+  {
+    "game_id": 20995,
+    "date": "2024-03-06",
+    "home_team": "Montreal Canadiens",
+    "away_team": "EDM",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the EDM in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3815,
+      "face_offs": 43,
+      "shots": 157,
+      "goals": 0,
+      "periods": "4"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1257,
+        "face_offs": 15,
+        "shots": 46
+      },
+      "period_2": {
+        "events": 1195,
+        "face_offs": 14,
+        "shots": 49
+      },
+      "period_3": {
+        "events": 1146,
+        "face_offs": 11,
+        "shots": 50
+      },
+      "period_4": {
+        "events": 217,
+        "face_offs": 3,
+        "shots": 12
+      }
+    },
+    "rag_content": "Game 20995: Montreal Canadiens vs EDM - 0-0. The Montreal Canadiens faced the EDM in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "EDM",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3815,
+      "game_length": 3815
+    }
+  },
+  {
+    "game_id": 21008,
+    "date": "2024-03-08",
+    "home_team": "Montreal Canadiens",
+    "away_team": "CGY",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the CGY in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3864,
+      "face_offs": 43,
+      "shots": 139,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1243,
+        "face_offs": 10,
+        "shots": 45
+      },
+      "period_2": {
+        "events": 1287,
+        "face_offs": 18,
+        "shots": 57
+      },
+      "period_3": {
+        "events": 1334,
+        "face_offs": 15,
+        "shots": 37
+      }
+    },
+    "rag_content": "Game 21008: Montreal Canadiens vs CGY - 0-0. The Montreal Canadiens faced the CGY in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "CGY",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3864,
+      "game_length": 3864
+    }
+  },
+  {
+    "game_id": 21032,
+    "date": "2024-03-11",
+    "home_team": "Montreal Canadiens",
+    "away_team": "VAN",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the VAN in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3576,
+      "face_offs": 59,
+      "shots": 175,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1160,
+        "face_offs": 13,
+        "shots": 54
+      },
+      "period_2": {
+        "events": 1232,
+        "face_offs": 26,
+        "shots": 65
+      },
+      "period_3": {
+        "events": 1184,
+        "face_offs": 20,
+        "shots": 56
+      }
+    },
+    "rag_content": "Game 21032: Montreal Canadiens vs VAN - 0-0. The Montreal Canadiens faced the VAN in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "VAN",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3576,
+      "game_length": 3576
+    }
+  },
+  {
+    "game_id": 21039,
+    "date": "2024-03-12",
+    "home_team": "Montreal Canadiens",
+    "away_team": "SEA",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the SEA in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3746,
+      "face_offs": 44,
+      "shots": 159,
+      "goals": 0,
+      "periods": "4"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1227,
+        "face_offs": 13,
+        "shots": 55
+      },
+      "period_2": {
+        "events": 1309,
+        "face_offs": 16,
+        "shots": 66
+      },
+      "period_3": {
+        "events": 1198,
+        "face_offs": 15,
+        "shots": 37
+      },
+      "period_4": {
+        "events": 12,
+        "face_offs": 0,
+        "shots": 1
+      }
+    },
+    "rag_content": "Game 21039: Montreal Canadiens vs SEA - 0-0. The Montreal Canadiens faced the SEA in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "SEA",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3746,
+      "game_length": 3746
+    }
+  },
+  {
+    "game_id": 21060,
+    "date": "2024-03-15",
+    "home_team": "FLA",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the FLA in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3826,
+      "face_offs": 49,
+      "shots": 141,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1247,
+        "face_offs": 17,
+        "shots": 53
+      },
+      "period_2": {
+        "events": 1311,
+        "face_offs": 14,
+        "shots": 42
+      },
+      "period_3": {
+        "events": 1268,
+        "face_offs": 18,
+        "shots": 46
+      }
+    },
+    "rag_content": "Game 21060: FLA vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the FLA in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "FLA",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 3826,
+      "game_length": 3826
+    }
+  },
+  {
+    "game_id": 21078,
+    "date": "2024-03-18",
+    "home_team": "OTT",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the OTT in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3762,
+      "face_offs": 49,
+      "shots": 131,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1228,
+        "face_offs": 20,
+        "shots": 44
+      },
+      "period_2": {
+        "events": 1284,
+        "face_offs": 15,
+        "shots": 43
+      },
+      "period_3": {
+        "events": 1250,
+        "face_offs": 14,
+        "shots": 44
+      }
+    },
+    "rag_content": "Game 21078: OTT vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the OTT in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "OTT",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 3762,
+      "game_length": 3762
+    }
+  },
+  {
+    "game_id": 21094,
+    "date": "2024-03-20",
+    "home_team": "Montreal Canadiens",
+    "away_team": "NYI",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the NYI in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3933,
+      "face_offs": 66,
+      "shots": 195,
+      "goals": 0,
+      "periods": "4"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1283,
+        "face_offs": 19,
+        "shots": 58
+      },
+      "period_2": {
+        "events": 1325,
+        "face_offs": 20,
+        "shots": 63
+      },
+      "period_3": {
+        "events": 1165,
+        "face_offs": 24,
+        "shots": 64
+      },
+      "period_4": {
+        "events": 160,
+        "face_offs": 3,
+        "shots": 10
+      }
+    },
+    "rag_content": "Game 21094: Montreal Canadiens vs NYI - 0-0. The Montreal Canadiens faced the NYI in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "NYI",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3933,
+      "game_length": 3933
+    }
+  },
+  {
+    "game_id": 21112,
+    "date": "2024-03-22",
+    "home_team": "COL",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the COL in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 4069,
+      "face_offs": 65,
+      "shots": 169,
+      "goals": 0,
+      "periods": "4"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1289,
+        "face_offs": 15,
+        "shots": 60
+      },
+      "period_2": {
+        "events": 1264,
+        "face_offs": 20,
+        "shots": 45
+      },
+      "period_3": {
+        "events": 1230,
+        "face_offs": 19,
+        "shots": 51
+      },
+      "period_4": {
+        "events": 286,
+        "face_offs": 11,
+        "shots": 13
+      }
+    },
+    "rag_content": "Game 21112: COL vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the COL in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "COL",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 4069,
+      "game_length": 4069
+    }
+  },
+  {
+    "game_id": 21133,
+    "date": "2024-03-25",
+    "home_team": "Montreal Canadiens",
+    "away_team": "STL",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the STL in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3754,
+      "face_offs": 38,
+      "shots": 145,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1264,
+        "face_offs": 11,
+        "shots": 46
+      },
+      "period_2": {
+        "events": 1298,
+        "face_offs": 16,
+        "shots": 57
+      },
+      "period_3": {
+        "events": 1192,
+        "face_offs": 11,
+        "shots": 42
+      }
+    },
+    "rag_content": "Game 21133: Montreal Canadiens vs STL - 0-0. The Montreal Canadiens faced the STL in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "STL",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3754,
+      "game_length": 3754
+    }
+  },
+  {
+    "game_id": 21146,
+    "date": "2024-03-27",
+    "home_team": "Montreal Canadiens",
+    "away_team": "PHI",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the PHI in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3733,
+      "face_offs": 44,
+      "shots": 153,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1274,
+        "face_offs": 14,
+        "shots": 62
+      },
+      "period_2": {
+        "events": 1230,
+        "face_offs": 11,
+        "shots": 48
+      },
+      "period_3": {
+        "events": 1229,
+        "face_offs": 19,
+        "shots": 43
+      }
+    },
+    "rag_content": "Game 21146: Montreal Canadiens vs PHI - 0-0. The Montreal Canadiens faced the PHI in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "PHI",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3733,
+      "game_length": 3733
+    }
+  },
+  {
+    "game_id": 21154,
+    "date": "2024-03-28",
+    "home_team": "Montreal Canadiens",
+    "away_team": "CAR",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the CAR in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3896,
+      "face_offs": 45,
+      "shots": 141,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1333,
+        "face_offs": 14,
+        "shots": 36
+      },
+      "period_2": {
+        "events": 1210,
+        "face_offs": 10,
+        "shots": 46
+      },
+      "period_3": {
+        "events": 1353,
+        "face_offs": 21,
+        "shots": 59
+      }
+    },
+    "rag_content": "Game 21154: Montreal Canadiens vs CAR - 0-0. The Montreal Canadiens faced the CAR in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "CAR",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3896,
+      "game_length": 3896
+    }
+  },
+  {
+    "game_id": 21170,
+    "date": "2024-03-30",
+    "home_team": "Montreal Canadiens",
+    "away_team": "FLA",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the FLA in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3835,
+      "face_offs": 44,
+      "shots": 151,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1286,
+        "face_offs": 15,
+        "shots": 53
+      },
+      "period_2": {
+        "events": 1347,
+        "face_offs": 16,
+        "shots": 50
+      },
+      "period_3": {
+        "events": 1202,
+        "face_offs": 13,
+        "shots": 48
+      }
+    },
+    "rag_content": "Game 21170: Montreal Canadiens vs FLA - 0-0. The Montreal Canadiens faced the FLA in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "FLA",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3835,
+      "game_length": 3835
+    }
+  },
+  {
+    "game_id": 21183,
+    "date": "2024-04-01",
+    "home_team": "FLA",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the FLA in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3690,
+      "face_offs": 43,
+      "shots": 141,
+      "goals": 0,
+      "periods": "4"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1226,
+        "face_offs": 20,
+        "shots": 45
+      },
+      "period_2": {
+        "events": 1290,
+        "face_offs": 13,
+        "shots": 55
+      },
+      "period_3": {
+        "events": 1151,
+        "face_offs": 9,
+        "shots": 40
+      },
+      "period_4": {
+        "events": 23,
+        "face_offs": 1,
+        "shots": 1
+      }
+    },
+    "rag_content": "Game 21183: FLA vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the FLA in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "FLA",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 3690,
+      "game_length": 3690
+    }
+  },
+  {
+    "game_id": 21197,
+    "date": "2024-04-03",
+    "home_team": "BOS",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the BOS in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 4000,
+      "face_offs": 50,
+      "shots": 154,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1328,
+        "face_offs": 17,
+        "shots": 56
+      },
+      "period_2": {
+        "events": 1395,
+        "face_offs": 18,
+        "shots": 47
+      },
+      "period_3": {
+        "events": 1277,
+        "face_offs": 15,
+        "shots": 51
+      }
+    },
+    "rag_content": "Game 21197: BOS vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the BOS in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "BOS",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 4000,
+      "game_length": 4000
+    }
+  },
+  {
+    "game_id": 21217,
+    "date": "2024-04-05",
+    "home_team": "PHI",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the PHI in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3754,
+      "face_offs": 33,
+      "shots": 127,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1176,
+        "face_offs": 7,
+        "shots": 33
+      },
+      "period_2": {
+        "events": 1290,
+        "face_offs": 11,
+        "shots": 35
+      },
+      "period_3": {
+        "events": 1288,
+        "face_offs": 15,
+        "shots": 59
+      }
+    },
+    "rag_content": "Game 21217: PHI vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the PHI in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "PHI",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 3754,
+      "game_length": 3754
+    }
+  },
+  {
+    "game_id": 21228,
+    "date": "2024-04-06",
+    "home_team": "Montreal Canadiens",
+    "away_team": "NSH",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the NSH in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3705,
+      "face_offs": 42,
+      "shots": 153,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1245,
+        "face_offs": 13,
+        "shots": 43
+      },
+      "period_2": {
+        "events": 1315,
+        "face_offs": 18,
+        "shots": 64
+      },
+      "period_3": {
+        "events": 1145,
+        "face_offs": 11,
+        "shots": 46
+      }
+    },
+    "rag_content": "Game 21228: Montreal Canadiens vs NSH - 0-0. The Montreal Canadiens faced the NSH in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "NSH",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3705,
+      "game_length": 3705
+    }
+  },
+  {
+    "game_id": 21236,
+    "date": "2024-04-08",
+    "home_team": "DET",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the DET in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3740,
+      "face_offs": 45,
+      "shots": 152,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1264,
+        "face_offs": 11,
+        "shots": 61
+      },
+      "period_2": {
+        "events": 1251,
+        "face_offs": 14,
+        "shots": 44
+      },
+      "period_3": {
+        "events": 1225,
+        "face_offs": 20,
+        "shots": 47
+      }
+    },
+    "rag_content": "Game 21236: DET vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the DET in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "DET",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 3740,
+      "game_length": 3740
+    }
+  },
+  {
+    "game_id": 21260,
+    "date": "2024-04-11",
+    "home_team": "Montreal Canadiens",
+    "away_team": "OTT",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the OTT in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3751,
+      "face_offs": 51,
+      "shots": 124,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1191,
+        "face_offs": 11,
+        "shots": 45
+      },
+      "period_2": {
+        "events": 1348,
+        "face_offs": 27,
+        "shots": 48
+      },
+      "period_3": {
+        "events": 1212,
+        "face_offs": 13,
+        "shots": 31
+      }
+    },
+    "rag_content": "Game 21260: Montreal Canadiens vs OTT - 0-0. The Montreal Canadiens faced the OTT in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "OTT",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3751,
+      "game_length": 3751
+    }
+  },
+  {
+    "game_id": 21269,
+    "date": "2024-04-12",
+    "home_team": "Montreal Canadiens",
+    "away_team": "TOR",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the TOR in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3618,
+      "face_offs": 35,
+      "shots": 140,
+      "goals": 0,
+      "periods": "4"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1154,
+        "face_offs": 11,
+        "shots": 50
+      },
+      "period_2": {
+        "events": 1202,
+        "face_offs": 7,
+        "shots": 44
+      },
+      "period_3": {
+        "events": 1228,
+        "face_offs": 16,
+        "shots": 44
+      },
+      "period_4": {
+        "events": 34,
+        "face_offs": 1,
+        "shots": 2
+      }
+    },
+    "rag_content": "Game 21269: Montreal Canadiens vs TOR - 0-0. The Montreal Canadiens faced the TOR in a home game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "TOR",
+      "season": "2024-2025",
+      "venue": "home",
+      "total_events": 3618,
+      "game_length": 3618
+    }
+  },
+  {
+    "game_id": 21285,
+    "date": "2024-04-14",
+    "home_team": "CHI",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the CHI in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 4112,
+      "face_offs": 43,
+      "shots": 165,
+      "goals": 0,
+      "periods": "4"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1347,
+        "face_offs": 16,
+        "shots": 58
+      },
+      "period_2": {
+        "events": 1348,
+        "face_offs": 12,
+        "shots": 59
+      },
+      "period_3": {
+        "events": 1223,
+        "face_offs": 9,
+        "shots": 45
+      },
+      "period_4": {
+        "events": 194,
+        "face_offs": 6,
+        "shots": 3
+      }
+    },
+    "rag_content": "Game 21285: CHI vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the CHI in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "CHI",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 4112,
+      "game_length": 4112
+    }
+  },
+  {
+    "game_id": 21301,
+    "date": "2024-04-16",
+    "home_team": "CAR",
+    "away_team": "Montreal Canadiens",
+    "final_score": "0-0",
+    "montreal_score": 0,
+    "opponent_score": 0,
+    "game_result": "T",
+    "narrative_summary": "The Montreal Canadiens faced the CAR in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "key_statistics": {
+      "total_events": 3901,
+      "face_offs": 47,
+      "shots": 149,
+      "goals": 0,
+      "periods": "3"
+    },
+    "period_summaries": {
+      "period_1": {
+        "events": 1324,
+        "face_offs": 20,
+        "shots": 39
+      },
+      "period_2": {
+        "events": 1318,
+        "face_offs": 12,
+        "shots": 57
+      },
+      "period_3": {
+        "events": 1259,
+        "face_offs": 15,
+        "shots": 53
+      }
+    },
+    "rag_content": "Game 21301: CAR vs Montreal Canadiens - 0-0. The Montreal Canadiens faced the CAR in a away game.\n\nKey moments included face-offs, shots, and possession changes throughout the game. The Canadiens demonstrated strong puck possession and created several scoring opportunities.\n\nThe game featured intense competition with both teams battling for control in all three zones. Montreal's performance showed solid defensive structure throughout the contest.",
+    "metadata": {
+      "opponent": "CAR",
+      "season": "2024-2025",
+      "venue": "away",
+      "total_events": 3901,
+      "game_length": 3901
+    }
+  }
+]

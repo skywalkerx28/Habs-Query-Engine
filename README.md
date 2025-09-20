@@ -60,10 +60,134 @@ Coaches, players, scouts, analysts, and other authorized personnel can ask natur
 - [IN PROGRESS] MTL-specific embedding fine-tuning
 
 ### Phase 3: LLM Integration & Analysis Engine (Weeks 2-3)
-- [PLANNED] Prompt engineering with Habs context
-- [PLANNED] RAG chain implementation
-- [PLANNED] Structured output formatting (tables/plots)
-- [PLANNED] Custom MTL analysis tools
+
+**Goal:** Develop a sophisticated Retrieval-Augmented Generation (RAG) system that enables natural language queries about Montreal Canadiens performance data, providing accurate, contextual, and actionable insights through intelligent data synthesis.
+
+#### Core Objectives:
+- **Natural Language Processing:** Enable conversational queries like "How effective was Montreal's power play against Toronto?" or "What's the impact of pairing youth with veterans?"
+- **Intelligent Data Retrieval:** Multi-tier retrieval system combining pre-processed JSON summaries with real-time Parquet analytics
+- **Contextual Analysis:** Generate insights combining historical patterns, player performance, and strategic recommendations
+- **Visual Intelligence:** Create dynamic visualizations and statistical outputs based on query context
+
+#### Technical Implementation Strategy:
+
+##### 3.1 Multi-Tier Retrieval System
+```
+Query Processing Flow:
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   User Query    │ -> │  Intent Analysis│ -> │  Data Retrieval │
+│  "How did PP    │    │  (LLM Router)  │    │  Strategy        │
+│   perform vs    │    │                 │    │                 │
+│   Toronto?"     │    │  - Query type   │    │  - JSON lookup  │
+└─────────────────┘    │  - Complexity   │    │  - Parquet query│
+                       │  - Data needs   │    │  - Real-time calc│
+                       └─────────────────┘    └─────────────────┘
+```
+
+**Low-Level Components:**
+- **Query Classifier:** BERT-based model to categorize queries (basic stats, advanced analytics, trend analysis, predictive)
+- **Data Router:** Intelligent routing between JSON summaries and Parquet analytics based on query complexity
+- **Context Builder:** Aggregates relevant information from multiple data sources for comprehensive responses
+
+##### 3.2 RAG Chain Architecture
+```
+RAG Pipeline:
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Query         │ -> │  Retrieval      │ -> │  Context        │ -> │  Generation    │
+│   Processing    │    │  (FAISS/Chroma)│    │  Enhancement     │    │  (Fine-tuned   │
+│                 │    │                 │    │                 │    │  LLM)          │
+│  - Tokenization │    │  - Semantic     │    │  - Multi-source │    │               │
+│  - Embedding    │    │    search       │    │    synthesis    │    │  - Prompt eng. │
+│  - Similarity   │    │  - Hybrid       │    │  - Fact checking│    │  - Structured  │
+│    matching     │    │    filtering    │    │  - Relevance    │    │    output      │
+└─────────────────┘    └─────────────────┘    └─────────────────┘    └─────────────────┘
+```
+
+**Vector Database Implementation:**
+- **Embedding Model:** Sentence-BERT optimized for sports analytics domain
+- **Index Strategy:** HNSW (Hierarchical Navigable Small World) for sub-second retrieval
+- **Hybrid Search:** Combines semantic similarity with keyword-based filtering
+- **Metadata Filtering:** Game date, opponent, player, situation-specific retrieval
+
+##### 3.3 Montreal-Specific Analysis Tools
+
+**Statistical Analysis Engine:**
+```python
+class HabsAnalysisTools:
+    def calculate_corsi_differential(self, team_events, opponent_events):
+        """Real-time Corsi calculation from play-by-play data"""
+        # Implementation for shot attempt differentials
+
+    def zone_entry_analysis(self, game_data):
+        """Analyze controlled vs uncontrolled zone entries"""
+        # Success rates, entry methods, defensive pressure
+
+    def player_pairing_impact(self, player_combinations):
+        """Quantify impact of player pairings on performance"""
+        # On-ice metrics, zone starts, quality of competition
+```
+
+**Custom Analysis Modules:**
+- **Power Play Optimizer:** Analyzes PP efficiency, personnel combinations, situational success rates
+- **Penalty Kill Analyzer:** PK success patterns, shorthanded strategies, goaltender performance
+- **Youth Integration Tracker:** Performance metrics for young players, development trajectories
+- **Matchup Intelligence:** Team vs team analysis, style-based recommendations
+
+##### 3.4 Structured Output Generation
+
+**Dynamic Visualization Engine:**
+```python
+class HabsVisualizer:
+    def create_shot_heatmap(self, shot_data, rink_template):
+        """Generate interactive shot heatmaps with player tracking"""
+
+    def generate_performance_charts(self, metrics_data):
+        """Create comparative performance visualizations"""
+
+    def build_statistical_tables(self, analysis_results):
+        """Format complex statistical data into readable tables"""
+```
+
+**Response Formatting Pipeline:**
+- **Template System:** Context-aware response templates for different query types
+- **Data Formatting:** Automatic conversion of raw statistics into narrative form
+- **Visual Integration:** Seamless embedding of charts and heatmaps in responses
+- **Source Attribution:** Clear indication of data sources and calculation methods
+
+##### 3.5 Fine-Tuning & Optimization
+
+**Domain-Specific Training:**
+- **Custom Dataset:** 2,528 QA pairs focused on hockey analytics terminology
+- **Montreal Context:** Fine-tuning on Canadiens-specific language and references
+- **Statistical Literacy:** Training on proper interpretation of advanced metrics
+- **Conversational Flow:** Optimization for multi-turn analytical conversations
+
+**Performance Optimization:**
+- **Query Caching:** Intelligent caching of frequent queries and calculations
+- **Batch Processing:** Optimized batch operations for complex multi-game analysis
+- **Memory Management:** Efficient handling of large datasets during analysis
+- **Response Time Targets:** <2 seconds for basic queries, <5 seconds for complex analysis
+
+##### 3.6 Testing & Validation Framework
+
+**Automated Testing Suite:**
+- **Unit Tests:** Individual component functionality (retrieval accuracy, calculation precision)
+- **Integration Tests:** End-to-end query processing and response generation
+- **Performance Benchmarks:** Query response times, retrieval accuracy metrics
+- **Accuracy Validation:** Statistical calculation verification against known baselines
+
+**Human Evaluation Protocol:**
+- **Expert Review:** Validation by hockey analysts and coaches
+- **User Testing:** Real-world query testing with target user groups
+- **Iterative Improvement:** Continuous refinement based on user feedback
+- **Edge Case Handling:** Robust processing of unusual or complex queries
+
+#### Success Metrics:
+- **Query Accuracy:** >90% statistically correct responses
+- **Response Time:** <3 seconds average for complex queries
+- **User Satisfaction:** >4.5/5 rating on response quality and relevance
+- **Retrieval Precision:** >85% relevant information retrieval
+- **Contextual Understanding:** >80% accurate interpretation of analytical intent
 
 ### Phase 4: UI & Deployment (Weeks 3-4)
 - [PLANNED] Streamlit chat interface
