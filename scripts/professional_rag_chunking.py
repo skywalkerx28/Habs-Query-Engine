@@ -577,6 +577,253 @@ class ProfessionalRAGChunker:
 
         return chunks
 
+    def chunk_season_reports(self, df: pd.DataFrame, file_path: Path) -> List[RAGChunk]:
+        """Chunk season reports data into semantically coherent units."""
+        chunks = []
+
+        # Process each metric row
+        for _, row in df.iterrows():
+            metric_label = str(row['Metric Label'])
+            montreal_value = row['Montreal']
+            montreal_rank = row['Montreal rank']
+            league_median = row['League Median']
+            league_leader_value = row['League Leader Value']
+            league_leader_team = row['League Leader Team']
+
+            # Create comprehensive metric analysis
+            content = f"""Montreal Canadiens Season Performance - {metric_label}
+
+Value: {montreal_value}
+League Ranking: {montreal_rank} out of 32 teams
+League Median: {league_median}
+League Leader: {league_leader_value} ({league_leader_team})
+
+Performance Analysis:
+- {'Above league median' if pd.notna(montreal_value) and pd.notna(league_median) and montreal_value > league_median else 'Below league median'}
+- {'Elite performance (top 5)' if montreal_rank <= 5 else 'Strong performance (top 10)' if montreal_rank <= 10 else 'Average performance (11-20)' if montreal_rank <= 20 else 'Below average (21-25)' if montreal_rank <= 25 else 'Poor performance (26-32)'}
+- Differential from league leader: {abs(montreal_value - league_leader_value) if pd.notna(montreal_value) and pd.notna(league_leader_value) else 'N/A'}"""
+
+            # Extract metrics for metadata
+            metrics = {}
+            if pd.notna(montreal_value) and isinstance(montreal_value, (int, float)):
+                metrics['montreal_value'] = float(montreal_value)
+            if pd.notna(montreal_rank) and isinstance(montreal_rank, (int, float)):
+                metrics['montreal_rank'] = int(montreal_rank)
+            if pd.notna(league_median) and isinstance(league_median, (int, float)):
+                metrics['league_median'] = float(league_median)
+            if pd.notna(league_leader_value) and isinstance(league_leader_value, (int, float)):
+                metrics['league_leader_value'] = float(league_leader_value)
+
+            metadata = ChunkMetadata(
+                chunk_id=self.generate_chunk_id(content, {
+                    'team': 'Montreal',
+                    'season': '2024-2025',
+                    'metric': metric_label.replace(' ', '_').lower()
+                }),
+                source_file=str(file_path),
+                data_type='season_reports',
+                season='2024-2025',
+                team='Montreal',
+                metrics=metrics,
+                tags=['season_performance', 'league_ranking', 'montreal_analysis', 'advanced_metrics', metric_label.split()[0].lower()]
+            )
+
+            chunk = RAGChunk(
+                content=content,
+                metadata=metadata,
+                source='season_reports',
+                token_count=self.estimate_token_count(content)
+            )
+
+            is_valid, confidence = self.validate_mathematical_accuracy(chunk)
+            if is_valid:
+                chunks.append(chunk)
+                self.chunk_registry[metadata.chunk_id] = chunk
+
+        return chunks
+
+    def chunk_team_stats(self, df: pd.DataFrame, file_path: Path) -> List[RAGChunk]:
+        """Chunk team statistics data into semantically coherent units."""
+        chunks = []
+        filename = file_path.stem
+
+        if 'Teams_Statistics_For_2024-2025' in filename:
+            # League-wide team statistics
+            for _, row in df.iterrows():
+                team = str(row['Team'])
+                total_goals = row['Total Goals']
+                true_shooting_pct = row['True Shooting Percentage']
+                expected_goals = row['Expected Goals']
+                actual_to_expected = row['Actual to Expected Goals']
+
+                content = f"""Team Performance Overview - {team} (2024-2025 Season)
+
+Total Goals: {total_goals}
+True Shooting Percentage: {true_shooting_pct:.4f}
+Expected Goals: {expected_goals:.1f}
+Actual to Expected Goals Differential: {actual_to_expected:+.3f}
+
+Performance Analysis:
+- {'Overperforming relative to expected goals' if actual_to_expected > 0.1 else 'Underperforming relative to expected goals' if actual_to_expected < -0.1 else 'Performing in line with expected goals'}
+- True Shooting % indicates {'efficient' if true_shooting_pct > 0.055 else 'average' if true_shooting_pct > 0.045 else 'inefficient'} scoring efficiency
+- Goal total suggests {'high' if total_goals > 250 else 'moderate' if total_goals > 220 else 'low'} offensive output"""
+
+                metrics = {
+                    'total_goals': int(total_goals) if pd.notna(total_goals) else None,
+                    'true_shooting_percentage': float(true_shooting_pct) if pd.notna(true_shooting_pct) else None,
+                    'expected_goals': float(expected_goals) if pd.notna(expected_goals) else None,
+                    'actual_to_expected_differential': float(actual_to_expected) if pd.notna(actual_to_expected) else None
+                }
+                metrics = {k: v for k, v in metrics.items() if v is not None}
+
+                metadata = ChunkMetadata(
+                    chunk_id=self.generate_chunk_id(content, {
+                        'team': team,
+                        'season': '2024-2025',
+                        'data_type': 'team_overview'
+                    }),
+                    source_file=str(file_path),
+                    data_type='team_stats_league',
+                    season='2024-2025',
+                    team=team,
+                    metrics=metrics,
+                    tags=['team_performance', 'league_comparison', 'xg_analysis', 'scoring_efficiency']
+                )
+
+                chunk = RAGChunk(
+                    content=content,
+                    metadata=metadata,
+                    source='team_stats',
+                    token_count=self.estimate_token_count(content)
+                )
+
+                is_valid, confidence = self.validate_mathematical_accuracy(chunk)
+                if is_valid:
+                    chunks.append(chunk)
+                    self.chunk_registry[metadata.chunk_id] = chunk
+
+        elif 'Strengths-Weaknesses' in filename:
+            # Strengths/weaknesses analysis
+            for _, row in df.iterrows():
+                section = str(row['Section'])
+                metric_label = str(row['Metric Label'])
+                montreal_value = row['Montreal']
+                montreal_rank = row['Montreal Ranking']
+                opponent_value = row['Carolina']
+                opponent_rank = row['Carolina Ranking']
+
+                content = f"""Strengths/Weaknesses Analysis - {section}: {metric_label}
+
+Montreal vs Carolina Hurricanes (2024-2025)
+
+Montreal Value: {montreal_value} (League Rank: {montreal_rank})
+Carolina Value: {opponent_value} (League Rank: {opponent_rank})
+
+Performance Comparison:
+- {'Montreal advantage' if montreal_rank < opponent_rank else 'Carolina advantage' if opponent_rank < montreal_rank else 'Similar performance'}
+- Differential: {montreal_value - opponent_value if pd.notna(montreal_value) and pd.notna(opponent_value) else 'N/A'}
+- This represents a {'strength' if montreal_rank < opponent_rank else 'weakness' if opponent_rank < montreal_rank else 'neutral'} for Montreal"""
+
+                metrics = {}
+                if pd.notna(montreal_value) and isinstance(montreal_value, (int, float)):
+                    metrics['montreal_value'] = float(montreal_value)
+                if pd.notna(montreal_rank) and isinstance(montreal_rank, (int, float)):
+                    metrics['montreal_rank'] = int(montreal_rank)
+                if pd.notna(opponent_value) and isinstance(opponent_value, (int, float)):
+                    metrics['carolina_value'] = float(opponent_value)
+                if pd.notna(opponent_rank) and isinstance(opponent_rank, (int, float)):
+                    metrics['carolina_rank'] = int(opponent_rank)
+
+                metadata = ChunkMetadata(
+                    chunk_id=self.generate_chunk_id(content, {
+                        'team1': 'Montreal',
+                        'team2': 'Carolina',
+                        'season': '2024-2025',
+                        'metric': metric_label.replace(' ', '_').lower()
+                    }),
+                    source_file=str(file_path),
+                    data_type='strengths_weaknesses',
+                    season='2024-2025',
+                    team='Montreal',
+                    opponent='Carolina',
+                    metrics=metrics,
+                    tags=['strengths_weaknesses', 'team_comparison', 'montreal_vs_carolina', section.lower().replace(' ', '_')]
+                )
+
+                chunk = RAGChunk(
+                    content=content,
+                    metadata=metadata,
+                    source='team_stats',
+                    token_count=self.estimate_token_count(content)
+                )
+
+                is_valid, confidence = self.validate_mathematical_accuracy(chunk)
+                if is_valid:
+                    chunks.append(chunk)
+                    self.chunk_registry[metadata.chunk_id] = chunk
+
+        elif 'XG-Benchmarks' in filename:
+            # XG benchmarks data
+            for _, row in df.iterrows():
+                section = str(row['Section'])
+                metric_label = str(row['Metric Label'])
+                below_avg = row['Below']
+                average = row['Average']
+                above_avg = row['Above']
+                montreal_value = row['Against']  # This column contains Montreal's value
+
+                content = f"""XG Benchmark Analysis - {section}: {metric_label}
+
+League Performance Ranges (2024-2025):
+- Below Average: < {below_avg}
+- Average: {below_avg} - {above_avg}
+- Above Average: > {above_avg}
+
+Montreal Performance: {montreal_value}
+
+Analysis:
+- {'Above league average' if pd.notna(montreal_value) and pd.notna(above_avg) and isinstance(montreal_value, (int, float)) and isinstance(above_avg, (int, float)) and montreal_value > above_avg else 'Below league average' if pd.notna(montreal_value) and pd.notna(below_avg) and isinstance(montreal_value, (int, float)) and isinstance(below_avg, (int, float)) and montreal_value < below_avg else 'At league average'}
+- Performance percentile: {'Top quartile' if pd.notna(montreal_value) and pd.notna(above_avg) and isinstance(montreal_value, (int, float)) and isinstance(above_avg, (int, float)) and montreal_value >= above_avg else 'Bottom quartile' if pd.notna(montreal_value) and pd.notna(below_avg) and isinstance(montreal_value, (int, float)) and isinstance(below_avg, (int, float)) and montreal_value <= below_avg else 'Middle 50%'}"""
+
+                metrics = {}
+                if pd.notna(below_avg) and isinstance(below_avg, (int, float)):
+                    metrics['league_below_average'] = float(below_avg)
+                if pd.notna(average) and isinstance(average, (int, float)):
+                    metrics['league_average'] = float(average)
+                if pd.notna(above_avg) and isinstance(above_avg, (int, float)):
+                    metrics['league_above_average'] = float(above_avg)
+                if pd.notna(montreal_value) and isinstance(montreal_value, (int, float)):
+                    metrics['montreal_value'] = float(montreal_value)
+
+                metadata = ChunkMetadata(
+                    chunk_id=self.generate_chunk_id(content, {
+                        'team': 'Montreal',
+                        'season': '2024-2025',
+                        'metric': metric_label.replace(' ', '_').lower(),
+                        'benchmark_type': 'xg_benchmark'
+                    }),
+                    source_file=str(file_path),
+                    data_type='xg_benchmarks',
+                    season='2024-2025',
+                    team='Montreal',
+                    metrics=metrics,
+                    tags=['xg_benchmarks', 'performance_analysis', 'league_comparison', section.lower().replace(' ', '_')]
+                )
+
+                chunk = RAGChunk(
+                    content=content,
+                    metadata=metadata,
+                    source='team_stats',
+                    token_count=self.estimate_token_count(content)
+                )
+
+                is_valid, confidence = self.validate_mathematical_accuracy(chunk)
+                if is_valid:
+                    chunks.append(chunk)
+                    self.chunk_registry[metadata.chunk_id] = chunk
+
+        return chunks
+
     def extract_team_from_path(self, file_path: Path) -> str:
         """Extract team code from file path"""
         path_str = str(file_path)
@@ -723,6 +970,10 @@ class ProfessionalRAGChunker:
                     new_chunks = self.chunk_play_by_play(df, file_path)
                 elif 'matchup' in str(file_path):
                     new_chunks = self.chunk_matchup_reports(df, file_path)
+                elif 'season_reports' in str(file_path):
+                    new_chunks = self.chunk_season_reports(df, file_path)
+                elif 'team_stats' in str(file_path):
+                    new_chunks = self.chunk_team_stats(df, file_path)
                 else:
                     logger.warning(f"Unknown file type for {file_path}, skipping")
                     continue

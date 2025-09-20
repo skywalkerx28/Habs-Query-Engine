@@ -1,0 +1,78 @@
+{
+  "data_source": "team_stats",
+  "description": "Comprehensive NHL team statistics and performance benchmarks for the 2024-2025 season, including league-wide comparisons, strengths/weaknesses analysis, and XG benchmarks",
+  "format": "parquet",
+  "organization": {
+    "structure": "multiple_files",
+    "files": [
+      {
+        "name": "Teams_Statistics_For_2024-2025_Regular_-_9_18_25,_6_15_PM.parquet",
+        "description": "League-wide team performance statistics including goals, true shooting percentage, expected goals, and actual vs expected goals differential",
+        "path": "data/processed/analytics/team_stats/Teams_Statistics_For_2024-2025_Regular_-_9_18_25,_6_15_PM.parquet",
+        "rows": 32,
+        "columns": 5
+      },
+      {
+        "name": "Strengths-Weaknesses-Montreal-2024.parquet",
+        "description": "Detailed strengths and weaknesses analysis comparing Montreal Canadiens to Carolina Hurricanes across multiple performance metrics",
+        "path": "data/processed/analytics/team_stats/Strengths-Weaknesses-Montreal-2024.parquet",
+        "rows": 10,
+        "columns": 7
+      },
+      {
+        "name": "XG-Benchmarks-Montreal-2024.parquet",
+        "description": "Expected goals benchmarks for Montreal Canadiens across 170+ advanced metrics, showing performance relative to league averages",
+        "path": "data/processed/analytics/team_stats/XG-Benchmarks-Montreal-2024.parquet",
+        "rows": 172,
+        "columns": 6
+      }
+    ],
+    "season": "2024-2025",
+    "focus_team": "MTL"
+  },
+  "data_characteristics": {
+    "total_files": 3,
+    "total_rows": 214,
+    "total_metrics": "175+ performance metrics",
+    "metric_categories": [
+      "Expected Goals Analysis",
+      "Shooting and Scoring Efficiency",
+      "Possession and Zone Control",
+      "Defensive Metrics",
+      "Special Teams Performance",
+      "Goaltending Statistics",
+      "Face-off and Puck Management",
+      "Team Comparisons and Rankings"
+    ]
+  },
+  "content_examples": [
+    "Team Statistics: Montreal - 243 Goals, True Shooting %: 0.055, XG: 228.3, XG Differential: -0.33",
+    "Strengths/Weaknesses: Montreal vs Carolina - PP Passes to Slot: 1.223 vs 1.324, Montreal Rank: 30 vs Carolina Rank: 4",
+    "XG Benchmarks: Montreal ES Expected Goals For - Below: 1.733, Average: 2.606, Above: 3.527, Montreal Value: 2.606"
+  ],
+  "query_capabilities": [
+    "Compare Montreal's performance to any NHL team across all metrics",
+    "Analyze strengths and weaknesses against specific opponents",
+    "Get league rankings and percentiles for any team statistic",
+    "Retrieve XG benchmarks showing performance relative to league norms",
+    "Identify top and bottom performing teams in specific categories",
+    "Generate team performance reports and comparisons"
+  ],
+  "sample_queries": [
+    "How does Montreal rank compared to other NHL teams in expected goals?",
+    "What are Montreal's key strengths and weaknesses against Carolina?",
+    "Show me the teams with the highest true shooting percentage this season",
+    "Which teams have the biggest positive XG differential?",
+    "Compare Montreal's zone exit performance to league benchmarks",
+    "What teams are performing best on the power play?"
+  ],
+  "update_frequency": "weekly",
+  "access_method": "read_parquet_file tool, comparative analysis",
+  "key_insights": [
+    "Montreal ranks 16th in total goals but 11th in true shooting percentage, showing efficient scoring",
+    "XG differential of -0.33 suggests Montreal is performing slightly below expectations",
+    "Strong defensive metrics in zone exits and face-off performance",
+    "Power play shows significant room for improvement compared to league leaders",
+    "Goaltending ranks 25th in ES save percentage, area for potential upgrade"
+  ]
+}
