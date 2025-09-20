@@ -61,33 +61,36 @@ Coaches, players, scouts, analysts, and other authorized personnel can ask natur
 
 ### Phase 3: LLM Integration & Analysis Engine (Weeks 2-3)
 
-**Goal:** Develop a sophisticated Retrieval-Augmented Generation (RAG) system that enables natural language queries about Montreal Canadiens performance data, providing accurate, contextual, and actionable insights through intelligent data synthesis.
+**Goal:** Develop a sophisticated hybrid RAG system that combines contextual hockey knowledge with real-time data analysis capabilities, enabling the LLM to dynamically answer any query combination through intelligent tool usage and data synthesis.
 
 #### Core Objectives:
-- **Natural Language Processing:** Enable conversational queries like "How effective was Montreal's power play against Toronto?" or "What's the impact of pairing Hutson with Matheson on offensive production ?"
-- **Intelligent Data Retrieval:** Multi-tier retrieval system combining pre-processed JSON summaries with real-time Parquet analytics
-- **Contextual Analysis:** Generate insights combining historical patterns, player performance, and strategic recommendations
-- **Visual Intelligence:** Create dynamic visualizations and statistical outputs based on query context
+- **Natural Language Processing:** Enable conversational queries like "How effective was Montreal's power play against Toronto in 3rd periods?" or "Compare Hutson's zone exit success vs Eastern Conference teams"
+- **Hybrid Intelligence System:** Multi-tier architecture combining RAG chunks (hockey context) with real-time Parquet queries (live calculations)
+- **Dynamic Tool Usage:** Provide LLM with analytical tools to think on its feet and answer any query combination, not just static responses
+- **Contextual Analysis:** Generate insights combining historical patterns, player performance, and strategic recommendations through real-time data synthesis
+- **Visual Intelligence:** Create dynamic visualizations and statistical outputs based on query context and live data analysis
 
 #### Technical Implementation Strategy:
 
-##### 3.1 Multi-Tier Retrieval System
+##### 3.1 Hybrid RAG + Real-Time Query System
 ```
 Query Processing Flow:
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   User Query    │ -> │  Intent Analysis│ -> │  Data Retrieval │
-│  "How did PP    │    │  (LLM Router)   │    │  Strategy       │
-│   perform vs    │    │                 │    │                 │
-│   Toronto?"     │    │  - Query type   │    │  - JSON lookup  │
-└─────────────────┘    │  - Complexity   │    │  - Parquet query│
-                       │  - Data needs   │    │  - Instant calc │ 
-                       └─────────────────┘    └─────────────────┘
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   User Query    │ -> │  Intent Analysis│ -> │  Hybrid         │ -> │  LLM with Tools │
+│  "Montreal's    │    │  (LLM Router)   │    │  Retrieval      │    │  & Context      │
+│   blocking vs   │    │                 │    │                 │    │                 │
+│   Toronto in    │    │  - Query type   │    │  - RAG chunks   │    │  - Hockey context│
+│   3rd periods"  │    │  - Complexity   │    │    (context)    │    │  - SQL tools    │
+└─────────────────┘    │  - Data needs   │    │  - Parquet SQL  │    │  - Visualization│
+                       │  - Filters      │    │    (live data)  │    │  - Calculation  │
+                       └─────────────────┘    └─────────────────┘    └─────────────────┘
 ```
 
 **Low-Level Components:**
 - **Query Classifier:** BERT-based model to categorize queries (basic stats, advanced analytics, trend analysis, predictive)
-- **Data Router:** Intelligent routing between JSON summaries and Parquet analytics based on query complexity
-- **Context Builder:** Aggregates relevant information from multiple data sources for comprehensive responses
+- **Hybrid Data Router:** Intelligent routing between RAG chunks (hockey context) and Parquet queries (live calculations)
+- **Tool Provider:** Equips LLM with analytical tools for dynamic query processing and real-time calculations
+- **Context Builder:** Combines hockey domain knowledge with live data for comprehensive, accurate responses
 
 ##### 3.2 RAG Chain Architecture
 ```
@@ -96,7 +99,7 @@ RAG Pipeline:
 │   Query         │ -> │  Retrieval      │ -> │  Context        │ -> │  Generation    │
 │   Processing    │    │   (Pinecone)   │    │  Enhancement     │    │  (Fine-tuned   │
 │                 │    │                 │    │                 │    │  LLM)          │
-│  - Tokenization │    │  - Semantic     │    │  - Multi-source │    │               │
+│  - Tokenization │    │  - Semantic     │    │  - Multi-source │    │                │
 │  - Embedding    │    │    search       │    │    synthesis    │    │  - Prompt eng. │
 │  - Similarity   │    │  - Hybrid       │    │  - Fact checking│    │  - Structured  │
 │    matching     │    │    filtering    │    │  - Relevance    │    │    output      │
@@ -109,29 +112,36 @@ RAG Pipeline:
 - **Hybrid Search:** Combines semantic similarity with keyword-based filtering
 - **Metadata Filtering:** Game date, opponent, player, situation-specific retrieval
 
-##### 3.3 Montreal-Specific Analysis Tools
+##### 3.3 Dynamic Analysis Tools for LLM
 
-**Statistical Analysis Engine:**
+**LLM Tool Arsenal:**
 ```python
 class HabsAnalysisTools:
-    def calculate_corsi_differential(self, team_events, opponent_events):
-        """Real-time Corsi calculation from play-by-play data"""
-        # Implementation for shot attempt differentials
-
-    def zone_entry_analysis(self, game_data):
-        """Analyze controlled vs uncontrolled zone entries"""
-        # Success rates, entry methods, defensive pressure
-
-    def player_pairing_impact(self, player_combinations):
-        """Quantify impact of player pairings on performance"""
-        # On-ice metrics, zone starts, quality of competition
+    def query_parquet_data(self, sql_query: str, context: dict):
+        """Execute real-time SQL queries on parquet files with hockey context"""
+        # Dynamic filtering, aggregation, and calculation capabilities
+        
+    def calculate_advanced_metrics(self, data: pd.DataFrame, metric_type: str):
+        """Calculate complex hockey metrics on-demand"""
+        # Corsi, expected goals, zone entry success, possession metrics
+        
+    def compare_performance(self, filters: dict, comparison_type: str):
+        """Dynamic performance comparisons across any dimensions"""
+        # Player vs player, team vs team, situation vs situation
+        
+    def generate_visualizations(self, data: pd.DataFrame, chart_type: str):
+        """Create dynamic charts and heatmaps from query results"""
+        # Shot maps, performance trends, comparative analysis
 ```
 
-**Custom Analysis Modules:**
-- **Power Play Optimizer:** Analyzes PP efficiency, personnel combinations, situational success rates
-- **Penalty Kill Analyzer:** PK success patterns, shorthanded strategies, goaltender performance
-- **Youth Integration Tracker:** Performance metrics for young players, development trajectories
-- **Matchup Intelligence:** Team vs team analysis, style-based recommendations
+**Dynamic Tool Categories:**
+- **Data Query Tools:** Real-time parquet filtering, aggregation, and calculation
+- **Hockey Analytics Tools:** Advanced metric calculation (Corsi, xG, zone analysis)
+- **Comparison Tools:** Multi-dimensional performance analysis and benchmarking
+- **Visualization Tools:** Dynamic chart and heatmap generation from live data
+- **Context Integration Tools:** Combine RAG hockey knowledge with real-time calculations
+
+**Critical Capability:** LLM can answer ANY query combination by dynamically using tools rather than relying on pre-computed static responses
 
 ##### 3.4 Structured Output Generation
 
