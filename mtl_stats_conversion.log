@@ -1,0 +1,590 @@
+2025-09-20 14:19:01,366 - INFO - Montreal Canadiens Team Statistics Converter
+2025-09-20 14:19:01,366 - INFO - Converting CSV files to optimized parquet format...
+2025-09-20 14:19:01,366 - INFO - Starting Montreal Team Statistics CSV to Parquet conversion...
+2025-09-20 14:19:01,366 - INFO - Scanning for CSV files in /Users/xavier.bouchard/Desktop/HeartBeat/data/mtl_team_stats
+2025-09-20 14:19:01,366 - INFO - Skipping already processed file: Teams_Statistics_For_2024-2025_Regular_-_9_18_25,_6_15_PM.csv
+2025-09-20 14:19:01,366 - INFO - Skipping already processed file: Strengths-Weaknesses-Montreal-2024.csv
+2025-09-20 14:19:01,366 - INFO - Skipping already processed file: XG-Benchmarks-Montreal-2024.csv
+2025-09-20 14:19:01,366 - INFO - Found 68 CSV files to convert
+2025-09-20 14:19:01,366 - INFO - Beginning conversion of 68 files...
+2025-09-20 14:19:01,366 - INFO - Processing: mtl_playmaking_scoring_chances_against_2024-2025.csv
+2025-09-20 14:19:01,367 - ERROR - ✗ Error converting mtl_playmaking_scoring_chances_against_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 7, saw 3
+
+2025-09-20 14:19:01,367 - INFO - Processing: mtl_playmaking_scoring_chances_for_2024-2025.csv
+2025-09-20 14:19:01,367 - ERROR - ✗ Error converting mtl_playmaking_scoring_chances_for_2024-2025.csv: Error tokenizing data. C error: Expected 3 fields in line 8, saw 4
+
+2025-09-20 14:19:01,368 - INFO - Processing: mtl_passing_nz_against_2024-2025.csv
+2025-09-20 14:19:01,368 - ERROR - ✗ Error converting mtl_passing_nz_against_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 7, saw 3
+
+2025-09-20 14:19:01,368 - INFO - Processing: mtl_passing_dz_against_2024-2025.csv
+2025-09-20 14:19:01,368 - ERROR - ✗ Error converting mtl_passing_dz_against_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 7, saw 3
+
+2025-09-20 14:19:01,368 - INFO - Processing: mtl_passing_oz_for_2024-2025.csv
+2025-09-20 14:19:01,368 - ERROR - ✗ Error converting mtl_passing_oz_for_2024-2025.csv: Error tokenizing data. C error: Expected 3 fields in line 35, saw 32
+
+2025-09-20 14:19:01,368 - INFO - Processing: mtl_passing_receptions_for_2024-2025.csv
+2025-09-20 14:19:01,369 - ERROR - ✗ Error converting mtl_passing_receptions_for_2024-2025.csv: Error tokenizing data. C error: Expected 3 fields in line 35, saw 6
+
+2025-09-20 14:19:01,369 - INFO - Processing: mtl_passing_dz_for_2024-2025.csv
+2025-09-20 14:19:01,369 - ERROR - ✗ Error converting mtl_passing_dz_for_2024-2025.csv: Error tokenizing data. C error: Expected 3 fields in line 8, saw 5
+
+2025-09-20 14:19:01,369 - INFO - Processing: mtl_passing_oz_against_2024-2025.csv
+2025-09-20 14:19:01,369 - ERROR - ✗ Error converting mtl_passing_oz_against_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 7, saw 3
+
+2025-09-20 14:19:01,369 - INFO - Processing: mtl_passing_all_for_2024-2025.csv
+2025-09-20 14:19:01,369 - ERROR - ✗ Error converting mtl_passing_all_for_2024-2025.csv: Error tokenizing data. C error: Expected 3 fields in line 8, saw 4
+
+2025-09-20 14:19:01,369 - INFO - Processing: mtl_passing_receptions_against-2024-2025.csv
+2025-09-20 14:19:01,370 - ERROR - ✗ Error converting mtl_passing_receptions_against-2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 7, saw 3
+
+2025-09-20 14:19:01,370 - INFO - Processing: mtl_passing_all_against_2024-2025.csv
+2025-09-20 14:19:01,370 - ERROR - ✗ Error converting mtl_passing_all_against_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 6, saw 2
+
+2025-09-20 14:19:01,370 - INFO - Processing: mtl_passing_nz_for_2024-2025.csv
+2025-09-20 14:19:01,370 - ERROR - ✗ Error converting mtl_passing_nz_for_2024-2025.csv: Error tokenizing data. C error: Expected 3 fields in line 9, saw 4
+
+2025-09-20 14:19:01,370 - INFO - Processing: mtl_dz_exits_all_for_2024-2025.csv
+2025-09-20 14:19:01,370 - ERROR - ✗ Error converting mtl_dz_exits_all_for_2024-2025.csv: Error tokenizing data. C error: Expected 4 fields in line 5, saw 20
+
+2025-09-20 14:19:01,370 - INFO - Processing: mtl_dz_exits_per_dump_types_for_2024-2025.csv
+2025-09-20 14:19:01,370 - ERROR - ✗ Error converting mtl_dz_exits_per_dump_types_for_2024-2025.csv: Error tokenizing data. C error: Expected 3 fields in line 4, saw 41
+
+2025-09-20 14:19:01,370 - INFO - Processing: mtl_dz_exits_all_against_2024-2025.csv
+2025-09-20 14:19:01,371 - ERROR - ✗ Error converting mtl_dz_exits_all_against_2024-2025.csv: Error tokenizing data. C error: Expected 4 fields in line 5, saw 20
+
+2025-09-20 14:19:01,371 - INFO - Processing: mtl_dz_exits_perdump_types_against_2024-2025.csv
+2025-09-20 14:19:01,371 - ERROR - ✗ Error converting mtl_dz_exits_perdump_types_against_2024-2025.csv: Error tokenizing data. C error: Expected 3 fields in line 4, saw 41
+
+2025-09-20 14:19:01,371 - INFO - Processing: mtl_penalties_for_2024-2025.csv
+2025-09-20 14:19:01,371 - ERROR - ✗ Error converting mtl_penalties_for_2024-2025.csv: Error tokenizing data. C error: Expected 3 fields in line 35, saw 13
+
+2025-09-20 14:19:01,371 - INFO - Processing: mtl_penalties_against_2024-2025.csv
+2025-09-20 14:19:01,372 - ERROR - ✗ Error converting mtl_penalties_against_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 6, saw 3
+
+2025-09-20 14:19:01,372 - INFO - Processing: mtl_shooting_slot_against_2024-2025.csv
+2025-09-20 14:19:01,372 - ERROR - ✗ Error converting mtl_shooting_slot_against_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 7, saw 2
+
+2025-09-20 14:19:01,372 - INFO - Processing: mtl_shooting_inner_slot_for_2024-2025.csv
+2025-09-20 14:19:01,372 - ERROR - ✗ Error converting mtl_shooting_inner_slot_for_2024-2025.csv: Error tokenizing data. C error: Expected 3 fields in line 38, saw 12
+
+2025-09-20 14:19:01,372 - INFO - Processing: mtl_shooting_screened_shots_against_2024-2025.csv
+2025-09-20 14:19:01,372 - ERROR - ✗ Error converting mtl_shooting_screened_shots_against_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 8, saw 2
+
+2025-09-20 14:19:01,372 - INFO - Processing: mtl_shooting_all_shots_against_2024-2025.csv
+2025-09-20 14:19:01,373 - ERROR - ✗ Error converting mtl_shooting_all_shots_against_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 7, saw 3
+
+2025-09-20 14:19:01,373 - INFO - Processing: mtl_shooting_screened_shots_for_2024-2025.csv
+2025-09-20 14:19:01,373 - ERROR - ✗ Error converting mtl_shooting_screened_shots_for_2024-2025.csv: Error tokenizing data. C error: Expected 3 fields in line 35, saw 26
+
+2025-09-20 14:19:01,373 - INFO - Processing: mtl_shooting_inner_slot_against_2024-2025.csv
+2025-09-20 14:19:01,373 - ERROR - ✗ Error converting mtl_shooting_inner_slot_against_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 7, saw 2
+
+2025-09-20 14:19:01,373 - INFO - Processing: mtl_shooting_outside_for_2024-2025.csv
+2025-09-20 14:19:01,373 - ERROR - ✗ Error converting mtl_shooting_outside_for_2024-2025.csv: Error tokenizing data. C error: Expected 3 fields in line 9, saw 4
+
+2025-09-20 14:19:01,373 - INFO - Processing: mtl_shooting_all_shots_for_2024-2025.csv
+2025-09-20 14:19:01,373 - ERROR - ✗ Error converting mtl_shooting_all_shots_for_2024-2025.csv: Error tokenizing data. C error: Expected 3 fields in line 7, saw 4
+
+2025-09-20 14:19:01,373 - INFO - Processing: mtl_shooting_outside_against_2024-2025.csv
+2025-09-20 14:19:01,374 - ERROR - ✗ Error converting mtl_shooting_outside_against_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 8, saw 3
+
+2025-09-20 14:19:01,374 - INFO - Processing: mtl_shooting_slot_for_2024-2025.csv
+2025-09-20 14:19:01,374 - ERROR - ✗ Error converting mtl_shooting_slot_for_2024-2025.csv: Error tokenizing data. C error: Expected 3 fields in line 38, saw 12
+
+2025-09-20 14:19:01,374 - INFO - Processing: mtl_faceoffs_for_2024-2025.csv
+2025-09-20 14:19:01,374 - ERROR - ✗ Error converting mtl_faceoffs_for_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 3, saw 3
+
+2025-09-20 14:19:01,374 - INFO - Processing: mtl_faceoffs_against_2024-2025.csv
+2025-09-20 14:19:01,374 - ERROR - ✗ Error converting mtl_faceoffs_against_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 8, saw 2
+
+2025-09-20 14:19:01,374 - INFO - Processing: mtl_scoring_against_2024-2025.csv
+2025-09-20 14:19:01,375 - ERROR - ✗ Error converting mtl_scoring_against_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 7, saw 3
+
+2025-09-20 14:19:01,375 - INFO - Processing: mtl_scoring_for_2024-2025.csv
+2025-09-20 14:19:01,375 - ERROR - ✗ Error converting mtl_scoring_for_2024-2025.csv: Error tokenizing data. C error: Expected 3 fields in line 35, saw 5
+
+2025-09-20 14:19:01,375 - INFO - Processing: mtl_shootouts_aim_against_2024-2025.csv
+2025-09-20 14:19:01,375 - ERROR - ✗ Error converting mtl_shootouts_aim_against_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 9, saw 2
+
+2025-09-20 14:19:01,375 - INFO - Processing: mtl_shootouts_aim_for_2024-2025.csv
+2025-09-20 14:19:01,375 - ERROR - ✗ Error converting mtl_shootouts_aim_for_2024-2025.csv: Error tokenizing data. C error: Expected 3 fields in line 38, saw 11
+
+2025-09-20 14:19:01,375 - INFO - Processing: mtl_shootouts_all_for_2024-2025.csv
+2025-09-20 14:19:01,376 - ERROR - ✗ Error converting mtl_shootouts_all_for_2024-2025.csv: Error tokenizing data. C error: Expected 3 fields in line 38, saw 7
+
+2025-09-20 14:19:01,376 - INFO - Processing: mtl_shootouts_shot_types_for_2024-2025.csv
+2025-09-20 14:19:01,376 - ERROR - ✗ Error converting mtl_shootouts_shot_types_for_2024-2025.csv: Error tokenizing data. C error: Expected 3 fields in line 37, saw 13
+
+2025-09-20 14:19:01,376 - INFO - Processing: mtl_shootouts_shot_types_against_2024-2025.csv
+2025-09-20 14:19:01,376 - ERROR - ✗ Error converting mtl_shootouts_shot_types_against_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 10, saw 2
+
+2025-09-20 14:19:01,376 - INFO - Processing: mtl_shootouts_all_against_2024-2025.csv
+2025-09-20 14:19:01,376 - ERROR - ✗ Error converting mtl_shootouts_all_against_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 7, saw 2
+
+2025-09-20 14:19:01,376 - INFO - Processing: mtl_possession_per_zone_for_2024-2025.csv
+2025-09-20 14:19:01,376 - ERROR - ✗ Error converting mtl_possession_per_zone_for_2024-2025.csv: Error tokenizing data. C error: Expected 3 fields in line 35, saw 13
+
+2025-09-20 14:19:01,376 - INFO - Processing: mtl_possession_success_rate_against_2024-2025.csv
+2025-09-20 14:19:01,377 - ERROR - ✗ Error converting mtl_possession_success_rate_against_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 7, saw 3
+
+2025-09-20 14:19:01,377 - INFO - Processing: mtl_possession__per_zone_against_2024-2025.csv
+2025-09-20 14:19:01,377 - ERROR - ✗ Error converting mtl_possession__per_zone_against_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 7, saw 3
+
+2025-09-20 14:19:01,377 - INFO - Processing: mtl_possession_dekes_for_2024-2025.csv
+2025-09-20 14:19:01,377 - ERROR - ✗ Error converting mtl_possession_dekes_for_2024-2025.csv: Error tokenizing data. C error: Expected 3 fields in line 35, saw 13
+
+2025-09-20 14:19:01,377 - INFO - Processing: mtl_possession_dekes_against_2024-2025.csv
+2025-09-20 14:19:01,377 - ERROR - ✗ Error converting mtl_possession_dekes_against_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 7, saw 3
+
+2025-09-20 14:19:01,377 - INFO - Processing: mtl_possession_success_rate_for_2024-2025.csv
+2025-09-20 14:19:01,377 - ERROR - ✗ Error converting mtl_possession_success_rate_for_2024-2025.csv: Error tokenizing data. C error: Expected 3 fields in line 35, saw 29
+
+2025-09-20 14:19:01,377 - INFO - Processing: mtl_dumpins_per_type_for_2024-2025.csv
+2025-09-20 14:19:01,378 - ERROR - ✗ Error converting mtl_dumpins_per_type_for_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 7, saw 3
+
+2025-09-20 14:19:01,378 - INFO - Processing: mtl_dumpins_all_against_2024-2025.csv
+2025-09-20 14:19:01,378 - ERROR - ✗ Error converting mtl_dumpins_all_against_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 6, saw 2
+
+2025-09-20 14:19:01,378 - INFO - Processing: mtl_dumpins_per_type_against_2024-2025.csv
+2025-09-20 14:19:01,378 - ERROR - ✗ Error converting mtl_dumpins_per_type_against_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 8, saw 2
+
+2025-09-20 14:19:01,378 - INFO - Processing: mtl_dumpins_all_for_2024-2025.csv
+2025-09-20 14:19:01,378 - ERROR - ✗ Error converting mtl_dumpins_all_for_2024-2025.csv: Error tokenizing data. C error: Expected 3 fields in line 7, saw 4
+
+2025-09-20 14:19:01,378 - INFO - Processing: mtl_goalie_all_for_2024-2025.csv
+2025-09-20 14:19:01,380 - INFO - Loaded CSV with 1 rows, 16 columns
+2025-09-20 14:19:01,411 - INFO - ✓ Converted mtl_goalie_all_for_2024-2025.csv -> mtl_goalie_all_for_2024-2025.parquet
+2025-09-20 14:19:01,411 - INFO -   Size: 0.6KB -> 11.6KB (Compression: -1703.2%)
+2025-09-20 14:19:01,411 - INFO - Processing: mtl_goalie_screened_shots_for_2024-2025.csv
+2025-09-20 14:19:01,412 - INFO - Loaded CSV with 1 rows, 27 columns
+2025-09-20 14:19:01,416 - INFO - ✓ Converted mtl_goalie_screened_shots_for_2024-2025.csv -> mtl_goalie_screened_shots_for_2024-2025.parquet
+2025-09-20 14:19:01,416 - INFO -   Size: 1.3KB -> 21.1KB (Compression: -1507.1%)
+2025-09-20 14:19:01,416 - INFO - Processing: mtl_goalie_dumpin_recoveries_against_2024-2025.csv
+2025-09-20 14:19:01,417 - ERROR - ✗ Error converting mtl_goalie_dumpin_recoveries_against_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 8, saw 2
+
+2025-09-20 14:19:01,417 - INFO - Processing: mtl_goallie_dumpin_recoveries_for_2024-2025.csv
+2025-09-20 14:19:01,417 - ERROR - ✗ Error converting mtl_goallie_dumpin_recoveries_for_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 3, saw 3
+
+2025-09-20 14:19:01,417 - INFO - Processing: mtl_entries_oz_for_2024-2025.csv
+2025-09-20 14:19:01,417 - ERROR - ✗ Error converting mtl_entries_oz_for_2024-2025.csv: Error tokenizing data. C error: Expected 3 fields in line 35, saw 26
+
+2025-09-20 14:19:01,417 - INFO - Processing: mtl_entries_oz_against_2024-2025.csv
+2025-09-20 14:19:01,417 - ERROR - ✗ Error converting mtl_entries_oz_against_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 6, saw 2
+
+2025-09-20 14:19:01,418 - INFO - Processing: mtl_defensive_dz_denials_for_2024-2025.csv
+2025-09-20 14:19:01,418 - ERROR - ✗ Error converting mtl_defensive_dz_denials_for_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 3, saw 3
+
+2025-09-20 14:19:01,418 - INFO - Processing: mtl_defensive_bodychecks_for_2024-2025.csv
+2025-09-20 14:19:01,418 - ERROR - ✗ Error converting mtl_defensive_bodychecks_for_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 3, saw 3
+
+2025-09-20 14:19:01,418 - INFO - Processing: mtl_defensive_bodychecks_against_2024-2025.csv
+2025-09-20 14:19:01,418 - ERROR - ✗ Error converting mtl_defensive_bodychecks_against_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 6, saw 2
+
+2025-09-20 14:19:01,418 - INFO - Processing: mtl_defensive_blocks_for_2024-2025.csv
+2025-09-20 14:19:01,418 - ERROR - ✗ Error converting mtl_defensive_blocks_for_2024-2025.csv: Error tokenizing data. C error: Expected 3 fields in line 26, saw 26
+
+2025-09-20 14:19:01,418 - INFO - Processing: mtl_defensive_all_against_2024-2025.csv
+2025-09-20 14:19:01,419 - ERROR - ✗ Error converting mtl_defensive_all_against_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 7, saw 3
+
+2025-09-20 14:19:01,419 - INFO - Processing: mtl_defensive_stickchecks_for_2024-2025.csv
+2025-09-20 14:19:01,419 - ERROR - ✗ Error converting mtl_defensive_stickchecks_for_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 3, saw 3
+
+2025-09-20 14:19:01,419 - INFO - Processing: mtl_defensive_all_for_2024-2025.csv
+2025-09-20 14:19:01,419 - ERROR - ✗ Error converting mtl_defensive_all_for_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 3, saw 3
+
+2025-09-20 14:19:01,419 - INFO - Processing: mtl_defensive_blocks_against_2024-2025.csv
+2025-09-20 14:19:01,419 - ERROR - ✗ Error converting mtl_defensive_blocks_against_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 8, saw 2
+
+2025-09-20 14:19:01,419 - INFO - Processing: mtl_defensive_dz_denials_against_2024-2025.csv
+2025-09-20 14:19:01,420 - ERROR - ✗ Error converting mtl_defensive_dz_denials_against_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 22, saw 2
+
+2025-09-20 14:19:01,420 - INFO - Processing: mtl_defensive_stickchecks_against_2024-2025.csv
+2025-09-20 14:19:01,420 - ERROR - ✗ Error converting mtl_defensive_stickchecks_against_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 8, saw 2
+
+2025-09-20 14:19:01,420 - INFO - Processing: mtl_lpr_regroup_for_2024-2025.csv
+2025-09-20 14:19:01,420 - ERROR - ✗ Error converting mtl_lpr_regroup_for_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 3, saw 3
+
+2025-09-20 14:19:01,420 - INFO - Processing: mtl_lpr_per_zone_against_2024-2025.csv
+2025-09-20 14:19:01,420 - ERROR - ✗ Error converting mtl_lpr_per_zone_against_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 7, saw 3
+
+2025-09-20 14:19:01,420 - INFO - Processing: mtl_lpr_per_zone_for_2024-2025.csv
+2025-09-20 14:19:01,420 - ERROR - ✗ Error converting mtl_lpr_per_zone_for_2024-2025.csv: Error tokenizing data. C error: Expected 3 fields in line 8, saw 4
+
+2025-09-20 14:19:01,420 - INFO - Processing: mtl_lpr_regroup_against_2024-2025.csv
+2025-09-20 14:19:01,421 - ERROR - ✗ Error converting mtl_lpr_regroup_against_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 8, saw 2
+
+2025-09-20 14:19:01,421 - INFO - 
+============================================================
+2025-09-20 14:19:01,421 - INFO - MONTREAL TEAM STATISTICS CONVERSION REPORT
+2025-09-20 14:19:01,421 - INFO - ============================================================
+2025-09-20 14:19:01,421 - INFO - Total CSV files found:     68
+2025-09-20 14:19:01,421 - INFO - Successfully converted:    2
+2025-09-20 14:19:01,421 - INFO - Already processed (skipped): 3
+2025-09-20 14:19:01,421 - INFO - Conversion errors:         66
+2025-09-20 14:19:01,421 - INFO - Success rate:              2.9%
+2025-09-20 14:19:01,421 - INFO - ============================================================
+2025-09-20 14:19:01,421 - INFO - ✓ All parquet files saved to: /Users/xavier.bouchard/Desktop/HeartBeat/data/processed/analytics
+2025-09-20 14:19:01,421 - INFO - ✓ Files ready for analytics and ML processing
+2025-09-20 14:19:28,943 - INFO - Montreal Canadiens Team Statistics Converter
+2025-09-20 14:19:28,943 - INFO - Converting CSV files to optimized parquet format...
+2025-09-20 14:19:28,943 - INFO - Starting Montreal Team Statistics CSV to Parquet conversion...
+2025-09-20 14:19:28,943 - INFO - Scanning for CSV files in /Users/xavier.bouchard/Desktop/HeartBeat/data/mtl_team_stats
+2025-09-20 14:19:28,943 - INFO - Skipping already processed file: Teams_Statistics_For_2024-2025_Regular_-_9_18_25,_6_15_PM.csv
+2025-09-20 14:19:28,943 - INFO - Skipping already processed file: Strengths-Weaknesses-Montreal-2024.csv
+2025-09-20 14:19:28,943 - INFO - Skipping already processed file: XG-Benchmarks-Montreal-2024.csv
+2025-09-20 14:19:28,944 - INFO - Found 68 CSV files to convert
+2025-09-20 14:19:28,944 - INFO - Beginning conversion of 68 files...
+2025-09-20 14:19:28,944 - INFO - Processing: mtl_playmaking_scoring_chances_against_2024-2025.csv
+2025-09-20 14:19:28,944 - INFO - Found 35 comment/header lines in mtl_playmaking_scoring_chances_against_2024-2025.csv
+2025-09-20 14:19:28,946 - INFO - Loaded CSV with 1 rows, 24 columns
+2025-09-20 14:19:28,983 - INFO - ✓ Converted mtl_playmaking_scoring_chances_against_2024-2025.csv -> mtl_playmaking_scoring_chances_against_2024-2025.parquet
+2025-09-20 14:19:28,983 - INFO -   Size: 4.6KB -> 18.8KB (Compression: -307.4%)
+2025-09-20 14:19:28,983 - INFO - Processing: mtl_playmaking_scoring_chances_for_2024-2025.csv
+2025-09-20 14:19:28,983 - INFO - Found 34 comment/header lines in mtl_playmaking_scoring_chances_for_2024-2025.csv
+2025-09-20 14:19:28,984 - INFO - Loaded CSV with 1 rows, 24 columns
+2025-09-20 14:19:28,988 - INFO - ✓ Converted mtl_playmaking_scoring_chances_for_2024-2025.csv -> mtl_playmaking_scoring_chances_for_2024-2025.parquet
+2025-09-20 14:19:28,988 - INFO -   Size: 3.9KB -> 16.8KB (Compression: -331.3%)
+2025-09-20 14:19:28,988 - INFO - Processing: mtl_passing_nz_against_2024-2025.csv
+2025-09-20 14:19:28,988 - INFO - Found 35 comment/header lines in mtl_passing_nz_against_2024-2025.csv
+2025-09-20 14:19:28,989 - INFO - Loaded CSV with 1 rows, 20 columns
+2025-09-20 14:19:28,992 - INFO - ✓ Converted mtl_passing_nz_against_2024-2025.csv -> mtl_passing_nz_against_2024-2025.parquet
+2025-09-20 14:19:28,992 - INFO -   Size: 4.4KB -> 15.8KB (Compression: -259.0%)
+2025-09-20 14:19:28,992 - INFO - Processing: mtl_passing_dz_against_2024-2025.csv
+2025-09-20 14:19:28,992 - INFO - Found 36 comment/header lines in mtl_passing_dz_against_2024-2025.csv
+2025-09-20 14:19:28,993 - INFO - Loaded CSV with 1 rows, 16 columns
+2025-09-20 14:19:28,995 - INFO - ✓ Converted mtl_passing_dz_against_2024-2025.csv -> mtl_passing_dz_against_2024-2025.parquet
+2025-09-20 14:19:28,996 - INFO -   Size: 4.2KB -> 12.1KB (Compression: -188.2%)
+2025-09-20 14:19:28,996 - INFO - Processing: mtl_passing_oz_for_2024-2025.csv
+2025-09-20 14:19:28,996 - INFO - Found 34 comment/header lines in mtl_passing_oz_for_2024-2025.csv
+2025-09-20 14:19:28,996 - INFO - Loaded CSV with 1 rows, 32 columns
+2025-09-20 14:19:29,001 - INFO - ✓ Converted mtl_passing_oz_for_2024-2025.csv -> mtl_passing_oz_for_2024-2025.parquet
+2025-09-20 14:19:29,001 - INFO -   Size: 4.4KB -> 22.7KB (Compression: -412.3%)
+2025-09-20 14:19:29,001 - INFO - Processing: mtl_passing_receptions_for_2024-2025.csv
+2025-09-20 14:19:29,002 - INFO - Found 34 comment/header lines in mtl_passing_receptions_for_2024-2025.csv
+2025-09-20 14:19:29,002 - INFO - Loaded CSV with 1 rows, 6 columns
+2025-09-20 14:19:29,004 - INFO - ✓ Converted mtl_passing_receptions_for_2024-2025.csv -> mtl_passing_receptions_for_2024-2025.parquet
+2025-09-20 14:19:29,004 - INFO -   Size: 3.4KB -> 4.5KB (Compression: -34.0%)
+2025-09-20 14:19:29,004 - INFO - Processing: mtl_passing_dz_for_2024-2025.csv
+2025-09-20 14:19:29,004 - INFO - Found 34 comment/header lines in mtl_passing_dz_for_2024-2025.csv
+2025-09-20 14:19:29,005 - INFO - Loaded CSV with 1 rows, 16 columns
+2025-09-20 14:19:29,007 - INFO - ✓ Converted mtl_passing_dz_for_2024-2025.csv -> mtl_passing_dz_for_2024-2025.parquet
+2025-09-20 14:19:29,007 - INFO -   Size: 3.8KB -> 10.8KB (Compression: -187.5%)
+2025-09-20 14:19:29,007 - INFO - Processing: mtl_passing_oz_against_2024-2025.csv
+2025-09-20 14:19:29,007 - INFO - Found 35 comment/header lines in mtl_passing_oz_against_2024-2025.csv
+2025-09-20 14:19:29,008 - INFO - Loaded CSV with 1 rows, 32 columns
+2025-09-20 14:19:29,012 - INFO - ✓ Converted mtl_passing_oz_against_2024-2025.csv -> mtl_passing_oz_against_2024-2025.parquet
+2025-09-20 14:19:29,012 - INFO -   Size: 5.1KB -> 25.4KB (Compression: -393.7%)
+2025-09-20 14:19:29,012 - INFO - Processing: mtl_passing_all_for_2024-2025.csv
+2025-09-20 14:19:29,012 - INFO - Found 34 comment/header lines in mtl_passing_all_for_2024-2025.csv
+2025-09-20 14:19:29,012 - INFO - Loaded CSV with 1 rows, 13 columns
+2025-09-20 14:19:29,014 - INFO - ✓ Converted mtl_passing_all_for_2024-2025.csv -> mtl_passing_all_for_2024-2025.parquet
+2025-09-20 14:19:29,014 - INFO -   Size: 3.3KB -> 8.3KB (Compression: -152.3%)
+2025-09-20 14:19:29,014 - INFO - Processing: mtl_passing_receptions_against-2024-2025.csv
+2025-09-20 14:19:29,015 - INFO - Found 35 comment/header lines in mtl_passing_receptions_against-2024-2025.csv
+2025-09-20 14:19:29,015 - INFO - Loaded CSV with 1 rows, 6 columns
+2025-09-20 14:19:29,016 - INFO - ✓ Converted mtl_passing_receptions_against-2024-2025.csv -> mtl_passing_receptions_against-2024-2025.parquet
+2025-09-20 14:19:29,016 - INFO -   Size: 3.6KB -> 5.0KB (Compression: -36.4%)
+2025-09-20 14:19:29,016 - INFO - Processing: mtl_passing_all_against_2024-2025.csv
+2025-09-20 14:19:29,016 - INFO - Found 34 comment/header lines in mtl_passing_all_against_2024-2025.csv
+2025-09-20 14:19:29,016 - INFO - Loaded CSV with 1 rows, 13 columns
+2025-09-20 14:19:29,019 - INFO - ✓ Converted mtl_passing_all_against_2024-2025.csv -> mtl_passing_all_against_2024-2025.parquet
+2025-09-20 14:19:29,019 - INFO -   Size: 3.6KB -> 9.3KB (Compression: -161.1%)
+2025-09-20 14:19:29,019 - INFO - Processing: mtl_passing_nz_for_2024-2025.csv
+2025-09-20 14:19:29,019 - INFO - Found 34 comment/header lines in mtl_passing_nz_for_2024-2025.csv
+2025-09-20 14:19:29,019 - INFO - Loaded CSV with 1 rows, 20 columns
+2025-09-20 14:19:29,022 - INFO - ✓ Converted mtl_passing_nz_for_2024-2025.csv -> mtl_passing_nz_for_2024-2025.parquet
+2025-09-20 14:19:29,022 - INFO -   Size: 4.0KB -> 14.1KB (Compression: -252.8%)
+2025-09-20 14:19:29,022 - INFO - Processing: mtl_dz_exits_all_for_2024-2025.csv
+2025-09-20 14:19:29,022 - INFO - Found 1 comment/header lines in mtl_dz_exits_all_for_2024-2025.csv
+2025-09-20 14:19:29,022 - ERROR - Error reading CSV with comments mtl_dz_exits_all_for_2024-2025.csv: Error tokenizing data. C error: Expected 4 fields in line 5, saw 20
+
+2025-09-20 14:19:29,022 - ERROR - ✗ Error converting mtl_dz_exits_all_for_2024-2025.csv: Error tokenizing data. C error: Expected 4 fields in line 5, saw 20
+
+2025-09-20 14:19:29,022 - INFO - Processing: mtl_dz_exits_per_dump_types_for_2024-2025.csv
+2025-09-20 14:19:29,022 - INFO - Found 1 comment/header lines in mtl_dz_exits_per_dump_types_for_2024-2025.csv
+2025-09-20 14:19:29,023 - ERROR - Error reading CSV with comments mtl_dz_exits_per_dump_types_for_2024-2025.csv: Error tokenizing data. C error: Expected 3 fields in line 4, saw 41
+
+2025-09-20 14:19:29,023 - ERROR - ✗ Error converting mtl_dz_exits_per_dump_types_for_2024-2025.csv: Error tokenizing data. C error: Expected 3 fields in line 4, saw 41
+
+2025-09-20 14:19:29,023 - INFO - Processing: mtl_dz_exits_all_against_2024-2025.csv
+2025-09-20 14:19:29,023 - INFO - Found 1 comment/header lines in mtl_dz_exits_all_against_2024-2025.csv
+2025-09-20 14:19:29,023 - ERROR - Error reading CSV with comments mtl_dz_exits_all_against_2024-2025.csv: Error tokenizing data. C error: Expected 4 fields in line 5, saw 20
+
+2025-09-20 14:19:29,023 - ERROR - ✗ Error converting mtl_dz_exits_all_against_2024-2025.csv: Error tokenizing data. C error: Expected 4 fields in line 5, saw 20
+
+2025-09-20 14:19:29,023 - INFO - Processing: mtl_dz_exits_perdump_types_against_2024-2025.csv
+2025-09-20 14:19:29,023 - INFO - Found 1 comment/header lines in mtl_dz_exits_perdump_types_against_2024-2025.csv
+2025-09-20 14:19:29,023 - ERROR - Error reading CSV with comments mtl_dz_exits_perdump_types_against_2024-2025.csv: Error tokenizing data. C error: Expected 3 fields in line 4, saw 41
+
+2025-09-20 14:19:29,023 - ERROR - ✗ Error converting mtl_dz_exits_perdump_types_against_2024-2025.csv: Error tokenizing data. C error: Expected 3 fields in line 4, saw 41
+
+2025-09-20 14:19:29,023 - INFO - Processing: mtl_penalties_for_2024-2025.csv
+2025-09-20 14:19:29,023 - INFO - Found 34 comment/header lines in mtl_penalties_for_2024-2025.csv
+2025-09-20 14:19:29,024 - INFO - Loaded CSV with 1 rows, 13 columns
+2025-09-20 14:19:29,026 - INFO - ✓ Converted mtl_penalties_for_2024-2025.csv -> mtl_penalties_for_2024-2025.parquet
+2025-09-20 14:19:29,026 - INFO -   Size: 3.5KB -> 8.9KB (Compression: -155.2%)
+2025-09-20 14:19:29,026 - INFO - Processing: mtl_penalties_against_2024-2025.csv
+2025-09-20 14:19:29,026 - INFO - Found 34 comment/header lines in mtl_penalties_against_2024-2025.csv
+2025-09-20 14:19:29,026 - INFO - Loaded CSV with 1 rows, 13 columns
+2025-09-20 14:19:29,028 - INFO - ✓ Converted mtl_penalties_against_2024-2025.csv -> mtl_penalties_against_2024-2025.parquet
+2025-09-20 14:19:29,028 - INFO -   Size: 3.8KB -> 10.0KB (Compression: -161.0%)
+2025-09-20 14:19:29,028 - INFO - Processing: mtl_shooting_slot_against_2024-2025.csv
+2025-09-20 14:19:29,029 - INFO - Found 38 comment/header lines in mtl_shooting_slot_against_2024-2025.csv
+2025-09-20 14:19:29,029 - INFO - Loaded CSV with 1 rows, 12 columns
+2025-09-20 14:19:29,031 - INFO - ✓ Converted mtl_shooting_slot_against_2024-2025.csv -> mtl_shooting_slot_against_2024-2025.parquet
+2025-09-20 14:19:29,031 - INFO -   Size: 4.7KB -> 11.2KB (Compression: -137.6%)
+2025-09-20 14:19:29,031 - INFO - Processing: mtl_shooting_inner_slot_for_2024-2025.csv
+2025-09-20 14:19:29,031 - INFO - Found 37 comment/header lines in mtl_shooting_inner_slot_for_2024-2025.csv
+2025-09-20 14:19:29,032 - INFO - Loaded CSV with 1 rows, 12 columns
+2025-09-20 14:19:29,033 - INFO - ✓ Converted mtl_shooting_inner_slot_for_2024-2025.csv -> mtl_shooting_inner_slot_for_2024-2025.parquet
+2025-09-20 14:19:29,033 - INFO -   Size: 4.3KB -> 10.8KB (Compression: -151.4%)
+2025-09-20 14:19:29,033 - INFO - Processing: mtl_shooting_screened_shots_against_2024-2025.csv
+2025-09-20 14:19:29,034 - INFO - Found 35 comment/header lines in mtl_shooting_screened_shots_against_2024-2025.csv
+2025-09-20 14:19:29,034 - INFO - Loaded CSV with 1 rows, 26 columns
+2025-09-20 14:19:29,038 - INFO - ✓ Converted mtl_shooting_screened_shots_against_2024-2025.csv -> mtl_shooting_screened_shots_against_2024-2025.parquet
+2025-09-20 14:19:29,038 - INFO -   Size: 5.0KB -> 21.6KB (Compression: -333.0%)
+2025-09-20 14:19:29,038 - INFO - Processing: mtl_shooting_all_shots_against_2024-2025.csv
+2025-09-20 14:19:29,038 - INFO - Found 36 comment/header lines in mtl_shooting_all_shots_against_2024-2025.csv
+2025-09-20 14:19:29,039 - INFO - Loaded CSV with 1 rows, 36 columns
+2025-09-20 14:19:29,043 - INFO - ✓ Converted mtl_shooting_all_shots_against_2024-2025.csv -> mtl_shooting_all_shots_against_2024-2025.parquet
+2025-09-20 14:19:29,043 - INFO -   Size: 5.3KB -> 28.6KB (Compression: -439.0%)
+2025-09-20 14:19:29,044 - INFO - Processing: mtl_shooting_screened_shots_for_2024-2025.csv
+2025-09-20 14:19:29,044 - INFO - Found 34 comment/header lines in mtl_shooting_screened_shots_for_2024-2025.csv
+2025-09-20 14:19:29,044 - INFO - Loaded CSV with 1 rows, 26 columns
+2025-09-20 14:19:29,048 - INFO - ✓ Converted mtl_shooting_screened_shots_for_2024-2025.csv -> mtl_shooting_screened_shots_for_2024-2025.parquet
+2025-09-20 14:19:29,048 - INFO -   Size: 4.7KB -> 21.1KB (Compression: -351.0%)
+2025-09-20 14:19:29,048 - INFO - Processing: mtl_shooting_inner_slot_against_2024-2025.csv
+2025-09-20 14:19:29,048 - INFO - Found 36 comment/header lines in mtl_shooting_inner_slot_against_2024-2025.csv
+2025-09-20 14:19:29,048 - INFO - Loaded CSV with 1 rows, 12 columns
+2025-09-20 14:19:29,050 - INFO - ✓ Converted mtl_shooting_inner_slot_against_2024-2025.csv -> mtl_shooting_inner_slot_against_2024-2025.parquet
+2025-09-20 14:19:29,050 - INFO -   Size: 4.6KB -> 11.7KB (Compression: -153.8%)
+2025-09-20 14:19:29,050 - INFO - Processing: mtl_shooting_outside_for_2024-2025.csv
+2025-09-20 14:19:29,050 - INFO - Found 34 comment/header lines in mtl_shooting_outside_for_2024-2025.csv
+2025-09-20 14:19:29,051 - INFO - Loaded CSV with 1 rows, 12 columns
+2025-09-20 14:19:29,052 - INFO - ✓ Converted mtl_shooting_outside_for_2024-2025.csv -> mtl_shooting_outside_for_2024-2025.parquet
+2025-09-20 14:19:29,053 - INFO -   Size: 4.2KB -> 11.0KB (Compression: -164.1%)
+2025-09-20 14:19:29,053 - INFO - Processing: mtl_shooting_all_shots_for_2024-2025.csv
+2025-09-20 14:19:29,053 - INFO - Found 34 comment/header lines in mtl_shooting_all_shots_for_2024-2025.csv
+2025-09-20 14:19:29,053 - INFO - Loaded CSV with 1 rows, 36 columns
+2025-09-20 14:19:29,058 - INFO - ✓ Converted mtl_shooting_all_shots_for_2024-2025.csv -> mtl_shooting_all_shots_for_2024-2025.parquet
+2025-09-20 14:19:29,058 - INFO -   Size: 4.6KB -> 25.6KB (Compression: -452.5%)
+2025-09-20 14:19:29,058 - INFO - Processing: mtl_shooting_outside_against_2024-2025.csv
+2025-09-20 14:19:29,058 - INFO - Found 35 comment/header lines in mtl_shooting_outside_against_2024-2025.csv
+2025-09-20 14:19:29,058 - INFO - Loaded CSV with 1 rows, 12 columns
+2025-09-20 14:19:29,060 - INFO - ✓ Converted mtl_shooting_outside_against_2024-2025.csv -> mtl_shooting_outside_against_2024-2025.parquet
+2025-09-20 14:19:29,060 - INFO -   Size: 4.5KB -> 11.9KB (Compression: -163.5%)
+2025-09-20 14:19:29,060 - INFO - Processing: mtl_shooting_slot_for_2024-2025.csv
+2025-09-20 14:19:29,061 - INFO - Found 37 comment/header lines in mtl_shooting_slot_for_2024-2025.csv
+2025-09-20 14:19:29,061 - INFO - Loaded CSV with 1 rows, 12 columns
+2025-09-20 14:19:29,063 - INFO - ✓ Converted mtl_shooting_slot_for_2024-2025.csv -> mtl_shooting_slot_for_2024-2025.parquet
+2025-09-20 14:19:29,063 - INFO -   Size: 4.4KB -> 10.3KB (Compression: -132.4%)
+2025-09-20 14:19:29,063 - INFO - Processing: mtl_faceoffs_for_2024-2025.csv
+2025-09-20 14:19:29,063 - INFO - Found 32 comment/header lines in mtl_faceoffs_for_2024-2025.csv
+2025-09-20 14:19:29,063 - INFO - Loaded CSV with 1 rows, 21 columns
+2025-09-20 14:19:29,066 - INFO - ✓ Converted mtl_faceoffs_for_2024-2025.csv -> mtl_faceoffs_for_2024-2025.parquet
+2025-09-20 14:19:29,066 - INFO -   Size: 3.2KB -> 14.7KB (Compression: -356.1%)
+2025-09-20 14:19:29,066 - INFO - Processing: mtl_faceoffs_against_2024-2025.csv
+2025-09-20 14:19:29,066 - INFO - Found 33 comment/header lines in mtl_faceoffs_against_2024-2025.csv
+2025-09-20 14:19:29,067 - INFO - Loaded CSV with 1 rows, 21 columns
+2025-09-20 14:19:29,070 - INFO - ✓ Converted mtl_faceoffs_against_2024-2025.csv -> mtl_faceoffs_against_2024-2025.parquet
+2025-09-20 14:19:29,070 - INFO -   Size: 3.7KB -> 16.4KB (Compression: -340.7%)
+2025-09-20 14:19:29,070 - INFO - Processing: mtl_scoring_against_2024-2025.csv
+2025-09-20 14:19:29,070 - INFO - Found 35 comment/header lines in mtl_scoring_against_2024-2025.csv
+2025-09-20 14:19:29,071 - INFO - Loaded CSV with 1 rows, 5 columns
+2025-09-20 14:19:29,071 - INFO - ✓ Converted mtl_scoring_against_2024-2025.csv -> mtl_scoring_against_2024-2025.parquet
+2025-09-20 14:19:29,072 - INFO -   Size: 3.5KB -> 3.8KB (Compression: -8.0%)
+2025-09-20 14:19:29,072 - INFO - Processing: mtl_scoring_for_2024-2025.csv
+2025-09-20 14:19:29,072 - INFO - Found 34 comment/header lines in mtl_scoring_for_2024-2025.csv
+2025-09-20 14:19:29,072 - INFO - Loaded CSV with 1 rows, 5 columns
+2025-09-20 14:19:29,073 - INFO - ✓ Converted mtl_scoring_for_2024-2025.csv -> mtl_scoring_for_2024-2025.parquet
+2025-09-20 14:19:29,073 - INFO -   Size: 3.2KB -> 3.5KB (Compression: -7.4%)
+2025-09-20 14:19:29,073 - INFO - Processing: mtl_shootouts_aim_against_2024-2025.csv
+2025-09-20 14:19:29,073 - INFO - Found 38 comment/header lines in mtl_shootouts_aim_against_2024-2025.csv
+2025-09-20 14:19:29,073 - INFO - Loaded CSV with 1 rows, 11 columns
+2025-09-20 14:19:29,075 - INFO - ✓ Converted mtl_shootouts_aim_against_2024-2025.csv -> mtl_shootouts_aim_against_2024-2025.parquet
+2025-09-20 14:19:29,075 - INFO -   Size: 4.3KB -> 8.3KB (Compression: -91.9%)
+2025-09-20 14:19:29,075 - INFO - Processing: mtl_shootouts_aim_for_2024-2025.csv
+2025-09-20 14:19:29,075 - INFO - Found 37 comment/header lines in mtl_shootouts_aim_for_2024-2025.csv
+2025-09-20 14:19:29,075 - INFO - Loaded CSV with 1 rows, 11 columns
+2025-09-20 14:19:29,077 - INFO - ✓ Converted mtl_shootouts_aim_for_2024-2025.csv -> mtl_shootouts_aim_for_2024-2025.parquet
+2025-09-20 14:19:29,077 - INFO -   Size: 4.0KB -> 7.4KB (Compression: -85.0%)
+2025-09-20 14:19:29,077 - INFO - Processing: mtl_shootouts_all_for_2024-2025.csv
+2025-09-20 14:19:29,077 - INFO - Found 37 comment/header lines in mtl_shootouts_all_for_2024-2025.csv
+2025-09-20 14:19:29,077 - INFO - Loaded CSV with 1 rows, 7 columns
+2025-09-20 14:19:29,078 - INFO - ✓ Converted mtl_shootouts_all_for_2024-2025.csv -> mtl_shootouts_all_for_2024-2025.parquet
+2025-09-20 14:19:29,079 - INFO -   Size: 3.8KB -> 4.8KB (Compression: -24.6%)
+2025-09-20 14:19:29,079 - INFO - Processing: mtl_shootouts_shot_types_for_2024-2025.csv
+2025-09-20 14:19:29,079 - INFO - Found 36 comment/header lines in mtl_shootouts_shot_types_for_2024-2025.csv
+2025-09-20 14:19:29,079 - INFO - Loaded CSV with 1 rows, 13 columns
+2025-09-20 14:19:29,081 - INFO - ✓ Converted mtl_shootouts_shot_types_for_2024-2025.csv -> mtl_shootouts_shot_types_for_2024-2025.parquet
+2025-09-20 14:19:29,081 - INFO -   Size: 4.0KB -> 9.1KB (Compression: -126.9%)
+2025-09-20 14:19:29,081 - INFO - Processing: mtl_shootouts_shot_types_against_2024-2025.csv
+2025-09-20 14:19:29,081 - INFO - Found 36 comment/header lines in mtl_shootouts_shot_types_against_2024-2025.csv
+2025-09-20 14:19:29,081 - INFO - Loaded CSV with 1 rows, 13 columns
+2025-09-20 14:19:29,083 - INFO - ✓ Converted mtl_shootouts_shot_types_against_2024-2025.csv -> mtl_shootouts_shot_types_against_2024-2025.parquet
+2025-09-20 14:19:29,083 - INFO -   Size: 4.3KB -> 10.2KB (Compression: -135.1%)
+2025-09-20 14:19:29,083 - INFO - Processing: mtl_shootouts_all_against_2024-2025.csv
+2025-09-20 14:19:29,083 - INFO - Found 38 comment/header lines in mtl_shootouts_all_against_2024-2025.csv
+2025-09-20 14:19:29,083 - INFO - Loaded CSV with 1 rows, 7 columns
+2025-09-20 14:19:29,085 - INFO - ✓ Converted mtl_shootouts_all_against_2024-2025.csv -> mtl_shootouts_all_against_2024-2025.parquet
+2025-09-20 14:19:29,085 - INFO -   Size: 4.3KB -> 5.2KB (Compression: -21.9%)
+2025-09-20 14:19:29,085 - INFO - Processing: mtl_possession_per_zone_for_2024-2025.csv
+2025-09-20 14:19:29,085 - INFO - Found 34 comment/header lines in mtl_possession_per_zone_for_2024-2025.csv
+2025-09-20 14:19:29,085 - INFO - Loaded CSV with 1 rows, 13 columns
+2025-09-20 14:19:29,087 - INFO - ✓ Converted mtl_possession_per_zone_for_2024-2025.csv -> mtl_possession_per_zone_for_2024-2025.parquet
+2025-09-20 14:19:29,087 - INFO -   Size: 3.5KB -> 8.0KB (Compression: -126.4%)
+2025-09-20 14:19:29,087 - INFO - Processing: mtl_possession_success_rate_against_2024-2025.csv
+2025-09-20 14:19:29,088 - INFO - Found 35 comment/header lines in mtl_possession_success_rate_against_2024-2025.csv
+2025-09-20 14:19:29,088 - INFO - Loaded CSV with 1 rows, 29 columns
+2025-09-20 14:19:29,092 - INFO - ✓ Converted mtl_possession_success_rate_against_2024-2025.csv -> mtl_possession_success_rate_against_2024-2025.parquet
+2025-09-20 14:19:29,092 - INFO -   Size: 4.8KB -> 20.9KB (Compression: -337.5%)
+2025-09-20 14:19:29,092 - INFO - Processing: mtl_possession__per_zone_against_2024-2025.csv
+2025-09-20 14:19:29,092 - INFO - Found 35 comment/header lines in mtl_possession__per_zone_against_2024-2025.csv
+2025-09-20 14:19:29,092 - INFO - Loaded CSV with 1 rows, 13 columns
+2025-09-20 14:19:29,095 - INFO - ✓ Converted mtl_possession__per_zone_against_2024-2025.csv -> mtl_possession__per_zone_against_2024-2025.parquet
+2025-09-20 14:19:29,095 - INFO -   Size: 4.0KB -> 9.1KB (Compression: -126.8%)
+2025-09-20 14:19:29,095 - INFO - Processing: mtl_possession_dekes_for_2024-2025.csv
+2025-09-20 14:19:29,095 - INFO - Found 34 comment/header lines in mtl_possession_dekes_for_2024-2025.csv
+2025-09-20 14:19:29,095 - INFO - Loaded CSV with 1 rows, 13 columns
+2025-09-20 14:19:29,097 - INFO - ✓ Converted mtl_possession_dekes_for_2024-2025.csv -> mtl_possession_dekes_for_2024-2025.parquet
+2025-09-20 14:19:29,097 - INFO -   Size: 3.8KB -> 9.0KB (Compression: -140.0%)
+2025-09-20 14:19:29,097 - INFO - Processing: mtl_possession_dekes_against_2024-2025.csv
+2025-09-20 14:19:29,098 - INFO - Found 35 comment/header lines in mtl_possession_dekes_against_2024-2025.csv
+2025-09-20 14:19:29,098 - INFO - Loaded CSV with 1 rows, 13 columns
+2025-09-20 14:19:29,100 - INFO - ✓ Converted mtl_possession_dekes_against_2024-2025.csv -> mtl_possession_dekes_against_2024-2025.parquet
+2025-09-20 14:19:29,100 - INFO -   Size: 4.0KB -> 10.0KB (Compression: -150.7%)
+2025-09-20 14:19:29,100 - INFO - Processing: mtl_possession_success_rate_for_2024-2025.csv
+2025-09-20 14:19:29,100 - INFO - Found 34 comment/header lines in mtl_possession_success_rate_for_2024-2025.csv
+2025-09-20 14:19:29,101 - INFO - Loaded CSV with 1 rows, 29 columns
+2025-09-20 14:19:29,105 - INFO - ✓ Converted mtl_possession_success_rate_for_2024-2025.csv -> mtl_possession_success_rate_for_2024-2025.parquet
+2025-09-20 14:19:29,105 - INFO -   Size: 4.4KB -> 19.9KB (Compression: -352.5%)
+2025-09-20 14:19:29,105 - INFO - Processing: mtl_dumpins_per_type_for_2024-2025.csv
+2025-09-20 14:19:29,105 - INFO - Found 29 comment/header lines in mtl_dumpins_per_type_for_2024-2025.csv
+2025-09-20 14:19:29,105 - INFO - Loaded CSV with 1 rows, 21 columns
+2025-09-20 14:19:29,108 - INFO - ✓ Converted mtl_dumpins_per_type_for_2024-2025.csv -> mtl_dumpins_per_type_for_2024-2025.parquet
+2025-09-20 14:19:29,108 - INFO -   Size: 3.1KB -> 15.8KB (Compression: -414.3%)
+2025-09-20 14:19:29,108 - INFO - Processing: mtl_dumpins_all_against_2024-2025.csv
+2025-09-20 14:19:29,108 - INFO - Found 34 comment/header lines in mtl_dumpins_all_against_2024-2025.csv
+2025-09-20 14:19:29,109 - INFO - Loaded CSV with 1 rows, 20 columns
+2025-09-20 14:19:29,112 - INFO - ✓ Converted mtl_dumpins_all_against_2024-2025.csv -> mtl_dumpins_all_against_2024-2025.parquet
+2025-09-20 14:19:29,112 - INFO -   Size: 3.9KB -> 17.0KB (Compression: -338.8%)
+2025-09-20 14:19:29,112 - INFO - Processing: mtl_dumpins_per_type_against_2024-2025.csv
+2025-09-20 14:19:29,112 - INFO - Found 30 comment/header lines in mtl_dumpins_per_type_against_2024-2025.csv
+2025-09-20 14:19:29,113 - INFO - Loaded CSV with 1 rows, 21 columns
+2025-09-20 14:19:29,115 - INFO - ✓ Converted mtl_dumpins_per_type_against_2024-2025.csv -> mtl_dumpins_per_type_against_2024-2025.parquet
+2025-09-20 14:19:29,115 - INFO -   Size: 3.5KB -> 17.6KB (Compression: -396.9%)
+2025-09-20 14:19:29,115 - INFO - Processing: mtl_dumpins_all_for_2024-2025.csv
+2025-09-20 14:19:29,115 - INFO - Found 32 comment/header lines in mtl_dumpins_all_for_2024-2025.csv
+2025-09-20 14:19:29,116 - INFO - Loaded CSV with 1 rows, 20 columns
+2025-09-20 14:19:29,119 - INFO - ✓ Converted mtl_dumpins_all_for_2024-2025.csv -> mtl_dumpins_all_for_2024-2025.parquet
+2025-09-20 14:19:29,119 - INFO -   Size: 3.2KB -> 15.3KB (Compression: -375.7%)
+2025-09-20 14:19:29,119 - INFO - Processing: mtl_goalie_all_for_2024-2025.csv
+2025-09-20 14:19:29,119 - INFO - Loaded CSV with 1 rows, 16 columns
+2025-09-20 14:19:29,122 - INFO - ✓ Converted mtl_goalie_all_for_2024-2025.csv -> mtl_goalie_all_for_2024-2025.parquet
+2025-09-20 14:19:29,122 - INFO -   Size: 0.6KB -> 11.6KB (Compression: -1703.2%)
+2025-09-20 14:19:29,122 - INFO - Processing: mtl_goalie_screened_shots_for_2024-2025.csv
+2025-09-20 14:19:29,123 - INFO - Loaded CSV with 1 rows, 27 columns
+2025-09-20 14:19:29,126 - INFO - ✓ Converted mtl_goalie_screened_shots_for_2024-2025.csv -> mtl_goalie_screened_shots_for_2024-2025.parquet
+2025-09-20 14:19:29,126 - INFO -   Size: 1.3KB -> 21.1KB (Compression: -1507.1%)
+2025-09-20 14:19:29,126 - INFO - Processing: mtl_goalie_dumpin_recoveries_against_2024-2025.csv
+2025-09-20 14:19:29,127 - INFO - Found 33 comment/header lines in mtl_goalie_dumpin_recoveries_against_2024-2025.csv
+2025-09-20 14:19:29,127 - INFO - Loaded CSV with 1 rows, 36 columns
+2025-09-20 14:19:29,132 - INFO - ✓ Converted mtl_goalie_dumpin_recoveries_against_2024-2025.csv -> mtl_goalie_dumpin_recoveries_against_2024-2025.parquet
+2025-09-20 14:19:29,132 - INFO -   Size: 5.4KB -> 34.2KB (Compression: -530.3%)
+2025-09-20 14:19:29,132 - INFO - Processing: mtl_goallie_dumpin_recoveries_for_2024-2025.csv
+2025-09-20 14:19:29,132 - INFO - Found 32 comment/header lines in mtl_goallie_dumpin_recoveries_for_2024-2025.csv
+2025-09-20 14:19:29,132 - ERROR - Error reading CSV with comments mtl_goallie_dumpin_recoveries_for_2024-2025.csv: No columns to parse from file
+2025-09-20 14:19:29,132 - ERROR - ✗ Error converting mtl_goallie_dumpin_recoveries_for_2024-2025.csv: Error tokenizing data. C error: Expected 1 fields in line 3, saw 3
+
+2025-09-20 14:19:29,132 - INFO - Processing: mtl_entries_oz_for_2024-2025.csv
+2025-09-20 14:19:29,133 - INFO - Found 34 comment/header lines in mtl_entries_oz_for_2024-2025.csv
+2025-09-20 14:19:29,133 - INFO - Loaded CSV with 1 rows, 26 columns
+2025-09-20 14:19:29,137 - INFO - ✓ Converted mtl_entries_oz_for_2024-2025.csv -> mtl_entries_oz_for_2024-2025.parquet
+2025-09-20 14:19:29,137 - INFO -   Size: 4.4KB -> 20.1KB (Compression: -358.3%)
+2025-09-20 14:19:29,137 - INFO - Processing: mtl_entries_oz_against_2024-2025.csv
+2025-09-20 14:19:29,137 - INFO - Found 34 comment/header lines in mtl_entries_oz_against_2024-2025.csv
+2025-09-20 14:19:29,137 - INFO - Loaded CSV with 1 rows, 26 columns
+2025-09-20 14:19:29,141 - INFO - ✓ Converted mtl_entries_oz_against_2024-2025.csv -> mtl_entries_oz_against_2024-2025.parquet
+2025-09-20 14:19:29,141 - INFO -   Size: 4.8KB -> 22.1KB (Compression: -360.3%)
+2025-09-20 14:19:29,141 - INFO - Processing: mtl_defensive_dz_denials_for_2024-2025.csv
+2025-09-20 14:19:29,141 - INFO - Found 24 comment/header lines in mtl_defensive_dz_denials_for_2024-2025.csv
+2025-09-20 14:19:29,141 - INFO - Loaded CSV with 1 rows, 11 columns
+2025-09-20 14:19:29,143 - INFO - ✓ Converted mtl_defensive_dz_denials_for_2024-2025.csv -> mtl_defensive_dz_denials_for_2024-2025.parquet
+2025-09-20 14:19:29,143 - INFO -   Size: 2.1KB -> 8.3KB (Compression: -301.1%)
+2025-09-20 14:19:29,143 - INFO - Processing: mtl_defensive_bodychecks_for_2024-2025.csv
+2025-09-20 14:19:29,143 - INFO - Found 29 comment/header lines in mtl_defensive_bodychecks_for_2024-2025.csv
+2025-09-20 14:19:29,144 - INFO - Loaded CSV with 1 rows, 5 columns
+2025-09-20 14:19:29,145 - INFO - ✓ Converted mtl_defensive_bodychecks_for_2024-2025.csv -> mtl_defensive_bodychecks_for_2024-2025.parquet
+2025-09-20 14:19:29,145 - INFO -   Size: 2.2KB -> 3.7KB (Compression: -63.8%)
+2025-09-20 14:19:29,145 - INFO - Processing: mtl_defensive_bodychecks_against_2024-2025.csv
+2025-09-20 14:19:29,145 - INFO - Found 31 comment/header lines in mtl_defensive_bodychecks_against_2024-2025.csv
+2025-09-20 14:19:29,145 - INFO - Loaded CSV with 1 rows, 5 columns
+2025-09-20 14:19:29,146 - INFO - ✓ Converted mtl_defensive_bodychecks_against_2024-2025.csv -> mtl_defensive_bodychecks_against_2024-2025.parquet
+2025-09-20 14:19:29,146 - INFO -   Size: 2.5KB -> 4.0KB (Compression: -61.3%)
+2025-09-20 14:19:29,146 - INFO - Processing: mtl_defensive_blocks_for_2024-2025.csv
+2025-09-20 14:19:29,146 - INFO - Found 25 comment/header lines in mtl_defensive_blocks_for_2024-2025.csv
+2025-09-20 14:19:29,147 - INFO - Loaded CSV with 1 rows, 26 columns
+2025-09-20 14:19:29,150 - INFO - ✓ Converted mtl_defensive_blocks_for_2024-2025.csv -> mtl_defensive_blocks_for_2024-2025.parquet
+2025-09-20 14:19:29,150 - INFO -   Size: 2.8KB -> 17.5KB (Compression: -523.5%)
+2025-09-20 14:19:29,151 - INFO - Processing: mtl_defensive_all_against_2024-2025.csv
+2025-09-20 14:19:29,151 - INFO - Found 26 comment/header lines in mtl_defensive_all_against_2024-2025.csv
+2025-09-20 14:19:29,151 - INFO - Loaded CSV with 1 rows, 8 columns
+2025-09-20 14:19:29,153 - INFO - ✓ Converted mtl_defensive_all_against_2024-2025.csv -> mtl_defensive_all_against_2024-2025.parquet
+2025-09-20 14:19:29,153 - INFO -   Size: 2.3KB -> 6.5KB (Compression: -179.7%)
+2025-09-20 14:19:29,153 - INFO - Processing: mtl_defensive_stickchecks_for_2024-2025.csv
+2025-09-20 14:19:29,153 - INFO - Found 29 comment/header lines in mtl_defensive_stickchecks_for_2024-2025.csv
+2025-09-20 14:19:29,153 - INFO - Loaded CSV with 1 rows, 5 columns
+2025-09-20 14:19:29,154 - INFO - ✓ Converted mtl_defensive_stickchecks_for_2024-2025.csv -> mtl_defensive_stickchecks_for_2024-2025.parquet
+2025-09-20 14:19:29,154 - INFO -   Size: 2.3KB -> 3.7KB (Compression: -61.9%)
+2025-09-20 14:19:29,154 - INFO - Processing: mtl_defensive_all_for_2024-2025.csv
+2025-09-20 14:19:29,154 - INFO - Found 24 comment/header lines in mtl_defensive_all_for_2024-2025.csv
+2025-09-20 14:19:29,154 - INFO - Loaded CSV with 1 rows, 8 columns
+2025-09-20 14:19:29,156 - INFO - ✓ Converted mtl_defensive_all_for_2024-2025.csv -> mtl_defensive_all_for_2024-2025.parquet
+2025-09-20 14:19:29,156 - INFO -   Size: 2.0KB -> 5.9KB (Compression: -192.4%)
+2025-09-20 14:19:29,156 - INFO - Processing: mtl_defensive_blocks_against_2024-2025.csv
+2025-09-20 14:19:29,156 - INFO - Found 27 comment/header lines in mtl_defensive_blocks_against_2024-2025.csv
+2025-09-20 14:19:29,156 - INFO - Loaded CSV with 1 rows, 26 columns
+2025-09-20 14:19:29,160 - INFO - ✓ Converted mtl_defensive_blocks_against_2024-2025.csv -> mtl_defensive_blocks_against_2024-2025.parquet
+2025-09-20 14:19:29,160 - INFO -   Size: 3.3KB -> 19.6KB (Compression: -491.9%)
+2025-09-20 14:19:29,160 - INFO - Processing: mtl_defensive_dz_denials_against_2024-2025.csv
+2025-09-20 14:19:29,160 - INFO - Found 23 comment/header lines in mtl_defensive_dz_denials_against_2024-2025.csv
+2025-09-20 14:19:29,161 - INFO - Loaded CSV with 1 rows, 11 columns
+2025-09-20 14:19:29,163 - INFO - ✓ Converted mtl_defensive_dz_denials_against_2024-2025.csv -> mtl_defensive_dz_denials_against_2024-2025.parquet
+2025-09-20 14:19:29,163 - INFO -   Size: 2.5KB -> 9.1KB (Compression: -258.7%)
+2025-09-20 14:19:29,163 - INFO - Processing: mtl_defensive_stickchecks_against_2024-2025.csv
+2025-09-20 14:19:29,163 - INFO - Found 31 comment/header lines in mtl_defensive_stickchecks_against_2024-2025.csv
+2025-09-20 14:19:29,163 - INFO - Loaded CSV with 1 rows, 5 columns
+2025-09-20 14:19:29,164 - INFO - ✓ Converted mtl_defensive_stickchecks_against_2024-2025.csv -> mtl_defensive_stickchecks_against_2024-2025.parquet
+2025-09-20 14:19:29,164 - INFO -   Size: 2.7KB -> 4.0KB (Compression: -52.7%)
+2025-09-20 14:19:29,164 - INFO - Processing: mtl_lpr_regroup_for_2024-2025.csv
+2025-09-20 14:19:29,164 - INFO - Found 33 comment/header lines in mtl_lpr_regroup_for_2024-2025.csv
+2025-09-20 14:19:29,165 - INFO - Loaded CSV with 1 rows, 23 columns
+2025-09-20 14:19:29,168 - INFO - ✓ Converted mtl_lpr_regroup_for_2024-2025.csv -> mtl_lpr_regroup_for_2024-2025.parquet
+2025-09-20 14:19:29,168 - INFO -   Size: 4.3KB -> 21.5KB (Compression: -394.5%)
+2025-09-20 14:19:29,168 - INFO - Processing: mtl_lpr_per_zone_against_2024-2025.csv
+2025-09-20 14:19:29,168 - INFO - Found 35 comment/header lines in mtl_lpr_per_zone_against_2024-2025.csv
+2025-09-20 14:19:29,169 - INFO - Loaded CSV with 1 rows, 22 columns
+2025-09-20 14:19:29,172 - INFO - ✓ Converted mtl_lpr_per_zone_against_2024-2025.csv -> mtl_lpr_per_zone_against_2024-2025.parquet
+2025-09-20 14:19:29,172 - INFO -   Size: 3.9KB -> 16.7KB (Compression: -325.0%)
+2025-09-20 14:19:29,172 - INFO - Processing: mtl_lpr_per_zone_for_2024-2025.csv
+2025-09-20 14:19:29,172 - INFO - Found 33 comment/header lines in mtl_lpr_per_zone_for_2024-2025.csv
+2025-09-20 14:19:29,173 - INFO - Loaded CSV with 1 rows, 22 columns
+2025-09-20 14:19:29,176 - INFO - ✓ Converted mtl_lpr_per_zone_for_2024-2025.csv -> mtl_lpr_per_zone_for_2024-2025.parquet
+2025-09-20 14:19:29,176 - INFO -   Size: 3.5KB -> 14.9KB (Compression: -330.3%)
+2025-09-20 14:19:29,176 - INFO - Processing: mtl_lpr_regroup_against_2024-2025.csv
+2025-09-20 14:19:29,176 - INFO - Found 35 comment/header lines in mtl_lpr_regroup_against_2024-2025.csv
+2025-09-20 14:19:29,176 - INFO - Loaded CSV with 1 rows, 23 columns
+2025-09-20 14:19:29,180 - INFO - ✓ Converted mtl_lpr_regroup_against_2024-2025.csv -> mtl_lpr_regroup_against_2024-2025.parquet
+2025-09-20 14:19:29,180 - INFO -   Size: 4.7KB -> 21.5KB (Compression: -354.9%)
+2025-09-20 14:19:29,180 - INFO - 
+============================================================
+2025-09-20 14:19:29,180 - INFO - MONTREAL TEAM STATISTICS CONVERSION REPORT
+2025-09-20 14:19:29,180 - INFO - ============================================================
+2025-09-20 14:19:29,180 - INFO - Total CSV files found:     68
+2025-09-20 14:19:29,180 - INFO - Successfully converted:    63
+2025-09-20 14:19:29,180 - INFO - Already processed (skipped): 3
+2025-09-20 14:19:29,180 - INFO - Conversion errors:         5
+2025-09-20 14:19:29,180 - INFO - Success rate:              92.6%
+2025-09-20 14:19:29,180 - INFO - ============================================================
+2025-09-20 14:19:29,180 - INFO - ✓ All parquet files saved to: /Users/xavier.bouchard/Desktop/HeartBeat/data/processed/analytics
+2025-09-20 14:19:29,180 - INFO - ✓ Files ready for analytics and ML processing
