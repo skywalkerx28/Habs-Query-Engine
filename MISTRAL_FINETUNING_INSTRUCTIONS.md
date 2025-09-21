@@ -5,7 +5,15 @@
 - **File**: mistral_finetuning_dataset_2024_2025.jsonl
 - **Total Examples**: 1,982 conversation pairs
 - **Format**: JSONL with messages array
+- **Dataset Size**: 1.7MB (optimal for instruction tuning)
+- **Quality**: High-quality, domain-specific Q&A pairs
 - **Base Model**: ministral-8b-latest (recommended for HeartBeat)
+
+### Why This Dataset Size Works
+- **Instruction Tuning**: 1K-5K examples typically sufficient
+- **Domain Expertise**: Quality over quantity for hockey analytics
+- **Base Model Capability**: ministral-8b-latest already has strong reasoning
+- **Cost Efficiency**: Smaller datasets train faster and cheaper
 
 ### Mistral AI Platform Steps
 
@@ -26,6 +34,8 @@
    - **Allowed Invalid Lines**: 5% (tolerance for data quality issues)
 
 5. **Training Duration**: 4-15 minutes for ministral-8b (much faster than larger models)
+   - **Note**: Small dataset + efficient model = fast training
+   - **Quality**: 1,982 high-quality examples sufficient for domain expertise
 6. **Cost**: Check Mistral AI pricing for ministral-8b fine-tuning
 
 ### Model Capabilities After Training
