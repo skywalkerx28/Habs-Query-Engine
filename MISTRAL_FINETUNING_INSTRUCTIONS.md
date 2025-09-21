@@ -14,16 +14,18 @@
 3. **Upload Dataset**:
    - Choose "Fine-tuning" section
    - Upload `mistral_finetuning_dataset_2024_2025.jsonl`
-   - Select base model: `Mixtral-8x7B-Instruct-v0.1`
+   - Select base model: `ministral-8b-latest`
 
-4. **Recommended Training Parameters**:
-   - **Learning Rate**: 2e-5 (default)
-   - **Epochs**: 3-5
+4. **Recommended Training Parameters** (UPDATED for ministral-8b-latest):
+   - **Learning Rate**: 1e-4 (Mistral recommended for LoRA fine-tuning)
+   - **Epochs**: 3 (optimal for 1.7MB dataset)
    - **Batch Size**: Auto (let Mistral optimize)
    - **Validation Split**: 10%
+   - **Max Steps**: ~500 (calculated: epochs × dataset_size_MB)
+   - **Learning Rate Schedule**: Linear warmup + cosine decay
 
 5. **Training Duration**: 4-8 hours depending on parameters
-6. **Cost**: Check Mistral AI pricing for Mixtral fine-tuning
+6. **Cost**: Check Mistral AI pricing for ministral-8b fine-tuning
 
 ### Model Capabilities After Training
 - Strategic opponent analysis with professional terminology
