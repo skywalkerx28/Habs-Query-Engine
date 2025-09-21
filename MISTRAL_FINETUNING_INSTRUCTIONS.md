@@ -18,14 +18,14 @@
 
 4. **Recommended Training Parameters** (UPDATED for ministral-8b-latest):
    - **Learning Rate**: 1e-4 (Mistral recommended for LoRA fine-tuning)
-   - **Epochs**: 3 (optimal for 1.7MB dataset)
+   - **Max Steps**: 5 (for ~3 epochs with 1.7MB dataset)
    - **Batch Size**: Auto (let Mistral optimize)
    - **Validation Split**: 10%
-   - **Max Steps**: ~500 (calculated: epochs × dataset_size_MB)
+   - **Epochs Formula**: epochs = max_steps / dataset_size_MB (Mistral calculation)
    - **Learning Rate Schedule**: Linear warmup + cosine decay
    - **Allowed Invalid Lines**: 5% (tolerance for data quality issues)
 
-5. **Training Duration**: 4-8 hours depending on parameters
+5. **Training Duration**: 4-15 minutes for ministral-8b (much faster than larger models)
 6. **Cost**: Check Mistral AI pricing for ministral-8b fine-tuning
 
 ### Model Capabilities After Training
