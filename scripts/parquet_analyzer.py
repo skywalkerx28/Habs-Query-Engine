@@ -293,7 +293,11 @@ class ParquetAnalyzer:
             query_lower = query.lower()
             
             # Intelligent query routing
-            if any(term in query_lower for term in ["rank", "percentile", "compare", "among"]):
+            if any(term in query_lower for term in ["record", "season", "wins", "losses", "points", "standings"]):
+                # Season record query - NEW ROUTING
+                return self.get_season_record()
+                
+            elif any(term in query_lower for term in ["rank", "percentile", "compare", "among"]):
                 # Player comparison query
                 return self.get_player_ranking("player_context", "general")
                 
@@ -323,6 +327,66 @@ class ParquetAnalyzer:
                     "suggestion": "Try more specific queries about players, opponents, or team performance"
                 }
             }
+
+    def get_season_record(self) -> Dict[str, Any]:
+        """Get Montreal Canadiens season record with concrete statistics"""
+        try:
+            # Look for season results files
+            season_files = self.file_map["season_results"]
+            
+            results = {
+                "query_type": "season_record",
+                "season": "2024-2025",
+                "record_metrics": {},
+                "context": "Montreal Canadiens season performance",
+                "data_source": "Official game results"
+            }
+
+            if season_files:
+                try:
+                    # Load the most recent season results
+                    season_df = pd.read_parquet(season_files[0])
+                    
+                    if len(season_df) > 0 and 'Result' in season_df.columns:
+                        # Calculate official NHL record
+                        wins = int((season_df['Result'] == 'W').sum())
+                        losses = int((season_df['Result'] == 'L').sum()) 
+                        otl = int((season_df['Result'] == 'OTL').sum())
+                        total_games = len(season_df)
+                        points = wins * 2 + otl
+                        
+                        # Calculate additional metrics
+                        if 'MTL_G' in season_df.columns and 'OPP_G' in season_df.columns:
+                            goals_for = int(season_df['MTL_G'].sum())
+                            goals_against = int(season_df['OPP_G'].sum())
+                            goal_diff = goals_for - goals_against
+                        else:
+                            goals_for = goals_against = goal_diff = 0
+
+                        results["record_metrics"] = {
+                            "wins": {"value": wins, "metric_type": "wins"},
+                            "losses": {"value": losses, "metric_type": "losses"}, 
+                            "overtime_losses": {"value": otl, "metric_type": "overtime_losses"},
+                            "total_games": {"value": total_games, "metric_type": "games_played"},
+                            "points": {"value": points, "metric_type": "standings_points"},
+                            "record_string": {"value": f"{wins}-{losses}-{otl}", "metric_type": "official_record"},
+                            "goals_for": {"value": goals_for, "metric_type": "goals_scored"} if goals_for > 0 else None,
+                            "goals_against": {"value": goals_against, "metric_type": "goals_allowed"} if goals_against > 0 else None,
+                            "goal_differential": {"value": goal_diff, "metric_type": "goal_difference"} if goal_diff != 0 else None
+                        }
+                        
+                        # Remove None values
+                        results["record_metrics"] = {k: v for k, v in results["record_metrics"].items() if v is not None}
+
+                except Exception as season_error:
+                    logger.warning(f"Season record calculation error: {season_error}")
+                    results["record_metrics"] = {"note": "Season data processing limited"}
+
+            return results
+
+        except Exception as e:
+            logger.error(f"Error getting season record: {e}")
+            return {"error": f"Season record query failed: {str(e)}"}
 
     def _extract_opponent(self, query: str) -> str:
         """Extract opponent name from query"""

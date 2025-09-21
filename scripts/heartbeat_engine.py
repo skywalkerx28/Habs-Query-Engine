@@ -30,23 +30,23 @@ class HeartBeatEngine:
         self.model_id = "ft:ministral-8b-latest:dd26ff35:20250921:5207f629"
 
         if not self.mistral_api_key:
-            logger.error("❌ MISTRAL_API_KEY not set")
+            logger.error("MISTRAL_API_KEY not set")
         if not self.pinecone_api_key:
-            logger.warning("⚠️ PINECONE_API_KEY not set - RAG will be limited")
+            logger.warning("PINECONE_API_KEY not set - RAG will be limited")
 
         # Initialize components
         self.rag_system = RAGSystem()
         self.parquet_analyzer = ParquetAnalyzer()
         self.response_synthesizer = ResponseSynthesizer()
 
-        logger.info("✅ HeartBeat Engine initialized")
-        logger.info("🎯 Model: Mistral fine-tuned analyst")
-        logger.info("🧠 RAG: Hockey context retrieval")
-        logger.info("📊 Analytics: Real-time Parquet queries")
+        logger.info("HeartBeat Engine initialized")
+        logger.info("Model: Mistral fine-tuned analyst")
+        logger.info("RAG: Hockey context retrieval")
+        logger.info("Analytics: Real-time Parquet queries")
 
     def analyze_query(self, user_query: str, user_type: str = "coach") -> Dict[str, Any]:
         """Main analysis pipeline"""
-        logger.info(f"🏒 Analyzing query: {user_query[:50]}...")
+        logger.info(f"Analyzing query: {user_query[:50]}...")
 
         # Step 1: Query analysis and context gathering
         query_analysis = self._analyze_query_intent(user_query, user_type)
@@ -213,9 +213,9 @@ class ParquetAnalyzer:
             from parquet_analyzer import ParquetAnalyzer as FullAnalyzer
             self.analyzer = FullAnalyzer()
             self.initialized = True
-            logger.info("✅ Full ParquetAnalyzer loaded - 176+ files ready")
+            logger.info("Full ParquetAnalyzer loaded - 176+ files ready")
         except ImportError as e:
-            logger.warning(f"⚠️ Full analyzer not available: {e}")
+            logger.warning(f"Full analyzer not available: {e}")
             self.initialized = False
 
     def get_relevant_data(self, query: str, analysis: Dict[str, Any]) -> Optional[List[Dict[str, Any]]]:
@@ -264,6 +264,18 @@ class ParquetAnalyzer:
                                 "percentile": percentile_data.get("percentile", 50),
                                 "league_avg": percentile_data.get("league_avg", 0),
                                 "sample_size": percentile_data.get("sample_size", 0)
+                            })
+
+                # Extract season record metrics - NEW HANDLING
+                if "record_metrics" in result:
+                    for metric_name, metric_data in result["record_metrics"].items():
+                        if isinstance(metric_data, dict) and "value" in metric_data:
+                            data_points.append({
+                                "metric": metric_name,
+                                "value": metric_data["value"],
+                                "metric_type": metric_data.get("metric_type", metric_name),
+                                "context": result.get("context", "MTL season record"),
+                                "season": result.get("season", "2024-2025")
                             })
 
                 return data_points if data_points else None
@@ -330,11 +342,11 @@ class ResponseSynthesizer:
                 result = response.json()
                 return result['choices'][0]['message']['content']
             else:
-                logger.error(f"❌ Model API error: {response.status_code}")
+                logger.error(f"Model API error: {response.status_code}")
                 return self._generate_fallback_response(user_query, data_insights)
 
         except Exception as e:
-            logger.error(f"❌ Response generation error: {e}")
+            logger.error(f"Response generation error: {e}")
             return self._generate_fallback_response(user_query, data_insights)
 
     def _build_system_prompt(self, user_type: str, rag_context: Optional[List], data_insights: Optional[List]) -> str:
@@ -445,7 +457,7 @@ CRITICAL REQUIREMENT: When provided with specific statistics, percentiles, or me
 
 def main():
     """Demo the HeartBeat Engine"""
-    print("🏒 HeartBeat Engine - Montreal Canadiens AI Hockey Analyst")
+    print("HeartBeat Engine - Montreal Canadiens AI Hockey Analyst")
     print("=" * 70)
 
     # Initialize engine
@@ -459,17 +471,17 @@ def main():
     ]
 
     for user_type, query in demo_queries:
-        print(f"\n🎭 User Type: {user_type.upper()}")
-        print(f"❓ Query: {query}")
+        print(f"\nUser Type: {user_type.upper()}")
+        print(f"Query: {query}")
 
         result = engine.analyze_query(query, user_type)
 
-        print(f"🤖 Response: {result['response'][:300]}..." if len(result['response']) > 300 else f"🤖 Response: {result['response']}")
-        print(f"📊 Context Used: {result['context_used']}, Data Points: {result['data_points']}")
+        print(f"Response: {result['response'][:300]}..." if len(result['response']) > 300 else f"Response: {result['response']}")
+        print(f"Context Used: {result['context_used']}, Data Points: {result['data_points']}")
         print("-" * 70)
 
-    print("\n✅ HeartBeat Engine Demo Complete!")
-    print("🔗 Ready for Streamlit integration and full deployment!")
+    print("\nHeartBeat Engine Demo Complete!")
+    print("Ready for Streamlit integration and full deployment!")
 
 
 if __name__ == "__main__":
