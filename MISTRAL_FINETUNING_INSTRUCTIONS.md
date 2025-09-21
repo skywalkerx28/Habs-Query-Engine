@@ -5,7 +5,7 @@
 - **File**: mistral_finetuning_dataset_2024_2025.jsonl
 - **Total Examples**: 1,982 conversation pairs
 - **Format**: JSONL with messages array
-- **Base Model**: Mixtral-8x7B-Instruct-v0.1
+- **Base Model**: ministral-8b-latest (recommended for HeartBeat)
 
 ### Mistral AI Platform Steps
 
