@@ -206,12 +206,16 @@ class ParquetAnalyzer:
         """Initialize Parquet analysis system"""
         # Import the comprehensive ParquetAnalyzer
         try:
+            import sys
+            from pathlib import Path
+            script_dir = Path(__file__).parent
+            sys.path.append(str(script_dir))
             from parquet_analyzer import ParquetAnalyzer as FullAnalyzer
             self.analyzer = FullAnalyzer()
             self.initialized = True
-            logger.info("Full ParquetAnalyzer loaded - 176+ files ready")
+            logger.info("✅ Full ParquetAnalyzer loaded - 176+ files ready")
         except ImportError as e:
-            logger.warning(f"Full analyzer not available: {e}")
+            logger.warning(f"⚠️ Full analyzer not available: {e}")
             self.initialized = False
 
     def get_relevant_data(self, query: str, analysis: Dict[str, Any]) -> Optional[List[Dict[str, Any]]]:
@@ -334,41 +338,73 @@ class ResponseSynthesizer:
             return self._generate_fallback_response(user_query, data_insights)
 
     def _build_system_prompt(self, user_type: str, rag_context: Optional[List], data_insights: Optional[List]) -> str:
-        """Build enhanced system prompt with available context"""
-        base_prompt = """You are a world-class hockey analyst and consultant for the Montreal Canadiens. You have profound understanding of hockey systems, historical patterns, and trends. You communicate using authentic coach and player terminology, providing precise, actionable insights based on comprehensive data analysis. Your responses demonstrate deep hockey knowledge and strategic thinking."""
+        """Build enhanced system prompt with available context - ENHANCED FOR CONCRETE DATA"""
+        base_prompt = """You are a world-class hockey analyst and consultant for the Montreal Canadiens. You have profound understanding of hockey systems, historical patterns, and trends. You communicate using authentic coach and player terminology, providing precise, actionable insights based on comprehensive data analysis. Your responses demonstrate deep hockey knowledge and strategic thinking.
 
-        # Add context availability information
+CRITICAL REQUIREMENT: When provided with specific statistics, percentiles, or metrics, you MUST incorporate these concrete numbers directly into your analysis. Your expertise is demonstrated through the seamless integration of data with hockey knowledge."""
+
+        # Add context availability information with emphasis on data usage
         context_info = []
         if rag_context:
-            context_info.append(f"Access to {len(rag_context)} relevant hockey knowledge chunks")
+            context_info.append(f"hockey domain knowledge from {len(rag_context)} relevant context chunks")
         if data_insights:
-            context_info.append(f"Access to {len(data_insights)} live performance metrics")
+            context_info.append(f"real-time performance metrics from {len(data_insights)} statistical data points")
 
         if context_info:
-            base_prompt += f"\n\nAvailable Context: {', '.join(context_info)}. Use this data to provide specific, evidence-based insights."
+            base_prompt += f"\n\nAvailable Resources: {', '.join(context_info)}."
+            
+        if data_insights:
+            base_prompt += f"\n\nDATA INTEGRATION INSTRUCTION: The user query includes specific statistical data that must be referenced in your response. Incorporate these numbers naturally into your hockey analysis to provide evidence-based insights. Your professional credibility depends on using concrete data to support your analytical conclusions."
 
         if user_type == "player":
-            base_prompt += "\n\nFocus on individual development, performance analysis, and personal growth opportunities."
+            base_prompt += "\n\nPerspective: Focus on individual development, performance analysis, and personal growth opportunities. When discussing rankings or comparisons, always reference specific percentiles and metrics."
         elif user_type == "coach":
-            base_prompt += "\n\nFocus on strategic analysis, opponent preparation, and team tactical adjustments."
+            base_prompt += "\n\nPerspective: Focus on strategic analysis, opponent preparation, and team tactical adjustments. Support recommendations with concrete performance data and trend analysis."
 
         return base_prompt
 
     def _enrich_query_with_data(self, query: str, data_insights: Optional[List], analysis: Dict) -> str:
-        """Enrich user query with relevant data context"""
-        if not data_insights:
-            return query
+        """Enrich user query with relevant data context - ENHANCED FOR CONCRETE RESPONSES"""
+        enriched_parts = [f"User Query: {query}"]
 
-        enriched_parts = [f"Original Query: {query}"]
+        if data_insights:
+            # Always include data when available - this solves the "empty data" problem
+            data_points = []
+            statistical_context = []
+            
+            for insight in data_insights:
+                try:
+                    metric_name = insight.get('metric', 'unknown_metric')
+                    value = insight.get('value', 0)
+                    percentile = insight.get('percentile', 50)
+                    
+                    # Format for natural language inclusion
+                    if percentile != 50:  # Only include meaningful percentiles
+                        data_points.append(f"{metric_name}: {value} ({percentile}th percentile)")
+                    else:
+                        data_points.append(f"{metric_name}: {value}")
+                    
+                    # Add contextual information
+                    if 'league_avg' in insight:
+                        statistical_context.append(f"League average for {metric_name}: {insight['league_avg']}")
+                    
+                    if 'trend' in insight and insight['trend'] != 'stable':
+                        statistical_context.append(f"{metric_name} trend: {insight['trend']}")
+                        
+                except (KeyError, TypeError) as e:
+                    logger.warning(f"Error processing data insight: {e}")
+                    continue
 
-        # Add relevant data points
-        data_relevant = []
-        for insight in data_insights:
-            if self._is_data_relevant(insight, analysis):
-                data_relevant.append(f"{insight['metric']}: {insight['value']} (percentile: {insight.get('percentile', 'N/A')})")
-
-        if data_relevant:
-            enriched_parts.append(f"Relevant Data: {'; '.join(data_relevant)}")
+            if data_points:
+                enriched_parts.append(f"\nCONCRETE STATISTICS TO INCLUDE IN RESPONSE:")
+                enriched_parts.extend([f"- {dp}" for dp in data_points])
+            
+            if statistical_context:
+                enriched_parts.append(f"\nADDITIONAL CONTEXT:")
+                enriched_parts.extend([f"- {sc}" for sc in statistical_context])
+                
+            # Explicit instruction for data inclusion
+            enriched_parts.append(f"\nIMPORTANT: Your response MUST include the specific statistics listed above. Reference actual numbers, percentiles, and trends in your hockey analysis.")
 
         return "\n".join(enriched_parts)
 
