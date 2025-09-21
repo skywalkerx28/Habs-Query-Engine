@@ -1,7 +1,7 @@
 # Mistral AI Fine-Tuning Instructions
 ## HeartBeat Engine - Montreal Canadiens Hockey Analyst
 
-## ✅ TRAINING SUCCESSFUL!
+## TRAINING SUCCESSFUL!
 **Model ID**: `ft:ministral-8b-latest:dd26ff35:20250921:5207f629`
 **Status**: Ready for API integration
 **Training**: Completed in ~8-12 minutes
@@ -52,7 +52,7 @@
 
 ### Integration with HeartBeat Engine
 After training completion:
-1. ✅ **Model Created**: ft:ministral-8b-latest:dd26ff35:20250921:5207f629
+1.  **Model Created**: ft:ministral-8b-latest:dd26ff35:20250921:5207f629
 2. **Test the model** via Mistral API
 3. **Integrate with Pinecone** vector database (RAG chunks ready)
 4. **Deploy hybrid system** (RAG + real-time Parquet queries)

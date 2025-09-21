@@ -160,7 +160,7 @@ def main():
     total_tests = len(results)
 
     print(f"✅ Successful responses: {successful_tests}/{total_tests}")
-    print(".1f"
+    print(f"📈 Success rate: {successful_tests/total_tests:.1f}")
     if successful_tests == total_tests:
         print("🎉 ALL TESTS PASSED! Your HeartBeat AI is working perfectly!")
         print("🏆 Ready for integration with Pinecone and Streamlit!")
@@ -168,7 +168,7 @@ def main():
         print("⚠️  Some tests failed. Check API key and model availability.")
 
     # Save results
-    output_file = Path(__file__).parent.parent / "model_test_results.json"
+    output_file = Path(__file__).parent.parent / "model_tests" / "model_test_results.json"
     with open(output_file, 'w') as f:
         json.dump({
             "model_id": tester.model_id,
@@ -184,7 +184,7 @@ def main():
             ]
         }, f, indent=2)
 
-    print(f"\n💾 Results saved to: {output_file}")
+    print(f"\n💾 Results saved to: model_tests/{output_file.name}")
 
 if __name__ == "__main__":
     main()
