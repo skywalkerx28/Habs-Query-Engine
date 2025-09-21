@@ -23,6 +23,7 @@
    - **Validation Split**: 10%
    - **Max Steps**: ~500 (calculated: epochs × dataset_size_MB)
    - **Learning Rate Schedule**: Linear warmup + cosine decay
+   - **Allowed Invalid Lines**: 5% (tolerance for data quality issues)
 
 5. **Training Duration**: 4-8 hours depending on parameters
 6. **Cost**: Check Mistral AI pricing for ministral-8b fine-tuning
