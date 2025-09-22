@@ -161,13 +161,10 @@ export function MilitaryChatInterface() {
           </div>
           
           {/* Military-style status bar */}
-          <div className="flex items-center justify-between mt-3 text-xs text-gray-500">
+          <div className="flex items-center justify-center mt-3 text-xs text-gray-500">
             <div className="flex items-center space-x-4">
               <span className="font-military-display">SECURE CONNECTION</span>
               <span className="font-military-display">MTL-ANALYTICS-v2.1</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <span className="font-military-chat">Press Enter to send</span>
             </div>
           </div>
         </div>
