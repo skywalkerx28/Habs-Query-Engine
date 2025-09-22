@@ -77,22 +77,20 @@ export function MilitaryChatInterface() {
   }
 
   return (
-    <div className="flex flex-col h-screen bg-gray-950">
-      {/* Military-style header */}
-      <header className="border-b border-gray-800 bg-gray-900/50 backdrop-blur-sm">
-        <div className="flex items-center justify-center px-6 py-4 relative">
-          <h1 className="text-xl font-bold text-white tracking-wider">
-            HEARTBEAT
-          </h1>
-          <div className="absolute right-6 flex items-center space-x-2">
-            <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-            <span className="text-xs text-gray-400 font-mono">ONLINE</span>
-          </div>
+    <div className="relative flex flex-col h-screen bg-gray-950">
+      {/* Floating title */}
+      <div className="absolute top-0 left-0 right-0 z-10 flex items-center justify-center px-6 py-6">
+        <h1 className="text-xl font-bold text-white tracking-wider text-shadow-military">
+          HEARTBEAT
+        </h1>
+        <div className="absolute right-6 flex items-center space-x-2">
+          <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+          <span className="text-xs text-gray-400 font-mono">ONLINE</span>
         </div>
-      </header>
+      </div>
 
       {/* Chat messages area */}
-      <div className="flex-1 overflow-y-auto px-6 py-6 space-y-6">
+      <div className="flex-1 overflow-y-auto px-6 pt-20 pb-6 space-y-6">
         <AnimatePresence>
           {messages.map((message) => (
             <motion.div
