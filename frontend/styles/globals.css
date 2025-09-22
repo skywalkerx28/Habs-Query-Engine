@@ -74,4 +74,29 @@
   .border-glow-red {
     box-shadow: 0 0 0 1px rgba(175, 30, 45, 0.3);
   }
+
+  /* Military-style fonts with JetBrains Mono base */
+  .font-military {
+    font-family: var(--font-jetbrains-mono), 'Monaco', 'Consolas', 'Courier New', monospace;
+    letter-spacing: 0.015em;
+  }
+
+  .font-military-display {
+    font-family: var(--font-jetbrains-mono), 'Monaco', 'Consolas', 'Courier New', monospace;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .font-military-chat {
+    font-family: var(--font-jetbrains-mono), 'Monaco', 'Consolas', 'Courier New', monospace;
+    letter-spacing: 0.005em;
+  }
+
+  /* Grid pattern background for auth */
+  .bg-grid-pattern {
+    background-image: 
+      linear-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
 }

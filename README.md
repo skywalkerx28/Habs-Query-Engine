@@ -79,8 +79,8 @@ User Query → Intent Classification → Router → Tools → Synthesis → Resp
 ### Phase 1: Data Preparation & Ingestion Pipeline (Week 1)
 - [COMPLETED] Audit & concatenate CSVs for schema consistency
 - [COMPLETED] Data cleaning, enrichment, and feature derivation
-- [In Progress] Chunking for RAG (500-event summaries)
-- [In Progress] Initial SQLite/Parquet database setup
+- [Completed] Chunking for RAG (500-event summaries)
+- [Completed] Initial SQLite/Parquet database setup
 
 ### Phase 2: Vectorization & Retrieval System (Weeks 1-2)
 - [Planned] Embedding generation for semantic search

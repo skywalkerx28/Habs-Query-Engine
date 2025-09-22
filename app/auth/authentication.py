@@ -112,7 +112,7 @@ class AuthenticationManager:
                             ("coach_martin", "Martin St-Louis", "Coach"),
                             ("analyst_hughes", "Kent Hughes", "Analyst"), 
                             ("player_suzuki", "Nick Suzuki", "Player"),
-                            ("scout_timmins", "Trevor Timmins", "Scout"),
+                            ("scout_lapointe", "Martin Lapointe", "Scout"),
                             ("staff_molson", "Geoff Molson", "Staff")
                         ]
                         

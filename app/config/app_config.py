@@ -167,12 +167,12 @@ class AuthConfig:
             "team_access": ["MTL"],
             "email": "player@canadiens.com"
         },
-        "scout_timmins": {
-            "name": "Trevor Timmins",
+        "scout_lapointe": {
+            "name": "Martin Lapointe",
             "password": "scout2024",
             "role": "scout", 
             "team_access": ["MTL", "ANA", "BOS", "CAR"],
-            "email": "scout@canadiens.com"
+            "email": "martin.lapointe@canadiens.com"
         },
         "staff_molson": {
             "name": "Geoff Molson",

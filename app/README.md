@@ -77,8 +77,8 @@ python run_app.py
 - **Access**: Personal performance, team context, improvement focus
 - **Quick Actions**: Personal stats, improvement areas, team role analysis
 
-### Scout (Trevor Timmins)
-- **Username**: `scout_timmins`
+### Scout (Martin Lapointe)
+- **Username**: `scout_lapointe`
 - **Password**: `scout2024`
 - **Access**: Player evaluation, opponent analysis, draft insights
 - **Quick Actions**: Prospect evaluation, opponent scouting, draft analysis
