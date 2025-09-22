@@ -25,7 +25,7 @@ Coaches, players, scouts, analysts, and other authorized personnel can ask natur
 ## Technical Architecture
 
 ### LangGraph Orchestrator Core
-**Central Intelligence:** LangGraph-based agent orchestrator powered by fine-tuned `mistral-large-latest`
+**Central Intelligence:** LangGraph-based agent orchestrator powered by fine-tuned `Llama-3.3-70B-Instruct`
 
 **Processing Flow:**
 ```
@@ -52,13 +52,15 @@ User Query → Intent Classification → Router → Tools → Synthesis → Resp
 - **Live Analytics**: Real-time Parquet queries for current statistics
 - **Tool Integration**: Seamless combination of historical and live data
 
-### Optional Mistral Agents Integration
-- **Narrow Services**: Specialized endpoints (post-game reports, scouting summaries)
-- **Fallback Systems**: Lite endpoints for high-availability scenarios
+### SageMaker Model Training & Deployment
+- **Training Infrastructure**: AWS SageMaker for large-scale model fine-tuning
+- **Model Registry**: Centralized model versioning and deployment management
+- **Scalable Inference**: Auto-scaling endpoints for production workloads
 
 ### Tech Stack
 - **Orchestration**: LangGraph, LangChain agents and workflows
-- **Core Model**: Fine-tuned Mistral-large-latest (`ft:mistral-large-latest:dd26ff35:20250921:af45b5ef`)
+- **Core Model**: Fine-tuned Llama-3.3-70B-Instruct trained on AWS SageMaker
+- **ML Platform**: AWS SageMaker for model training, fine-tuning, and deployment
 - **Vector Database**: Pinecone with hybrid search and metadata filtering
 - **Analytics Backend**: Python 3.13, pandas, numpy, Parquet optimized queries
 - **Visualization**: matplotlib, seaborn, plotly with dynamic generation
@@ -88,10 +90,10 @@ User Query → Intent Classification → Router → Tools → Synthesis → Resp
 
 ### Phase 3: LangGraph Orchestrator Implementation (Weeks 2-3)
 
-**Goal:** Implement a sophisticated LangGraph-based agent orchestrator that seamlessly combines fine-tuned Mistral expertise with hybrid RAG + real-time analytics, enabling dynamic hockey analysis with enterprise-grade security and performance.
+**Goal:** Implement a sophisticated LangGraph-based agent orchestrator that seamlessly combines fine-tuned Llama-3.3-70B-Instruct with hybrid RAG + real-time analytics, enabling dynamic hockey analysis with enterprise-grade security and performance.
 
 #### Architecture Implementation:
-- **LangGraph Agent Core:** Fine-tuned `mistral-large-latest` as central reasoning engine
+- **LangGraph Agent Core:** Fine-tuned `Llama-3.3-70B-Instruct` as central reasoning engine
 - **Node-based Workflow:** Intent → Router → Vector Search → Parquet SQL → Analytics Tools → Visualization → Synthesis
 - **Identity-Aware System:** User role enforcement with data scoping and permissions
 - **Hybrid Intelligence:** RAG chunks for hockey context + live Parquet queries for current statistics
@@ -201,10 +203,11 @@ class HabsVisualizer:
 ##### 3.5 Fine-Tuning & Optimization
 
 **Domain-Specific Training:**
-- **Custom Dataset:** 2,528 QA pairs focused on hockey analytics terminology
+- **Custom Dataset:** 2,198 QA pairs focused on hockey analytics terminology
 - **Montreal Context:** Fine-tuning on Canadiens-specific language and references
 - **Statistical Literacy:** Training on proper interpretation of advanced metrics
 - **Conversational Flow:** Optimization for multi-turn analytical conversations
+- **SageMaker Training:** Enterprise-grade model training on AWS infrastructure
 
 **Performance Optimization:**
 - **Query Caching:** Intelligent caching of frequent queries and calculations

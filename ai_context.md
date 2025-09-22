@@ -41,14 +41,14 @@ Coaches, players, scouts, analysts, and authorized personnel can ask natural-lan
 **Efficiency Focus**: Batch processing, memory-efficient embeddings, sub-second retrieval
 
 ### Phase 3: LangGraph Orchestrator & Analysis Engine (Weeks 2-3) - IN PROGRESS
-**Goal**: Implement a production-ready LangGraph agent orchestrator with fine-tuned Mistral-large-latest core, enabling sophisticated hockey analytics through intelligent tool orchestration, identity-aware data access, and enterprise-grade performance.
+**Goal**: Implement a production-ready LangGraph agent orchestrator with fine-tuned Llama-3.3-70B-Instruct core, enabling sophisticated hockey analytics through intelligent tool orchestration, identity-aware data access, and enterprise-grade performance.
 
 #### Architecture Decision: LangGraph Orchestrator
-**Primary Framework**: LangGraph-based agent system with optional Mistral Agent adjuncts
-**Reasoning**: Maximum flexibility for complex routing, stateful workflows, identity management, and hybrid data integration while maintaining vendor independence and offline capabilities.
+**Primary Framework**: LangGraph-based agent system with AWS SageMaker-trained models
+**Reasoning**: Maximum flexibility for complex routing, stateful workflows, identity management, and hybrid data integration while leveraging enterprise-grade ML infrastructure for model training and deployment.
 
 #### Core Implementation Objectives:
-- **LangGraph Agent Core**: Fine-tuned `ft:mistral-large-latest:dd26ff35:20250921:af45b5ef` as central reasoning engine
+- **LangGraph Agent Core**: Fine-tuned `Llama-3.3-70B-Instruct` trained on AWS SageMaker as central reasoning engine
 - **Node-based Orchestration**: Intent → Router → Vector Search → Parquet SQL → Analytics Tools → Visualization → Synthesis
 - **Identity-Aware Processing**: User role enforcement with data scoping and permission-based filtering
 - **Enterprise Security**: Resource guards, caching, timeout handling, and audit trails
@@ -175,10 +175,11 @@ class HabsQueryEngine:
 
 ##### 3.5 Fine-Tuning & Optimization
 **Domain-Specific Training:**
-- **Custom Dataset**: 2,528 QA pairs focused on hockey analytics terminology
+- **Custom Dataset**: 2,198 QA pairs focused on hockey analytics terminology
 - **Montreal Context**: Fine-tuning on Canadiens-specific language and references
 - **Statistical Literacy**: Training on proper interpretation of advanced metrics
 - **Conversational Flow**: Optimization for multi-turn analytical conversations
+- **SageMaker Infrastructure**: Enterprise-grade model training on AWS platform with Llama-3.3-70B-Instruct
 
 **Performance Optimization:**
 - **Query Caching**: Intelligent caching of frequent queries and calculations

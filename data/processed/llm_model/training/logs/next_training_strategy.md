@@ -1,9 +1,9 @@
-# Next Mistral Training Dataset Strategy
-## Advanced Tool Integration & LangGraph Preparation
+# AWS SageMaker Training Dataset Strategy
+## Advanced Tool Integration & LangGraph Preparation for Llama-3.3-70B-Instruct
 
 ### Training Session 2 Objectives
 
-Building on the exceptional foundation from Session 1 (`ft:mistral-large-latest:dd26ff35:20250921:af45b5ef`), this next training phase will prepare the model for sophisticated LangGraph orchestrator integration with enterprise-grade tool usage and identity-aware analytics.
+Building on enterprise-grade training infrastructure with AWS SageMaker, this training phase prepares the Llama-3.3-70B-Instruct model for sophisticated LangGraph orchestrator integration with enterprise-grade tool usage and identity-aware analytics.
 
 ## Core Training Focus Areas
 
