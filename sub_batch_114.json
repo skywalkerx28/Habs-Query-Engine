@@ -1,0 +1,522 @@
+[
+  {
+    "id": "ev-2024-25-g20096-p3-1500",
+    "content": "G20096 P3 15:00 \u2014 Scoring chance opportunity",
+    "type": "event_excerpt",
+    "season": "2024-25",
+    "game_id": 20096,
+    "period": 3,
+    "period_seconds": 900,
+    "strength": "PK",
+    "opponent_abbr": "UNK",
+    "players_ids": [
+      "nhl_8481523",
+      "nhl_8483457",
+      "nhl_8480018"
+    ],
+    "players": [
+      "Dach",
+      "Hutson",
+      "Suzuki"
+    ],
+    "source_uri": "parquet://data/processed/fact/pbp/",
+    "parquet_ref_season": "2024-25",
+    "parquet_ref_game_id": 20096,
+    "row_selector_table": "pbp",
+    "row_selector_partitions": {
+      "season": "2024-25",
+      "game_id": 20096
+    },
+    "row_selector_where": {
+      "period": {
+        "$eq": 3
+      },
+      "period_seconds": {
+        "$between": [
+          885,
+          915
+        ]
+      }
+    },
+    "row_selector_columns": [
+      "row_id",
+      "event_type",
+      "period",
+      "period_seconds",
+      "xg",
+      "player_id",
+      "team_abbr",
+      "x_coord",
+      "y_coord"
+    ],
+    "date_ts": 1758473788
+  },
+  {
+    "id": "ev-2024-25-g20096-p3-1502",
+    "content": "G20096 P3 15:02 \u2014 Scoring chance opportunity",
+    "type": "event_excerpt",
+    "season": "2024-25",
+    "game_id": 20096,
+    "period": 3,
+    "period_seconds": 902,
+    "strength": "PK",
+    "opponent_abbr": "UNK",
+    "players_ids": [
+      "nhl_8483457",
+      "nhl_8480018",
+      "nhl_8481523"
+    ],
+    "players": [
+      "Hutson",
+      "Suzuki",
+      "Dach"
+    ],
+    "source_uri": "parquet://data/processed/fact/pbp/",
+    "parquet_ref_season": "2024-25",
+    "parquet_ref_game_id": 20096,
+    "row_selector_table": "pbp",
+    "row_selector_partitions": {
+      "season": "2024-25",
+      "game_id": 20096
+    },
+    "row_selector_where": {
+      "period": {
+        "$eq": 3
+      },
+      "period_seconds": {
+        "$between": [
+          887,
+          917
+        ]
+      }
+    },
+    "row_selector_columns": [
+      "row_id",
+      "event_type",
+      "period",
+      "period_seconds",
+      "xg",
+      "player_id",
+      "team_abbr",
+      "x_coord",
+      "y_coord"
+    ],
+    "date_ts": 1758473788
+  },
+  {
+    "id": "ev-2024-25-g20096-p3-1516",
+    "content": "G20096 P3 15:16 \u2014 Scoring chance opportunity",
+    "type": "event_excerpt",
+    "season": "2024-25",
+    "game_id": 20096,
+    "period": 3,
+    "period_seconds": 916,
+    "strength": "PP",
+    "opponent_abbr": "UNK",
+    "players_ids": [
+      "nhl_8483457",
+      "nhl_8481618",
+      "nhl_8476469"
+    ],
+    "players": [
+      "Hutson",
+      "Newhook",
+      "Armia"
+    ],
+    "source_uri": "parquet://data/processed/fact/pbp/",
+    "parquet_ref_season": "2024-25",
+    "parquet_ref_game_id": 20096,
+    "row_selector_table": "pbp",
+    "row_selector_partitions": {
+      "season": "2024-25",
+      "game_id": 20096
+    },
+    "row_selector_where": {
+      "period": {
+        "$eq": 3
+      },
+      "period_seconds": {
+        "$between": [
+          901,
+          931
+        ]
+      }
+    },
+    "row_selector_columns": [
+      "row_id",
+      "event_type",
+      "period",
+      "period_seconds",
+      "xg",
+      "player_id",
+      "team_abbr",
+      "x_coord",
+      "y_coord"
+    ],
+    "date_ts": 1758473788
+  },
+  {
+    "id": "ev-2024-25-g20096-p3-1520",
+    "content": "G20096 P3 15:20 \u2014 Scoring chance opportunity",
+    "type": "event_excerpt",
+    "season": "2024-25",
+    "game_id": 20096,
+    "period": 3,
+    "period_seconds": 920,
+    "strength": "EV",
+    "opponent_abbr": "UNK",
+    "players_ids": [
+      "nhl_8481618",
+      "nhl_8476469",
+      "nhl_8481593"
+    ],
+    "players": [
+      "Newhook",
+      "Armia",
+      "Struble"
+    ],
+    "source_uri": "parquet://data/processed/fact/pbp/",
+    "parquet_ref_season": "2024-25",
+    "parquet_ref_game_id": 20096,
+    "row_selector_table": "pbp",
+    "row_selector_partitions": {
+      "season": "2024-25",
+      "game_id": 20096
+    },
+    "row_selector_where": {
+      "period": {
+        "$eq": 3
+      },
+      "period_seconds": {
+        "$between": [
+          905,
+          935
+        ]
+      }
+    },
+    "row_selector_columns": [
+      "row_id",
+      "event_type",
+      "period",
+      "period_seconds",
+      "xg",
+      "player_id",
+      "team_abbr",
+      "x_coord",
+      "y_coord"
+    ],
+    "date_ts": 1758473788
+  },
+  {
+    "id": "ev-2024-25-g20096-p3-1535",
+    "content": "G20096 P3 15:35 \u2014 Goal sequence with build-up",
+    "type": "event_excerpt",
+    "season": "2024-25",
+    "game_id": 20096,
+    "period": 3,
+    "period_seconds": 935,
+    "strength": "EV",
+    "opponent_abbr": "UNK",
+    "players_ids": [
+      "nhl_8481593",
+      "nhl_8482733",
+      "nhl_8477989"
+    ],
+    "players": [
+      "Struble",
+      "Mailloux",
+      "Dvorak"
+    ],
+    "source_uri": "parquet://data/processed/fact/pbp/",
+    "parquet_ref_season": "2024-25",
+    "parquet_ref_game_id": 20096,
+    "row_selector_table": "pbp",
+    "row_selector_partitions": {
+      "season": "2024-25",
+      "game_id": 20096
+    },
+    "row_selector_where": {
+      "period": {
+        "$eq": 3
+      },
+      "period_seconds": {
+        "$between": [
+          920,
+          950
+        ]
+      }
+    },
+    "row_selector_columns": [
+      "row_id",
+      "event_type",
+      "period",
+      "period_seconds",
+      "xg",
+      "player_id",
+      "team_abbr",
+      "x_coord",
+      "y_coord"
+    ],
+    "date_ts": 1758473788
+  },
+  {
+    "id": "ev-2024-25-g20096-p3-1539",
+    "content": "G20096 P3 15:39 \u2014 Goal sequence with build-up",
+    "type": "event_excerpt",
+    "season": "2024-25",
+    "game_id": 20096,
+    "period": 3,
+    "period_seconds": 939,
+    "strength": "EV",
+    "opponent_abbr": "UNK",
+    "players_ids": [
+      "nhl_8481593",
+      "nhl_8482733",
+      "nhl_8477989"
+    ],
+    "players": [
+      "Struble",
+      "Mailloux",
+      "Dvorak"
+    ],
+    "source_uri": "parquet://data/processed/fact/pbp/",
+    "parquet_ref_season": "2024-25",
+    "parquet_ref_game_id": 20096,
+    "row_selector_table": "pbp",
+    "row_selector_partitions": {
+      "season": "2024-25",
+      "game_id": 20096
+    },
+    "row_selector_where": {
+      "period": {
+        "$eq": 3
+      },
+      "period_seconds": {
+        "$between": [
+          924,
+          954
+        ]
+      }
+    },
+    "row_selector_columns": [
+      "row_id",
+      "event_type",
+      "period",
+      "period_seconds",
+      "xg",
+      "player_id",
+      "team_abbr",
+      "x_coord",
+      "y_coord"
+    ],
+    "date_ts": 1758473788
+  },
+  {
+    "id": "ev-2024-25-g20096-p3-1539",
+    "content": "G20096 P3 15:39 \u2014 Goal sequence with build-up",
+    "type": "event_excerpt",
+    "season": "2024-25",
+    "game_id": 20096,
+    "period": 3,
+    "period_seconds": 939,
+    "strength": "EV",
+    "opponent_abbr": "UNK",
+    "players_ids": [
+      "nhl_8481593",
+      "nhl_8482733",
+      "nhl_8477989"
+    ],
+    "players": [
+      "Struble",
+      "Mailloux",
+      "Dvorak"
+    ],
+    "source_uri": "parquet://data/processed/fact/pbp/",
+    "parquet_ref_season": "2024-25",
+    "parquet_ref_game_id": 20096,
+    "row_selector_table": "pbp",
+    "row_selector_partitions": {
+      "season": "2024-25",
+      "game_id": 20096
+    },
+    "row_selector_where": {
+      "period": {
+        "$eq": 3
+      },
+      "period_seconds": {
+        "$between": [
+          924,
+          954
+        ]
+      }
+    },
+    "row_selector_columns": [
+      "row_id",
+      "event_type",
+      "period",
+      "period_seconds",
+      "xg",
+      "player_id",
+      "team_abbr",
+      "x_coord",
+      "y_coord"
+    ],
+    "date_ts": 1758473788
+  },
+  {
+    "id": "ev-2024-25-g20096-p3-1540",
+    "content": "G20096 P3 15:40 \u2014 Goal sequence with build-up",
+    "type": "event_excerpt",
+    "season": "2024-25",
+    "game_id": 20096,
+    "period": 3,
+    "period_seconds": 940,
+    "strength": "EV",
+    "opponent_abbr": "UNK",
+    "players_ids": [
+      "nhl_8481593",
+      "nhl_8482733",
+      "nhl_8477989"
+    ],
+    "players": [
+      "Struble",
+      "Mailloux",
+      "Dvorak"
+    ],
+    "source_uri": "parquet://data/processed/fact/pbp/",
+    "parquet_ref_season": "2024-25",
+    "parquet_ref_game_id": 20096,
+    "row_selector_table": "pbp",
+    "row_selector_partitions": {
+      "season": "2024-25",
+      "game_id": 20096
+    },
+    "row_selector_where": {
+      "period": {
+        "$eq": 3
+      },
+      "period_seconds": {
+        "$between": [
+          925,
+          955
+        ]
+      }
+    },
+    "row_selector_columns": [
+      "row_id",
+      "event_type",
+      "period",
+      "period_seconds",
+      "xg",
+      "player_id",
+      "team_abbr",
+      "x_coord",
+      "y_coord"
+    ],
+    "date_ts": 1758473788
+  },
+  {
+    "id": "ev-2024-25-g20096-p3-1607",
+    "content": "G20096 P3 16:07 \u2014 Goal sequence with build-up",
+    "type": "event_excerpt",
+    "season": "2024-25",
+    "game_id": 20096,
+    "period": 3,
+    "period_seconds": 967,
+    "strength": "EV",
+    "opponent_abbr": "UNK",
+    "players_ids": [
+      "nhl_8481593",
+      "nhl_8482733",
+      "nhl_8482476"
+    ],
+    "players": [
+      "Struble",
+      "Mailloux",
+      "Heineman"
+    ],
+    "source_uri": "parquet://data/processed/fact/pbp/",
+    "parquet_ref_season": "2024-25",
+    "parquet_ref_game_id": 20096,
+    "row_selector_table": "pbp",
+    "row_selector_partitions": {
+      "season": "2024-25",
+      "game_id": 20096
+    },
+    "row_selector_where": {
+      "period": {
+        "$eq": 3
+      },
+      "period_seconds": {
+        "$between": [
+          952,
+          982
+        ]
+      }
+    },
+    "row_selector_columns": [
+      "row_id",
+      "event_type",
+      "period",
+      "period_seconds",
+      "xg",
+      "player_id",
+      "team_abbr",
+      "x_coord",
+      "y_coord"
+    ],
+    "date_ts": 1758473788
+  },
+  {
+    "id": "ev-2024-25-g20096-p3-1616",
+    "content": "G20096 P3 16:16 \u2014 Goal sequence with build-up",
+    "type": "event_excerpt",
+    "season": "2024-25",
+    "game_id": 20096,
+    "period": 3,
+    "period_seconds": 976,
+    "strength": "EV",
+    "opponent_abbr": "UNK",
+    "players_ids": [
+      "nhl_8479543",
+      "nhl_8481593",
+      "nhl_8478133"
+    ],
+    "players": [
+      "Pezzetta",
+      "Struble",
+      "Evans"
+    ],
+    "source_uri": "parquet://data/processed/fact/pbp/",
+    "parquet_ref_season": "2024-25",
+    "parquet_ref_game_id": 20096,
+    "row_selector_table": "pbp",
+    "row_selector_partitions": {
+      "season": "2024-25",
+      "game_id": 20096
+    },
+    "row_selector_where": {
+      "period": {
+        "$eq": 3
+      },
+      "period_seconds": {
+        "$between": [
+          961,
+          991
+        ]
+      }
+    },
+    "row_selector_columns": [
+      "row_id",
+      "event_type",
+      "period",
+      "period_seconds",
+      "xg",
+      "player_id",
+      "team_abbr",
+      "x_coord",
+      "y_coord"
+    ],
+    "date_ts": 1758473788
+  }
+]

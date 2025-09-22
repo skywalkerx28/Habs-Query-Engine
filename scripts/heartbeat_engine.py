@@ -27,7 +27,7 @@ class HeartBeatEngine:
         """Initialize the HeartBeat Engine"""
         self.mistral_api_key = os.getenv('MISTRAL_API_KEY')
         self.pinecone_api_key = os.getenv('PINECONE_API_KEY')
-        self.model_id = "ft:ministral-8b-latest:dd26ff35:20250921:5207f629"
+        self.model_id = "ft:mistral-large-latest:dd26ff35:20250921:af45b5ef"  # Fine-tuned Montreal Canadiens hockey analytics model
 
         if not self.mistral_api_key:
             logger.error("MISTRAL_API_KEY not set")
@@ -128,12 +128,13 @@ class RAGSystem:
     def __init__(self):
         """Initialize RAG system"""
         self.initialized = True  # Using MCP integration
-        self.comprehensive_index = "hockey-comprehensive-2024"
-        self.contextual_index = "mtl-contextual-2024"
-        logger.info("RAG System initialized with Pinecone MCP")
+        self.index_name = "heartbeat-unified-index"
+        self.prose_namespace = "prose"
+        self.events_namespace = "events"
+        logger.info("RAG System initialized with Pinecone MCP - Unified Index Architecture")
 
     def retrieve_context(self, query: str, analysis: Dict[str, Any]) -> Optional[List[Dict[str, Any]]]:
-        """Retrieve relevant context from Pinecone indexes - REAL IMPLEMENTATION"""
+        """Retrieve relevant context from Pinecone index - REAL IMPLEMENTATION"""
         if not self.initialized:
             return None
 
@@ -141,19 +142,17 @@ class RAGSystem:
             query_type = analysis.get("type", "general")
             context_results = []
 
-            # Choose appropriate index based on query type
-            if query_type in ["player_comparison", "tactical_advice"]:
-                # Use MTL-specific contextual index
-                index_name = self.contextual_index
-                namespace = "main"
+            # Choose appropriate namespace based on query type
+            if query_type in ["player_comparison", "tactical_advice", "statistical_analysis"]:
+                # Use events namespace for data-driven queries
+                namespace = self.events_namespace
             else:
-                # Use comprehensive hockey knowledge
-                index_name = self.comprehensive_index  
-                namespace = "main"
+                # Use prose namespace for contextual hockey knowledge
+                namespace = self.prose_namespace
 
             # Search using MCP Pinecone integration
             search_params = {
-                "name": index_name,
+                "name": self.index_name,
                 "namespace": namespace,
                 "query": {
                     "topK": 3,
@@ -302,7 +301,7 @@ class ResponseSynthesizer:
     def __init__(self):
         """Initialize response synthesizer"""
         self.mistral_api_key = os.getenv('MISTRAL_API_KEY')
-        self.model_id = "ft:ministral-8b-latest:dd26ff35:20250921:5207f629"
+        self.model_id = "ft:mistral-large-latest:dd26ff35:20250921:af45b5ef"  # Fine-tuned Montreal Canadiens hockey analytics model
         self.api_url = "https://api.mistral.ai/v1/chat/completions"
 
     def generate_response(self, user_query: str, user_type: str,

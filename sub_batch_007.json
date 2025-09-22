@@ -1,0 +1,907 @@
+[
+  {
+    "id": "recap-2024-25-g20968",
+    "content": "03-03 \u2014 MTL 4, BUF 3 (H). Result: W (OT). MTL SOG: 20, BUF SOG: 36. Key players: Hutson, Suzuki, Matheson.",
+    "type": "game_recap",
+    "season": "2024-25",
+    "game_id": 20968,
+    "date_ts": 1740960000,
+    "opponent_abbr": "BUF",
+    "home_away": "H",
+    "result": "W",
+    "ot_so": "OT",
+    "final_score_mtl": 4,
+    "final_score_opp": 3,
+    "mtl_sog": 20,
+    "opp_sog": 36,
+    "mtl_attempts": 1723,
+    "opp_attempts": 2005,
+    "mtl_possessions": 0,
+    "total_plays": 3728,
+    "players_ids": [
+      "nhl_8483457",
+      "nhl_8480018",
+      "nhl_8476875",
+      "nhl_8478133",
+      "nhl_8478851"
+    ],
+    "players": [
+      "Hutson",
+      "Suzuki",
+      "Matheson",
+      "Evans",
+      "Carrier"
+    ],
+    "source_uri": [
+      "parquet://data/processed/fact/pbp/",
+      "parquet://data/processed/analytics/mtl_season_results/2024-2025/mtl_season_game_results_2024-2025.parquet"
+    ],
+    "parquet_ref_season": "2024-25",
+    "parquet_ref_game_id": 20968,
+    "row_selector_table": "pbp",
+    "row_selector_partitions": {
+      "season": "2024-25",
+      "game_id": 20968
+    },
+    "row_selector_where": {
+      "period": {
+        "$in": [
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "row_selector_columns": [
+      "row_id",
+      "period",
+      "period_seconds",
+      "event_type",
+      "team_abbr",
+      "x_coord",
+      "y_coord",
+      "player_id",
+      "on_ice_ids",
+      "xg",
+      "strength",
+      "zone"
+    ],
+    "season_results_selector_table": "season_results",
+    "season_results_selector_partitions": {
+      "season": "2024-25"
+    },
+    "season_results_selector_where": {
+      "Game": {
+        "$eq": 61
+      }
+    },
+    "season_results_selector_columns": [
+      "Game",
+      "Date",
+      "Home/Away",
+      "Opponent",
+      "MTL_G",
+      "OPP_G",
+      "Result",
+      "OT_SO",
+      "MTL_SOG",
+      "Opp_SOG"
+    ],
+    "ingest_ts": 1758473788,
+    "version": "2025-09-21T12:56:28Z"
+  },
+  {
+    "id": "recap-2024-25-g20995",
+    "content": "03-06 \u2014 MTL 2, EDM 3 (A). Result: OTL (OT). MTL SOG: 27, EDM SOG: 32. Key players: Matheson, Suzuki, Hutson.",
+    "type": "game_recap",
+    "season": "2024-25",
+    "game_id": 20995,
+    "date_ts": 1741219200,
+    "opponent_abbr": "EDM",
+    "home_away": "A",
+    "result": "OTL",
+    "ot_so": "OT",
+    "final_score_mtl": 2,
+    "final_score_opp": 3,
+    "mtl_sog": 27,
+    "opp_sog": 32,
+    "mtl_attempts": 1750,
+    "opp_attempts": 2065,
+    "mtl_possessions": 0,
+    "total_plays": 3815,
+    "players_ids": [
+      "nhl_8476875",
+      "nhl_8480018",
+      "nhl_8483457",
+      "nhl_8478133",
+      "nhl_8483515"
+    ],
+    "players": [
+      "Matheson",
+      "Suzuki",
+      "Hutson",
+      "Evans",
+      "Slafkovsky"
+    ],
+    "source_uri": [
+      "parquet://data/processed/fact/pbp/",
+      "parquet://data/processed/analytics/mtl_season_results/2024-2025/mtl_season_game_results_2024-2025.parquet"
+    ],
+    "parquet_ref_season": "2024-25",
+    "parquet_ref_game_id": 20995,
+    "row_selector_table": "pbp",
+    "row_selector_partitions": {
+      "season": "2024-25",
+      "game_id": 20995
+    },
+    "row_selector_where": {
+      "period": {
+        "$in": [
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "row_selector_columns": [
+      "row_id",
+      "period",
+      "period_seconds",
+      "event_type",
+      "team_abbr",
+      "x_coord",
+      "y_coord",
+      "player_id",
+      "on_ice_ids",
+      "xg",
+      "strength",
+      "zone"
+    ],
+    "season_results_selector_table": "season_results",
+    "season_results_selector_partitions": {
+      "season": "2024-25"
+    },
+    "season_results_selector_where": {
+      "Game": {
+        "$eq": 62
+      }
+    },
+    "season_results_selector_columns": [
+      "Game",
+      "Date",
+      "Home/Away",
+      "Opponent",
+      "MTL_G",
+      "OPP_G",
+      "Result",
+      "OT_SO",
+      "MTL_SOG",
+      "Opp_SOG"
+    ],
+    "ingest_ts": 1758473788,
+    "version": "2025-09-21T12:56:28Z"
+  },
+  {
+    "id": "recap-2024-25-g21008",
+    "content": "03-08 \u2014 MTL 0, CGY 1 (A). Result: L. MTL SOG: 26, CGY SOG: 24. Key players: Suzuki, Hutson, Matheson.",
+    "type": "game_recap",
+    "season": "2024-25",
+    "game_id": 21008,
+    "date_ts": 1741392000,
+    "opponent_abbr": "CGY",
+    "home_away": "A",
+    "result": "L",
+    "final_score_mtl": 0,
+    "final_score_opp": 1,
+    "mtl_sog": 26,
+    "opp_sog": 24,
+    "mtl_attempts": 2011,
+    "opp_attempts": 1853,
+    "mtl_possessions": 0,
+    "total_plays": 3864,
+    "players_ids": [
+      "nhl_8480018",
+      "nhl_8483457",
+      "nhl_8476875",
+      "nhl_8483515",
+      "nhl_8478851"
+    ],
+    "players": [
+      "Suzuki",
+      "Hutson",
+      "Matheson",
+      "Slafkovsky",
+      "Carrier"
+    ],
+    "source_uri": [
+      "parquet://data/processed/fact/pbp/",
+      "parquet://data/processed/analytics/mtl_season_results/2024-2025/mtl_season_game_results_2024-2025.parquet"
+    ],
+    "parquet_ref_season": "2024-25",
+    "parquet_ref_game_id": 21008,
+    "row_selector_table": "pbp",
+    "row_selector_partitions": {
+      "season": "2024-25",
+      "game_id": 21008
+    },
+    "row_selector_where": {
+      "period": {
+        "$in": [
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "row_selector_columns": [
+      "row_id",
+      "period",
+      "period_seconds",
+      "event_type",
+      "team_abbr",
+      "x_coord",
+      "y_coord",
+      "player_id",
+      "on_ice_ids",
+      "xg",
+      "strength",
+      "zone"
+    ],
+    "season_results_selector_table": "season_results",
+    "season_results_selector_partitions": {
+      "season": "2024-25"
+    },
+    "season_results_selector_where": {
+      "Game": {
+        "$eq": 63
+      }
+    },
+    "season_results_selector_columns": [
+      "Game",
+      "Date",
+      "Home/Away",
+      "Opponent",
+      "MTL_G",
+      "OPP_G",
+      "Result",
+      "OT_SO",
+      "MTL_SOG",
+      "Opp_SOG"
+    ],
+    "ingest_ts": 1758473788,
+    "version": "2025-09-21T12:56:28Z"
+  },
+  {
+    "id": "recap-2024-25-g21032",
+    "content": "03-11 \u2014 MTL 4, VAN 2 (A). Result: W. MTL SOG: 27, VAN SOG: 31. Key players: Matheson, Hutson, Carrier.",
+    "type": "game_recap",
+    "season": "2024-25",
+    "game_id": 21032,
+    "date_ts": 1741651200,
+    "opponent_abbr": "VAN",
+    "home_away": "A",
+    "result": "W",
+    "final_score_mtl": 4,
+    "final_score_opp": 2,
+    "mtl_sog": 27,
+    "opp_sog": 31,
+    "mtl_attempts": 1675,
+    "opp_attempts": 1901,
+    "mtl_possessions": 0,
+    "total_plays": 3576,
+    "players_ids": [
+      "nhl_8476875",
+      "nhl_8483457",
+      "nhl_8478851",
+      "nhl_8480018",
+      "nhl_8481618"
+    ],
+    "players": [
+      "Matheson",
+      "Hutson",
+      "Carrier",
+      "Suzuki",
+      "Newhook"
+    ],
+    "source_uri": [
+      "parquet://data/processed/fact/pbp/",
+      "parquet://data/processed/analytics/mtl_season_results/2024-2025/mtl_season_game_results_2024-2025.parquet"
+    ],
+    "parquet_ref_season": "2024-25",
+    "parquet_ref_game_id": 21032,
+    "row_selector_table": "pbp",
+    "row_selector_partitions": {
+      "season": "2024-25",
+      "game_id": 21032
+    },
+    "row_selector_where": {
+      "period": {
+        "$in": [
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "row_selector_columns": [
+      "row_id",
+      "period",
+      "period_seconds",
+      "event_type",
+      "team_abbr",
+      "x_coord",
+      "y_coord",
+      "player_id",
+      "on_ice_ids",
+      "xg",
+      "strength",
+      "zone"
+    ],
+    "season_results_selector_table": "season_results",
+    "season_results_selector_partitions": {
+      "season": "2024-25"
+    },
+    "season_results_selector_where": {
+      "Game": {
+        "$eq": 64
+      }
+    },
+    "season_results_selector_columns": [
+      "Game",
+      "Date",
+      "Home/Away",
+      "Opponent",
+      "MTL_G",
+      "OPP_G",
+      "Result",
+      "OT_SO",
+      "MTL_SOG",
+      "Opp_SOG"
+    ],
+    "ingest_ts": 1758473788,
+    "version": "2025-09-21T12:56:28Z"
+  },
+  {
+    "id": "recap-2024-25-g21039",
+    "content": "03-12 \u2014 MTL 4, SEA 5 (A). Result: OTL (OT). MTL SOG: 25, SEA SOG: 35. Key players: Suzuki, Matheson, Hutson.",
+    "type": "game_recap",
+    "season": "2024-25",
+    "game_id": 21039,
+    "date_ts": 1741737600,
+    "opponent_abbr": "SEA",
+    "home_away": "A",
+    "result": "OTL",
+    "ot_so": "OT",
+    "final_score_mtl": 4,
+    "final_score_opp": 5,
+    "mtl_sog": 25,
+    "opp_sog": 35,
+    "mtl_attempts": 1735,
+    "opp_attempts": 2011,
+    "mtl_possessions": 0,
+    "total_plays": 3746,
+    "players_ids": [
+      "nhl_8480018",
+      "nhl_8476875",
+      "nhl_8483457",
+      "nhl_8478851",
+      "nhl_8481593"
+    ],
+    "players": [
+      "Suzuki",
+      "Matheson",
+      "Hutson",
+      "Carrier",
+      "Struble"
+    ],
+    "source_uri": [
+      "parquet://data/processed/fact/pbp/",
+      "parquet://data/processed/analytics/mtl_season_results/2024-2025/mtl_season_game_results_2024-2025.parquet"
+    ],
+    "parquet_ref_season": "2024-25",
+    "parquet_ref_game_id": 21039,
+    "row_selector_table": "pbp",
+    "row_selector_partitions": {
+      "season": "2024-25",
+      "game_id": 21039
+    },
+    "row_selector_where": {
+      "period": {
+        "$in": [
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "row_selector_columns": [
+      "row_id",
+      "period",
+      "period_seconds",
+      "event_type",
+      "team_abbr",
+      "x_coord",
+      "y_coord",
+      "player_id",
+      "on_ice_ids",
+      "xg",
+      "strength",
+      "zone"
+    ],
+    "season_results_selector_table": "season_results",
+    "season_results_selector_partitions": {
+      "season": "2024-25"
+    },
+    "season_results_selector_where": {
+      "Game": {
+        "$eq": 65
+      }
+    },
+    "season_results_selector_columns": [
+      "Game",
+      "Date",
+      "Home/Away",
+      "Opponent",
+      "MTL_G",
+      "OPP_G",
+      "Result",
+      "OT_SO",
+      "MTL_SOG",
+      "Opp_SOG"
+    ],
+    "ingest_ts": 1758473788,
+    "version": "2025-09-21T12:56:28Z"
+  },
+  {
+    "id": "recap-2024-25-g21060",
+    "content": "03-15 \u2014 MTL 3, FLA 1 (H). Result: W. MTL SOG: 15, FLA SOG: 22. Key players: Suzuki, Matheson, Hutson.",
+    "type": "game_recap",
+    "season": "2024-25",
+    "game_id": 21060,
+    "date_ts": 1741996800,
+    "opponent_abbr": "FLA",
+    "home_away": "H",
+    "result": "W",
+    "final_score_mtl": 3,
+    "final_score_opp": 1,
+    "mtl_sog": 15,
+    "opp_sog": 22,
+    "mtl_attempts": 1800,
+    "opp_attempts": 2026,
+    "mtl_possessions": 0,
+    "total_plays": 3826,
+    "players_ids": [
+      "nhl_8480018",
+      "nhl_8476875",
+      "nhl_8483457",
+      "nhl_8478851",
+      "nhl_8481593"
+    ],
+    "players": [
+      "Suzuki",
+      "Matheson",
+      "Hutson",
+      "Carrier",
+      "Struble"
+    ],
+    "source_uri": [
+      "parquet://data/processed/fact/pbp/",
+      "parquet://data/processed/analytics/mtl_season_results/2024-2025/mtl_season_game_results_2024-2025.parquet"
+    ],
+    "parquet_ref_season": "2024-25",
+    "parquet_ref_game_id": 21060,
+    "row_selector_table": "pbp",
+    "row_selector_partitions": {
+      "season": "2024-25",
+      "game_id": 21060
+    },
+    "row_selector_where": {
+      "period": {
+        "$in": [
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "row_selector_columns": [
+      "row_id",
+      "period",
+      "period_seconds",
+      "event_type",
+      "team_abbr",
+      "x_coord",
+      "y_coord",
+      "player_id",
+      "on_ice_ids",
+      "xg",
+      "strength",
+      "zone"
+    ],
+    "season_results_selector_table": "season_results",
+    "season_results_selector_partitions": {
+      "season": "2024-25"
+    },
+    "season_results_selector_where": {
+      "Game": {
+        "$eq": 66
+      }
+    },
+    "season_results_selector_columns": [
+      "Game",
+      "Date",
+      "Home/Away",
+      "Opponent",
+      "MTL_G",
+      "OPP_G",
+      "Result",
+      "OT_SO",
+      "MTL_SOG",
+      "Opp_SOG"
+    ],
+    "ingest_ts": 1758473788,
+    "version": "2025-09-21T12:56:28Z"
+  },
+  {
+    "id": "recap-2024-25-g21078",
+    "content": "03-18 \u2014 MTL 6, OTT 3 (H). Result: W. MTL SOG: 33, OTT SOG: 25. Key players: Hutson, Suzuki, Matheson.",
+    "type": "game_recap",
+    "season": "2024-25",
+    "game_id": 21078,
+    "date_ts": 1742256000,
+    "opponent_abbr": "OTT",
+    "home_away": "H",
+    "result": "W",
+    "final_score_mtl": 6,
+    "final_score_opp": 3,
+    "mtl_sog": 33,
+    "opp_sog": 25,
+    "mtl_attempts": 1857,
+    "opp_attempts": 1905,
+    "mtl_possessions": 0,
+    "total_plays": 3762,
+    "players_ids": [
+      "nhl_8483457",
+      "nhl_8480018",
+      "nhl_8476875",
+      "nhl_8483515",
+      "nhl_8481593"
+    ],
+    "players": [
+      "Hutson",
+      "Suzuki",
+      "Matheson",
+      "Slafkovsky",
+      "Struble"
+    ],
+    "source_uri": [
+      "parquet://data/processed/fact/pbp/",
+      "parquet://data/processed/analytics/mtl_season_results/2024-2025/mtl_season_game_results_2024-2025.parquet"
+    ],
+    "parquet_ref_season": "2024-25",
+    "parquet_ref_game_id": 21078,
+    "row_selector_table": "pbp",
+    "row_selector_partitions": {
+      "season": "2024-25",
+      "game_id": 21078
+    },
+    "row_selector_where": {
+      "period": {
+        "$in": [
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "row_selector_columns": [
+      "row_id",
+      "period",
+      "period_seconds",
+      "event_type",
+      "team_abbr",
+      "x_coord",
+      "y_coord",
+      "player_id",
+      "on_ice_ids",
+      "xg",
+      "strength",
+      "zone"
+    ],
+    "season_results_selector_table": "season_results",
+    "season_results_selector_partitions": {
+      "season": "2024-25"
+    },
+    "season_results_selector_where": {
+      "Game": {
+        "$eq": 67
+      }
+    },
+    "season_results_selector_columns": [
+      "Game",
+      "Date",
+      "Home/Away",
+      "Opponent",
+      "MTL_G",
+      "OPP_G",
+      "Result",
+      "OT_SO",
+      "MTL_SOG",
+      "Opp_SOG"
+    ],
+    "ingest_ts": 1758473788,
+    "version": "2025-09-21T12:56:28Z"
+  },
+  {
+    "id": "recap-2024-25-g21094",
+    "content": "03-20 \u2014 MTL 3, NYI 4 (A). Result: OTL (OT). MTL SOG: 41, NYI SOG: 25. Key players: Hutson, Suzuki, Matheson.",
+    "type": "game_recap",
+    "season": "2024-25",
+    "game_id": 21094,
+    "date_ts": 1742428800,
+    "opponent_abbr": "NYI",
+    "home_away": "A",
+    "result": "OTL",
+    "ot_so": "OT",
+    "final_score_mtl": 3,
+    "final_score_opp": 4,
+    "mtl_sog": 41,
+    "opp_sog": 25,
+    "mtl_attempts": 1947,
+    "opp_attempts": 1986,
+    "mtl_possessions": 0,
+    "total_plays": 3933,
+    "players_ids": [
+      "nhl_8483457",
+      "nhl_8480018",
+      "nhl_8476875",
+      "nhl_8483515",
+      "nhl_8478133"
+    ],
+    "players": [
+      "Hutson",
+      "Suzuki",
+      "Matheson",
+      "Slafkovsky",
+      "Evans"
+    ],
+    "source_uri": [
+      "parquet://data/processed/fact/pbp/",
+      "parquet://data/processed/analytics/mtl_season_results/2024-2025/mtl_season_game_results_2024-2025.parquet"
+    ],
+    "parquet_ref_season": "2024-25",
+    "parquet_ref_game_id": 21094,
+    "row_selector_table": "pbp",
+    "row_selector_partitions": {
+      "season": "2024-25",
+      "game_id": 21094
+    },
+    "row_selector_where": {
+      "period": {
+        "$in": [
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "row_selector_columns": [
+      "row_id",
+      "period",
+      "period_seconds",
+      "event_type",
+      "team_abbr",
+      "x_coord",
+      "y_coord",
+      "player_id",
+      "on_ice_ids",
+      "xg",
+      "strength",
+      "zone"
+    ],
+    "season_results_selector_table": "season_results",
+    "season_results_selector_partitions": {
+      "season": "2024-25"
+    },
+    "season_results_selector_where": {
+      "Game": {
+        "$eq": 68
+      }
+    },
+    "season_results_selector_columns": [
+      "Game",
+      "Date",
+      "Home/Away",
+      "Opponent",
+      "MTL_G",
+      "OPP_G",
+      "Result",
+      "OT_SO",
+      "MTL_SOG",
+      "Opp_SOG"
+    ],
+    "ingest_ts": 1758473788,
+    "version": "2025-09-21T12:56:28Z"
+  },
+  {
+    "id": "recap-2024-25-g21112",
+    "content": "03-22 \u2014 MTL 4, COL 5 (H). Result: OTL (SO). MTL SOG: 29, COL SOG: 37. Key players: Suzuki, Hutson, Matheson.",
+    "type": "game_recap",
+    "season": "2024-25",
+    "game_id": 21112,
+    "date_ts": 1742601600,
+    "opponent_abbr": "COL",
+    "home_away": "H",
+    "result": "OTL",
+    "ot_so": "SO",
+    "final_score_mtl": 4,
+    "final_score_opp": 5,
+    "mtl_sog": 29,
+    "opp_sog": 37,
+    "mtl_attempts": 1979,
+    "opp_attempts": 2090,
+    "mtl_possessions": 0,
+    "total_plays": 4069,
+    "players_ids": [
+      "nhl_8480018",
+      "nhl_8483457",
+      "nhl_8476875",
+      "nhl_8481593",
+      "nhl_8478851"
+    ],
+    "players": [
+      "Suzuki",
+      "Hutson",
+      "Matheson",
+      "Struble",
+      "Carrier"
+    ],
+    "source_uri": [
+      "parquet://data/processed/fact/pbp/",
+      "parquet://data/processed/analytics/mtl_season_results/2024-2025/mtl_season_game_results_2024-2025.parquet"
+    ],
+    "parquet_ref_season": "2024-25",
+    "parquet_ref_game_id": 21112,
+    "row_selector_table": "pbp",
+    "row_selector_partitions": {
+      "season": "2024-25",
+      "game_id": 21112
+    },
+    "row_selector_where": {
+      "period": {
+        "$in": [
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "row_selector_columns": [
+      "row_id",
+      "period",
+      "period_seconds",
+      "event_type",
+      "team_abbr",
+      "x_coord",
+      "y_coord",
+      "player_id",
+      "on_ice_ids",
+      "xg",
+      "strength",
+      "zone"
+    ],
+    "season_results_selector_table": "season_results",
+    "season_results_selector_partitions": {
+      "season": "2024-25"
+    },
+    "season_results_selector_where": {
+      "Game": {
+        "$eq": 69
+      }
+    },
+    "season_results_selector_columns": [
+      "Game",
+      "Date",
+      "Home/Away",
+      "Opponent",
+      "MTL_G",
+      "OPP_G",
+      "Result",
+      "OT_SO",
+      "MTL_SOG",
+      "Opp_SOG"
+    ],
+    "ingest_ts": 1758473788,
+    "version": "2025-09-21T12:56:28Z"
+  },
+  {
+    "id": "recap-2024-25-g21133",
+    "content": "03-25 \u2014 MTL 1, STL 6 (A). Result: L. MTL SOG: 25, STL SOG: 37. Key players: Suzuki, Hutson, Matheson.",
+    "type": "game_recap",
+    "season": "2024-25",
+    "game_id": 21133,
+    "date_ts": 1742860800,
+    "opponent_abbr": "STL",
+    "home_away": "A",
+    "result": "L",
+    "final_score_mtl": 1,
+    "final_score_opp": 6,
+    "mtl_sog": 25,
+    "opp_sog": 37,
+    "mtl_attempts": 1863,
+    "opp_attempts": 1891,
+    "mtl_possessions": 0,
+    "total_plays": 3754,
+    "players_ids": [
+      "nhl_8480018",
+      "nhl_8483457",
+      "nhl_8476875",
+      "nhl_8481593",
+      "nhl_8481618"
+    ],
+    "players": [
+      "Suzuki",
+      "Hutson",
+      "Matheson",
+      "Struble",
+      "Newhook"
+    ],
+    "source_uri": [
+      "parquet://data/processed/fact/pbp/",
+      "parquet://data/processed/analytics/mtl_season_results/2024-2025/mtl_season_game_results_2024-2025.parquet"
+    ],
+    "parquet_ref_season": "2024-25",
+    "parquet_ref_game_id": 21133,
+    "row_selector_table": "pbp",
+    "row_selector_partitions": {
+      "season": "2024-25",
+      "game_id": 21133
+    },
+    "row_selector_where": {
+      "period": {
+        "$in": [
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    "row_selector_columns": [
+      "row_id",
+      "period",
+      "period_seconds",
+      "event_type",
+      "team_abbr",
+      "x_coord",
+      "y_coord",
+      "player_id",
+      "on_ice_ids",
+      "xg",
+      "strength",
+      "zone"
+    ],
+    "season_results_selector_table": "season_results",
+    "season_results_selector_partitions": {
+      "season": "2024-25"
+    },
+    "season_results_selector_where": {
+      "Game": {
+        "$eq": 70
+      }
+    },
+    "season_results_selector_columns": [
+      "Game",
+      "Date",
+      "Home/Away",
+      "Opponent",
+      "MTL_G",
+      "OPP_G",
+      "Result",
+      "OT_SO",
+      "MTL_SOG",
+      "Opp_SOG"
+    ],
+    "ingest_ts": 1758473788,
+    "version": "2025-09-21T12:56:28Z"
+  }
+]

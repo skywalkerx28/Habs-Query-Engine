@@ -24,19 +24,46 @@ Coaches, players, scouts, analysts, and other authorized personnel can ask natur
 
 ## Technical Architecture
 
-### Core Components
-- **Data Pipeline**: ETL processes for CSV files → unified Parquet format
-- **Vector Database**: Pinecone for semantic search over event embeddings
-- **LLM Integration**: LangChain + local/cloud models for query processing
-- **Analysis Engine**: Custom tools for MTL-specific metrics (Corsi, zone entries, etc.)
-- **Web Interface**: Streamlit-powered chat application (includes heatmap, custom tabular data creation, etc).
+### LangGraph Orchestrator Core
+**Central Intelligence:** LangGraph-based agent orchestrator powered by fine-tuned `mistral-large-latest`
+
+**Processing Flow:**
+```
+User Query → Intent Classification → Router → Tools → Synthesis → Response
+```
+
+**Node Architecture:**
+- **Intent Node**: Query classification and parameter extraction
+- **Router Node**: Determines RAG vs Parquet vs hybrid data needs  
+- **Vector Search**: Semantic retrieval from hockey knowledge chunks
+- **Parquet SQL**: Real-time analytics queries on game/player data
+- **Analytics Tools**: xG calculations, zone entry/exit stats, matchup comparisons
+- **Visualization**: Dynamic heatmaps, charts, and statistical displays
+- **Synthesis**: Context-aware response generation with evidence citation
+
+### System Guards & Identity Management
+- **User/Role Filters**: Identity-aware data scoping and permissions
+- **Resource Guards**: Row/byte caps, query timeouts, retry logic
+- **Caching Layer**: Intelligent caching for performance optimization
+- **Security**: `resolve_current_user` with data access enforcement
+
+### Hybrid Data Architecture
+- **RAG System**: Hockey domain knowledge and contextual explanations
+- **Live Analytics**: Real-time Parquet queries for current statistics
+- **Tool Integration**: Seamless combination of historical and live data
+
+### Optional Mistral Agents Integration
+- **Narrow Services**: Specialized endpoints (post-game reports, scouting summaries)
+- **Fallback Systems**: Lite endpoints for high-availability scenarios
 
 ### Tech Stack
-- **Backend**: Python 3.13, pandas, numpy, scikit-learn.
-- **AI/ML**: LangChain, sentence-transformers, Pinecone.
-- **Visualization**: matplotlib, seaborn, plotly.
-- **Database**: SQLite/Parquet for local storage.
-- **Deployment**: Streamlit, Docker, Hugging Face Spaces.
+- **Orchestration**: LangGraph, LangChain agents and workflows
+- **Core Model**: Fine-tuned Mistral-large-latest (`ft:mistral-large-latest:dd26ff35:20250921:af45b5ef`)
+- **Vector Database**: Pinecone with hybrid search and metadata filtering
+- **Analytics Backend**: Python 3.13, pandas, numpy, Parquet optimized queries
+- **Visualization**: matplotlib, seaborn, plotly with dynamic generation
+- **Identity & Security**: Role-based access control with data scoping
+- **Deployment**: Streamlit interface, Docker containerization, cloud-ready architecture
 
 ## Data Overview
 
@@ -59,16 +86,23 @@ Coaches, players, scouts, analysts, and other authorized personnel can ask natur
 - [Planned] Hybrid search (semantic + keyword)
 - [Planned] MTL-specific embedding fine-tuning
 
-### Phase 3: LLM Integration & Analysis Engine (Weeks 2-3)
+### Phase 3: LangGraph Orchestrator Implementation (Weeks 2-3)
 
-**Goal:** Develop a sophisticated hybrid RAG system that combines contextual hockey knowledge with real-time data analysis capabilities, enabling the LLM to dynamically answer any query combination through intelligent tool usage and data synthesis.
+**Goal:** Implement a sophisticated LangGraph-based agent orchestrator that seamlessly combines fine-tuned Mistral expertise with hybrid RAG + real-time analytics, enabling dynamic hockey analysis with enterprise-grade security and performance.
+
+#### Architecture Implementation:
+- **LangGraph Agent Core:** Fine-tuned `mistral-large-latest` as central reasoning engine
+- **Node-based Workflow:** Intent → Router → Vector Search → Parquet SQL → Analytics Tools → Visualization → Synthesis
+- **Identity-Aware System:** User role enforcement with data scoping and permissions
+- **Hybrid Intelligence:** RAG chunks for hockey context + live Parquet queries for current statistics
+- **Tool Orchestration:** xG calculations, zone entry/exit analysis, matchup comparisons, dynamic visualizations
 
 #### Core Objectives:
-- **Natural Language Processing:** Enable conversational queries like "How effective was Montreal's power play against Toronto in 3rd periods?" or "Compare Hutson's zone exit success vs Eastern Conference teams"
-- **Hybrid Intelligence System:** Multi-tier architecture combining RAG chunks (hockey context) with real-time Parquet queries (live calculations)
-- **Dynamic Tool Usage:** Provide LLM with analytical tools to think on its feet and answer any query combination, not just static responses
-- **Contextual Analysis:** Generate insights combining historical patterns, player performance, and strategic recommendations through real-time data synthesis
-- **Visual Intelligence:** Create dynamic visualizations and statistical outputs based on query context and live data analysis
+- **Conversational Analytics:** Enable complex queries like "How effective was Montreal's power play against Toronto in 3rd periods?" with multi-step tool usage
+- **Smart Routing:** Intelligent decision-making between RAG knowledge, live data, or hybrid approaches based on query intent
+- **Real-time Tool Integration:** Dynamic analytics capabilities with timeout handling, caching, and error recovery
+- **Contextual Synthesis:** Evidence-based responses combining historical patterns with current performance data
+- **Role-based Access:** User-specific data filtering and permission enforcement for coaches, players, analysts, and staff
 
 #### Technical Implementation Strategy:
 
@@ -76,9 +110,9 @@ Coaches, players, scouts, analysts, and other authorized personnel can ask natur
 ```
 Query Processing Flow:
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   User Query    │ -> │  Intent Analysis│ -> │  Hybrid         │ -> │  LLM with Tools │
+│   User Query    │ -> │ Intent Analysis │ -> │  Hybrid         │ -> │  LLM with Tools │
 │  "Montreal's    │    │  (LLM Router)   │    │  Retrieval      │    │  & Context      │
-│   blocking vs   │    │                 │    │                 │    │                 │
+│   shots  vs     │    │                 │    │                 │    │                 │
 │   Toronto in    │    │  - Query type   │    │  - RAG chunks   │    │  - Hockey cntxt │
 │   3rd periods"  │    │  - Complexity   │    │    (context)    │    │  - SQL tools    │
 └─────────────────┘    │  - Data needs   │    │  - Parquet SQL  │    │  - Visualization│
@@ -96,13 +130,13 @@ Query Processing Flow:
 ```
 RAG Pipeline:
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   Query         │ -> │  Retrieval      │ -> │  Context        │ -> │  Generation    │
-│   Processing    │    │   (Pinecone)   │    │  Enhancement     │    │  (Fine-tuned   │
-│                 │    │                 │    │                 │    │  LLM)          │
-│  - Tokenization │    │  - Semantic     │    │  - Multi-source │    │                │
-│  - Embedding    │    │    search       │    │    synthesis    │    │  - Prompt eng. │
-│  - Similarity   │    │  - Hybrid       │    │  - Fact checking│    │  - Structured  │
-│    matching     │    │    filtering    │    │  - Relevance    │    │    output      │
+│   Query         │ -> │  Retrieval      │ -> │  Context        │ -> │  Generation     │
+│   Processing    │    │   (Pinecone)    │    │  Enhancement    │    │  (Fine-tuned    │
+│                 │    │                 │    │                 │    │  LLM)           │
+│  - Tokenization │    │  - Semantic     │    │  - Multi-source │    │                 │
+│  - Embedding    │    │    search       │    │    synthesis    │    │  - Prompt eng.  │
+│  - Similarity   │    │  - Hybrid       │    │  - Fact checking│    │  - Structured   │
+│    matching     │    │    filtering    │    │  - Relevance    │    │    output       │
 └─────────────────┘    └─────────────────┘    └─────────────────┘    └─────────────────┘
 ```
 

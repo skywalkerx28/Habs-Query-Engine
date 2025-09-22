@@ -40,37 +40,51 @@ Coaches, players, scouts, analysts, and authorized personnel can ask natural-lan
 - [IN PROGRESS] MTL-specific embedding fine-tuning (Habs terminology)
 **Efficiency Focus**: Batch processing, memory-efficient embeddings, sub-second retrieval
 
-### Phase 3: LLM Integration & Analysis Engine (Weeks 2-3) - Planned
-**Goal**: Develop a sophisticated hybrid RAG system that combines contextual hockey knowledge with real-time analytical tools, enabling the LLM to dynamically process ANY query combination through intelligent tool usage and live data synthesis.
+### Phase 3: LangGraph Orchestrator & Analysis Engine (Weeks 2-3) - IN PROGRESS
+**Goal**: Implement a production-ready LangGraph agent orchestrator with fine-tuned Mistral-large-latest core, enabling sophisticated hockey analytics through intelligent tool orchestration, identity-aware data access, and enterprise-grade performance.
 
-#### Core Objectives:
-- **Natural Language Processing**: Enable conversational queries like "Montreal's power play vs Toronto in overtime periods" or "Hutson's zone exits when paired with Guhle against Western teams"
-- **Hybrid Intelligence Architecture**: Multi-tier system combining RAG chunks (hockey context/explanations) with real-time Parquet queries (live calculations)
-- **Dynamic Tool Provisioning**: Equip LLM with analytical tools to think on its feet rather than relying on static pre-computed responses
-- **Contextual Analysis**: Generate insights combining historical patterns, player performance, and strategic recommendations through real-time data synthesis
-- **Visual Intelligence**: Create dynamic visualizations and statistical outputs based on query context and live data analysis
+#### Architecture Decision: LangGraph Orchestrator
+**Primary Framework**: LangGraph-based agent system with optional Mistral Agent adjuncts
+**Reasoning**: Maximum flexibility for complex routing, stateful workflows, identity management, and hybrid data integration while maintaining vendor independence and offline capabilities.
 
-#### Critical Architecture Principle:
-**The LLM must have access to analytical tools that enable dynamic query processing. Players and coaches will ask complex, multi-dimensional questions that cannot be answered with static chunks alone. The system must combine hockey domain knowledge (from RAG) with real-time calculation capabilities (from Parquet tools) to answer ANY query combination accurately.**
+#### Core Implementation Objectives:
+- **LangGraph Agent Core**: Fine-tuned `ft:mistral-large-latest:dd26ff35:20250921:af45b5ef` as central reasoning engine
+- **Node-based Orchestration**: Intent → Router → Vector Search → Parquet SQL → Analytics Tools → Visualization → Synthesis
+- **Identity-Aware Processing**: User role enforcement with data scoping and permission-based filtering
+- **Enterprise Security**: Resource guards, caching, timeout handling, and audit trails
+- **Hybrid Data Intelligence**: Seamless RAG + live analytics with intelligent routing decisions
+
+#### Critical Architecture Principles:
+1. **Tool Orchestration**: LangGraph manages complex multi-step workflows with deterministic routing and error handling
+2. **Identity Integration**: Every query scoped by `resolve_current_user` with role-based data access enforcement  
+3. **Performance Optimization**: Intelligent caching, resource limits, and sub-3s p95 latency targets
+4. **Evidence-Based Responses**: All insights backed by cited sources from RAG chunks or live query results
 
 #### Technical Implementation Strategy:
 
-##### 3.1 Hybrid RAG + Real-Time Tool System
+##### 3.1 LangGraph Node Orchestration System
 ```
-Query Processing Flow:
-User Query → Intent Analysis → Hybrid Retrieval → LLM Tool Execution
-                   ↓              ↓                    ↓
-            Query Classification  RAG chunks +      Dynamic tools:
-                   ↓              Parquet paths      - SQL queries
-            Tool Requirements     Hockey context     - Calculations
-                                                    - Visualizations
+LangGraph Processing Flow:
+User Query → Intent Node → Router Node → Tool Execution → Synthesis Node → Response
+     ↓             ↓            ↓              ↓               ↓
+Identity Check  Classify &   RAG/Parquet   Analytics &    Evidence-based
+& Permissions  Extract Params  Selection   Visualization   Response Gen
 ```
 
-**Low-Level Components:**
-- **Query Classifier**: BERT-based model to categorize queries and determine required tools
-- **Hybrid Router**: Retrieves RAG chunks for hockey context AND identifies relevant Parquet files for live queries
-- **Tool Orchestrator**: Provides LLM with analytical tools for dynamic data processing and real-time calculations
-- **Context Synthesizer**: Combines hockey domain knowledge with live query results for comprehensive responses
+**LangGraph Node Architecture:**
+- **Intent Node**: Query classification, parameter extraction, and user identity resolution
+- **Router Node**: Intelligent routing between RAG chunks, Parquet queries, or hybrid approaches
+- **Vector Search Node**: Semantic retrieval from hockey knowledge chunks with metadata filtering
+- **Parquet SQL Node**: Real-time analytics queries with user-scoped data access
+- **Analytics Tools Node**: xG calculations, zone entry/exit stats, matchup comparisons
+- **Visualization Node**: Dynamic heatmap and chart generation based on query results
+- **Synthesis Node**: Context-aware response generation with source attribution
+
+**Enterprise Features:**
+- **Identity Management**: `resolve_current_user` with role-based data filtering
+- **Resource Guards**: Row/byte limits, query timeouts, retry logic, intelligent caching
+- **Security Layer**: Permission enforcement at each node with audit trail logging
+- **Performance Optimization**: Parallel tool execution where possible, result caching
 
 ##### 3.2 RAG Chain Architecture
 ```
@@ -275,7 +289,7 @@ class HabsQueryEngine:
 - `source_file`: Original CSV filename for traceability
 
 #### **LLM Context Layer (JSON)**
-**Location**: `/data/processed/llm_context/`
+**Location**: `/data/processed/llm_model/`
 **Format**: Structured JSON for LLM consumption
 **Use Case**: Fast retrieval and contextual responses
 
