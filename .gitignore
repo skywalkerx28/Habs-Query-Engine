@@ -19,5 +19,10 @@ ENV/
 .DS_Store
 Thumbs.db
 
+# Frontend build artifacts
+.next/
+node_modules/
+*.log
+
 # Data files (if you don't want to commit large data files)
 # *.csv
