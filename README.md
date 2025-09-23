@@ -58,14 +58,17 @@ User Query → Intent Classification → Router → Tools → Synthesis → Resp
 - **Scalable Inference**: Auto-scaling endpoints for production workloads
 
 ### Tech Stack
-- **Orchestration**: LangGraph, LangChain agents and workflows
-- **Core Model**: Fine-tuned deepseek-ai/DeepSeek-R1-Distill-Qwen-32B trained on AWS SageMaker
-- **ML Platform**: AWS SageMaker for model training, fine-tuning, and deployment
-- **Vector Database**: Pinecone with hybrid search and metadata filtering
-- **Analytics Backend**: Python 3.13, pandas, numpy, Parquet optimized queries
-- **Visualization**: matplotlib, seaborn, plotly with dynamic generation
-- **Identity & Security**: Role-based access control with data scoping
-- **Deployment**: Streamlit interface, Docker containerization, cloud-ready architecture
+- **Orchestration**: LangGraph agent workflows with custom node architecture
+- **Core Model**: DeepSeek-R1-Distill-Qwen-32B (32.7B parameters, MIT licensed)
+- **ML Platform**: AWS SageMaker for enterprise-grade training and inference
+- **Vector Database**: Pinecone with hybrid semantic + keyword search
+- **Analytics Backend**: Python 3.13, pandas, pyarrow for Parquet optimization
+- **Video Processing**: FFmpeg integration for clip analysis and thumbnails
+- **Visualization**: Dynamic matplotlib/seaborn charts with real-time generation
+- **Frontend**: Streamlit chat interface with military-grade UI components
+- **Backend**: FastAPI services with async processing capabilities
+- **Security**: AWS IAM policies, Secrets Manager, and role-based access control
+- **Infrastructure**: Terraform-ready AWS configurations and deployment scripts
 
 ## Data Overview
 
@@ -74,21 +77,23 @@ User Query → Intent Classification → Router → Tools → Synthesis → Resp
 - **Key Fields**: xCoord, yCoord, type, playerReferenceId, expectedGoalsOnNet, period, gameTime.
 - **Processing**: Unified schema, derived features (shot_distance, possession_duration), Habs event flagging.
 
-## Development Roadmap
+## Development Status
 
-### Phase 1: Data Preparation & Ingestion Pipeline (Week 1)
-- [COMPLETED] Audit & concatenate CSVs for schema consistency
-- [COMPLETED] Data cleaning, enrichment, and feature derivation
-- [Completed] Chunking for RAG (500-event summaries)
-- [Completed] Initial SQLite/Parquet database setup
+### Completed Infrastructure
+- [x] **Model Migration**: Updated from Llama models to DeepSeek-R1-Distill-Qwen-32B
+- [x] **AWS Integration**: SageMaker training infrastructure and endpoint management
+- [x] **Project Reorganization**: Restructured codebase with proper separation of concerns
+- [x] **Data Architecture**: Organized training assets and video clip storage
+- [x] **Infrastructure Setup**: AWS policy files and deployment configurations
 
-### Phase 2: Vectorization & Retrieval System (Weeks 1-2)
-- [Planned] Embedding generation for semantic search
-- [PLanned] Pinecone vector database implementation
-- [Planned] Hybrid search (semantic + keyword)
-- [Planned] MTL-specific embedding fine-tuning
+### Current Capabilities
+- **LangGraph Orchestrator**: Agent-based workflow with intent analysis and routing
+- **Hybrid Intelligence**: RAG + real-time Parquet SQL integration
+- **Video Analytics**: Video clip retrieval and analysis capabilities
+- **Multi-modal Interface**: Streamlit chat interface with analytics panels
+- **Enterprise Security**: Role-based access control and data scoping
 
-### Phase 3: LangGraph Orchestrator Implementation (Weeks 2-3)
+### Phase 3: Advanced LangGraph Orchestrator (In Progress)
 
 **Goal:** Implement a sophisticated LangGraph-based agent orchestrator that seamlessly combines fine-tuned deepseek-ai/DeepSeek-R1-Distill-Qwen-32B with hybrid RAG + real-time analytics, enabling dynamic hockey analysis with enterprise-grade security and performance.
 
@@ -236,30 +241,33 @@ class HabsVisualizer:
 - **Retrieval Precision:** >85% relevant information retrieval
 - **Contextual Understanding:** >80% accurate interpretation of analytical intent
 
-### Phase 4: UI & Deployment (Weeks 3-4)
-- [PLANNED] Streamlit chat interface
-- [PLANNED] Visualization integration
-- [PLANNED] Docker containerization
-- [PLANNED] Hugging Face Spaces deployment
+### Next Development Phases
 
-### Phase 5: Testing & Launch (Weeks 4-6)
-- [PLANNED] Comprehensive testing suite
-- [PLANNED] User testing and iteration
-- [PLANNED] Performance optimization
-- [PLANNED] MVP launch preparation
+#### Phase 4: Enhanced Analytics & Testing
+- [ ] **Advanced Visualizations**: Interactive heatmaps and performance charts
+- [ ] **Video Integration**: Seamless video clip embedding in responses
+- [ ] **Performance Optimization**: Query caching and response time improvements
+- [ ] **Comprehensive Testing**: Unit tests, integration tests, and user validation
+
+#### Phase 5: Production Deployment
+- [ ] **Containerization**: Docker deployment with optimized environments
+- [ ] **Cloud Deployment**: AWS SageMaker endpoints and scalable infrastructure
+- [ ] **Monitoring**: Performance metrics and error tracking
+- [ ] **User Training**: Documentation and onboarding materials
 
 ## Installation & Setup
 
 ### Prerequisites
 - Python 3.13+
 - Git
-- 4GB+ RAM (for embedding processing)
+- 8GB+ RAM (for ML model processing)
+- AWS CLI configured (for SageMaker integration)
 
 ### Local Development Setup
 ```bash
 # Clone repository
-git clone https://github.com/skywalkerx28/Habs-Query-Engine.git
-cd habs-query-engine
+git clone https://github.com/skywalkerx28/HeartBeat.git
+cd HeartBeat
 
 # Create virtual environment
 python3 -m venv venv
@@ -268,49 +276,85 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 # Install dependencies
 pip install -r requirements.txt
 
-# Run data preparation
+# Set up environment variables
+export OPENAI_API_KEY="your-openai-key"  # For fallback model
+
+# Run data preparation (if needed)
 python scripts/etl_pipeline.py
 
 # Start development server
 streamlit run app/main.py
 ```
 
+### Project Structure
+```
+HeartBeat/
+├── app/                          # Streamlit application
+├── backend/                      # FastAPI backend services
+├── frontend/                     # Next.js React frontend
+├── orchestrator/                 # LangGraph agent orchestration
+├── data/                         # Data processing and storage
+│   ├── processed/
+│   │   └── llm_model/
+│   │       └── training/         # ML training assets
+│   └── clips/                    # Video clip storage
+├── infrastructure/               # AWS infrastructure files
+├── scripts/                      # Utility and deployment scripts
+└── venv/                         # Virtual environment (gitignored)
+```
+
 ### Data Setup
-1. Place your NHL CSV files in `data/raw/`
-2. Run ETL pipeline to create unified dataset
-3. Generate embeddings for semantic search
+1. Place NHL CSV files in `data/raw/` (if available)
+2. Configure AWS credentials for SageMaker access
+3. Set up Pinecone vector database credentials
+4. Initialize training data in `data/processed/llm_model/training/`
 
 ## Usage Examples
 
 ### Basic Queries
 ```python
-from habs_ai import HabsQueryEngine
+from app.main import initialize_system
 
-engine = HabsQueryEngine()
-response = engine.query("How effective was Montreal's power play against Toronto?")
-print(response.stats)
-print(response.visualization)
+# Initialize the HeartBeat system
+system = initialize_system()
+
+# Query the analytics engine
+response = system.query("How effective was Montreal's power play against Toronto?")
+print(response.content)
+print(response.analytics)
 ```
 
 ### Advanced Analysis
 ```python
-# Multi-game analysis
-response = engine.query("Compare Suzuki's performance in 5v5 vs power play situations")
+# Multi-game performance analysis
+response = system.query("Compare Suzuki's performance in 5v5 vs power play situations")
 
-# Trend analysis
-response = engine.query("What's the impact of youth pairings on zone exit success?")
+# Trend analysis with video clips
+response = system.query("What's the impact of youth pairings on zone exit success?")
 
-# Predictive insights
-response = engine.query("Which matchups should we target for better scoring opportunities?")
+# Predictive insights with visualizations
+response = system.query("Which matchups should we target for better scoring opportunities?")
+```
+
+### API Usage
+```python
+import requests
+
+# Query via REST API
+response = requests.post("http://localhost:8000/api/query",
+    json={"query": "Analyze Montreal's shot distribution patterns"}
+)
+result = response.json()
 ```
 
 ## Performance Benchmarks
 
-- **Query Accuracy**: 85%+ (via backtesting)
-- **Response Time**: <5 seconds
-- **Data Coverage**: 100% of 2024-2025 season events
-- **Retrieval Precision**: >80% relevant chunks
-- **User Satisfaction**: Target 4.5/5 rating
+- **Model**: DeepSeek-R1-Distill-Qwen-32B (32.7B parameters, MIT licensed)
+- **Query Accuracy**: Target 90%+ statistically correct responses
+- **Response Time**: <3 seconds average for complex analytical queries
+- **Training Data**: 2,198 hockey analytics QA pairs for fine-tuning
+- **Retrieval Precision**: >85% relevant information retrieval
+- **Tool Integration**: Dynamic RAG + Parquet SQL hybrid queries
 
 ## Contributing
 
