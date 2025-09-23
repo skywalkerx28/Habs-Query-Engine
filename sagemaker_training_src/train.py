@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-HeartBeat Engine - Llama 3.3 70B Instruct QLoRA Fine-Tuning Script
+HeartBeat Engine - Llama 4 Scout 17B Instruct QLoRA Fine-Tuning Script
 Stanley - Montreal Canadiens Advanced Analytics Assistant Training 
 
-Fine-tunes Llama 3.3 70B Instruct for hockey analytics with tool orchestration,
+Fine-tunes Llama-4-Scout-17B-16E-Instruct for hockey analytics with tool orchestration,
 role-based responses, and evidence-based analysis capabilities.
 """
 
@@ -193,7 +193,7 @@ def main():
     set_seed(42)
     
     # Get environment variables
-    model_id = os.environ.get("MODEL_ID", "meta-llama/Llama-3.3-70B-Instruct")
+    model_id = os.environ.get("MODEL_ID", "meta-llama/Llama-4-Scout-17B-16E-Instruct")
     
     # SageMaker data paths - check multiple possible locations
     train_base = os.environ.get("SM_CHANNEL_TRAINING", "/opt/ml/input/data/training")
@@ -230,14 +230,14 @@ def main():
     logger.info(f"Training data path: {train_path}")
     logger.info(f"Validation data path: {val_path}")
     
-    # Training hyperparameters (QLoRA-friendly defaults)
-    learning_rate = float(os.environ.get("LEARNING_RATE", "1e-4"))
-    max_steps = int(os.environ.get("MAX_STEPS", "600"))
-    per_device_batch_size = int(os.environ.get("PER_DEVICE_BATCH_SIZE", "1"))
-    gradient_accumulation_steps = int(os.environ.get("GRADIENT_ACCUMULATION_STEPS", "128"))
-    max_length = int(os.environ.get("MAX_LENGTH", "2048"))  # Reduced for memory
+    # Training hyperparameters optimized for 17B model (QLoRA-friendly defaults)
+    learning_rate = float(os.environ.get("LEARNING_RATE", "2e-4"))
+    max_steps = int(os.environ.get("MAX_STEPS", "400"))
+    per_device_batch_size = int(os.environ.get("PER_DEVICE_BATCH_SIZE", "2"))
+    gradient_accumulation_steps = int(os.environ.get("GRADIENT_ACCUMULATION_STEPS", "32"))
+    max_length = int(os.environ.get("MAX_LENGTH", "4096"))  # Increased for 17B model
     
-    logger.info("=== HeartBeat Engine - Llama 3.3 70B Fine-Tuning ===")
+    logger.info("=== HeartBeat Engine - Llama 4 Scout 17B Fine-Tuning ===")
     logger.info(f"Model ID: {model_id}")
     logger.info(f"Learning Rate: {learning_rate}")
     logger.info(f"Max Steps: {max_steps}")
@@ -260,7 +260,7 @@ def main():
         pad_to_multiple_of=8
     )
     
-    # Training arguments optimized for QLoRA on Llama 3.3 70B
+    # Training arguments optimized for QLoRA on Llama 4 Scout 17B
     training_args = TrainingArguments(
         output_dir=output_dir,
         
@@ -326,7 +326,7 @@ def main():
     logger.info("Starting fine-tuning...")
     trainer.train()
     
-    # Save LoRA adapters (not full 70B weights)
+    # Save LoRA adapters (not full 17B weights)
     logger.info("Saving LoRA adapters and tokenizer...")
     final_dir = os.path.join(output_dir, "final")
     os.makedirs(final_dir, exist_ok=True)
