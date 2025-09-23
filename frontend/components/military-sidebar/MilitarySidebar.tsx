@@ -190,15 +190,15 @@ export function MilitarySidebar({ isOpen, onToggle, userInfo, onLogout }: Sideba
               <button
                 onClick={onLogout}
                 className={clsx(
-                  "group relative flex items-center w-full rounded-md transition-all",
+                  "group relative flex items-center w-full rounded-md transition-all h-10",
                   isOpen 
-                    ? "gap-3 px-3 py-2.5 text-sm font-military-chat text-gray-300 hover:text-white hover:bg-gray-800 text-left"
-                    : "justify-center p-2 text-gray-500 hover:text-white hover:bg-gray-800"
+                    ? "gap-3 px-3 text-sm font-military-chat text-gray-300 hover:text-white hover:bg-gray-800 text-left"
+                    : "justify-center text-gray-500 hover:text-white hover:bg-gray-800"
                 )}
               >
                 <ArrowRightOnRectangleIcon className={clsx(
-                  "flex-shrink-0",
-                  isOpen ? "w-5 h-5 text-gray-500 group-hover:text-gray-300" : "w-5 h-5"
+                  "flex-shrink-0 w-5 h-5",
+                  isOpen ? "text-gray-500 group-hover:text-gray-300" : ""
                 )} />
                 {isOpen && <span>Logout</span>}
                 {!isOpen && (
@@ -283,16 +283,16 @@ const UnifiedSidebarItem = forwardRef<HTMLAnchorElement, UnifiedSidebarItemProps
         ref={ref}
         href={href}
         className={clsx(
-          'group relative flex items-center rounded-md transition-all',
+          'group relative flex items-center rounded-md transition-all h-10',
           isOpen
             ? clsx(
-                'gap-3 px-3 py-2.5 text-sm font-military-chat',
+                'gap-3 px-3 text-sm font-military-chat',
                 current
                   ? 'bg-red-600/20 text-white border-l-2 border-red-600 -ml-[2px] pl-[14px]'
                   : 'text-gray-300 hover:text-white hover:bg-gray-800'
               )
             : clsx(
-                'justify-center p-2',
+                'justify-center',
                 current
                   ? 'bg-red-600/20 text-red-600'
                   : 'text-gray-500 hover:text-white hover:bg-gray-800'
