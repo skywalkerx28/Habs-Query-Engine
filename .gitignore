@@ -23,6 +23,9 @@ Thumbs.db
 .next/
 node_modules/
 *.log
+dist/
+build/
+.turbo/
 
 # Data files (if you don't want to commit large data files)
 # *.csv

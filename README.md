@@ -65,7 +65,7 @@ User Query → Intent Classification → Router → Tools → Synthesis → Resp
 - **Analytics Backend**: Python 3.13, pandas, pyarrow for Parquet optimization
 - **Video Processing**: FFmpeg integration for clip analysis and thumbnails
 - **Visualization**: Dynamic matplotlib/seaborn charts with real-time generation
-- **Frontend**: Streamlit chat interface with military-grade UI components
+- **Frontend**: React + TypeScript interface with Tailwind CSS 
 - **Backend**: FastAPI services with async processing capabilities
 - **Security**: AWS IAM policies, Secrets Manager, and role-based access control
 - **Infrastructure**: Terraform-ready AWS configurations and deployment scripts
@@ -90,7 +90,7 @@ User Query → Intent Classification → Router → Tools → Synthesis → Resp
 - **LangGraph Orchestrator**: Agent-based workflow with intent analysis and routing
 - **Hybrid Intelligence**: RAG + real-time Parquet SQL integration
 - **Video Analytics**: Video clip retrieval and analysis capabilities
-- **Multi-modal Interface**: Streamlit chat interface with analytics panels
+- **Multi-modal Interface**: React + TypeScript chat interface with analytics panels
 - **Enterprise Security**: Role-based access control and data scoping
 
 ### Phase 3: Advanced LangGraph Orchestrator (In Progress)
@@ -282,14 +282,18 @@ export OPENAI_API_KEY="your-openai-key"  # For fallback model
 # Run data preparation (if needed)
 python scripts/etl_pipeline.py
 
-# Start development server
-streamlit run app/main.py
+# Start development servers
+# Frontend (React/TypeScript)
+cd frontend && npm run dev
+
+# Backend (FastAPI)
+cd backend && python main.py
 ```
 
 ### Project Structure
 ```
 HeartBeat/
-├── app/                          # Streamlit application
+├── app/                          # Streamlit application (legacy)
 ├── backend/                      # FastAPI backend services
 ├── frontend/                     # Next.js React frontend
 ├── orchestrator/                 # LangGraph agent orchestration
