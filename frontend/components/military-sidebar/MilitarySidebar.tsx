@@ -34,7 +34,61 @@ interface SidebarProps {
 export function MilitarySidebar({ isOpen, onToggle, userInfo, onLogout }: SidebarProps) {
   return (
     <>
-      {/* Sidebar */}
+      {/* Collapsed sidebar - always visible */}
+      <div className="fixed left-0 top-0 bottom-0 w-16 bg-gray-900 border-r border-gray-800 z-40 flex flex-col">
+        {/* Collapsed header */}
+        <div className="flex items-center justify-center py-6 border-b border-gray-800">
+          <button
+            onClick={onToggle}
+            className="p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 transition-colors"
+          >
+            <ChevronRightIcon className="w-5 h-5" />
+          </button>
+        </div>
+
+        {/* Collapsed navigation icons */}
+        <nav className="flex-1 overflow-y-auto py-6">
+          <div className="space-y-1 px-2">
+            <CollapsedSidebarItem href="/" icon={HomeIcon} current tooltip="Dashboard" />
+            <CollapsedSidebarItem href="/analytics" icon={ChartBarIcon} tooltip="Analytics" />
+            <CollapsedSidebarItem href="/players" icon={UserGroupIcon} tooltip="Player Stats" />
+            <CollapsedSidebarItem href="/games" icon={TrophyIcon} tooltip="Game Analysis" />
+            
+            <div className="my-4 border-t border-gray-800" />
+            
+            <CollapsedSidebarItem href="/predictions" icon={ClockIcon} tooltip="Predictions" />
+            <CollapsedSidebarItem href="/reports" icon={DocumentTextIcon} tooltip="Reports" />
+            <CollapsedSidebarItem href="/lab" icon={BeakerIcon} tooltip="Research Lab" />
+            
+            <div className="my-4 border-t border-gray-800" />
+            
+            <CollapsedSidebarItem href="/settings" icon={CogIcon} tooltip="Settings" />
+            <button
+              onClick={onLogout}
+              className="group relative flex items-center justify-center w-full p-2 rounded-md text-gray-500 hover:text-white hover:bg-gray-800 transition-colors"
+              title="Logout"
+            >
+              <ArrowRightOnRectangleIcon className="w-5 h-5" />
+              <span className="absolute left-full ml-2 px-2 py-1 text-xs bg-gray-800 text-white rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-50">
+                Logout
+              </span>
+            </button>
+          </div>
+        </nav>
+
+        {/* Collapsed user indicator */}
+        {userInfo && (
+          <div className="px-2 py-4 border-t border-gray-800">
+            <div className="w-full flex justify-center">
+              <div className="w-8 h-8 rounded-full bg-red-600 text-white flex items-center justify-center text-xs font-military-display">
+                {userInfo.name.split(' ').map(n => n[0]).join('')}
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Expanded sidebar overlay */}
       <AnimatePresence mode="wait">
         {isOpen && (
           <>
@@ -43,23 +97,23 @@ export function MilitarySidebar({ isOpen, onToggle, userInfo, onLogout }: Sideba
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
+              className="fixed inset-0 bg-black/50 backdrop-blur-sm z-45 lg:hidden"
               onClick={onToggle}
             />
             
-            {/* Sidebar panel */}
+            {/* Expanded sidebar panel */}
             <motion.aside
-              initial={{ x: -320 }}
+              initial={{ x: -256 }}
               animate={{ x: 0 }}
-              exit={{ x: -320 }}
+              exit={{ x: -256 }}
               transition={{ type: "spring", damping: 30, stiffness: 300 }}
-              className="fixed left-0 top-0 bottom-0 w-80 bg-gray-900 border-r border-gray-800 z-50 flex flex-col"
+              className="fixed left-16 top-0 bottom-0 w-64 bg-gray-900 border-r border-gray-800 z-50 flex flex-col"
             >
-              {/* Sidebar header */}
+              {/* Expanded sidebar header */}
               <div className="flex items-center justify-between px-6 py-6 border-b border-gray-800">
                 <div className="flex items-center space-x-3">
                   <div className="w-2 h-2 bg-red-600 rounded-full animate-pulse" />
-                  <h2 className="text-lg font-military-display text-white">COMMAND CENTER</h2>
+                  <h2 className="text-lg font-military-display text-white whitespace-nowrap">COMMAND CENTER</h2>
                 </div>
                 <button
                   onClick={onToggle}
@@ -69,7 +123,7 @@ export function MilitarySidebar({ isOpen, onToggle, userInfo, onLogout }: Sideba
                 </button>
               </div>
 
-              {/* Sidebar navigation */}
+              {/* Expanded sidebar navigation */}
               <nav className="flex-1 overflow-y-auto py-6">
                 {/* Main section */}
                 <div className="px-3 mb-6">
@@ -158,21 +212,6 @@ export function MilitarySidebar({ isOpen, onToggle, userInfo, onLogout }: Sideba
           </>
         )}
       </AnimatePresence>
-
-      {/* Toggle button when sidebar is closed */}
-      <AnimatePresence>
-        {!isOpen && (
-          <motion.button
-            initial={{ opacity: 0, x: -10 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -10 }}
-            onClick={onToggle}
-            className="fixed left-4 top-6 z-40 p-2 rounded-md bg-gray-900 border border-gray-800 text-gray-400 hover:text-white hover:bg-gray-800 transition-colors"
-          >
-            <ChevronRightIcon className="w-5 h-5" />
-          </motion.button>
-        )}
-      </AnimatePresence>
     </>
   )
 }
@@ -201,7 +240,37 @@ const SidebarItem = forwardRef<HTMLAnchorElement, SidebarItemProps>(
           'w-5 h-5 flex-shrink-0',
           current ? 'text-red-600' : 'text-gray-500 group-hover:text-gray-300'
         )} />
-        <span>{children}</span>
+        <span className="whitespace-nowrap">{children}</span>
+      </a>
+    )
+  }
+)
+
+interface CollapsedSidebarItemProps {
+  href: string
+  icon: React.ComponentType<{ className?: string }>
+  current?: boolean
+  tooltip: string
+}
+
+const CollapsedSidebarItem = forwardRef<HTMLAnchorElement, CollapsedSidebarItemProps>(
+  function CollapsedSidebarItem({ href, icon: Icon, current = false, tooltip }, ref) {
+    return (
+      <a
+        ref={ref}
+        href={href}
+        className={clsx(
+          'group relative flex items-center justify-center p-2 rounded-md transition-all',
+          current
+            ? 'bg-red-600/20 text-red-600'
+            : 'text-gray-500 hover:text-white hover:bg-gray-800'
+        )}
+        title={tooltip}
+      >
+        <Icon className="w-5 h-5" />
+        <span className="absolute left-full ml-2 px-2 py-1 text-xs bg-gray-800 text-white rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none z-50">
+          {tooltip}
+        </span>
       </a>
     )
   }

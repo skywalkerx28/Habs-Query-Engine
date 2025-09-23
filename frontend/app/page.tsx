@@ -68,7 +68,7 @@ export default function HomePage() {
       />
       <div className={clsx(
         'transition-all duration-300',
-        sidebarOpen ? 'lg:ml-80' : 'ml-0'
+        sidebarOpen ? 'ml-80' : 'ml-16'
       )}>
         <MilitaryChatInterface />
       </div>
