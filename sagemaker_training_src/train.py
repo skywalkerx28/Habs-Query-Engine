@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-HeartBeat Engine - Llama 4 Scout 17B Instruct QLoRA Fine-Tuning Script
+HeartBeat Engine - DeepSeek-R1-Distill-Qwen-32B QLoRA Fine-Tuning Script
 Stanley - Montreal Canadiens Advanced Analytics Assistant Training 
 
-Fine-tunes Llama-4-Scout-17B-16E-Instruct for hockey analytics with tool orchestration,
-role-based responses, and evidence-based analysis capabilities.
+Fine-tunes DeepSeek-R1-Distill-Qwen-32B for advanced hockey analytics with superior reasoning,
+mathematical computation, tool orchestration, and evidence-based analysis capabilities.
 """
 
 import json
@@ -27,6 +27,7 @@ from peft import (
     prepare_model_for_kbit_training,
 )
 from transformers.trainer_utils import IntervalStrategy
+from transformers.trainer_callback import EarlyStoppingCallback
 import boto3
 
 # Configure logging
@@ -97,6 +98,7 @@ def setup_model_and_tokenizer(model_id: str):
     # Prepare for k-bit training and wrap with LoRA
     model = prepare_model_for_kbit_training(model)
 
+    # LoRA target modules for Qwen2 architecture (similar to LLaMA but optimized for DeepSeek)
     lora_targets_env = os.environ.get(
         "LORA_TARGETS",
         "q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj",
@@ -124,6 +126,20 @@ def setup_model_and_tokenizer(model_id: str):
 
     return model, tokenizer
 
+def _find_dataset_files(base_path: str):
+    """Return a list of .jsonl or .json files under base_path (recursive)."""
+    candidates = []
+    if os.path.isfile(base_path):
+        if base_path.endswith((".jsonl", ".json")):
+            candidates = [base_path]
+    else:
+        for root, _, files in os.walk(base_path):
+            for fname in files:
+                if fname.endswith((".jsonl", ".json")):
+                    candidates.append(os.path.join(root, fname))
+    return sorted(candidates)
+
+
 def load_and_process_data(
     train_path: str, val_path: str, tokenizer, max_length: int = 8192
 ):
@@ -131,9 +147,21 @@ def load_and_process_data(
     logger.info(f"Loading training data from: {train_path}")
     logger.info(f"Loading validation data from: {val_path}")
     
-    # Load datasets
-    train_dataset = datasets.load_dataset("json", data_files=train_path, split="train")
-    val_dataset = datasets.load_dataset("json", data_files=val_path, split="train")
+    # Resolve file lists (support both .jsonl and .json, directory or file)
+    train_files = _find_dataset_files(train_path)
+    val_files = _find_dataset_files(val_path)
+
+    if not train_files:
+        raise FileNotFoundError(f"No training .jsonl/.json files found at: {train_path}")
+    if not val_files:
+        raise FileNotFoundError(f"No validation .jsonl/.json files found at: {val_path}")
+
+    logger.info(f"Found {len(train_files)} training files; {len(val_files)} validation files")
+    logger.info(f"Example training file: {train_files[0]}")
+
+    # Load datasets (datasets will concatenate multiple JSON files)
+    train_dataset = datasets.load_dataset("json", data_files=train_files, split="train")
+    val_dataset = datasets.load_dataset("json", data_files=val_files, split="train")
     
     logger.info(f"Training examples: {len(train_dataset)}")
     logger.info(f"Validation examples: {len(val_dataset)}")
@@ -193,51 +221,46 @@ def main():
     set_seed(42)
     
     # Get environment variables
-    model_id = os.environ.get("MODEL_ID", "meta-llama/Llama-4-Scout-17B-16E-Instruct")
+    model_id = os.environ.get("MODEL_ID", "deepseek-ai/DeepSeek-R1-Distill-Qwen-32B")
     
     # SageMaker data paths - check multiple possible locations
     train_base = os.environ.get("SM_CHANNEL_TRAINING", "/opt/ml/input/data/training")
     val_base = os.environ.get("SM_CHANNEL_VALIDATION", "/opt/ml/input/data/validation")
     
     # Find the actual training file
-    if os.path.isfile(os.path.join(train_base, "train.jsonl")):
-        train_path = os.path.join(train_base, "train.jsonl")
-    elif os.path.isfile(train_base) and train_base.endswith('.jsonl'):
+    # Allow either a file path or a directory; support .jsonl and .json
+    if os.path.isfile(train_base):
         train_path = train_base
     else:
-        # Look for any .jsonl file in the training directory
-        train_files = [f for f in os.listdir(train_base) if f.endswith('.jsonl')]
-        if train_files:
-            train_path = os.path.join(train_base, train_files[0])
-        else:
-            raise FileNotFoundError(f"No training data found in {train_base}")
+        train_path = train_base
     
     # Find the actual validation file
-    if os.path.isfile(os.path.join(val_base, "val.jsonl")):
-        val_path = os.path.join(val_base, "val.jsonl")
-    elif os.path.isfile(val_base) and val_base.endswith('.jsonl'):
+    if os.path.isfile(val_base):
         val_path = val_base
     else:
-        # Look for any .jsonl file in the validation directory
-        val_files = [f for f in os.listdir(val_base) if f.endswith('.jsonl')]
-        if val_files:
-            val_path = os.path.join(val_base, val_files[0])
-        else:
-            raise FileNotFoundError(f"No validation data found in {val_base}")
+        val_path = val_base
     
     output_dir = os.environ.get("SM_MODEL_DIR", "/opt/ml/model")
     
-    logger.info(f"Training data path: {train_path}")
-    logger.info(f"Validation data path: {val_path}")
+    logger.info(f"Training data base: {train_base}")
+    logger.info(f"Validation data base: {val_base}")
+    logger.info(f"Resolved training path: {train_path}")
+    logger.info(f"Resolved validation path: {val_path}")
+    try:
+        logger.info(f"Training dir listing (top level): {os.listdir(train_base) if os.path.isdir(train_base) else 'N/A (file path)'}")
+        logger.info(f"Validation dir listing (top level): {os.listdir(val_base) if os.path.isdir(val_base) else 'N/A (file path)'}")
+    except Exception as e:
+        logger.warning(f"Directory listing failed: {e}")
     
-    # Training hyperparameters optimized for ml.g5.12xlarge with 2,198 examples (QLoRA-friendly defaults)
-    learning_rate = float(os.environ.get("LEARNING_RATE", "2e-4"))
-    max_steps = int(os.environ.get("MAX_STEPS", "200"))  # Reduced to prevent overfitting
-    per_device_batch_size = int(os.environ.get("PER_DEVICE_BATCH_SIZE", "1"))  # Optimized for A10G 24GB VRAM
-    gradient_accumulation_steps = int(os.environ.get("GRADIENT_ACCUMULATION_STEPS", "64"))  # Maintain effective batch size
-    max_length = int(os.environ.get("MAX_LENGTH", "3072"))  # Optimized for A10G memory constraints
+    # Training hyperparameters optimized for cost on ml.g5.12xlarge with QLoRA
+    learning_rate = float(os.environ.get("LEARNING_RATE", "1e-4"))
+    # ~4 epochs for 1,759 examples with effective batch size 32 (1 x 32)
+    max_steps = int(os.environ.get("MAX_STEPS", "220"))
+    per_device_batch_size = int(os.environ.get("PER_DEVICE_BATCH_SIZE", "1"))
+    gradient_accumulation_steps = int(os.environ.get("GRADIENT_ACCUMULATION_STEPS", "32"))
+    max_length = int(os.environ.get("MAX_LENGTH", "3072"))
     
-    logger.info("=== HeartBeat Engine - Llama 4 Scout 17B Fine-Tuning ===")
+    logger.info("=== HeartBeat Engine - DeepSeek-R1-Distill-Qwen-32B Fine-Tuning ===")
     logger.info(f"Model ID: {model_id}")
     logger.info(f"Learning Rate: {learning_rate}")
     logger.info(f"Max Steps: {max_steps}")
@@ -260,7 +283,7 @@ def main():
         pad_to_multiple_of=8
     )
     
-    # Training arguments optimized for QLoRA on Llama 4 Scout 17B
+    # Training arguments optimized for QLoRA on DeepSeek-R1-Distill-Qwen-32B (32.7B parameters)
     training_args = TrainingArguments(
         output_dir=output_dir,
         
@@ -287,8 +310,11 @@ def main():
         evaluation_strategy=IntervalStrategy.STEPS,
         eval_steps=50,
         save_strategy=IntervalStrategy.STEPS,
-        save_steps=100,
-        save_total_limit=3,
+        save_steps=50,
+        save_total_limit=2,
+        load_best_model_at_end=True,
+        metric_for_best_model="eval_loss",
+        greater_is_better=False,
         
         # Logging
         logging_steps=10,
@@ -312,7 +338,7 @@ def main():
         warmup_steps=int(max_steps * 0.1),
     )
     
-    # Initialize trainer
+    # Initialize trainer with early stopping
     trainer = Trainer(
         model=model,
         args=training_args,
@@ -320,6 +346,12 @@ def main():
         eval_dataset=val_dataset,
         tokenizer=tokenizer,
         data_collator=data_collator,
+        callbacks=[
+            EarlyStoppingCallback(
+                early_stopping_patience=int(os.environ.get("EARLY_STOPPING_PATIENCE", "5")),
+                early_stopping_threshold=0.0,
+            )
+        ],
     )
     
     # Start training
@@ -341,4 +373,10 @@ def main():
     logger.info("=== Fine-tuning completed successfully! ===")
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception as e:
+        import traceback
+        logger.error("Fatal exception in training: %s", e)
+        traceback.print_exc()
+        raise

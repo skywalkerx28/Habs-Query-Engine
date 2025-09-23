@@ -5,3 +5,8 @@ bitsandbytes==0.44.1
 datasets==3.0.2
 sentencepiece==0.2.0
 protobuf<5
+# Additional dependencies for DeepSeek-R1-Distill-Qwen-32B
+torch>=2.3.0
+torchvision
+aiohttp
+requests

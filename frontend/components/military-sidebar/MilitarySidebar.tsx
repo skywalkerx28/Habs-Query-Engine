@@ -4,6 +4,8 @@ import * as Headless from '@headlessui/react'
 import clsx from 'clsx'
 import { motion, AnimatePresence } from 'framer-motion'
 import React, { forwardRef } from 'react'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { 
   ChartBarIcon, 
   UserGroupIcon, 
@@ -32,6 +34,7 @@ interface SidebarProps {
 }
 
 export function MilitarySidebar({ isOpen, onToggle, userInfo, onLogout }: SidebarProps) {
+  const pathname = usePathname()
   return (
     <>
       {/* Mobile backdrop */}
@@ -119,17 +122,17 @@ export function MilitarySidebar({ isOpen, onToggle, userInfo, onLogout }: Sideba
               )}
             </AnimatePresence>
             <div className="space-y-1">
-              <UnifiedSidebarItem href="/" icon={HomeIcon} current isOpen={isOpen}>
-                Dashboard
-              </UnifiedSidebarItem>
-              <UnifiedSidebarItem href="/analytics" icon={ChartBarIcon} isOpen={isOpen}>
+              <UnifiedSidebarItem href="/analytics" icon={ChartBarIcon} current={pathname === '/analytics'} isOpen={isOpen}>
                 Analytics
               </UnifiedSidebarItem>
-              <UnifiedSidebarItem href="/players" icon={UserGroupIcon} isOpen={isOpen}>
+              <UnifiedSidebarItem href="/players" icon={UserGroupIcon} current={pathname === '/players'} isOpen={isOpen}>
                 Player Stats
               </UnifiedSidebarItem>
-              <UnifiedSidebarItem href="/games" icon={TrophyIcon} isOpen={isOpen}>
+              <UnifiedSidebarItem href="/games" icon={TrophyIcon} current={pathname === '/games'} isOpen={isOpen}>
                 Game Analysis
+              </UnifiedSidebarItem>
+              <UnifiedSidebarItem href="/chat" icon={HomeIcon} current={pathname === '/chat'} isOpen={isOpen}>
+                Chat Interface
               </UnifiedSidebarItem>
             </div>
           </div>
@@ -153,13 +156,13 @@ export function MilitarySidebar({ isOpen, onToggle, userInfo, onLogout }: Sideba
               )}
             </AnimatePresence>
             <div className="space-y-1">
-              <UnifiedSidebarItem href="/predictions" icon={ClockIcon} isOpen={isOpen}>
+              <UnifiedSidebarItem href="/predictions" icon={ClockIcon} current={pathname === '/predictions'} isOpen={isOpen}>
                 Predictions
               </UnifiedSidebarItem>
-              <UnifiedSidebarItem href="/reports" icon={DocumentTextIcon} isOpen={isOpen}>
+              <UnifiedSidebarItem href="/reports" icon={DocumentTextIcon} current={pathname === '/reports'} isOpen={isOpen}>
                 Reports
               </UnifiedSidebarItem>
-              <UnifiedSidebarItem href="/lab" icon={BeakerIcon} isOpen={isOpen}>
+              <UnifiedSidebarItem href="/lab" icon={BeakerIcon} current={pathname === '/lab'} isOpen={isOpen}>
                 Research Lab
               </UnifiedSidebarItem>
             </div>
@@ -184,7 +187,7 @@ export function MilitarySidebar({ isOpen, onToggle, userInfo, onLogout }: Sideba
               )}
             </AnimatePresence>
             <div className="space-y-1">
-              <UnifiedSidebarItem href="/settings" icon={CogIcon} isOpen={isOpen}>
+              <UnifiedSidebarItem href="/settings" icon={CogIcon} current={pathname === '/settings'} isOpen={isOpen}>
                 Settings
               </UnifiedSidebarItem>
               <button
@@ -279,8 +282,7 @@ interface UnifiedSidebarItemProps {
 const UnifiedSidebarItem = forwardRef<HTMLAnchorElement, UnifiedSidebarItemProps>(
   function UnifiedSidebarItem({ href, icon: Icon, current = false, isOpen, children }, ref) {
     return (
-      <a
-        ref={ref}
+      <Link
         href={href}
         className={clsx(
           'group relative flex items-center rounded-md transition-all h-10',
@@ -321,7 +323,7 @@ const UnifiedSidebarItem = forwardRef<HTMLAnchorElement, UnifiedSidebarItemProps
             {children}
           </span>
         )}
-      </a>
+      </Link>
     )
   }
 )

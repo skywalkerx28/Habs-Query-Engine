@@ -33,9 +33,9 @@ export function AnalyticsPanel({ analytics }: AnalyticsPanelProps) {
           {/* Panel header */}
           <div className="flex items-center justify-between mb-3">
             <div className="flex items-center space-x-2">
-              {item.type === 'stat' && <ChartBarIcon className="w-4 h-4 text-blue-500" />}
-              {item.type === 'chart' && <ArrowTrendingUpIcon className="w-4 h-4 text-green-500" />}
-              {item.type === 'table' && <TableCellsIcon className="w-4 h-4 text-amber-500" />}
+              {item.type === 'stat' && <ChartBarIcon className="w-4 h-4 text-gray-400" />}
+              {item.type === 'chart' && <ArrowTrendingUpIcon className="w-4 h-4 text-white" />}
+              {item.type === 'table' && <TableCellsIcon className="w-4 h-4 text-gray-400" />}
               <h3 className="text-sm font-medium text-white">
                 {item.title}
               </h3>
@@ -84,7 +84,7 @@ function ChartPreview({ data }: { data: any }) {
   return (
     <div className="h-24 bg-gray-800/30 rounded border border-gray-800/50 flex items-center justify-center">
       <div className="text-center">
-        <ArrowTrendingUpIcon className="w-8 h-8 text-green-500 mx-auto mb-1" />
+        <ArrowTrendingUpIcon className="w-8 h-8 text-white mx-auto mb-1" />
         <div className="text-xs text-gray-400">
           Chart visualization will render here
         </div>
