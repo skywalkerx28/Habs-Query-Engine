@@ -62,7 +62,9 @@ class ClipIndexManager:
     """Manages video clip indexing and retrieval"""
     
     def __init__(self, clips_base_path: str = "data/clips"):
-        self.clips_base_path = Path(clips_base_path)
+        # Ensure absolute path to avoid dependency on working directory
+        base_path = Path(clips_base_path)
+        self.clips_base_path = base_path if base_path.is_absolute() else (Path.cwd() / base_path).resolve()
         self.clip_cache = {}
         self.index_cache_ttl = 300  # 5 minutes
         self.last_indexed = None
@@ -104,22 +106,20 @@ class ClipIndexManager:
                 
             player_name = player_dir.name.replace('_', ' ').title()
             
-            # Search in event type folders
+            # Search in subdirectories - prioritize vs_ directories as game-specific
             for event_dir in player_dir.iterdir():
                 if not event_dir.is_dir():
                     continue
                     
-                event_type = event_dir.name
+                # Handle vs_ directories as game-specific (not generic event types)
+                if event_dir.name.startswith('vs_'):
+                    event_type = event_dir.name  # Keep the full vs_opponent_date format
+                else:
+                    event_type = event_dir.name  # Regular event types like 'goals', 'assists'
+                
                 clips.extend(self._scan_directory_for_clips(
                     event_dir, player_name, event_type, season
                 ))
-            
-            # Also search directly in player folder for game-specific folders
-            for item in player_dir.iterdir():
-                if item.is_dir() and item.name.startswith('vs_'):
-                    clips.extend(self._scan_directory_for_clips(
-                        item, player_name, "various", season
-                    ))
         
         return clips
     

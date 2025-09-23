@@ -125,7 +125,7 @@ Combine multiple Tailwind UI components to create:
 ### API Endpoints
 ```typescript
 // Integration with your Python FastAPI backend
-const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+const API_BASE = process.env.NEXT_PUBLIC_API_URL || 'http://10.121.114.200:8000';
 
 // Query Stanley (your orchestrator)
 POST /api/v1/query

@@ -40,7 +40,7 @@ export function AnalyticsPanel({ analytics }: AnalyticsPanelProps) {
     <div className="space-y-4">
       {analytics.map((item, index) => (
         <motion.div
-          key={index}
+          key={`${item.type}-${index}`}
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: index * 0.1, duration: 0.3 }}
@@ -76,7 +76,7 @@ export function AnalyticsPanel({ analytics }: AnalyticsPanelProps) {
           )}
           
           {item.type === 'clips' && (
-            <ClipsPreview clips={item.clips || []} title={item.title} />
+            <VideoClipsPanel clips={item.clips || []} />
           )}
         </motion.div>
       ))}
@@ -157,7 +157,7 @@ function ClipsPreview({ clips, title }: { clips: ClipData[], title: string }) {
   return (
     <div className="space-y-2">
       {previewClips.map((clip, index) => (
-        <div key={clip.clip_id} className="flex items-center space-x-3 p-2 bg-gray-800/30 rounded border border-gray-700/50">
+        <div key={`${clip.clip_id}-${index}`} className="flex items-center space-x-3 p-2 bg-gray-800/30 rounded border border-gray-700/50">
           <div className="flex-shrink-0 w-12 h-8 bg-black rounded overflow-hidden">
             <img 
               src={clip.thumbnail_url} 

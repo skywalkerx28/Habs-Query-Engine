@@ -91,7 +91,11 @@ app.add_middleware(
         "http://localhost:3009",
         "http://192.168.0.118:3000",
         "http://192.168.0.118:3008",
-        "http://192.168.0.118:3009"
+        "http://192.168.0.118:3009",
+        "http://10.121.114.200:3000",  # Current network IP
+        "http://10.121.114.200:3001",
+        "http://10.121.114.200:3008",
+        "http://10.121.114.200:3009"
     ],
     allow_credentials=True,
     allow_methods=["*"],

@@ -95,7 +95,7 @@ class ClipRetrieverNode:
         else:
             # Count available clips for logging
             available_clips = self.clip_index.discover_clips()
-            logger.info(f"Clips directory validated - {len(available_clips)} clips found")
+            logger.info(f"Clips directory validated - {len(available_clips)} clips found at {clips_path}")
     
     async def process(self, state: AgentState) -> AgentState:
         """Process video clip retrieval queries"""

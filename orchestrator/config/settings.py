@@ -75,6 +75,12 @@ class OrchestratorSettings:
         self.pinecone = PineconeConfig()
         self.parquet = ParquetConfig()
         self.orchestration = OrchestrationConfig()
+        # Resolve absolute clips base path to avoid CWD-dependent behavior
+        from pathlib import Path
+        # Repo root is two levels up from this file: orchestrator/config/settings.py
+        repo_root = Path(__file__).resolve().parents[2]
+        default_clips_path = os.getenv("CLIPS_BASE_PATH", str(repo_root / "data" / "clips"))
+        self.clips_base_path: str = default_clips_path
         
         # Role-based data access permissions
         self.role_permissions = {

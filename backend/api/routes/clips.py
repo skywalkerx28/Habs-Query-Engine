@@ -16,15 +16,16 @@ from starlette.background import BackgroundTask
 from orchestrator.utils.state import UserContext
 from orchestrator.models.clip_models import ClipIndexManager, ClipSearchParams
 from orchestrator.utils.thumbnail_generator import thumbnail_generator
-from ..dependencies import get_current_user_context
+from ..dependencies import get_current_user_context, get_user_context_allow_query
 from ..models.responses import ClipData
 
 logger = logging.getLogger(__name__)
 
 router = APIRouter(prefix="/api/v1/clips", tags=["clips"])
 
-# Initialize clip index manager
-clips_base_path = os.getenv("CLIPS_BASE_PATH", "data/clips")
+# Initialize clip index manager using absolute path from orchestrator settings
+from orchestrator.config.settings import settings
+clips_base_path = settings.clips_base_path
 clip_index = ClipIndexManager(clips_base_path)
 
 @router.get("/", response_model=list[ClipData])
@@ -95,7 +96,7 @@ async def list_clips(
 @router.get("/{clip_id}/video")
 async def serve_video(
     clip_id: str,
-    user_context: UserContext = Depends(get_current_user_context)
+    user_context: UserContext = Depends(get_user_context_allow_query)
 ):
     """
     Serve a video clip file with access control.
@@ -159,7 +160,7 @@ async def serve_video(
 @router.get("/{clip_id}/thumbnail")
 async def serve_thumbnail(
     clip_id: str,
-    user_context: UserContext = Depends(get_current_user_context)
+    user_context: UserContext = Depends(get_user_context_allow_query)
 ):
     """
     Serve a video thumbnail image.

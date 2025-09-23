@@ -5,7 +5,7 @@ Montreal Canadiens Advanced Analytics Assistant
 Dependency injection for FastAPI routes.
 """
 
-from fastapi import Depends, HTTPException, status
+from fastapi import Depends, HTTPException, status, Request
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 import base64
 import logging
@@ -124,3 +124,50 @@ def get_current_user_context(credentials: HTTPAuthorizationCredentials = Depends
             detail="Authentication failed",
             headers={"WWW-Authenticate": "Bearer"},
         )
+
+def get_user_context_allow_query(
+    request: Request,
+) -> UserContext:
+    """Variant that also accepts a base64 token via `?token=` query param for media requests.
+
+    This enables <video> and <img> tags to access protected resources without custom headers.
+    """
+    token_param = request.query_params.get("token")
+    if token_param:
+        try:
+            decoded = base64.b64decode(token_param).decode()
+            username, password = decoded.split(":", 1)
+            user_data = USERS_DB.get(username)
+            if not user_data or user_data["password"] != password:
+                raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid credentials")
+            return UserContext(
+                user_id=username,
+                role=user_data["role"],
+                name=user_data["name"],
+                team_access=user_data["team_access"],
+                session_id=f"api-session-{username}"
+            )
+        except Exception:
+            raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid token")
+
+    # Fallback to Authorization header if provided
+    auth_header = request.headers.get("authorization")
+    if auth_header and auth_header.lower().startswith("bearer "):
+        token = auth_header.split(" ", 1)[1]
+        try:
+            decoded = base64.b64decode(token).decode()
+            username, password = decoded.split(":", 1)
+            user_data = USERS_DB.get(username)
+            if not user_data or user_data["password"] != password:
+                raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid credentials")
+            return UserContext(
+                user_id=username,
+                role=user_data["role"],
+                name=user_data["name"],
+                team_access=user_data["team_access"],
+                session_id=f"api-session-{username}"
+            )
+        except Exception:
+            raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Invalid token")
+    # No auth supplied
+    raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Missing credentials")

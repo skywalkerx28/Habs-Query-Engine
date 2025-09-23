@@ -80,11 +80,11 @@ User Query → Intent Classification → Router → Tools → Synthesis → Resp
 ## Development Status
 
 ### Completed Infrastructure
-- [x] **Model Migration**: Updated from Llama models to DeepSeek-R1-Distill-Qwen-32B
-- [x] **AWS Integration**: SageMaker training infrastructure and endpoint management
-- [x] **Project Reorganization**: Restructured codebase with proper separation of concerns
-- [x] **Data Architecture**: Organized training assets and video clip storage
-- [x] **Infrastructure Setup**: AWS policy files and deployment configurations
+- **Model Migration**: Updated from Llama models to DeepSeek-R1-Distill-Qwen-32B
+- **AWS Integration**: SageMaker training infrastructure and endpoint management
+- **Project Reorganization**: Restructured codebase with proper separation of concerns
+- **Data Architecture**: Organized training assets and video clip storage
+- **Infrastructure Setup**: AWS policy files and deployment configurations
 
 ### Current Capabilities
 - **LangGraph Orchestrator**: Agent-based workflow with intent analysis and routing

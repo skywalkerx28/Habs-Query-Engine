@@ -74,9 +74,10 @@ export function MilitaryChatInterface() {
         content: queryResponse.response,
         timestamp: new Date(),
         analytics: queryResponse.analytics.length > 0 ? queryResponse.analytics.map(item => ({
-          type: item.type as 'stat' | 'chart' | 'table',
+          type: (item.type as any) ?? 'stat',
           title: item.title,
-          data: item.data
+          data: item.data,
+          clips: (item as any).clips || []
         })) : undefined
       }
       

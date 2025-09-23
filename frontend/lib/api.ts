@@ -5,7 +5,7 @@
  * API client for communicating with the FastAPI backend.
  */
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'
+export const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://10.121.114.200:8000'
 
 export interface LoginRequest {
   username: string
@@ -67,6 +67,15 @@ class HeartBeatAPI {
 
   clearAccessToken() {
     this.accessToken = null
+  }
+
+  // Expose base URL and token when UI needs to build absolute media URLs
+  getBaseUrl(): string {
+    return API_BASE_URL
+  }
+
+  getAccessToken(): string | null {
+    return this.accessToken
   }
 
   private getHeaders(): HeadersInit {
