@@ -53,6 +53,12 @@ class IntentAnalyzerNode:
                 r'\b(stats|statistics|numbers|data)\b',
                 r'\b(xG|corsi|fenwick|PDO|shooting percentage)\b',
                 r'\b(how many|what is|show me)\b'
+            ],
+            QueryType.CLIP_RETRIEVAL: [
+                r'\b(clips?|highlights?|video|footage|replay|shifts?)\b',
+                r'\b(show me|watch|see|display)\b.*\b(clips?|video|shifts?)\b',
+                r'\b(my clips?|my highlights?|my video|my shifts?)\b',
+                r'\b(from last game|last \d+ games)\b.*\b(clips?|video|shifts?)\b'
             ]
         }
         
@@ -80,6 +86,13 @@ class IntentAnalyzerNode:
             ToolType.VISUALIZATION: [
                 r'\b(show|chart|graph|plot|heatmap)\b',
                 r'\b(visualize|display|see)\b'
+            ],
+            ToolType.CLIP_RETRIEVAL: [
+                r'\b(clips?|highlights?|video|footage|replay|shifts?)\b',
+                r'\b(show me|watch|see|display)\b.*\b(clips?|video|highlights?|shifts?)\b',
+                r'\b(my clips?|my highlights?|my video|my shifts?)\b',
+                r'\b(from last game|last \d+ games)\b.*\b(clips?|video|shifts?)\b',
+                r'\b(goals?|assists?|saves?|hits?)\b.*\b(clips?|video|shifts?)\b'
             ]
         }
     
@@ -140,11 +153,36 @@ class IntentAnalyzerNode:
         
         required_tools = []
         
+        # First pass: Pattern-based tool detection
         for tool_type, patterns in self.tool_indicators.items():
             for pattern in patterns:
                 if re.search(pattern, query, re.IGNORECASE):
                     required_tools.append(tool_type)
                     break  # Avoid duplicates
+        
+        # Enhanced clip detection logic
+        clip_keywords = [
+            'clips?', 'highlights?', 'video', 'footage', 'replay', 'shifts?',
+            'my clips?', 'my highlights?', 'my shifts?', 'my video'
+        ]
+        
+        # Check if any clip keywords are present
+        query_has_clips = any(re.search(rf'\b{keyword}\b', query, re.IGNORECASE) 
+                             for keyword in clip_keywords)
+        
+        # Also check for event + visual context combinations
+        event_visual_patterns = [
+            r'\b(goals?|assists?|saves?|hits?)\b.*\b(show|display|watch|see)\b',
+            r'\b(show|display|watch|see)\b.*\b(goals?|assists?|saves?|hits?)\b'
+        ]
+        
+        has_event_visual = any(re.search(pattern, query, re.IGNORECASE) 
+                              for pattern in event_visual_patterns)
+        
+        # Add clip retrieval if detected
+        if ((query_has_clips or has_event_visual) and 
+            ToolType.CLIP_RETRIEVAL not in required_tools):
+            required_tools.append(ToolType.CLIP_RETRIEVAL)
         
         # Always include vector search for context unless it's a pure statistical query
         if (ToolType.VECTOR_SEARCH not in required_tools and 

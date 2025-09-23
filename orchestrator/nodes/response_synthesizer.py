@@ -2,8 +2,9 @@
 HeartBeat Engine - Response Synthesizer Node
 Montreal Canadiens Advanced Analytics Assistant
 
-Synthesizes final responses using the fine-tuned Llama 3.3 70B model,
-integrating RAG context and analytics data into coherent, evidence-based responses.
+Synthesizes final responses using the fine-tuned DeepSeek-R1-Distill-Qwen-32B model,
+integrating RAG context, analytics data, and video clips into coherent, evidence-based responses.
+Features advanced reasoning capabilities with sophisticated tool orchestration.
 """
 
 from typing import Dict, List, Any, Optional
@@ -32,46 +33,71 @@ logger = logging.getLogger(__name__)
 
 class ResponseSynthesizerNode:
     """
-    Synthesizes final responses using the fine-tuned Llama 3.3 70B model.
+    Synthesizes final responses using the fine-tuned DeepSeek-R1-Distill-Qwen-32B model.
     
-    Capabilities:
-    - Integration of RAG context and analytics data
-    - Role-appropriate response formatting
-    - Evidence-based reasoning chains
-    - Citation and source attribution
-    - Montreal Canadiens specific terminology
+    Advanced Reasoning Capabilities:
+    - Multi-step analytical reasoning with tool orchestration
+    - Integration of RAG context, analytics data, and video clips
+    - Role-appropriate response formatting with hockey linguistics
+    - Evidence-based reasoning chains with source attribution
+    - Advanced tool management and workflow coordination
+    - Montreal Canadiens specific terminology and context
     """
     
     def __init__(self):
         self.model_config = settings.model
         self.orchestration_config = settings.orchestration
         
-        # Response templates by user role
+        # Professional hockey analytics system prompt (consistent across all roles)
+        self.base_system_prompt = """You are an elite hockey analytics assistant exclusively for the Montreal Canadiens organization. You serve coaches, players, scouts, analysts, and staff with professional-grade insights combining deep hockey knowledge with advanced data analysis capabilities.
+
+CORE CAPABILITIES:
+- Process natural language queries about any aspect of Montreal Canadiens performance
+- Combine contextual hockey knowledge with real-time data analysis using dynamic tools
+- Generate statistical insights, visualizations, and strategic recommendations
+- Analyze play-by-play data, player performance, and opponent matchups dynamically
+- Provide video clip analysis and shift breakdowns using authentic hockey terminology
+
+COMMUNICATION STANDARDS:
+- Use authentic coach and player terminology that Montreal Canadiens personnel understand
+- Provide precise, actionable insights based on comprehensive statistical analysis  
+- Maintain professional communication standards (no emojis, clean technical language)
+- Structure responses with clear statistical evidence and strategic context
+
+ANALYTICAL APPROACH:
+- Leverage real-time data queries when needed for current statistics and trends
+- Combine historical patterns with situational analysis for comprehensive insights
+- Focus on Montreal-specific strategies, player development, and opponent analysis
+- Provide both immediate tactical advice and long-term strategic recommendations
+
+Your responses should demonstrate the analytical depth of a world-class hockey consultant while remaining accessible to coaches and players in game-planning and performance review contexts."""
+
+        # Role-specific focus areas and communication styles
         self.role_templates = {
             UserRole.COACH: {
-                "system_prompt": "You are responding to a Montreal Canadiens coach. Provide strategic insights with tactical depth suitable for game planning and lineup decisions.",
                 "style": "tactical_strategic",
-                "focus": ["strategy", "matchups", "deployment", "adjustments"]
+                "focus": ["strategy", "matchups", "deployment", "adjustments", "video_analysis", "shift_patterns"],
+                "context": "Focus on game planning, lineup decisions, and tactical adjustments with strategic depth."
             },
             UserRole.PLAYER: {
-                "system_prompt": "You are responding to a Montreal Canadiens player. Provide performance insights and actionable feedback for skill development.",
                 "style": "performance_focused",
-                "focus": ["individual_performance", "improvement", "comparisons", "goals"]
+                "focus": ["individual_performance", "improvement", "comparisons", "goals", "shift_analysis", "video_clips"],
+                "context": "Focus on personal performance insights, skill development, and actionable feedback using hockey terminology players understand."
             },
             UserRole.ANALYST: {
-                "system_prompt": "You are responding to a hockey analyst. Provide comprehensive data-driven insights with statistical depth and context.",
                 "style": "analytical_comprehensive",
-                "focus": ["statistics", "trends", "correlations", "predictions"]
+                "focus": ["statistics", "trends", "correlations", "predictions", "video_analytics", "advanced_metrics"],
+                "context": "Focus on comprehensive data-driven insights with statistical depth, advanced metrics, and predictive analysis."
             },
             UserRole.STAFF: {
-                "system_prompt": "You are responding to Montreal Canadiens staff. Provide clear, accessible insights focused on team operations and player welfare.",
                 "style": "operational_clear",
-                "focus": ["team_operations", "player_welfare", "logistics", "communication"]
+                "focus": ["team_operations", "player_welfare", "logistics", "communication", "shift_scheduling"],
+                "context": "Focus on clear, accessible insights for team operations, player welfare, and organizational efficiency."
             },
             UserRole.SCOUT: {
-                "system_prompt": "You are responding to a scout. Provide detailed player evaluation insights and comparative analysis for recruitment decisions.",
                 "style": "evaluative_detailed",
-                "focus": ["player_evaluation", "comparisons", "potential", "fit_assessment"]
+                "focus": ["player_evaluation", "comparisons", "potential", "fit_assessment", "shift_effectiveness", "video_scouting"],
+                "context": "Focus on detailed player evaluation, comparative analysis, and recruitment assessment using video and statistical evidence."
             }
         }
     
@@ -105,7 +131,7 @@ class ResponseSynthesizerNode:
             )
             
             # Generate response using model
-            response = await self._generate_response(synthesis_prompt, user_context)
+            response = await self._generate_response(synthesis_prompt, user_context, state)
             
             # Post-process and validate response
             final_response = self._post_process_response(
@@ -135,7 +161,7 @@ class ResponseSynthesizerNode:
             state = add_error(state, f"Response synthesis failed: {str(e)}")
             
             # Provide fallback response
-            state["final_response"] = self._generate_fallback_response(state)
+            state["final_response"] = self._generate_fallback_response(state, user_context)
             
             # Add failed tool result
             execution_time = int((datetime.now() - start_time).total_seconds() * 1000)
@@ -157,7 +183,7 @@ class ResponseSynthesizerNode:
         analytics_data: Dict[str, Any],
         tool_results: List[ToolResult]
     ) -> str:
-        """Build comprehensive prompt for response synthesis"""
+        """Build comprehensive prompt for response synthesis using DeepSeek-R1-Distill-Qwen-32B"""
         
         role_config = self.role_templates.get(
             user_context.role, 
@@ -167,55 +193,55 @@ class ResponseSynthesizerNode:
         # Build context sections
         context_section = self._format_retrieved_context(retrieved_context)
         analytics_section = self._format_analytics_data(analytics_data)
+        clips_section = self._format_video_clips(analytics_data)
         evidence_section = self._format_evidence_chain(tool_results)
         
         # Construct synthesis prompt
         synthesis_prompt = f"""
-{role_config['system_prompt']}
+{self.base_system_prompt}
 
-CORE CAPABILITIES:
-- Orchestrate complex multi-step analysis workflows using RAG retrieval and real-time data tools
-- Process natural language queries by determining optimal tool sequences and data requirements  
-- Generate evidence-based insights with clear source attribution from all tool outputs
-- Adapt communication style and data scope based on user role (coach/player/analyst/staff)
-- Handle identity-aware data access and permission-based information filtering
+ROLE-SPECIFIC CONTEXT: {role_config['context']}
 
-TOOL ORCHESTRATION:
-- Use [TOOL: vector_search] for hockey knowledge, rules, and strategic context
-- Use [TOOL: parquet_query] for real-time player/team statistics and game data
-- Use [TOOL: calculate_advanced_metrics] for xG, Corsi, zone analysis, and possession metrics
-- Use [TOOL: matchup_analysis] for opponent analysis and tactical recommendations
-- Use [TOOL: visualization] for heatmaps, charts, and statistical displays
-- Always specify tool usage clearly and integrate results meaningfully
+TOOL ORCHESTRATION CAPABILITIES:
+- [TOOL: vector_search] - Hockey knowledge, rules, strategic context, and historical insights
+- [TOOL: parquet_query] - Real-time player/team statistics, game data, and performance metrics
+- [TOOL: clip_retrieval] - Video clips, player shifts, highlights, and visual game analysis
+- [TOOL: calculate_advanced_metrics] - xG, Corsi, zone analysis, possession metrics, and advanced analytics  
+- [TOOL: matchup_analysis] - Opponent analysis, head-to-head comparisons, and tactical recommendations
+- [TOOL: visualization] - Statistical charts, heatmaps, and data visualizations
 
-COMMUNICATION STANDARDS:
-- Provide multi-step reasoning that shows your analytical workflow
-- Back all insights with specific data points and source attribution
-- Use authentic coach and player terminology appropriate for Montreal Canadiens personnel
-- Structure responses with clear evidence chains and actionable recommendations
-- Maintain professional communication standards with clean technical language
+RESPONSE REQUIREMENTS:
+- Demonstrate sophisticated analytical reasoning with multi-step analysis
+- Integrate data from all available tools meaningfully and comprehensively
+- Provide clear evidence chains and source attribution for all insights
+- Use authentic Montreal Canadiens hockey terminology and communication style
+- Focus on: {', '.join(role_config['focus'])}
+- Maintain professional standards with precise, actionable insights
 
 USER QUERY: {query}
 
-RETRIEVED CONTEXT:
+HOCKEY CONTEXT RETRIEVED:
 {context_section}
 
-ANALYTICS DATA:
+STATISTICAL ANALYTICS:
 {analytics_section}
 
-EVIDENCE CHAIN:
+VIDEO CLIPS & SHIFTS:
+{clips_section}
+
+EVIDENCE SOURCES:
 {evidence_section}
 
-INSTRUCTIONS:
-1. Analyze the user's query in the context of their role ({user_context.role.value})
-2. Integrate the retrieved context and analytics data meaningfully
-3. Provide a comprehensive response that demonstrates tool orchestration
-4. Include clear source attribution for all claims and data points
-5. Structure the response with evidence-based reasoning
-6. Use appropriate Montreal Canadiens terminology and context
-7. Ensure the response is actionable and role-appropriate
+ANALYTICAL INSTRUCTIONS:
+1. Process the query using multi-step reasoning appropriate for a {user_context.role.value}
+2. Synthesize insights from hockey context, statistical data, and video analysis
+3. Provide comprehensive analysis that leverages all available tool outputs
+4. Structure response with clear reasoning chains and strategic/tactical depth
+5. Include specific data points, shift analysis, and video references where relevant
+6. Ensure actionable recommendations suitable for Montreal Canadiens operations
+7. Maintain focus on: {role_config['context']}
 
-Generate a professional, evidence-based response that demonstrates sophisticated analytical orchestration:
+Generate your professional hockey analytics response:
 """
         
         return synthesis_prompt
@@ -223,7 +249,8 @@ Generate a professional, evidence-based response that demonstrates sophisticated
     async def _generate_response(
         self, 
         synthesis_prompt: str, 
-        user_context
+        user_context,
+        state: AgentState = None
     ) -> str:
         """Generate response using the fine-tuned model or fallback"""
         
@@ -242,23 +269,23 @@ Generate a professional, evidence-based response that demonstrates sophisticated
                 logger.warning(f"OpenAI fallback failed: {str(e)}")
         
         # Final fallback to template-based response
-        return self._generate_template_response(synthesis_prompt, user_context)
+        return self._generate_template_response(synthesis_prompt, user_context, state)
     
     async def _call_sagemaker_endpoint(self, prompt: str) -> str:
-        """Call the SageMaker endpoint for the fine-tuned model"""
+        """Call the SageMaker endpoint for the fine-tuned DeepSeek-R1-Distill-Qwen-32B model"""
         
         # This would implement actual SageMaker endpoint calling
         # For now, return a placeholder indicating the integration point
         
-        logger.info("Calling SageMaker endpoint (placeholder)")
+        logger.info("Calling SageMaker endpoint for DeepSeek-R1-Distill-Qwen-32B model")
         
-        # Simulate processing time
-        await asyncio.sleep(0.1)
+        # Simulate processing time for advanced reasoning model
+        await asyncio.sleep(0.2)
         
-        return "SageMaker endpoint response placeholder - integrate with actual fine-tuned Llama 3.3 70B model"
+        return "SageMaker endpoint response placeholder - integrate with actual fine-tuned DeepSeek-R1-Distill-Qwen-32B model"
     
     async def _call_openai_fallback(self, prompt: str) -> str:
-        """Call OpenAI API as fallback during development"""
+        """Call OpenAI API as fallback during development (supporting DeepSeek-R1 functionality)"""
         
         if not openai:
             raise Exception("OpenAI library not available")
@@ -269,7 +296,7 @@ Generate a professional, evidence-based response that demonstrates sophisticated
             response = await client.chat.completions.create(
                 model=self.model_config.fallback_model,
                 messages=[
-                    {"role": "system", "content": "You are an elite hockey analytics assistant for the Montreal Canadiens."},
+                    {"role": "system", "content": self.base_system_prompt},
                     {"role": "user", "content": prompt}
                 ],
                 temperature=self.model_config.temperature,
@@ -286,36 +313,152 @@ Generate a professional, evidence-based response that demonstrates sophisticated
     def _generate_template_response(
         self, 
         synthesis_prompt: str, 
-        user_context
+        user_context,
+        state: AgentState = None
     ) -> str:
-        """Generate template-based response as final fallback"""
+        """Generate template-based response as final fallback with clip data integration"""
+        
+        # Extract clip data from state tool results (more reliable than parsing prompt)
+        clip_data = self._extract_clip_data_from_state(state) if state else []
         
         role_config = self.role_templates.get(
             user_context.role,
             self.role_templates[UserRole.STAFF]
         )
         
-        template_response = f"""
-I understand you're asking about hockey analytics from a {user_context.role.value} perspective. 
+        # Generate response based on whether we have clip data
+        if clip_data and len(clip_data) > 0:
+            return self._generate_clip_response(clip_data, user_context, role_config)
+        else:
+            return self._generate_standard_fallback(user_context, role_config)
+    
+    def _extract_clip_data_from_state(self, state: AgentState) -> List[Dict[str, Any]]:
+        """Extract clip data directly from agent state tool results"""
+        
+        if not state or "tool_results" not in state:
+            return []
+        
+        # Find clip retrieval tool results
+        for tool_result in state["tool_results"]:
+            if (tool_result.tool_type == ToolType.CLIP_RETRIEVAL and 
+                tool_result.success and 
+                tool_result.data):
+                
+                clips_list = tool_result.data.get("clips", [])
+                return clips_list
+        
+        # Also check analytics_data for clips
+        analytics_data = state.get("analytics_data", {})
+        if "clips" in analytics_data:
+            return analytics_data["clips"]
+        
+        return []
+    
+    def _extract_clip_data_from_prompt(self, synthesis_prompt: str) -> List[Dict[str, Any]]:
+        """Extract clip data from synthesis prompt"""
+        
+        # Look for the VIDEO CLIPS & SHIFTS section in the prompt
+        import re
+        
+        clip_section_match = re.search(
+            r'VIDEO CLIPS & SHIFTS:\s*(.*?)(?=\n\n|\nEVIDENCE|\nANALYTICAL|$)', 
+            synthesis_prompt, 
+            re.DOTALL
+        )
+        
+        if not clip_section_match:
+            return []
+        
+        clip_section = clip_section_match.group(1)
+        
+        # Extract clip information using regex
+        clip_pattern = r'(\d+)\.\s+(.*?)\s+-\s+(.*?)\s+\((.*?)\)(?:\s+\|\s+(.*?))?(?:\s+\|\s+([\d.]+)s)?'
+        matches = re.findall(clip_pattern, clip_section)
+        
+        clips = []
+        for match in matches:
+            clips.append({
+                "title": match[1].strip(),
+                "player_name": match[2].strip(),
+                "event_type": match[3].strip(),
+                "game_info": match[4].strip() if len(match) > 4 and match[4] else "",
+                "duration": float(match[5]) if len(match) > 5 and match[5] else 0.0
+            })
+        
+        return clips
+    
+    def _generate_clip_response(
+        self, 
+        clip_data: List[Dict[str, Any]], 
+        user_context, 
+        role_config: Dict[str, Any]
+    ) -> str:
+        """Generate response when clip data is available"""
+        
+        clips_count = len(clip_data)
+        
+        # Create personalized greeting based on role
+        if user_context.role == UserRole.PLAYER:
+            greeting = f"Here are your video highlights, {user_context.name or 'player'}:"
+        elif user_context.role == UserRole.COACH:
+            greeting = f"Here are the requested video clips for analysis:"
+        else:
+            greeting = f"Here are the video clips from your query:"
+        
+        # Format clip information
+        clip_details = []
+        
+        for i, clip in enumerate(clip_data, 1):
+            title = clip.get('title', f'Clip {i}')
+            player = clip.get('player_name', 'Unknown Player')
+            event = clip.get('event_type', 'shift')
+            game_info = clip.get('game_info', '')
+            duration = clip.get('duration', 0)
+            
+            detail = f"{i}. {title}"
+            if game_info:
+                detail += f" | {game_info}"
+            if duration > 0:
+                detail += f" | {duration}s"
+            
+            clip_details.append(detail)
+        
+        # Create comprehensive response
+        response = f"""{greeting}
+
+Found {clips_count} video clip{'s' if clips_count != 1 else ''} matching your request:
+
+{chr(10).join(clip_details)}
+
+The clips are now loaded in the video player below. You can use the playback controls to review your performance and analyze key moments from the game.
+
+Note: Our full DeepSeek-R1-Distill-Qwen-32B analytics model is currently in training. Once available, you'll receive even more detailed analysis combining these video clips with advanced statistical insights and tactical recommendations."""
+        
+        return response
+    
+    def _generate_standard_fallback(self, user_context, role_config: Dict[str, Any]) -> str:
+        """Generate standard fallback when no clips are available"""
+        
+        return f"""
+I understand you're asking about hockey analytics from a {user_context.role.value} perspective for the Montreal Canadiens.
 
 Based on the available data and context, I can provide insights focused on {', '.join(role_config['focus'])}.
 
-However, I'm currently operating in fallback mode. For the most comprehensive analysis with our fine-tuned Montreal Canadiens analytics model, please ensure:
+However, I'm currently operating in fallback mode. For the most comprehensive analysis with our fine-tuned DeepSeek-R1-Distill-Qwen-32B analytics model, please ensure:
 
-1. The SageMaker endpoint is properly configured
-2. All data sources are available
+1. The SageMaker endpoint for our DeepSeek-R1 model is properly configured
+2. All data sources (RAG, Parquet, video clips) are available  
 3. Network connectivity is established
 
-I'm designed to provide sophisticated analysis combining:
+I'm designed to provide sophisticated multi-step reasoning analysis combining:
 - Hockey domain knowledge from our RAG system
-- Real-time statistics from Parquet data files  
-- Advanced metrics calculations
-- Role-specific insights for Montreal Canadiens personnel
+- Real-time statistics from Parquet data files
+- Video clip analysis and shift breakdowns  
+- Advanced metrics calculations and predictive insights
+- Role-specific insights tailored for Montreal Canadiens personnel
 
-Please try your query again once the full system is available.
+Please try your query again once the full HeartBeat Engine system is available.
 """
-        
-        return template_response
     
     def _format_retrieved_context(
         self, 
@@ -383,6 +526,35 @@ Please try your query again once the full system is available.
         formatted += f"- Goals For/Against: {metrics.get('goals_for', 0)}/{metrics.get('goals_against', 0)}\n"
         
         return formatted
+    
+    def _format_video_clips(self, analytics_data: Dict[str, Any]) -> str:
+        """Format video clips and shifts data for prompt integration"""
+        
+        clips = analytics_data.get("clips", [])
+        
+        if not clips:
+            return "No video clips or shifts available."
+        
+        formatted_clips = []
+        
+        for i, clip in enumerate(clips[:5], 1):  # Limit to top 5 clips
+            if isinstance(clip, dict):
+                title = clip.get("title", f"Clip {i}")
+                player = clip.get("player_name", "Unknown Player")
+                game_info = clip.get("game_info", "")
+                event_type = clip.get("event_type", "shift")
+                duration = clip.get("duration", 0)
+                
+                formatted_clips.append(
+                    f"{i}. {title} - {player} ({event_type})"
+                    f"{f' | {game_info}' if game_info else ''}"
+                    f"{f' | {duration}s' if duration > 0 else ''}"
+                )
+        
+        if formatted_clips:
+            return f"Available video clips/shifts ({len(clips)} total):\n" + "\n".join(formatted_clips)
+        else:
+            return "Video clips found but formatting unavailable."
     
     def _format_evidence_chain(self, tool_results: List[ToolResult]) -> str:
         """Format evidence chain from tool results"""
@@ -455,8 +627,18 @@ Please try rephrasing your question or check back shortly. I'm designed to provi
         
         return state
     
-    def _generate_fallback_response(self, state: AgentState) -> str:
+    def _generate_fallback_response(self, state: AgentState, user_context) -> str:
         """Generate a fallback response when synthesis fails"""
+        
+        # Check if we have clip data even when synthesis fails
+        clip_data = self._extract_clip_data_from_state(state)
+        
+        if clip_data and len(clip_data) > 0:
+            role_config = self.role_templates.get(
+                user_context.role,
+                self.role_templates[UserRole.STAFF]
+            )
+            return self._generate_clip_response(clip_data, user_context, role_config)
         
         query = state.get("original_query", "your query")
         
@@ -466,6 +648,7 @@ I encountered an issue processing your request about "{query[:100]}...".
 I'm designed to provide comprehensive hockey analytics by combining:
 - Domain expertise from hockey knowledge base
 - Real-time statistics and performance data
+- Video clip analysis and shift breakdowns
 - Advanced metrics and comparative analysis
 
 Please try your question again, or contact support if the issue persists.

@@ -33,7 +33,7 @@ class ParquetAnalyzer:
         
         logger.info(f"✅ ParquetAnalyzer initialized")
         logger.info(f"📊 Discovered {len(self.file_map)} parquet data sources")
-        logger.info(f"🎯 Ready for real-time hockey analytics")
+        logger.info(f"Ready for real-time hockey analytics")
 
     def _discover_parquet_files(self) -> Dict[str, List[Path]]:
         """Auto-discover and categorize all parquet files"""
@@ -426,7 +426,7 @@ def main():
             print(f"📋 Result: {type(result)}")
 
     print("\n✅ ParquetAnalyzer testing complete!")
-    print("🎯 Ready for integration with HeartBeat Engine!")
+    print("Ready for integration with HeartBeat Engine!")
 
 if __name__ == "__main__":
     main()

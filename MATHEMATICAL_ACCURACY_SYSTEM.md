@@ -4,7 +4,7 @@
 
 The **HabsAI Mathematical Accuracy System** is a comprehensive framework designed to ensure mathematical precision and contextual understanding in the Montreal Canadiens AI Query Engine. This system transforms raw hockey analytics data into mathematically validated, contextually enriched information that enables highly accurate LLM responses.
 
-## 🎯 Core Problem Solved
+## Core Problem Solved
 
 LLMs often struggle with:
 - **Mathematical inaccuracies** in calculations and formulas
@@ -201,7 +201,7 @@ print(f"Confidence: {result.confidence_score:.2f}")
 - **Low Confidence (0.5-0.7)**: Significant concerns requiring review
 - **Very Low Confidence (<0.5)**: Major errors detected
 
-## 🎯 Use Cases
+## Use Cases
 
 ### 1. Expected Goals Analysis
 ```python
@@ -305,7 +305,7 @@ Provides mathematical validation of responses.
 #### `MetadataManager`
 Manages metadata and relationship tracking.
 
-## 🎉 Success Stories
+## Success Stories
 
 ### Case Study: XG Analysis Accuracy
 **Before**: Generic LLM struggled with expected goals calculations

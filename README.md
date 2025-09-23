@@ -25,7 +25,7 @@ Coaches, players, scouts, analysts, and other authorized personnel can ask natur
 ## Technical Architecture
 
 ### LangGraph Orchestrator Core
-**Central Intelligence:** LangGraph-based agent orchestrator powered by fine-tuned `Llama-3.3-70B-Instruct`
+**Central Intelligence:** LangGraph-based agent orchestrator powered by fine-tuned `deepseek-ai/DeepSeek-R1-Distill-Qwen-32B`
 
 **Processing Flow:**
 ```
@@ -59,7 +59,7 @@ User Query → Intent Classification → Router → Tools → Synthesis → Resp
 
 ### Tech Stack
 - **Orchestration**: LangGraph, LangChain agents and workflows
-- **Core Model**: Fine-tuned Llama-3.3-70B-Instruct trained on AWS SageMaker
+- **Core Model**: Fine-tuned deepseek-ai/DeepSeek-R1-Distill-Qwen-32B trained on AWS SageMaker
 - **ML Platform**: AWS SageMaker for model training, fine-tuning, and deployment
 - **Vector Database**: Pinecone with hybrid search and metadata filtering
 - **Analytics Backend**: Python 3.13, pandas, numpy, Parquet optimized queries
@@ -90,10 +90,10 @@ User Query → Intent Classification → Router → Tools → Synthesis → Resp
 
 ### Phase 3: LangGraph Orchestrator Implementation (Weeks 2-3)
 
-**Goal:** Implement a sophisticated LangGraph-based agent orchestrator that seamlessly combines fine-tuned Llama-3.3-70B-Instruct with hybrid RAG + real-time analytics, enabling dynamic hockey analysis with enterprise-grade security and performance.
+**Goal:** Implement a sophisticated LangGraph-based agent orchestrator that seamlessly combines fine-tuned deepseek-ai/DeepSeek-R1-Distill-Qwen-32B with hybrid RAG + real-time analytics, enabling dynamic hockey analysis with enterprise-grade security and performance.
 
 #### Architecture Implementation:
-- **LangGraph Agent Core:** Fine-tuned `Llama-3.3-70B-Instruct` as central reasoning engine
+- **LangGraph Agent Core:** Fine-tuned `deepseek-ai/DeepSeek-R1-Distill-Qwen-32B` as central reasoning engine
 - **Node-based Workflow:** Intent → Router → Vector Search → Parquet SQL → Analytics Tools → Visualization → Synthesis
 - **Identity-Aware System:** User role enforcement with data scoping and permissions
 - **Hybrid Intelligence:** RAG chunks for hockey context + live Parquet queries for current statistics

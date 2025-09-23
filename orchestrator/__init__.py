@@ -2,7 +2,7 @@
 HeartBeat Engine - LangGraph Orchestrator
 Montreal Canadiens Advanced Analytics Assistant
 
-Main orchestrator module for coordinating between fine-tuned Llama model,
+Main orchestrator module for coordinating between fine-tuned DeepSeek-R1-Distill-Qwen-32B model,
 Pinecone RAG, and Parquet analytics tools.
 """
 

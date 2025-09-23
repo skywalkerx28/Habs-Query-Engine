@@ -228,7 +228,7 @@ class HeartBeatApp:
         
         with col2:
             st.markdown("**Powered By:**")
-            st.markdown("Llama 3.3 70B + RAG + Real-time Analytics")
+            st.markdown("deepseek-ai/DeepSeek-R1-Distill-Qwen-32B + RAG + Real-time Analytics")
         
         with col3:
             st.markdown("**Status:**")

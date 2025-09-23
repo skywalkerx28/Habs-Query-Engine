@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 
 class SageMakerEndpointManager:
     """
-    Manages SageMaker inference endpoints for the fine-tuned Llama 3.3 70B model.
+    Manages SageMaker inference endpoints for the fine-tuned DeepSeek-R1-Distill-Qwen-32B model.
     
     Features:
     - Endpoint deployment and configuration
@@ -33,9 +33,9 @@ class SageMakerEndpointManager:
         
         # Endpoint configuration
         self.endpoint_config = {
-            "model_name": "heartbeat-llama33-70b",
-            "endpoint_name": "heartbeat-llama33-70b-endpoint",
-            "endpoint_config_name": "heartbeat-llama33-70b-config",
+            "model_name": "heartbeat-deepseek-r1-qwen-32b",
+            "endpoint_name": "heartbeat-deepseek-r1-qwen-32b-endpoint",
+            "endpoint_config_name": "heartbeat-deepseek-r1-qwen-32b-config",
             "instance_type": "ml.g5.2xlarge",  # Start with smaller instance for inference
             "initial_instance_count": 1,
             "max_instance_count": 3,
@@ -103,7 +103,7 @@ class SageMakerEndpointManager:
                     'Image': '763104351884.dkr.ecr.ca-central-1.amazonaws.com/huggingface-pytorch-inference:2.5.1-transformers4.49.0-gpu-py311-cu124-ubuntu22.04',
                     'ModelDataUrl': model_s3_path,
                     'Environment': {
-                        'HF_MODEL_ID': 'meta-llama/Llama-3.3-70B-Instruct',
+                        'HF_MODEL_ID': 'deepseek-ai/DeepSeek-R1-Distill-Qwen-32B',
                         'HF_TASK': 'text-generation',
                         'SAGEMAKER_CONTAINER_LOG_LEVEL': '20',
                         'SAGEMAKER_REGION': self.region

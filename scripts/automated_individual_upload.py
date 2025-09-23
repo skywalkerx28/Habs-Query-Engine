@@ -129,7 +129,7 @@ def main():
                 for milestone in progress['milestones']:
                     if total_uploaded >= int(milestone) and not progress['milestones'][milestone]:
                         progress['milestones'][milestone] = True
-                        print(f"🎯 Milestone reached: {milestone} records uploaded!")
+                        print(f"Milestone reached: {milestone} records uploaded!")
 
                 # Save progress every 10 uploads
                 if total_uploaded % 10 == 0:
@@ -151,7 +151,7 @@ def main():
 
     # Final save
     save_progress(progress)
-    print("\n🎉 Upload process complete!")
+    print("\nUpload process complete!")
     print(f"Total records uploaded: {total_uploaded}/{progress['total_records']}")
     if progress['errors']:
         print(f"Errors encountered: {len(progress['errors'])}")

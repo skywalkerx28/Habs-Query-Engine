@@ -15,7 +15,7 @@ from typing import Dict, Any, AsyncGenerator
 
 from orchestrator.utils.state import UserContext
 from ..models.requests import QueryRequest
-from ..models.responses import QueryResponse, ErrorResponse, AnalyticsData, ToolResult
+from ..models.responses import QueryResponse, ErrorResponse, AnalyticsData, ToolResult, ClipData
 from ..dependencies import get_current_user_context, get_orchestrator
 
 logger = logging.getLogger(__name__)
@@ -150,8 +150,40 @@ def _convert_orchestrator_result(
                 type=item.get("type", "stat"),
                 title=item.get("title", "Analysis"),
                 data=item.get("data", {}),
-                metadata=item.get("metadata", {})
+                metadata=item.get("metadata", {}),
+                clips=item.get("clips")
             ))
+    
+    # Check for clip data in tool results and add to analytics
+    for result in tool_results:
+        if hasattr(result, 'tool') and result.tool == "clip_retrieval" and result.success:
+            clip_data = result.data or {}
+            clips_list = clip_data.get("clips", [])
+            
+            if clips_list:
+                # Convert clip dictionaries to ClipData models
+                clips_models = []
+                for clip_dict in clips_list:
+                    clips_models.append(ClipData(
+                        clip_id=clip_dict.get("clip_id", ""),
+                        title=clip_dict.get("title", ""),
+                        player_name=clip_dict.get("player_name", ""),
+                        game_info=clip_dict.get("game_info", ""),
+                        event_type=clip_dict.get("event_type", ""),
+                        description=clip_dict.get("description", ""),
+                        file_url=clip_dict.get("file_url", ""),
+                        thumbnail_url=clip_dict.get("thumbnail_url", ""),
+                        duration=clip_dict.get("duration", 0.0),
+                        relevance_score=clip_dict.get("relevance_score", 1.0)
+                    ))
+                
+                # Add clips as analytics data
+                analytics.append(AnalyticsData(
+                    type="clips",
+                    title=f"Video Highlights ({len(clips_models)} clips)",
+                    data={"total_clips": len(clips_models)},
+                    clips=clips_models
+                ))
     
     # Build response
     return QueryResponse(

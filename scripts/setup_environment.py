@@ -65,7 +65,7 @@ def test_heartbeat_system():
         print()
         
         if rag_working and data_working and model_working:
-            print("🎉 HeartBeat Engine Status: FULLY OPERATIONAL")
+            print("HeartBeat Engine Status: FULLY OPERATIONAL")
             print("🚀 Ready for Montreal Canadiens hockey analytics!")
             return True
         else:
@@ -96,7 +96,7 @@ def main():
         if system_success:
             print()
             print("=" * 60) 
-            print("🎯 SETUP COMPLETE!")
+            print("SETUP COMPLETE!")
             print("✅ API keys configured")
             print("✅ All systems operational")
             print("✅ Ready for hockey analytics")

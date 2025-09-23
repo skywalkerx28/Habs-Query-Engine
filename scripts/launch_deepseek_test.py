@@ -44,7 +44,7 @@ def validate_configuration():
     for key, value in training_config.items():
         print(f"  {key.replace('_', ' ').title()}: {value}")
     
-    print("\nKey Improvements over Llama-4-Scout-17B:")
+    print("\nKey Improvements over previous baseline models:")
     improvements = [
         "Superior mathematical reasoning (critical for hockey analytics)",
         "Better tool orchestration and decision-making",
@@ -59,7 +59,7 @@ def validate_configuration():
     
     print("\nCost Analysis:")
     print(f"  DeepSeek-R1-Qwen-32B (32.7B): ~$70-$120 CAD (g5.12xlarge)")
-    print(f"  Previous Llama-4-Scout-17B: ~$70 CAD") 
+    print(f"  Previous baseline models: ~$70 CAD") 
     print(f"  Outcome: Lower-cost run enabled via QLoRA and shorter schedule")
     
     print("\nTraining Dataset:")

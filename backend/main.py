@@ -18,6 +18,9 @@ from typing import Dict, Any
 # Add orchestrator to path
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 
+# Add backend directory to path for api imports
+sys.path.append(os.path.dirname(__file__))
+
 from orchestrator.agents.heartbeat_orchestrator import HeartBeatOrchestrator
 from orchestrator.config.settings import UserRole, settings
 from orchestrator.utils.state import UserContext
@@ -26,6 +29,7 @@ from orchestrator.utils.state import UserContext
 from api.routes.auth import router as auth_router
 from api.routes.query import router as query_router
 from api.routes.analytics import router as analytics_router
+from api.routes.clips import router as clips_router
 from api.dependencies import set_orchestrator
 
 # Configure logging
@@ -98,6 +102,7 @@ app.add_middleware(
 app.include_router(auth_router)
 app.include_router(query_router)
 app.include_router(analytics_router)
+app.include_router(clips_router)
 
 @app.get("/")
 async def root():

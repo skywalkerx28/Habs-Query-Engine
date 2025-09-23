@@ -3,7 +3,7 @@
 HeartBeat Engine - Model Deployment Pipeline
 Montreal Canadiens Advanced Analytics Assistant
 
-Automated deployment pipeline for the fine-tuned Llama 3.3 70B model.
+Automated deployment pipeline for the fine-tuned DeepSeek-R1-Distill-Qwen-32B model.
 """
 
 import asyncio
@@ -191,7 +191,7 @@ class ModelDeploymentPipeline:
         try:
             # List training jobs with HeartBeat prefix
             response = self.sagemaker_client.list_training_jobs(
-                NameContains="heartbeat-llama33-70b",
+                NameContains="heartbeat-deepseek-r1-qwen-32b",
                 StatusEquals='Completed',
                 SortBy='CreationTime',
                 SortOrder='Descending',
@@ -258,7 +258,7 @@ async def main():
         result = await pipeline.deploy_latest_model(latest_job)
         
         if result["success"]:
-            print("🎉 Model deployment successful!")
+            print("Model deployment successful!")
             print(f"Endpoint: {result['endpoint_name']}")
         else:
             print(f"❌ Deployment failed: {result['error']}")
@@ -273,7 +273,7 @@ async def main():
             result = await pipeline.deploy_when_ready()
             
             if result["success"]:
-                print("🎉 Auto-deployment successful!")
+                print("Auto-deployment successful!")
             else:
                 print(f"❌ Auto-deployment failed: {result['error']}")
 

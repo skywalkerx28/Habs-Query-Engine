@@ -253,7 +253,7 @@ Model configuration for different deployment scenarios.
 @dataclass
 class ModelConfig:
     primary_model_endpoint: str = ""         # SageMaker endpoint URL
-    primary_model_name: str = "heartbeat-llama33-70b"
+    primary_model_name: str = "heartbeat-deepseek-r1-qwen-32b"
     fallback_model: str = "gpt-4o-mini"      # Development fallback
     fallback_api_key: str = ""               # OpenAI API key
     temperature: float = 0.1                 # Model temperature

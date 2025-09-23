@@ -21,6 +21,7 @@ class QueryType(Enum):
     MATCHUP_COMPARISON = "matchup_comparison"
     TACTICAL_ANALYSIS = "tactical_analysis"
     STATISTICAL_QUERY = "statistical_query"
+    CLIP_RETRIEVAL = "clip_retrieval"
     GENERAL_HOCKEY = "general_hockey"
 
 class ToolType(Enum):
@@ -30,6 +31,7 @@ class ToolType(Enum):
     CALCULATE_METRICS = "calculate_metrics"
     MATCHUP_ANALYSIS = "matchup_analysis"
     VISUALIZATION = "visualization"
+    CLIP_RETRIEVAL = "clip_retrieval"
 
 @dataclass
 class UserContext:

@@ -272,6 +272,13 @@ export function MilitaryAnalyticsDashboard() {
 
   return (
     <div className="min-h-screen bg-gray-950 p-6">
+      {/* Floating title */}
+      <div className="absolute top-0 left-0 right-0 z-10 flex items-center justify-center px-6 py-6 pointer-events-none">
+        <h1 className="text-xl font-bold text-white tracking-wider text-shadow-military font-military-display">
+          HEARTBEAT
+        </h1>
+      </div>
+
       {/* Command Header */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}

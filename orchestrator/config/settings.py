@@ -23,7 +23,7 @@ class ModelConfig:
     """Model configuration for different deployment scenarios"""
     # Primary model (when training completes)
     primary_model_endpoint: str = ""  # SageMaker endpoint URL
-    primary_model_name: str = "heartbeat-llama33-70b"
+    primary_model_name: str = "heartbeat-deepseek-r1-qwen-32b"
     
     # Fallback model for development/testing
     fallback_model: str = "gpt-4o-mini"  # For initial testing

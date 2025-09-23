@@ -3,7 +3,7 @@
 ## CURRENT STATE ANALYSIS
 
 ### MAJOR ACHIEVEMENTS COMPLETED
-- **Fine-tuned AI Model**: `Llama-3.3-70B-Instruct` trained on AWS SageMaker (IN PROGRESS - Elite hockey analytics with enterprise-grade training infrastructure)
+- **Fine-tuned AI Model**: `deepseek-ai/DeepSeek-R1-Distill-Qwen-32B` trained on AWS SageMaker (IN PROGRESS - Elite hockey analytics with enterprise-grade training infrastructure)
 - **Enterprise Data Foundation**: 176+ parquet files with comprehensive MTL hockey analytics
 - **RAG Chunks Ready**: comprehensive_hockey_rag_chunks_2024_2025.json (573 chunks), mtl_team_stats_contextual_rag_chunks_2024_2025.json (353 chunks)
 - **Hybrid Architecture**: scripts/heartbeat_engine.py framework designed
@@ -56,8 +56,7 @@ Transform "text-only" responses into data-driven hockey intelligence by implemen
 
 **Result**: Model responses enriched with relevant hockey knowledge and context (2-3 chunks per query)
 
----
-
+----
 ### MILESTONE 2: Parquet Query Tools COMPLETED
 **Goal**: Enable real-time data analysis for concrete metrics and statistics
 
@@ -125,7 +124,7 @@ Transform "text-only" responses into data-driven hockey intelligence by implemen
 - [ ] **Install LangGraph dependencies**: LangGraph, LangChain agents, workflow management
 - [ ] **Initialize agent framework**: Create base LangGraph application structure
 - [ ] **Define node architecture**: Intent → Router → Tools → Synthesis workflow
-- [ ] **Configure fine-tuned model**: Integrate custom `Llama-3.3-70B-Instruct` from SageMaker training
+- [ ] **Configure fine-tuned model**: Integrate custom `deepseek-ai/DeepSeek-R1-Distill-Qwen-32B` from SageMaker training
 
 #### Task 4.2: Identity & Security Layer (2 days)
 - [ ] **Implement resolve_current_user**: User identity resolution system

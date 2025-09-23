@@ -32,7 +32,7 @@ frontend/
 └── utils/                   # Utility functions
 ```
 
-## 🎯 Component Categories
+## Component Categories
 
 ### Analytics Components (Priority 1)
 - **Player Performance Cards**: Individual player stats with trends
@@ -103,7 +103,7 @@ Combine multiple Tailwind UI components to create:
 - Game analysis interfaces
 - Comparison tools
 
-## 🎨 Design System
+## Design System
 
 ### Montreal Canadiens Branding
 ```css

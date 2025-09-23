@@ -98,7 +98,7 @@ def setup_model_and_tokenizer(model_id: str):
     # Prepare for k-bit training and wrap with LoRA
     model = prepare_model_for_kbit_training(model)
 
-    # LoRA target modules for Qwen2 architecture (similar to LLaMA but optimized for DeepSeek)
+    # LoRA target modules for Qwen2 architecture (optimized for DeepSeek-R1)
     lora_targets_env = os.environ.get(
         "LORA_TARGETS",
         "q_proj,k_proj,v_proj,o_proj,gate_proj,up_proj,down_proj",

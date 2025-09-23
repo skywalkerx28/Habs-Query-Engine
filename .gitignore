@@ -27,3 +27,6 @@ node_modules/
 # Data files (if you don't want to commit large data files)
 # *.csv
 sub_batch_*.json
+
+# AWS policy files (contain account-specific information)
+hf-secrets-policy.json

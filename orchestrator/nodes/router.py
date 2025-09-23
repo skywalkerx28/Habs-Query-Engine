@@ -22,11 +22,12 @@ class RouterNode:
     def __init__(self):
         # Tool execution priorities (lower = higher priority)
         self.tool_priorities = {
-            ToolType.VECTOR_SEARCH: 1,      # Context first
-            ToolType.PARQUET_QUERY: 2,      # Then data
-            ToolType.CALCULATE_METRICS: 3,  # Then calculations
-            ToolType.MATCHUP_ANALYSIS: 4,   # Then comparisons
-            ToolType.VISUALIZATION: 5       # Finally visualizations
+            ToolType.CLIP_RETRIEVAL: 1,     # Clips first (user-requested content)
+            ToolType.VECTOR_SEARCH: 2,      # Context second
+            ToolType.PARQUET_QUERY: 3,      # Then data
+            ToolType.CALCULATE_METRICS: 4,  # Then calculations
+            ToolType.MATCHUP_ANALYSIS: 5,   # Then comparisons
+            ToolType.VISUALIZATION: 6       # Finally visualizations
         }
     
     def process(self, state: AgentState) -> AgentState:
@@ -112,6 +113,10 @@ class RouterNode:
         if tool == ToolType.VISUALIZATION:
             return True
         
+        # Clip retrieval based on user permissions
+        if tool == ToolType.CLIP_RETRIEVAL:
+            return permissions.get("clips_access", True)  # Default to allowing clips
+        
         # Default to allowing
         return True
     
@@ -141,7 +146,9 @@ class RouterNode:
         
         tool = tools[0]
         
-        if tool == ToolType.VECTOR_SEARCH:
+        if tool == ToolType.CLIP_RETRIEVAL:
+            return ["clip_retrieval", "response_synthesis"]
+        elif tool == ToolType.VECTOR_SEARCH:
             return ["pinecone_retrieval", "response_synthesis"]
         elif tool in [ToolType.PARQUET_QUERY, ToolType.CALCULATE_METRICS]:
             return ["parquet_analysis", "response_synthesis"]
@@ -153,7 +160,11 @@ class RouterNode:
         
         sequence = []
         
-        # Always start with context if available
+        # Start with clips if requested (high priority user content)
+        if ToolType.CLIP_RETRIEVAL in tools:
+            sequence.append("clip_retrieval")
+        
+        # Then context if available
         if ToolType.VECTOR_SEARCH in tools:
             sequence.append("pinecone_retrieval")
         
@@ -211,7 +222,9 @@ class RouterNode:
         
         # Map tools to nodes
         for tool in sorted_tools:
-            if tool == ToolType.VECTOR_SEARCH and "pinecone_retrieval" not in sequence:
+            if tool == ToolType.CLIP_RETRIEVAL and "clip_retrieval" not in sequence:
+                sequence.append("clip_retrieval")
+            elif tool == ToolType.VECTOR_SEARCH and "pinecone_retrieval" not in sequence:
                 sequence.append("pinecone_retrieval")
             elif tool in [
                 ToolType.PARQUET_QUERY, 

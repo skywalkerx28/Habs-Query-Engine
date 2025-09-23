@@ -15,10 +15,24 @@ interface Message {
   analytics?: AnalyticsData[]
 }
 
+interface ClipData {
+  clip_id: string
+  title: string
+  player_name: string
+  game_info: string
+  event_type: string
+  description: string
+  file_url: string
+  thumbnail_url: string
+  duration: number
+  relevance_score?: number
+}
+
 interface AnalyticsData {
-  type: 'stat' | 'chart' | 'table'
+  type: 'stat' | 'chart' | 'table' | 'clips'
   title: string
   data: any
+  clips?: ClipData[]
 }
 
 export function MilitaryChatInterface() {

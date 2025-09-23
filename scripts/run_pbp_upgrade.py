@@ -190,7 +190,7 @@ class PBPUpgradeOrchestrator:
         
         duration = time.time() - self.start_time
         
-        print("🎉 PBP UPGRADE PROCESS COMPLETED")
+        print("PBP UPGRADE PROCESS COMPLETED")
         print("=" * 50)
         print(f"Total duration: {duration:.2f} seconds")
         print()

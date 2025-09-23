@@ -27,7 +27,7 @@ The HeartBeat orchestrator implements a sophisticated LangGraph-based workflow t
 │                    External Integrations                        │
 │  ┌─────────────┐    ┌──────────────┐    ┌─────────────────────┐ │
 │  │ Fine-tuned  │    │   Pinecone   │    │     Parquet         │ │
-│  │ Llama 3.3   │    │   Vector     │    │     Data            │ │
+│  │ DeepSeek-R1 │    │   Vector     │    │     Data            │ │
 │  │ 70B Model   │    │   Database   │    │     Files           │ │
 │  └─────────────┘    └──────────────┘    └─────────────────────┘ │
 └─────────────────────────────────────────────────────────────────┘
@@ -292,7 +292,7 @@ class ResponseSynthesizerNode:
 5. **Citation Management**: Add source attribution and evidence chains
 
 **Model Integration**:
-- **Primary Model**: SageMaker endpoint for fine-tuned Llama 3.3 70B
+- **Primary Model**: SageMaker endpoint for fine-tuned DeepSeek-R1-Distill-Qwen-32B
 - **Fallback Model**: OpenAI API for development and testing
 - **Template Fallback**: Static responses when models unavailable
 
@@ -455,7 +455,7 @@ ROLE_PERMISSIONS = {
 │   Endpoint      │    │    Vector DB    │    │    Data Files   │
 │                 │    │                 │    │                 │
 │ Fine-tuned      │    │ Hockey Domain   │    │ Statistical     │
-│ Llama 3.3 70B   │    │ Knowledge       │    │ Analytics       │
+│ DeepSeek-R1-Distill-Qwen-32B   │    │ Knowledge       │    │ Analytics       │
 └─────────────────┘    └─────────────────┘    └─────────────────┘
         │                        │                        │
         └────────────────────────┼────────────────────────┘

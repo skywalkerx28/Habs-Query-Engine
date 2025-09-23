@@ -28,6 +28,7 @@ from orchestrator.nodes.intent_analyzer import IntentAnalyzerNode
 from orchestrator.nodes.router import RouterNode
 from orchestrator.nodes.pinecone_retriever import PineconeRetrieverNode
 from orchestrator.nodes.parquet_analyzer import ParquetAnalyzerNode
+from orchestrator.nodes.clip_retriever import ClipRetrieverNode
 from orchestrator.nodes.response_synthesizer import ResponseSynthesizerNode
 
 logger = logging.getLogger(__name__)
@@ -37,7 +38,7 @@ class HeartBeatOrchestrator:
     Main orchestrator for the HeartBeat Engine.
     
     Coordinates between:
-    - Fine-tuned Llama 3.3 70B model (central reasoning)
+    - Fine-tuned DeepSeek model (central reasoning)
     - Pinecone vector search (hockey context/rules)
     - Parquet analytics (real-time stats/metrics)
     """
@@ -57,6 +58,7 @@ class HeartBeatOrchestrator:
         workflow.add_node("router", self._router_node)
         workflow.add_node("pinecone_retrieval", self._pinecone_retrieval_node)
         workflow.add_node("parquet_analysis", self._parquet_analysis_node)
+        workflow.add_node("clip_retrieval", self._clip_retrieval_node)
         workflow.add_node("response_synthesis", self._response_synthesis_node)
         
         # Define entry point
@@ -72,7 +74,9 @@ class HeartBeatOrchestrator:
             {
                 "pinecone": "pinecone_retrieval",
                 "parquet": "parquet_analysis", 
+                "clips": "clip_retrieval",
                 "both": "pinecone_retrieval",  # Start with pinecone, then parquet
+                "clips_and_data": "clip_retrieval",  # Start with clips, then data
                 "synthesis": "response_synthesis"
             }
         )
@@ -89,6 +93,17 @@ class HeartBeatOrchestrator:
         
         # From parquet to synthesis
         workflow.add_edge("parquet_analysis", "response_synthesis")
+        
+        # From clip retrieval - conditional routing
+        workflow.add_conditional_edges(
+            "clip_retrieval",
+            self._after_clip_decision,
+            {
+                "parquet": "parquet_analysis",
+                "pinecone": "pinecone_retrieval",
+                "synthesis": "response_synthesis"
+            }
+        )
         
         # End at synthesis
         workflow.add_edge("response_synthesis", END)
@@ -140,7 +155,10 @@ class HeartBeatOrchestrator:
                     {
                         "tool": r.tool_type.value,
                         "success": r.success,
-                        "citations": r.citations
+                        "data": r.data,
+                        "processing_time_ms": r.execution_time_ms,
+                        "citations": r.citations,
+                        "error": r.error
                     } for r in result["tool_results"]
                 ],
                 "processing_time_ms": result["processing_time_ms"],
@@ -180,6 +198,11 @@ class HeartBeatOrchestrator:
         node = ParquetAnalyzerNode()
         return await node.process(state)
     
+    async def _clip_retrieval_node(self, state: AgentState) -> AgentState:
+        """Retrieve video clips based on query parameters"""
+        node = ClipRetrieverNode()
+        return await node.process(state)
+    
     async def _response_synthesis_node(self, state: AgentState) -> AgentState:
         """Synthesize final response using fine-tuned model"""
         node = ResponseSynthesizerNode()
@@ -195,8 +218,14 @@ class HeartBeatOrchestrator:
             ToolType.CALCULATE_METRICS,
             ToolType.MATCHUP_ANALYSIS
         ])
+        has_clips = ToolType.CLIP_RETRIEVAL in required_tools
         
-        if has_pinecone and has_parquet:
+        # Prioritize clip retrieval if requested
+        if has_clips and (has_pinecone or has_parquet):
+            return "clips_and_data"
+        elif has_clips:
+            return "clips"
+        elif has_pinecone and has_parquet:
             return "both"
         elif has_pinecone:
             return "pinecone"
@@ -216,6 +245,25 @@ class HeartBeatOrchestrator:
         ])
         
         return "parquet" if needs_parquet else "synthesis"
+    
+    def _after_clip_decision(self, state: AgentState) -> str:
+        """Decide next step after Clip retrieval"""
+        required_tools = state["required_tools"]
+        
+        needs_parquet = any(t in required_tools for t in [
+            ToolType.PARQUET_QUERY,
+            ToolType.CALCULATE_METRICS, 
+            ToolType.MATCHUP_ANALYSIS
+        ])
+        
+        needs_pinecone = ToolType.VECTOR_SEARCH in required_tools
+        
+        if needs_parquet:
+            return "parquet"
+        elif needs_pinecone:
+            return "pinecone"
+        else:
+            return "synthesis"
 
 # Global orchestrator instance
 orchestrator = HeartBeatOrchestrator()

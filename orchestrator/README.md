@@ -2,7 +2,7 @@
 
 **Montreal Canadiens Advanced Analytics Assistant**
 
-A LangGraph-based orchestrator that coordinates between fine-tuned Llama 3.3 70B model, Pinecone RAG, and Parquet analytics tools to provide sophisticated hockey analytics with role-based access control.
+A LangGraph-based orchestrator that coordinates between fine-tuned deepseek-ai/DeepSeek-R1-Distill-Qwen-32B model, Pinecone RAG, and Parquet analytics tools to provide sophisticated hockey analytics with role-based access control.
 
 ## Table of Contents
 
@@ -26,7 +26,7 @@ A LangGraph-based orchestrator that coordinates between fine-tuned Llama 3.3 70B
 
 The HeartBeat orchestrator implements a hybrid intelligence system that combines:
 
-- **Fine-tuned Llama 3.3 70B**: Central reasoning engine trained on hockey analytics
+- **Fine-tuned deepseek-ai/DeepSeek-R1-Distill-Qwen-32B**: Central reasoning engine trained on hockey analytics
 - **Pinecone RAG**: Vector search for hockey domain knowledge and context
 - **Parquet Analytics**: Real-time statistical queries and advanced metrics
 - **Role-based Access**: Identity-aware processing for different user types
@@ -240,7 +240,7 @@ result = await orchestrator.process_query(
 @dataclass
 class ModelConfig:
     primary_model_endpoint: str = ""  # SageMaker endpoint
-    primary_model_name: str = "heartbeat-llama33-70b"
+    primary_model_name: str = "heartbeat-deepseek-r1-qwen-32b"
     fallback_model: str = "gpt-4o-mini"
     temperature: float = 0.1
     max_tokens: int = 4096
@@ -421,7 +421,7 @@ The orchestrator includes comprehensive mock data for testing without external d
 
 ### SageMaker Model Integration
 
-The orchestrator is designed to integrate seamlessly with your fine-tuned Llama 3.3 70B model:
+The orchestrator is designed to integrate seamlessly with your fine-tuned deepseek-ai/DeepSeek-R1-Distill-Qwen-32B model:
 
 ```python
 # Update model endpoint when training completes

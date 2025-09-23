@@ -26,12 +26,26 @@ class ToolResult(BaseModel):
     citations: List[str] = Field(default_factory=list, description="Data sources and citations")
     error: Optional[str] = Field(None, description="Error message if tool failed")
 
+class ClipData(BaseModel):
+    """Video clip data model"""
+    clip_id: str = Field(..., description="Unique clip identifier")
+    title: str = Field(..., description="Clip title")
+    player_name: str = Field(..., description="Player featured in clip")
+    game_info: str = Field(..., description="Game information")
+    event_type: str = Field(..., description="Type of event (goal, assist, save, etc.)")
+    description: str = Field(..., description="Clip description")
+    file_url: str = Field(..., description="URL to video file")
+    thumbnail_url: str = Field(..., description="URL to thumbnail image")
+    duration: float = Field(..., description="Clip duration in seconds")
+    relevance_score: Optional[float] = Field(None, description="Relevance score for search query")
+
 class AnalyticsData(BaseModel):
     """Analytics data for frontend display"""
-    type: str = Field(..., description="Type of analytics (stat, chart, table)")
+    type: str = Field(..., description="Type of analytics (stat, chart, table, clips)")
     title: str = Field(..., description="Display title")
     data: Any = Field(..., description="Analytics data payload")
     metadata: Optional[Dict[str, Any]] = Field(None, description="Additional metadata")
+    clips: Optional[List[ClipData]] = Field(None, description="Video clips data (when type=clips)")
 
 class QueryResponse(BaseModel):
     """Main query response model"""

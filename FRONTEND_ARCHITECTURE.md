@@ -23,7 +23,7 @@ HeartBeat Engine Architecture:
 │              Your Existing Python Backend                   │
 │  ┌─────────────┐  ┌─────────────┐  ┌─────────────────────┐  │
 │  │ Orchestrator│  │  Pinecone   │  │   SageMaker         │  │
-│  │  (Unchanged)│  │    RAG      │  │   Llama 3.3 70B     │  │
+│  │  (Unchanged)│  │    RAG      │  │   DeepSeek-R1-Distill-Qwen-32B     │  │
 │  └─────────────┘  └─────────────┘  └─────────────────────┘  │
 └─────────────────────────────────────────────────────────────┘
 ```
@@ -64,7 +64,7 @@ HeartBeat/
     └── sagemaker_training_src/      # ✅ Training code unchanged
 ```
 
-## 🎯 What You Need to Do Next
+## What You Need to Do Next
 
 ### Step 1: Add Your Tailwind UI Components
 
@@ -168,7 +168,7 @@ export function PlayerDashboard() {
 3. **Me**: Build interactive player/team comparison tools
 4. **Me**: Performance optimization and caching
 
-## 🎨 Design System Integration
+## Design System Integration
 
 ### Montreal Canadiens Branding
 ```css
@@ -213,7 +213,7 @@ interface DashboardProps {
 }
 ```
 
-## 🎯 Expected Results
+## Expected Results
 
 ### Professional Interface
 - **Premium Tailwind UI components** adapted for hockey analytics
@@ -235,7 +235,7 @@ interface DashboardProps {
 
 ---
 
-## 🏁 Next Actions
+## Next Actions
 
 1. **Download your Tailwind UI components** into the created directory structure
 2. **Let me know when they're added** so I can begin the Next.js setup

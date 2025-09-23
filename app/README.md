@@ -24,7 +24,7 @@ Professional web interface for the HeartBeat hockey analytics platform with role
 - **Performance Metrics**: Real-time processing time and success rate tracking
 
 ### Production Features
-- **SageMaker Integration**: Seamless connection to fine-tuned Llama 3.3 70B model
+- **SageMaker Integration**: Seamless connection to fine-tuned DeepSeek-R1-Distill-Qwen-32B model
 - **Auto-Scaling**: Responsive design with performance optimization
 - **Error Handling**: Graceful degradation and user-friendly error messages
 - **Montreal Canadiens Branding**: Team colors and professional styling
@@ -103,7 +103,7 @@ python run_app.py
 │                HeartBeat Orchestrator                       │
 │  ┌─────────────┐  ┌─────────────┐  ┌─────────────────────┐  │
 │  │  Pinecone   │  │   Parquet   │  │   Fine-tuned        │  │
-│  │    RAG      │  │ Analytics   │  │   Llama 3.3 70B     │  │
+│  │    RAG      │  │ Analytics   │  │   DeepSeek-R1-Distill-Qwen-32B     │  │
 │  └─────────────┘  └─────────────┘  └─────────────────────┘  │
 └─────────────────────────────────────────────────────────────┘
 ```
