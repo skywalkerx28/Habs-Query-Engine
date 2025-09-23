@@ -230,12 +230,12 @@ def main():
     logger.info(f"Training data path: {train_path}")
     logger.info(f"Validation data path: {val_path}")
     
-    # Training hyperparameters optimized for 17B model with 2,198 examples (QLoRA-friendly defaults)
+    # Training hyperparameters optimized for ml.g5.12xlarge with 2,198 examples (QLoRA-friendly defaults)
     learning_rate = float(os.environ.get("LEARNING_RATE", "2e-4"))
     max_steps = int(os.environ.get("MAX_STEPS", "200"))  # Reduced to prevent overfitting
-    per_device_batch_size = int(os.environ.get("PER_DEVICE_BATCH_SIZE", "2"))
-    gradient_accumulation_steps = int(os.environ.get("GRADIENT_ACCUMULATION_STEPS", "32"))
-    max_length = int(os.environ.get("MAX_LENGTH", "4096"))  # Increased for 17B model
+    per_device_batch_size = int(os.environ.get("PER_DEVICE_BATCH_SIZE", "1"))  # Optimized for A10G 24GB VRAM
+    gradient_accumulation_steps = int(os.environ.get("GRADIENT_ACCUMULATION_STEPS", "64"))  # Maintain effective batch size
+    max_length = int(os.environ.get("MAX_LENGTH", "3072"))  # Optimized for A10G memory constraints
     
     logger.info("=== HeartBeat Engine - Llama 4 Scout 17B Fine-Tuning ===")
     logger.info(f"Model ID: {model_id}")

@@ -101,8 +101,36 @@ hyperparameters = {
 - **17B Model Cost**: $68-140 (3-12 hours training)
 - **Savings**: **$1,860-2,932** (93-95% cost reduction!)
 
-#### Recommended Configuration:
-**ml.p3.8xlarge** offers the best price/performance balance at ~**$100 total cost**
+#### Selected Configuration: ml.g5.12xlarge
+**Perfect for overnight training at just ~$70 total cost**
+
+**Optimized Settings for ml.g5.12xlarge:**
+```python
+# SageMaker Training Job Configuration
+instance_type = "ml.g5.12xlarge"
+instance_count = 1
+max_runtime_in_seconds = 43200  # 12 hours (safe margin)
+
+hyperparameters = {
+    "MODEL_ID": "meta-llama/Llama-4-Scout-17B-16E-Instruct",
+    "LEARNING_RATE": "2e-4",
+    "MAX_STEPS": "200",
+    "PER_DEVICE_BATCH_SIZE": "1",      # Reduced for A10G memory
+    "GRADIENT_ACCUMULATION_STEPS": "64", # Increased to maintain effective batch size
+    "MAX_LENGTH": "3072",              # Slightly reduced for A10G
+    "LORA_R": "16",
+    "LORA_ALPHA": "32", 
+    "LORA_DROPOUT": "0.1",
+    "BNB_QUANT_TYPE": "nf4",
+    "BNB_DOUBLE_QUANT": "true"
+}
+```
+
+**Why These Settings Work for A10G GPUs:**
+- **Batch Size 1**: Each A10G has 24GB VRAM (vs 40GB A100), so smaller batches prevent OOM
+- **Gradient Accumulation 64**: Maintains effective batch size of 64 examples per step
+- **Max Length 3072**: Optimized for A10G memory constraints
+- **12-hour runtime**: Plenty of buffer for 8-12 hour expected training time
 
 ### Memory Requirements:
 - **17B Model**: ~34GB in fp16, ~17GB with 4-bit quantization
