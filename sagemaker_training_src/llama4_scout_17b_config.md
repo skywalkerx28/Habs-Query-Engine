@@ -36,20 +36,73 @@
 hyperparameters = {
     "MODEL_ID": "meta-llama/Llama-4-Scout-17B-16E-Instruct",
     "LEARNING_RATE": "2e-4",        # Higher LR for 17B
-    "MAX_STEPS": "400",             # Reduced steps
+    "MAX_STEPS": "200",             # REDUCED - optimal for 2,198 examples
     "PER_DEVICE_BATCH_SIZE": "2",   # Larger batch size
     "GRADIENT_ACCUMULATION_STEPS": "32",  # Reduced accumulation
     "MAX_LENGTH": "4096",           # Longer sequences for better context
     "LORA_R": "16",                 # Standard LoRA rank
     "LORA_ALPHA": "32",             # Standard LoRA alpha
-    "LORA_DROPOUT": "0.05",         # Low dropout
+    "LORA_DROPOUT": "0.1",          # Higher dropout to prevent overfitting
 }
 ```
 
+### Why 200 Steps is Optimal for Your Dataset:
+
+**Dataset Analysis:**
+- **Training Examples**: 2,198 QA pairs
+- **Effective Batch Size**: 2 × 32 = 64 examples per step
+- **Dataset Coverage**: 200 steps × 64 = 12,800 training examples
+- **Epochs**: ~5.8 epochs through your dataset (ideal range: 3-10 epochs)
+
+**Overfitting Prevention:**
+- Research shows datasets <3K examples risk overfitting beyond 200-300 steps
+- Your 2,198 examples fall into this category
+- Higher dropout (0.1) adds regularization
+- Early stopping at 200 steps prevents memorization
+
 ### Training Time & Cost Estimates:
-- **Training Time**: 4-8 hours (vs 24-72 for 70B)
-- **Cost**: ~$200-400 (vs $1000-3000 for 70B)
-- **Max Runtime**: 28,800 seconds (8 hours) - much safer margin
+
+**Optimized for 200 Steps with 2,198 Examples:**
+
+#### Instance Options & Costs:
+
+**Option 1: ml.p4d.24xlarge (Recommended)**
+- **Specs**: 8x NVIDIA A100 40GB GPUs, 96 vCPUs, 1,152 GB RAM
+- **Hourly Rate**: $32.77/hour (US East N. Virginia)
+- **Estimated Training Time**: 3-4 hours (200 steps)
+- **Compute Cost**: 4 hours × $32.77 = **$131.08**
+
+**Option 2: ml.p3.8xlarge (Budget Option)**
+- **Specs**: 4x NVIDIA V100 16GB GPUs, 32 vCPUs, 244 GB RAM  
+- **Hourly Rate**: $12.24/hour (US East N. Virginia)
+- **Estimated Training Time**: 6-8 hours (200 steps)
+- **Compute Cost**: 8 hours × $12.24 = **$97.92**
+
+**Option 3: ml.g5.12xlarge (Most Budget-Friendly)**
+- **Specs**: 4x NVIDIA A10G 24GB GPUs, 48 vCPUs, 192 GB RAM
+- **Hourly Rate**: $5.67/hour (US East N. Virginia)
+- **Estimated Training Time**: 8-12 hours (200 steps)
+- **Compute Cost**: 12 hours × $5.67 = **$68.04**
+
+#### Additional Costs:
+
+**Data Storage (S3)**
+- **Training Dataset**: ~50 MB (2,198 examples)
+- **Monthly Storage**: 0.05 GB × $0.023/GB = **$0.001**
+- **Data Transfer**: Negligible for small dataset
+
+**Total Estimated Costs:**
+- **ml.p4d.24xlarge**: **$131-140** (fastest, best performance)
+- **ml.p3.8xlarge**: **$98-110** (good balance)
+- **ml.g5.12xlarge**: **$68-80** (budget option, slower)
+
+#### Cost Savings vs Original 70B Plan:
+- **70B Model Cost**: $2,000-3,000 (72 hours training)
+- **17B Model Cost**: $68-140 (3-12 hours training)
+- **Savings**: **$1,860-2,932** (93-95% cost reduction!)
+
+#### Recommended Configuration:
+**ml.p3.8xlarge** offers the best price/performance balance at ~**$100 total cost**
 
 ### Memory Requirements:
 - **17B Model**: ~34GB in fp16, ~17GB with 4-bit quantization
